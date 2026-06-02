@@ -133,6 +133,8 @@ A custom Python pipeline (released under an open-source license at the GitHub re
 
 Formation energies of competing phases (L2₁ MnAlFe₂, B2 AlFe, B2 AlFe₃) were retrieved directly from JARVIS-DFT for cross-validation of the AI's composition prediction against first-principles thermodynamics.
 
+![**Fig. 1.** Schematic of the custom computational audit pipeline for synchrotron peak analysis. Synchrotron `.chi` files enter the peak-detection stage (SciPy prominence-filtered peak finding, with Bragg-law conversion of synchrotron 2θ to Cu Kα-equivalent 2θ), feed into both a pattern-matching branch (JARVIS-DFT database, cosine-similarity scoring over 166 Fe-Al candidates) and a structure-prediction branch (DiffractGPT inference of crystal structure from formula + peak data), and terminate in a cross-validation step against JARVIS-DFT formation energies and competing-phase thermodynamic stability.](figures/Fig1_pipeline_schematic.png)
+
 ---
 
 # 3. Results
@@ -145,6 +147,8 @@ After the standard 1200 °C / 1 min anneal, the AI alloy (**Fig. 2a**) exhibits 
 
 The Omori benchmark behaves differently. After 3-cycle AGG (**Fig. 2c**), the Omori alloy develops the bamboo-like grain morphology consistent with the established Fe-Mn-Al-Ni paradigm [@omori2011superelastic; @vollmer2016cyclic], with grain diameters spanning a substantial fraction of the wire cross-section. The 1200 °C / 1 min condition (**Fig. 2d**) yields an acicular ferrite microstructure: a grain size large enough to permit partial martensitic nucleation but insufficient to support fully unconstrained transformation. By contrast, a 1200 °C / 12 s strand-anneal condition (not shown in Fig. 2) produces a uniformly refined small-grain microstructure, which is the configuration responsible for the highest pseudoelastic recovery measured in this work (Sec. 3.2).
 
+![**Fig. 2.** Optical micrographs of polished wire cross-sections under four representative heat-treatment conditions. (a) AI alloy after the standard 1200 °C / 1 min anneal: highly refined dual-phase morphology with irregular grain boundaries (scale bar 0.004 in.). (b) AI alloy after 3-cycle AGG: grain growth in one phase only; the dual-phase structure persists (scale bar 400 µm). (c) Omori benchmark after 3-cycle AGG: bamboo-like grain morphology consistent with the Omori paradigm (scale bar 200 µm). (d) Omori benchmark after 1200 °C / 1 min strand anneal: acicular ferrite microstructure (scale bar 200 µm). All images acquired on a Clemex Vision PE optical microscope under bright-field illumination.](figures/Fig2_microstructure_composite.png)
+
 ## 3.2 Cyclic stress–strain response
 
 Cyclic tensile stress–strain curves for representative specimens are shown in **Fig. 3**.
@@ -152,6 +156,8 @@ Cyclic tensile stress–strain curves for representative specimens are shown in 
 The AI alloy in both the 1200 °C / 1 min (**Fig. 3a**) and 3-cycle AGG (**Fig. 3b**) conditions displays essentially zero pseudoelastic recovery on unloading. Loading exhibits a monotonically rising stress with no defined transformation plateau, and unloading retraces a linear-elastic slope down to negligible recovered strain. The macroscopic behavior is consistent with plastic deformation by dislocation slip rather than stress-induced martensitic transformation (SIMT). This response is invariant across all AI-alloy heat treatments examined.
 
 The Omori benchmark shows the expected pseudoelastic response in conditions that develop the bamboo or refined-grain microstructures (**Fig. 3c, d**). Importantly, the 1200 °C / 12 s strand-anneal condition (refined small grains) exhibits approximately twice the total recovered strain of the 1200 °C / 5 min condition (larger grain growth, closer to the conventional bamboo paradigm) under identical applied strain. This direct comparison, performed on the same alloy chemistry with the only variable being strand-anneal residence time, is the central observation of Sec. 4.3.
+
+![**Fig. 3.** Cyclic tensile stress–strain response. (a) AI alloy after the standard 1200 °C / 1 min anneal: monotonic loading with no transformation plateau and essentially zero recoverable strain on unloading, consistent with dislocation slip. (b) AI alloy after 3-cycle AGG: response qualitatively identical to (a), confirming that AGG processing does not restore pseudoelasticity in the AI composition. (c) Omori benchmark after 1200 °C / 5 min strand anneal (larger grain growth): partial pseudoelastic recovery with developing hysteresis. (d) Omori benchmark after 1200 °C / 12 s strand anneal (refined small-grain microstructure): pronounced pseudoelastic hysteresis, a distinct stress plateau, and approximately twice the total recovered strain of the 5 min condition under identical applied strain. Red arrows in (c, d) mark the residual unrecovered strain after unloading.](figures/Fig3_stressstrain_composite.png)
 
 ## 3.3 Synchrotron diffraction
 
@@ -163,9 +169,13 @@ The AI alloy (**Fig. 4a**) exhibits a five-peak pattern indexable to a coexistin
 
 The Omori benchmark (**Fig. 4b**) presents a BCC α-dominated pattern with ordered β-NiAl (B2) precipitate reflections in the undeformed state. After 8% applied strain, the {111}γ reflection intensifies and the overlapping {200}α / {200}B2 cluster redistributes in intensity. These intensity shifts are consistent with stress-induced γ formation and partial variant activation of the precipitate-coherent transformation.
 
+![**Fig. 4.** Azimuthally integrated synchrotron XRD patterns converted to Cu Kα-equivalent 2θ, comparing the undeformed (0% strain) and deformed (post-tensile-test) states. (a) AI alloy: five-peak pattern indexable to coexisting FCC γ-austenite ({111}γ, {200}γ, {220}γ) and ordered B2/DO₃ Fe₃Al phase ({220}Fe₃Al, {400}Fe₃Al); the 0% and 10% strain patterns are essentially superimposed, indicating deformation by dislocation slip rather than phase transformation. (b) Omori benchmark: BCC α-dominated pattern with ordered β-NiAl (B2) precipitate reflections; after 8% strain the {111}γ reflection intensifies and the {200}α / {200}B2 cluster redistributes in intensity, consistent with stress-induced γ formation and partial variant activation. Data collected at SSRF beamline BL12SW with λ = 0.125870 Å.](figures/Fig4_XRD_1D_AI_vs_Omori.jpg)
+
 ### 3.3.2 Two-dimensional patterns
 
 Two-dimensional Debye–Scherrer patterns recorded directly on the SSRF area detector are shown in **Fig. 5** for the same four specimen states. The AI alloy rings (**Fig. 5a, b**) are virtually identical before and after deformation: ring positions, widths, and azimuthal intensity distributions are preserved. The Omori benchmark rings shift from sharp, discrete diffraction spots in the undeformed state (**Fig. 5c**) to broader, partially arced rings in the deformed state (**Fig. 5d**). The transition from spotty to arced rings is the signature of variant activation and increased mosaic spread accompanying partial martensitic transformation.
+
+![**Fig. 5.** Two-dimensional Debye–Scherrer synchrotron diffraction patterns recorded directly on the SSRF area detector for the same four specimen states. (a) AI alloy at 0% strain: sharp, discrete diffraction spots indexed to {111}γ, {200}γ, {220}γ on the γ-FCC subpattern and {220}Fe₃Al, {400}Fe₃Al on the DO₃ subpattern. (b) AI alloy at 10% strain: ring positions, widths, and azimuthal intensity distributions are preserved with no detectable redistribution, consistent with the absence of phase transformation indicated by Fig. 4a. (c) Omori benchmark at 0% strain: discrete spots indicating coarse, well-oriented grains. (d) Omori benchmark at 8% strain: spots transition to broader, partially arced rings, the signature of variant activation and increased mosaic spread accompanying partial martensitic transformation.](figures/Fig5_XRD_2D_composite.png)
 
 ### 3.3.3 Phase fraction analysis
 

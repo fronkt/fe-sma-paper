@@ -48,3 +48,5 @@ python build_composites.py
 ## Companion repo
 
 The computational audit pipeline used in this paper lives at <https://github.com/frankcai222/fe-sma-xrd>.
+
+This paper repo: <https://github.com/fronkt/fe-sma-paper>
