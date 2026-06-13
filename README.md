@@ -2,7 +2,7 @@
 
 Source files for the journal manuscript:
 
-**"Process-Aware Limits of AI-Guided Alloy Design: A Computational and Experimental Audit of an LLM-Hypothesized Fe-Mn-Al-Si-Ni-C Shape Memory Alloy"**
+**"Limited Room-Temperature Pseudoelasticity in an AI-Hypothesized Fe-Mn-Al-Si-Ni-C Alloy: Synthesis, Microstructure, and Cyclic Response"**
 
 Target venue: *Shape Memory and Superelasticity* (Springer).
 
@@ -10,12 +10,12 @@ Target venue: *Shape Memory and Superelasticity* (Springer).
 
 | Path | Contents |
 |------|----------|
-| `manuscript.md`                                | Master markdown source (5,300+ words) |
+| `manuscript.md`                                | Master markdown source |
 | `references.bib`                               | BibTeX bibliography (31 entries) |
 | `springer.csl`                                 | Springer basic author-date citation style |
 | `Cai_Fe-SMA_SMS_manuscript.docx`               | Word output (Chicago author-date) |
 | `Cai_Fe-SMA_SMS_manuscript_SpringerStyle.docx` | Word output (Springer style) |
-| `figures/Fig1–Fig5_*`                          | Final composites + individual panels (300–600 dpi) |
+| `figures/Fig*`                                 | Final composites + individual panels (300–600 dpi); manuscript figures Fig. 1–4 |
 | `figures/captions.md`                          | Full caption text and assembly notes |
 | `figures/build_composites.py`                  | PIL script that regenerates the 2×2 composites |
 | `figures/sources/`                             | Native-resolution source images |
@@ -24,6 +24,16 @@ Target venue: *Shape Memory and Superelasticity* (Springer).
 ## Rebuild the .docx
 
 ```powershell
+# Springer-style (Shape Memory and Superelasticity)
+pandoc manuscript.md `
+  --from markdown+yaml_metadata_block `
+  --to docx `
+  --citeproc `
+  --bibliography references.bib `
+  --csl springer.csl `
+  --output Cai_Fe-SMA_SMS_manuscript_SpringerStyle.docx
+
+# Default (Chicago author-date)
 pandoc manuscript.md `
   --from markdown+yaml_metadata_block `
   --to docx `
@@ -44,9 +54,5 @@ python build_composites.py
 - Frank Cai — Homestead Senior High School, Fort Wayne, IN, USA (corresponding)
 - S. Cai — Fort Wayne Metals, Fort Wayne, IN, USA
 - J. Yan — Shanghai Synchrotron Radiation Facility, Shanghai, China
-
-## Companion repo
-
-The computational audit pipeline used in this paper lives at <https://github.com/frankcai222/fe-sma-xrd>.
 
 This paper repo: <https://github.com/fronkt/fe-sma-paper>
