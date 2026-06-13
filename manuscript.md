@@ -148,18 +148,7 @@ The Omori benchmark (**Fig. 3b**) presents a BCC α-dominated pattern with order
 
 Two-dimensional Debye–Scherrer patterns recorded directly on the SSRF area detector are shown in **Fig. 4**. The AI alloy rings (**Fig. 4a, b**) are virtually identical before and after deformation: ring positions, widths, and azimuthal intensity distributions are preserved, again indicating the absence of a transformation. The Omori benchmark rings shift from sharp, discrete spots in the undeformed state (**Fig. 4c**) to broader, partially arced rings after deformation (**Fig. 4d**), a signature of variant activation and increased mosaic spread accompanying partial martensitic transformation.
 
-A quantitative comparison of phase-peak intensities before and after deformation is summarized in **Table 3**. For the AI alloy the relative intensity changes are interpreted as texture redistribution under load rather than phase transformation, because no new reflections appear in the 1D patterns and the 2D ring positions are unchanged. For the Omori benchmark in the 4 ft/min strand condition, the marked decrease in β-NiAl reflection intensity together with the increase in {111}γ is consistent with an α → γ transformation.
-
 ![**Fig. 4.** Two-dimensional Debye–Scherrer synchrotron diffraction patterns recorded directly on the SSRF area detector. (a) AI alloy at 0% strain: sharp, discrete diffraction spots indexed to {111}γ, {200}γ, {220}γ on the γ-FCC subpattern and {220}Fe₃Al, {400}Fe₃Al on the DO₃ subpattern. (b) AI alloy at 10% strain: ring positions, widths, and azimuthal intensity distributions are preserved with no detectable redistribution, consistent with the absence of phase transformation indicated by Fig. 3a. (c) Omori benchmark at 0% strain: discrete spots indicating coarse, well-oriented grains. (d) Omori benchmark at 8% strain: spots transition to broader, partially arced rings, the signature of variant activation accompanying partial martensitic transformation.](figures/Fig5_XRD_2D_composite.png)
-
-**Table 3.** Relative change in integrated peak intensity for the {111}γ, B2/Fe₃Al, and β-NiAl reflections between the undeformed and deformed states, for both alloys under both AGG and 4 ft/min strand-anneal conditions. Positive values indicate intensity increase; negative values indicate decrease.
-
-| Sample | Condition | Δ{111}γ | ΔB2/Fe₃Al | Δβ-NiAl | Phase transformation? |
-|--------|-----------|---------|-----------|---------|----------------------|
-| AI alloy   | 3-cycle AGG, 0 → 10% strain  | +49.7%  | −28.4%   | +23.7% | No (texture redistribution only) |
-| AI alloy   | 4 FPM strand, 0 → 10% strain | +32.2%  | +51.3%   | −17.1% | No (texture redistribution only) |
-| Omori      | 4 FPM strand, 0 → 8% strain  | +27.3%  | +40.7%   | −83.8% | Yes (α → γ) |
-| Omori      | 3-cycle AGG, 0 → 8% strain   | −43.1%  | −0.6%    | +1.3%  | No (γ suppression in bamboo grains) |
 
 ---
 
@@ -189,7 +178,7 @@ As a secondary observation (Sec. 3.2), the 1200 °C / 12 s strand-anneal conditi
 
 Several limitations should be noted before drawing broader conclusions.
 
-First, phase fractions are reported qualitatively rather than quantitatively. Full Rietveld refinement on the SSRF data would convert the relative intensity changes in **Table 3** into absolute phase fractions; this refinement is in progress and will be reported separately.
+First, phase fractions are reported qualitatively rather than quantitatively. Full Rietveld refinement on the SSRF data would convert the qualitative diffraction comparisons into absolute phase fractions; this refinement is in progress and will be reported separately.
 
 Second, the processing observation in Sec. 4.3 rests on a limited set of feed rates (0.8, 4, and 20 ft/min) and limited replicates per condition; it should not be elevated from observation to design rule without a systematic study.
 
