@@ -112,7 +112,7 @@ Wire cross-sections were embedded in cold-mount epoxy and ground sequentially wi
 
 Cyclic tensile tests were performed on an Instron servohydraulic testing frame in displacement control. Wire specimens were tested with a 6 mm gauge length using pneumatic grips. Each specimen was loaded to a target tensile strain (8% for the Omori benchmark, 10% for the AI alloy) at a nominal strain rate of 1 × 10⁻³ s⁻¹, held briefly at peak strain, and then unloaded to zero force. Pseudoelastic recovery was quantified as the ratio of recovered strain on unloading to applied peak strain.
 
-To characterize the AI alloy more broadly, monotonic incremental-cyclic tensile tests to failure were also performed on the final 0.36 mm AI-alloy wire after continuous strand annealing (≈1 min hot-zone residence) at temperatures from 600 to 1250 °C, after selected 200 °C post-anneal aging treatments, and after the 3-cycle AGG treatment. Tensile strength and elongation were taken directly from the recorded curves; yield strength (0.2% offset) and elastic modulus (initial loading slope) were extracted from the calibrated stress–strain data. Strain was computed from crosshead displacement over a 5 in gauge length.
+To characterize the AI alloy more broadly, monotonic incremental-cyclic tensile tests to failure were also performed on the final 0.36 mm AI-alloy wire after continuous strand annealing (≈1 min hot-zone residence) at strand-anneal temperatures from 600 to 1200 °C. Tensile strength and elongation were taken directly from the recorded curves; yield strength (0.2% offset) and elastic modulus (initial loading slope) were extracted from the calibrated stress–strain data. Strain was computed from crosshead displacement over a 5 in gauge length. Extended 1250 °C holds and the 3-cycle AGG treatment were also run but are excluded from the monotonic dataset (Table 4) because surface oxidation, and grip compliance at 1250 °C, made those specimens' data unreliable.
 
 ## 2.6 Synchrotron X-ray diffraction
 
@@ -138,9 +138,9 @@ Cyclic tensile stress–strain curves for representative specimens are shown in 
 
 Representative recovered-strain and peak-stress values, read from the incremental cyclic curves at a common 2% reference cycle, are summarized in **Table 3**. The AI alloy in both the 1200 °C / 1 min (**Fig. 2a**) and 3-cycle AGG (**Fig. 2b**) conditions recovered only ≈0.5% strain on unloading from the 2% cycle (a recovery ratio of ≈25%). Loading exhibited a monotonically rising stress with no defined transformation plateau, and the recovered strain is comparable to the elastic strain σ/E expected at the unload stress (≈0.4–0.5% at ≈650 MPa for E ≈ 150 GPa). In other words, the recovery is consistent with elastic springback alone, with no resolvable pseudoelastic contribution; this behavior was the same across all AI-alloy heat treatments examined, including loading as far as ≈24% total strain (Table 3).
 
-The Omori benchmark shows a stress plateau and greater recovery in the conditions that develop bamboo or refined-grain microstructures (**Fig. 2c, d**). At the same 2% reference cycle, the 1200 °C / 12 s condition recovered ≈0.92% strain (≈46%), roughly twice the ≈0.49% (≈25%) of the 1200 °C / 5 min condition, and exceeding the elastic strain — indicating a genuine pseudoelastic component. We treat this comparison cautiously, as it rests on single specimens (n = 1 per condition); it is considered further in Sec. 4.3.
+The Omori benchmark shows a stress plateau and greater recovery in the conditions that develop bamboo or refined-grain microstructures (**Fig. 2c, d**). At the same 2% reference cycle, the 1200 °C / 12 s condition recovered ≈0.92% strain (≈46%), roughly twice the ≈0.49% (≈25%) of the 1200 °C / 5 min condition, and exceeding the elastic strain — indicating a genuine pseudoelastic component. We treat this comparison cautiously, as it rests on single specimens (n = 1 per condition); it is considered further in Sec. 4.4.
 
-**Table 3.** Cyclic-tensile metrics for both alloys, computed from the calibrated incremental stress–strain curves of **Fig. 2**. Recovered strain and recovery ratio are reported at a common 2% applied-strain cycle present in all tests; peak stress is the maximum stress reached over the full test. Values are single-specimen (n = 1 per condition); a statistically resolved study is identified as future work (Sec. 4.4).
+**Table 3.** Cyclic-tensile metrics for both alloys, computed from the calibrated incremental stress–strain curves of **Fig. 2**. Recovered strain and recovery ratio are reported at a common 2% applied-strain cycle present in all tests; peak stress is the maximum stress reached over the full test. Values are single-specimen (n = 1 per condition); a statistically resolved study is identified as future work (Sec. 4.5).
 
 | Alloy | Condition | Max applied strain (%) | Peak stress (MPa) | Recovered strain at 2% (%) | Recovery at 2% (%) |
 |-------|-----------|------------------------|-------------------|----------------------------|--------------------|
@@ -153,25 +153,19 @@ For the AI alloy the recovered strain at 2% matches the elastic springback and t
 
 ![**Fig. 2.** Cyclic tensile stress–strain response. (a) AI alloy after the standard 1200 °C / 1 min anneal: monotonic loading with no transformation plateau; recovered strain on unloading (≈0.5% at the 2% cycle) is consistent with elastic springback alone (Table 3). (b) AI alloy after 3-cycle AGG: response qualitatively identical to (a), indicating that AGG processing did not restore pseudoelasticity in the AI composition. (c) Omori benchmark after 1200 °C / 5 min strand anneal: partial pseudoelastic recovery with developing hysteresis. (d) Omori benchmark after 1200 °C / 12 s strand anneal (refined small-grain microstructure): pronounced pseudoelastic hysteresis and a distinct stress plateau. Red arrows in (c, d) mark the residual unrecovered strain after unloading. Panels (c) and (d) are the ≈5 min and ≈12 s strand-anneal specimens of the Omori benchmark, respectively; one representative specimen per condition.](figures/Fig3_stressstrain_composite.png)
 
-Beyond the cyclic conditions of Table 3, monotonic tensile-to-failure tests on the final 0.36 mm AI-alloy wire give a broader picture of how heat treatment governs its mechanical properties (**Table 4**). The response is strongly anneal-dependent: low strand-anneal temperatures (600–700 °C) leave the wire high-strength but brittle (tensile strength up to ≈2290 MPa at only ≈2% elongation, reflecting incomplete recrystallization of the cold-drawn wire), whereas annealing at 800–1200 °C progressively softens the wire and restores ductility, with elongation peaking near 33% at 1000 °C. The elastic modulus stays in the ≈150–165 GPa range across the well-annealed conditions. Post-anneal aging at 200 °C produces only minor changes. Importantly, none of these treatments altered the cyclic behaviour of Sec. 3.2 — the AI wire deforms plastically with no pseudoelastic plateau regardless of anneal temperature — consistent with the dual-phase structure identified below (Sec. 3.3).
+Beyond the cyclic conditions of Table 3, monotonic tensile-to-failure tests on the final 0.36 mm AI-alloy wire give a broader picture of how heat treatment governs its mechanical properties (**Table 4**). The response is strongly anneal-dependent: low strand-anneal temperatures (600–700 °C) leave the wire high-strength but brittle (tensile strength up to ≈2010 MPa at only ≈2% elongation, reflecting incomplete recrystallization of the cold-drawn wire), whereas annealing at 800–1200 °C progressively softens the wire and restores ductility, with elongation peaking near 33% at 1000 °C. The elastic modulus stays in the ≈150–165 GPa range across the well-annealed conditions. Importantly, none of these treatments altered the cyclic behaviour of Sec. 3.2 — the AI wire deforms plastically with no pseudoelastic plateau regardless of anneal temperature — consistent with the dual-phase structure identified below (Sec. 3.3).
 
-**Table 4.** Monotonic tensile properties of the AI-alloy wire (0.36 mm diameter) as a function of strand-anneal temperature, including two extended 1250 °C holds, three 200 °C post-anneal aging treatments, and the 3-cycle abnormal-grain-growth (AGG) condition. Tensile strength and elongation are read directly from the stress–strain curves; yield strength (0.2% offset) and modulus (initial elastic slope) are extracted from the same calibrated data. Values are single-specimen (n = 1) measurements; strain is crosshead-displacement based, so the absolute moduli — and especially the two 1250 °C values, which were affected by grip compliance — should be read as approximate. The AGG row is the single incremental-cyclic AGG specimen of Table 3, with all four quantities taken from its calibrated stress–strain curve. None of these treatments produced a pseudoelastic plateau (cf. Table 3).
+**Table 4.** Monotonic tensile properties of the AI-alloy wire (0.36 mm diameter) as a function of strand-anneal temperature (600–1200 °C). Tensile strength and elongation are read directly from the stress–strain curves; yield strength (0.2% offset) and modulus (initial elastic slope) are extracted from the same calibrated data. Values are single-specimen (n = 1) measurements; strain is crosshead-displacement based, so the absolute moduli should be read as approximate. Higher-temperature 1250 °C holds and the 3-cycle abnormal-grain-growth (AGG) condition were also imposed but are excluded here: surface oxidation (and grip-compliance effects at 1250 °C) rendered those specimens' data unreliable. None of the conditions produced a pseudoelastic plateau (cf. Table 3).
 
 | Anneal temperature | Yield strength (MPa) | Tensile strength (MPa) | Elongation (%) | Modulus (GPa) |
 |--------------------|----------------------|------------------------|----------------|---------------|
-| 600 °C             | 1379 | 2293 | 2.3  | 157 |
-| 700 °C             | 1330 | 2009 | 2.2  | 163 |
-| 800 °C             | 1164 | 1221 | 24.0 | 154 |
-| 900 °C             | 944  | 1078 | 29.7 | 152 |
-| 1000 °C            | 673  | 967  | 33.4 | 156 |
-| 1100 °C            | 556  | 947  | 29.7 | 157 |
-| 1200 °C            | 502  | 938  | 23.9 | 163 |
-| 1250 °C (5 min)    | 361  | 661  | 12.5 | 121 |
-| 1250 °C (20 min)   | 395  | 589  | 6.3  | 79  |
-| 1200 °C + 200 °C / 1 h  | 518 | 945 | 25.2 | 157 |
-| 1200 °C + 200 °C / 3 h  | 505 | 934 | 25.5 | 160 |
-| 1200 °C + 200 °C / 20 h | 503 | 891 | 14.9 | 164 |
-| 3-cycle AGG (+200 °C / 3 h) | 448 | 817 | 9.2 | 124 |
+| 600 °C  | 1379 | 1948.4 | 2.3  | 157 |
+| 700 °C  | 1330 | 2009   | 2.2  | 163 |
+| 800 °C  | 1164 | 1221   | 24.0 | 154 |
+| 900 °C  | 944  | 1078   | 29.7 | 152 |
+| 1000 °C | 673  | 967    | 33.4 | 156 |
+| 1100 °C | 556  | 947    | 29.7 | 157 |
+| 1200 °C | 502  | 938    | 23.9 | 163 |
 
 ## 3.3 Synchrotron diffraction and phase identification
 
@@ -199,7 +193,19 @@ A key contributing factor is the alloy's carbon content, which at 0.105 wt% is r
 
 Taken together, these factors are consistent with the macroscopic response of **Fig. 2a, b** and **Fig. 3a**: with no transformable matrix available, the critical stress for stress-induced transformation in the AI alloy is not reached before dislocation slip, so the wire accommodates strain plastically and recovers only its elastic strain on unloading.
 
-## 4.2 A pre-synthesis screening loop for the LLM-agent route
+## 4.2 Anneal-temperature dependence of the AI alloy's tensile properties
+
+Although the AI alloy never showed pseudoelastic recovery, its monotonic tensile behaviour (**Table 4**) varies strongly and systematically with strand-anneal temperature, and the trends are exactly those expected for a cold-drawn wire passing through recovery, recrystallization, and grain growth. Reading these as a single-specimen survey, three regimes emerge.
+
+At the lowest temperatures (600–700 °C) the wire is very strong but essentially brittle: tensile strengths of ≈1950–2010 MPa and yield strengths of ≈1330–1380 MPa, but elongation of only ≈2%. These temperatures are below the recrystallization range of the heavily cold-drawn wire, so annealing here drives only recovery — relief of residual drawing stresses and partial rearrangement of the dislocation substructure — without nucleating new strain-free grains. The high dislocation density retained from cold drawing is what sustains the high strength, and the small ductility gains in this window reflect stress relief rather than any genuine restoration of formability; the wire still fractures soon after yield.
+
+The abrupt change near 800 °C marks the onset of recrystallization. Elongation jumps from 2.2% at 700 °C to 24.0% at 800 °C while tensile strength falls from 2009 to 1221 MPa and yield from 1330 to 1164 MPa. The discontinuity — rather than a smooth softening — is the signature of recrystallization: new equiaxed, strain-free grains nucleate and consume the deformed matrix, removing most of the stored dislocation content and abruptly restoring ductility. It is this recrystallization threshold, not a gradual process, that makes ductility appear only above ~800 °C.
+
+From 800 to 1200 °C the wire is fully recrystallized and the dominant process is grain growth. Yield strength falls monotonically with temperature (1164 → 502 MPa) in a manner consistent with Hall–Petch behaviour ($\sigma_y \propto d^{-1/2}$): as grains coarsen there are fewer grain boundaries to impede dislocation motion, lowering the flow stress, while the more uniform slip that coarser grains permit raises elongation to a peak of ≈33% near 1000 °C. In other words, across this regime increasing grain size simultaneously decreases strength and increases ductility — the classic strength–ductility trade-off of a single-phase-controlled structural metal. Above 1000 °C elongation eases back slightly (29.7% at 1100 °C, 23.9% at 1200 °C), which we attribute to excessive coarsening — likely including coarsening of the brittle ordered Fe₃Al constituent — reducing uniform elongation even as the matrix continues to soften. Throughout the whole sweep the elastic modulus stays within ≈150–165 GPa, as expected for a structure-insensitive property of an essentially unchanged dual-phase mixture.
+
+Two higher-energy conditions — extended 1250 °C holds and the 3-cycle AGG treatment — were also imposed on this wire, but their data are not reported in Table 4: surface oxidation (and, at 1250 °C, grip-compliance artefacts) made the measured strengths and moduli unreliable. We note them for completeness because, even where curves could be read, they showed the same plastic, non-recovering response as every other condition. The overall picture is therefore of a conventional dual-phase structural alloy whose strength and ductility are tunable across a wide range purely by anneal temperature, but which carries no pseudoelastic plateau at any condition — reinforcing the conclusion of Sec. 4.1 that the alloy lacks a transforming matrix.
+
+## 4.3 A pre-synthesis screening loop for the LLM-agent route
 
 We are cautious about generalizing from a single composition, and we restrict the following to the specific LLM-deep-research route used here rather than to AI-guided design in general. For that route, the failure mode we observed — the intended transforming matrix that never formed because a competing ordered Fe-Al phase, promoted by the alloy's chemistry and elevated carbon content, dominated instead — could plausibly have been caught before any metal was melted. We suggest a short, deterministic screening loop to run on the agent's output prior to synthesis:
 
@@ -210,11 +216,11 @@ We are cautious about generalizing from a single composition, and we restrict th
 
 Only compositions that pass these checks would proceed to synthesis. Each step uses information already available in standard thermodynamic databases and the Fe-SMA literature; what was missing in the present case was the step connecting the agent's proposal back to that information.
 
-## 4.3 A tentative processing observation in the benchmark
+## 4.4 A tentative processing observation in the benchmark
 
 As a secondary observation (Sec. 3.2, Table 3), the 1200 °C / 12 s strand-anneal condition on the Omori benchmark recovered ≈0.92% strain at the 2% reference cycle, against ≈0.49% for the 1200 °C / 5 min condition on the same chemistry — roughly a factor of two, with only the shorter-residence condition exceeding the elastic strain. This is consistent with the possibility that, within a bounded processing window, sufficiently refined grains embedded in a coherent matrix may aid favorable variant selection, and that faster strand-anneal conditions may retain a finer, more shearable precipitate dispersion. We emphasize that this rests on single specimens (n = 1 per condition) and three residence times and should be regarded as preliminary; it is not, on its own, evidence against the role of large grains established in the Fe-Mn-Al-Ni literature [@omori2011superelastic; @vollmer2016cyclic]. A systematic residence-time study with replicates would be needed to assess whether it reflects a reproducible processing window.
 
-## 4.4 Limitations
+## 4.5 Limitations
 
 Several limitations should be noted before drawing broader conclusions.
 
@@ -224,7 +230,7 @@ Second, phase fractions are reported qualitatively rather than quantitatively. F
 
 Third, the diffraction comparison is ex situ (measured before and after testing, not under load). While the combination of zero mechanical recovery and an unchanged dual-phase pattern is internally consistent, in-situ loading would more directly exclude a reversible transformation; this is planned future work.
 
-Fourth, the processing observation in Sec. 4.3 rests on a limited set of hot-zone residence times (≈5 min, ≈1 min, and ≈12 s) and single specimens per condition; it should not be elevated from observation to design rule without a systematic study. Electron backscatter diffraction (EBSD) was also not performed, and would directly resolve variant selection and grain-boundary character in the refined-grain Omori specimens.
+Fourth, the processing observation in Sec. 4.4 rests on a limited set of hot-zone residence times (≈5 min, ≈1 min, and ≈12 s) and single specimens per condition; it should not be elevated from observation to design rule without a systematic study. Electron backscatter diffraction (EBSD) was also not performed, and would directly resolve variant selection and grain-boundary character in the refined-grain Omori specimens.
 
 Fifth, the AI's composition was not iterated. The behavior reported here is for a single LLM-proposed composition; whether iterative feedback would converge to a successful Fe-SMA composition is an open question that this study does not address.
 
@@ -238,7 +244,7 @@ We synthesized and mechanically tested an Fe-Mn-Al-Si-Ni-C composition proposed 
 2. The absence of pseudoelasticity is attributed primarily to the formation of a competing ordered B2/DO₃ Fe-Al phase rather than the single transforming matrix, with the alloy's elevated carbon content (0.105 wt%, roughly ten times the benchmark) promoting BCC/B2-type ordering over the FCC austenite. Synchrotron XRD confirms the resulting dual-phase γ-FCC + Fe₃Al structure and shows its pattern essentially unchanged by 10% applied strain. Full confirmation of the carbon contribution awaits CALPHAD modelling of the Fe-Mn-Al-Ni-Si-C system.
 3. As a secondary, preliminary observation, refined-grain (shorter-residence strand-anneal) processing of the benchmark recovered roughly twice the strain of the longer-residence condition (≈0.9% vs ≈0.5% at 2% applied); this would warrant systematic investigation before any design conclusion is drawn.
 
-More broadly, for the specific LLM-deep-research route used here, this single case study suggests that proposed compositions may benefit from a short pre-synthesis screen (Sec. 4.2) — checking competing phases, key-element stoichiometry, and interstitial content — before synthesis. We present these findings as a starting point rather than a general result, and note that further replication and characterization are needed.
+More broadly, for the specific LLM-deep-research route used here, this single case study suggests that proposed compositions may benefit from a short pre-synthesis screen (Sec. 4.3) — checking competing phases, key-element stoichiometry, and interstitial content — before synthesis. We present these findings as a starting point rather than a general result, and note that further replication and characterization are needed.
 
 ---
 
