@@ -16,7 +16,10 @@ Plan: C:\Users\frank\.claude\plans\fluffy-bouncing-whistle.md
 - [x] Assemble submissions/{SMS,JAC,MSEA,MMTA}/ folders
 - [x] Update README.md to describe multi-journal layout
 - [x] Verify: word counts, citeproc resolves all refs, highlights char limits, Purdue affiliation everywhere, read-through each docx
-- [ ] Commit and push (flag before pushing given scale) — pending user confirmation
+- [x] Commit and push (first 4 journals)
+- [x] Add 5th journal: Journal of Materials Engineering and Performance (JMEP, Springer/ASM) — front_JMEP.md, jmep.csl, submissions/JMEP/
+- [x] Zip each submissions/{SMS,JAC,MSEA,MMTA,JMEP}/ folder for direct portal upload (flat file structure, .md sources excluded)
+- [ ] Commit and push (JMEP + zips) — pending user confirmation
 
 ## Review
 
@@ -29,3 +32,5 @@ Plan: C:\Users\frank\.claude\plans\fluffy-bouncing-whistle.md
 - A `git rm` of pre-existing stale files (old figures, old root-level docx) was correctly blocked by the permission system per the user's own "archive superseded docs, don't just rely on git history" preference — redone as `git mv` into dated archive folders instead.
 
 **Left for a human pass** (documented in README.md): exact ZIP/postal codes for Fort Wayne Metals and SSRF on the MMT-A title page (placeholders inserted), and the truncated author list on SSRF beamline reference [18] (MMT-A's style forbids "et al." truncation).
+
+**JMEP addendum (2026-07-13, same session):** JMEP's citation style resolved via its Zotero dependent-style parent (`journal-of-thermal-spray-technology`, another ASM/Springer journal) — numbered with titles, verified via pandoc round-trip same as the other 4. Its live submission-guidelines page (springer.com) redirects behind a login wall, so word/page limits weren't independently confirmed; flagged in README rather than guessed. All 5 submission folders zipped (flat structure, .md sources excluded) for direct portal upload.

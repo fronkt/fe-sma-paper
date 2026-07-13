@@ -4,7 +4,7 @@ Source files for the manuscript:
 
 **"Mechanical Responses of an AI-Hypothesized Super-elastic Fe-Mn-Al-Ni-Si-C Alloy"**
 
-Rejected by *Materials & Design* (Elsevier) in July 2026 (no reviewer comments provided — appears to be a scope-based decision). Reformatted for four candidate journals; see `submissions/` for the ready-to-submit packages. `manuscript.md` is the single shared body — it reflects the full science content actually reviewed by Materials & Design (SEM/EDS, Rietveld phase-fraction quantification, loading-unloading-heating shape-memory test), which is more complete than any earlier commit in this repo's history.
+Rejected by *Materials & Design* (Elsevier) in July 2026 (no reviewer comments provided — appears to be a scope-based decision). Reformatted for five candidate journals; see `submissions/` for the ready-to-submit packages (also zipped in `submissions/*.zip` for upload). `manuscript.md` is the single shared body — it reflects the full science content actually reviewed by Materials & Design (SEM/EDS, Rietveld phase-fraction quantification, loading-unloading-heating shape-memory test), which is more complete than any earlier commit in this repo's history.
 
 ## Layout
 
@@ -12,16 +12,18 @@ Rejected by *Materials & Design* (Elsevier) in July 2026 (no reviewer comments p
 |------|----------|
 | `manuscript.md`         | Shared body: Abstract → Declarations. No title/author block (that's per-journal, see below). |
 | `references.bib`        | BibTeX bibliography, 24 entries — exactly the refs cited in the submitted text. |
-| `front_{SMS,JAC,MSEA,MMTA}.md` | Per-journal title page (author/affiliation block formatted to each journal's convention). |
+| `front_{SMS,JAC,MSEA,MMTA,JMEP}.md` | Per-journal title page (author/affiliation block formatted to each journal's convention). |
 | `springer.csl`          | Springer author-date style (used by SMS). |
 | `elsevier-with-titles.csl` | Elsevier numbered style with article titles (used by JAC and MSE:A — same parent style Materials & Design itself uses, so references need no reformatting for those two). |
 | `mmta.csl`               | Metallurgical and Materials Transactions A numbered style, no article titles. |
+| `jmep.csl`               | Journal of Materials Engineering and Performance numbered style, with article titles (shares its Zotero parent style with *Journal of Thermal Spray Technology*, another ASM/Springer journal). |
 | `highlights.md`          | 5 highlight bullets (≤85 characters each), used for JAC and MSE:A. |
 | `figures/Figure_1.jpg`–`Figure_6.jpg` | The 6 print-ready figures actually reviewed by Materials & Design. |
 | `figures/captions.md`    | Current figure captions. |
 | `figures/archive-2026-06-pre-MD-revision/` | Superseded pre-revision figure set, kept for reference. |
 | `archive-2026-06-pre-MD-revision/` | Superseded pre-revision manuscript .docx/.md files, kept for reference. |
-| `submissions/{SMS,JAC,MSEA,MMTA}/` | Assembled, ready-to-submit packages (manuscript, cover letter, figures, tables, highlights/graphical abstract where applicable). |
+| `submissions/{SMS,JAC,MSEA,MMTA,JMEP}/` | Assembled, ready-to-submit packages (manuscript, cover letter, figures, tables, highlights/graphical abstract where applicable). |
+| `submissions/*.zip`      | Same folders, zipped for direct upload to each journal's submission portal. |
 
 ## Target journals
 
@@ -31,6 +33,7 @@ Rejected by *Materials & Design* (Elsevier) in July 2026 (no reviewer comments p
 | `JAC`   | *Journal of Alloys and Compounds* (Elsevier, IF 6.7) | numbered, with titles | Highlights + graphical abstract included. |
 | `MSEA`  | *Materials Science and Engineering: A* (Elsevier, IF 7.0) | numbered, with titles | Highlights + graphical abstract included; closest broad-scope sibling to Materials & Design. |
 | `MMTA`  | *Metallurgical and Materials Transactions A* (Springer/TMS-ASM) | numbered, no titles | Title page includes full mailing address; continuous line numbering added. |
+| `JMEP`  | *Journal of Materials Engineering and Performance* (Springer/ASM, IF 2.6) | numbered, with titles | Broadest scope of the five (materials selection/processing/characterization/evaluation); live submission-guidelines page is login-gated, so word/page limits are unverified — see follow-up list below. |
 
 ## Rebuild the docx packages
 
@@ -50,6 +53,10 @@ pandoc front_MSEA.md manuscript.md --from markdown+yaml_metadata_block --to docx
 pandoc front_MMTA.md manuscript.md --from markdown+yaml_metadata_block --to docx `
   --citeproc --bibliography references.bib --csl mmta.csl `
   --resource-path=. --output submissions/MMTA/Cai_Fe-SMA_MMTA_manuscript.docx
+
+pandoc front_JMEP.md manuscript.md --from markdown+yaml_metadata_block --to docx `
+  --citeproc --bibliography references.bib --csl jmep.csl `
+  --resource-path=. --output submissions/JMEP/Cai_Fe-SMA_JMEP_manuscript.docx
 ```
 
 MMT-A additionally needs continuous line numbering re-applied after any rebuild (python-docx injects `w:lnNumType` into the section properties — see `tasks/todo.md` for the one-off script used).
@@ -58,6 +65,7 @@ MMT-A additionally needs continuous line numbering re-applied after any rebuild 
 
 - **Fort Wayne Metals and SSRF mailing addresses** in `front_MMTA.md` have placeholder ZIP/postal codes — MMT-A's title page requires exact city/state/zip (or city/country/postal code). Confirm and fill in.
 - **Ref [18]** (Yang *et al.*, SSRF beamline paper) is cited with a truncated author list ("and others") because that's how it was cited in the Materials & Design submission. MMT-A's style guide asks for full author lists with no "et al." — worth tracking down the complete author list before that submission.
+- **JMEP's word/page limits and abstract-length requirement were not confirmed** — the live submission-guidelines page (`springer.com/journal/11665/submission-guidelines`) redirects behind a login wall. The current ~4000-word body and 167-word abstract are well within every other target's limits, so this is a low-risk gap, but worth a manual check before submitting.
 - Each journal's online submission system (title, abstract, keywords, suggested reviewers) still needs to be filled in by hand — this repo only produces the files, not the portal metadata.
 
 ## Authors
