@@ -31,11 +31,13 @@ T_SOLUTION = 1200.0
 MIN_SHOW = 0.005
 NONCONV = '__NONCONVERGED__'
 
+# Compositions are Table 1 (wt%) converted to at% -- state the unit on the figure,
+# because Table 1 is in wt% and Al roughly doubles on conversion.
 PANELS = [
     ('benchmark', '(a)  Omori-alloy',
-     'Fe–34.1Mn–15.2Al–7.8Ni–0.04C'),
+     'Fe–34.1Mn–15.2Al–7.8Ni–0.04C  (at%)'),
     ('llm', '(b)  AI-alloy',
-     'Fe–29.8Mn–11.9Al–4.2Ni–2.0Si–0.45C'),
+     'Fe–29.8Mn–11.9Al–4.2Ni–2.0Si–0.45C  (at%)'),
     ('llm_noC', '(c)  AI-alloy, carbon removed',
      'all other elements held fixed'),
 ]
