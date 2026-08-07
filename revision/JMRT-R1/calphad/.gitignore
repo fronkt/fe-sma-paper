@@ -1,0 +1,3 @@
+# Third-party thermodynamic assessments — fetched, never redistributed.
+# See README.md, "Licensing". Rebuild with: python fetch_databases.py
+db/

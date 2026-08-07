@@ -1,0 +1,135 @@
+Equilibrium step diagrams, 400-1400 C in 10 C steps
+
+==============================================================================
+mpea-02b  (mpea-02b.tdb)
+Hallstedt HEA v2b. Primary run: only database with Ni and C together. No Si.
+elements: FE MN AL NI C
+phases  : B2_BCC A1_FCC KAPPA_E21 CEMENTITE_D011 M23C6_D84 M7C3_D101 M5C2 GRAPHITE_A9 CBCC_A12 CUB_A13 HCP_A3 SIGMA_D8B AL8FE5_D82 AL8MN5_D810 AL13FE4 AL5FE2 AL2FE AL3NI2_D513 AL3NI_D011 AL3NI5 AL4NI3 AL71FE5NI24 AL11MN4_HT AL11MN4_LT AL12MN AL6MN_D2H AL4MN_MU AL4MN_LAMBDA
+absent  : LIQUID:L
+
+--- mpea-02b / benchmark ---
+    at.%: AL 15.224, C 0.040, FE 42.768, MN 34.155, NI 7.812
+    400 C : CUB_A13 71.4%, B2_BCC[ordered] 21.3%, A1_FCC 5.1%, B2_BCC[A2] 2.1%, M23C6_D84 0.1%
+    500 C : CUB_A13 48.4%, A1_FCC 29.6%, B2_BCC[ordered] 22.0%
+    600 C : A1_FCC 57.7%, B2_BCC[ordered] 21.7%, CUB_A13 20.5%
+    700 C : A1_FCC 79.4%, B2_BCC[ordered] 20.6%
+    800 C : A1_FCC 80.6%, B2_BCC[ordered] 19.4%
+    900 C : A1_FCC 81.3%, B2_BCC[ordered] 18.7%
+   1000 C : A1_FCC 79.2%, B2_BCC[ordered] 20.8%
+   1100 C : B2_BCC[A2] 83.0%, A1_FCC 11.8%, B2_BCC[ordered] 5.2%
+   1200 C : B2_BCC[A2] 100.0%
+   1300 C : B2_BCC[A2] 100.0%
+   1400 C : B2_BCC[A2] 100.0%
+
+--- mpea-02b / llm ---
+    at.%: AL 12.161, C 0.460, FE 52.632, MN 30.455, NI 4.292
+    400 C : CUB_A13 36.8%, A1_FCC 35.9%, B2_BCC[A2] 14.6%, B2_BCC[ordered] 11.0%, M23C6_D84 1.7%
+    500 C : A1_FCC 90.1%, B2_BCC[ordered] 9.9%
+    600 C : A1_FCC 92.0%, B2_BCC[ordered] 8.0%
+    700 C : A1_FCC 94.5%, B2_BCC[ordered] 5.5%
+    800 C : A1_FCC 97.7%, B2_BCC[ordered] 2.3%
+    900 C : A1_FCC 100.0%
+   1000 C : A1_FCC 100.0%
+   1100 C : A1_FCC 75.1%, B2_BCC[A2] 24.9%
+   1200 C : B2_BCC[A2] 71.1%, A1_FCC 28.9%
+   1300 C : B2_BCC[A2] 94.3%, A1_FCC 5.7%
+   1400 C : B2_BCC[A2] 100.0%
+
+--- mpea-02b / llm_noC ---
+    at.%: AL 12.218, C 0.000, FE 52.875, MN 30.595, NI 4.312
+    400 C : CUB_A13 43.7%, A1_FCC 31.3%, B2_BCC[A2] 14.0%, B2_BCC[ordered] 11.0%
+    500 C : A1_FCC 90.1%, B2_BCC[ordered] 9.9%
+    600 C : A1_FCC 92.0%, B2_BCC[ordered] 8.0%
+    700 C : A1_FCC 94.7%, B2_BCC[ordered] 5.3%
+    800 C : A1_FCC 98.0%, B2_BCC[ordered] 2.0%
+    900 C : A1_FCC 100.0%
+   1000 C : A1_FCC 100.0%
+   1100 C : B2_BCC[A2] 53.9%, A1_FCC 46.1%
+   1200 C : B2_BCC[A2] 100.0%
+   1300 C : B2_BCC[A2] 100.0%
+   1400 C : B2_BCC[A2] 100.0%
+
+==============================================================================
+PrecHiMn-04  (PrecHiMn-04_2.pycalphad.tdb)
+High-Mn steels. Carries Si and D0_3 (BCC_4SL) but has no Ni, so the benchmark cannot be run here.
+elements: FE MN AL SI C
+phases  : BCC_4SL A1_FCC KAPPA_E21 CEMENTITE_D011 M23C6_D84 M7C3_D101 M5C2 GRAPHITE_A9 CBCC_A12 CUB_A13 HCP_A3 AL8FE5_D82 AL8MN5_D810 AL13FE4 AL5FE2 AL2FE AL12MN AL6MN_D2H AL11MN4_HT AL11MN4_LT FE2SI FESI2_H FESI2_L M3SI M5SI3_D88 FE8SI2C SIGMA_D8B
+absent  : LIQUID:L
+
+--- PrecHiMn-04 / llm ---
+    at.%: AL 12.436, C 0.470, FE 53.820, MN 31.142, SI 2.132
+    400 C : CUB_A13 83.5%, BCC_4SL[A2] 14.1%, KAPPA_E21 2.4%
+    500 C : CUB_A13 92.0%, A1_FCC 5.8%, KAPPA_E21 2.2%
+    600 C : CUB_A13 56.9%, A1_FCC 43.1%
+    700 C : A1_FCC 73.3%, CUB_A13 26.7%
+    800 C : A1_FCC 100.0%
+    900 C : A1_FCC 100.0%
+   1000 C : A1_FCC 84.9%, BCC_4SL[A2] 15.1%
+   1100 C : A1_FCC 59.7%, BCC_4SL[A2] 40.3%
+   1200 C : BCC_4SL[A2] 64.5%, A1_FCC 35.5%
+   1300 C : BCC_4SL[A2] 84.5%, A1_FCC 15.5%
+   1400 C : BCC_4SL[A2] 100.0%
+
+--- PrecHiMn-04 / llm_noC ---
+    at.%: AL 12.495, C 0.000, FE 54.074, MN 31.289, SI 2.142
+    400 C : CUB_A13 88.2%, BCC_4SL[A2] 11.8%
+    500 C : CUB_A13 100.0%
+    600 C : CUB_A13 78.5%, A1_FCC 21.5%
+    700 C : A1_FCC 56.1%, CUB_A13 43.9%
+    800 C : A1_FCC 97.5%, CUB_A13 2.5%
+    900 C : A1_FCC 94.5%, BCC_4SL[A2] 5.5%
+   1000 C : A1_FCC 64.9%, BCC_4SL[A2] 35.1%
+   1100 C : BCC_4SL[A2] 73.1%, A1_FCC 26.9%
+   1200 C : BCC_4SL[A2] 100.0%
+   1300 C : BCC_4SL[A2] 100.0%
+   1400 C : BCC_4SL[A2] 100.0%
+
+==============================================================================
+mc_fe  (mc_fe_v2.059.pycalphad.tdb)
+MatCalc open Fe. Only database carrying all six elements plus P. BCC_B2 is an independent phase here, and K_CARB is kappa-(Fe,Mn)3AlC.
+elements: FE MN AL NI SI C P
+phases  : LIQUID BCC_A2 BCC_B2 FCC_A1 K_CARB CEMENTITE M23C6 M7C3 KSI_CARBIDE GRAPHITE BETA_MN ALPHA_MN HCP_A3 SIGMA LAVES_PHASE M2P M3P G_PHASE MU_PHASE CHI_A12
+absent  : M5C2
+
+--- mc_fe / benchmark ---
+    at.%: AL 15.206, C 0.040, FE 42.717, MN 34.114, NI 7.803, P 0.100, SI 0.020
+    400 C : BCC_A2 79.2%, FCC_A1 20.3%, M3P 0.4%, M23C6 0.0%
+    500 C : BCC_A2 83.2%, FCC_A1 12.7%, BETA_MN 3.8%, LIQUID 0.2%
+    600 C : BCC_A2 89.5%, FCC_A1 10.3%, LIQUID 0.2%
+    700 C : BCC_A2 94.3%, FCC_A1 5.4%, LIQUID 0.2%
+    800 C : BCC_A2 97.0%, FCC_A1 2.8%, LIQUID 0.2%
+    900 C : BCC_A2 98.8%, FCC_A1 1.0%, LIQUID 0.1%
+   1000 C : BCC_A2 100.0%
+   1100 C : BCC_A2 100.0%
+   1200 C : BCC_A2 100.0%
+   1300 C : BCC_A2 100.0%
+   1400 C : BCC_A2 73.9%, LIQUID 26.1%
+
+--- mc_fe / llm ---
+    at.%: AL 11.913, C 0.450, FE 51.557, MN 29.833, NI 4.205, P 0.000, SI 2.042
+    400 C : *** NOT CONVERGED ***
+    500 C : BCC_A2 49.9%, FCC_A1 49.0%, M23C6 1.1%
+    600 C : FCC_A1 59.4%, BCC_A2 40.6%
+    700 C : FCC_A1 61.7%, BCC_A2 38.3%
+    800 C : FCC_A1 62.5%, BCC_A2 37.5%
+    900 C : FCC_A1 61.3%, BCC_A2 38.7%
+   1000 C : FCC_A1 57.2%, BCC_A2 42.8%
+   1100 C : BCC_A2 50.5%, FCC_A1 49.5%
+   1200 C : BCC_A2 61.9%, FCC_A1 38.1%
+   1300 C : BCC_A2 66.5%, LIQUID 33.5%
+   1400 C : LIQUID 87.8%, BCC_A2 12.2%
+  !! did not converge at 8 of 101 temperatures: 400, 410, 420, 430, 840, 890, 990, 1190
+
+--- mc_fe / llm_noC ---
+    at.%: AL 11.967, C 0.000, FE 51.790, MN 29.968, NI 4.224, P 0.000, SI 2.051
+    400 C : BCC_A2 66.6%, BETA_MN 24.4%, FCC_A1 6.9%, G_PHASE 2.2%
+    500 C : BCC_A2 55.4%, FCC_A1 39.6%, BETA_MN 5.0%
+    600 C : BCC_A2 53.0%, FCC_A1 47.0%
+    700 C : BCC_A2 53.2%, FCC_A1 46.8%
+    800 C : BCC_A2 55.8%, FCC_A1 44.2%
+    900 C : BCC_A2 61.9%, FCC_A1 38.1%
+   1000 C : BCC_A2 73.6%, FCC_A1 26.4%
+   1100 C : BCC_A2 93.2%, FCC_A1 6.8%
+   1200 C : BCC_A2 100.0%
+   1300 C : BCC_A2 76.4%, LIQUID 23.6%
+   1400 C : LIQUID 81.8%, BCC_A2 18.2%

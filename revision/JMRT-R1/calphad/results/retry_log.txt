@@ -1,0 +1,8 @@
+780 C  pdens 1000  : FCC_A1 62.49%, BCC_A2 37.51%
+780 C  pdens 3000  : FCC_A1 62.49%, BCC_A2 37.51%
+780 C  pdens 700   : FCC_A1 62.49%, BCC_A2 37.51%
+780 C  pdens 4000  : FCC_A1 62.49%, BCC_A2 37.51%
+800 C  pdens 1000  : FCC_A1 62.52%, BCC_A2 37.48%
+800 C  pdens 3000  : FCC_A1 62.52%, BCC_A2 37.48%
+800 C  pdens 700   : FCC_A1 62.52%, BCC_A2 37.48%
+800 C  pdens 4000  : FCC_A1 62.52%, BCC_A2 37.48%

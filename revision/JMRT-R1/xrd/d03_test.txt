@@ -1,0 +1,135 @@
+D0_3 Fe3Al, a = 5.79632 A (= 2 x bcc a = 2.89816)
+
+Reflections unique to D0_3 (B2 cannot produce these):
+   {111}  d = 3.3465 A   2theta = 2.1552 deg
+   {311}  d = 1.7477 A   2theta = 4.1275 deg
+   {331}  d = 1.3298 A   2theta = 5.4254 deg
+   {511}  d = 1.1155 A   2theta = 6.4685 deg
+   {333}  d = 1.1155 A   2theta = 6.4685 deg
+
+Shared with B2 ordering:
+   {200}  d = 2.8982 A   2theta = 2.4886 deg
+   {222}  d = 1.6733 A   2theta = 4.3111 deg
+   {420}  d = 1.2961 A   2theta = 5.5665 deg
+
+Overlap check against fcc and bcc fundamentals (flagged if within 0.05 deg):
+   {111} @ 2.1552 : CLEAN
+   {311} @ 4.1275 : CLEAN
+   {331} @ 5.4254 : CLEAN
+   {511} @ 6.4685 : OVERLAPS fcc(3, 1, 1) @ 6.559, fcc(3, 1, 1) @ 6.559, fcc(3, 1, 1) @ 6.559
+   {333} @ 6.4685 : OVERLAPS fcc(3, 1, 1) @ 6.559, fcc(3, 1, 1) @ 6.559, fcc(3, 1, 1) @ 6.559
+   {200} @ 2.4886 : CLEAN
+   {222} @ 4.3111 : CLEAN
+   {420} @ 5.5665 : OVERLAPS fcc(2, 2, 0) @ 5.593, fcc(2, 2, 0) @ 5.593, fcc(2, 2, 0) @ 5.593
+
+========================================================================
+Sam1-NO7325.chi   LLM-alloy, 3-cycle AGG
+  hkl      2theta    % of max  S/N      verdict
+  -- UNIQUE --
+  {111}    2.1552    0.916     18.5     DETECTED
+  {311}    4.1275    0.630     0.4      absent
+  {331}    5.4254    0.213     0.7      absent
+  {511}    6.4685    0.328     1.3      UNUSABLE - overlaps fcc(3, 1, 1), fcc(3, 1, 1), fcc(3, 1, 1)
+  {333}    6.4685    0.328     1.3      UNUSABLE - overlaps fcc(3, 1, 1), fcc(3, 1, 1), fcc(3, 1, 1)
+  -- B2-shared --
+  {200}    2.4886    0.946     17.6     DETECTED
+  {222}    4.3111    0.344     1.6      absent
+  {420}    5.5665    11.076    173.3    UNUSABLE - overlaps fcc(2, 2, 0), fcc(2, 2, 0), fcc(2, 2, 0)
+
+========================================================================
+Sam1-NO7328.chi   LLM-alloy, 3-cycle AGG
+  hkl      2theta    % of max  S/N      verdict
+  -- UNIQUE --
+  {111}    2.1552    1.019     19.0     DETECTED
+  {311}    4.1275    0.771     0.4      absent
+  {331}    5.4254    0.309     0.5      absent
+  {511}    6.4685    0.493     1.6      UNUSABLE - overlaps fcc(3, 1, 1), fcc(3, 1, 1), fcc(3, 1, 1)
+  {333}    6.4685    0.493     1.6      UNUSABLE - overlaps fcc(3, 1, 1), fcc(3, 1, 1), fcc(3, 1, 1)
+  -- B2-shared --
+  {200}    2.4886    0.992     15.1     DETECTED
+  {222}    4.3111    0.403     1.5      absent
+  {420}    5.5665    21.426    226.1    UNUSABLE - overlaps fcc(2, 2, 0), fcc(2, 2, 0), fcc(2, 2, 0)
+
+========================================================================
+Sam5-NO7286.chi   LLM-alloy, 1200C/4fpm, 0 % strain
+  hkl      2theta    % of max  S/N      verdict
+  -- UNIQUE --
+  {111}    2.1552    0.812     26.8     DETECTED
+  {311}    4.1275    0.460     0.5      absent
+  {331}    5.4254    0.170     0.5      absent
+  {511}    6.4685    0.323     1.7      UNUSABLE - overlaps fcc(3, 1, 1), fcc(3, 1, 1), fcc(3, 1, 1)
+  {333}    6.4685    0.323     1.7      UNUSABLE - overlaps fcc(3, 1, 1), fcc(3, 1, 1), fcc(3, 1, 1)
+  -- B2-shared --
+  {200}    2.4886    1.059     23.5     DETECTED
+  {222}    4.3111    0.293     2.1      absent
+  {420}    5.5665    9.454     180.3    UNUSABLE - overlaps fcc(2, 2, 0), fcc(2, 2, 0), fcc(2, 2, 0)
+
+========================================================================
+Sam6-NO7280.chi   LLM-alloy, 1200C/4fpm, 10 % strain
+  hkl      2theta    % of max  S/N      verdict
+  -- UNIQUE --
+  {111}    2.1552    0.488     16.5     DETECTED
+  {311}    4.1275    0.266     0.2      absent
+  {331}    5.4254    0.111     0.4      absent
+  {511}    6.4685    0.291     1.7      UNUSABLE - overlaps fcc(3, 1, 1), fcc(3, 1, 1), fcc(3, 1, 1)
+  {333}    6.4685    0.291     1.7      UNUSABLE - overlaps fcc(3, 1, 1), fcc(3, 1, 1), fcc(3, 1, 1)
+  -- B2-shared --
+  {200}    2.4886    0.502     16.5     DETECTED
+  {222}    4.3111    0.188     1.8      absent
+  {420}    5.5665    5.991     173.8    UNUSABLE - overlaps fcc(2, 2, 0), fcc(2, 2, 0), fcc(2, 2, 0)
+
+========================================================================
+Sam7-NO7271.chi   benchmark, 1200C/4fpm, 0 % strain
+  hkl      2theta    % of max  S/N      verdict
+  -- UNIQUE --
+  {111}    2.1552    0.283     2.9      absent
+  {311}    4.1275    0.159     0.4      absent
+  {331}    5.4254    0.071     0.1      absent
+  {511}    6.4685    0.076     0.8      UNUSABLE - overlaps fcc(3, 1, 1), fcc(3, 1, 1), fcc(3, 1, 1)
+  {333}    6.4685    0.076     0.8      UNUSABLE - overlaps fcc(3, 1, 1), fcc(3, 1, 1), fcc(3, 1, 1)
+  -- B2-shared --
+  {200}    2.4886    3.833     53.5     DETECTED
+  {222}    4.3111    0.546     8.1      DETECTED
+  {420}    5.5665    2.952     42.6     UNUSABLE - overlaps fcc(2, 2, 0), fcc(2, 2, 0), fcc(2, 2, 0)
+
+========================================================================
+Sam7-NO7274.chi   benchmark, 1200C/4fpm, 0 % strain
+  hkl      2theta    % of max  S/N      verdict
+  -- UNIQUE --
+  {111}    2.1552    0.194     2.3      absent
+  {311}    4.1275    0.121     0.5      absent
+  {331}    5.4254    0.041     0.4      absent
+  {511}    6.4685    0.062     1.0      UNUSABLE - overlaps fcc(3, 1, 1), fcc(3, 1, 1), fcc(3, 1, 1)
+  {333}    6.4685    0.062     1.0      UNUSABLE - overlaps fcc(3, 1, 1), fcc(3, 1, 1), fcc(3, 1, 1)
+  -- B2-shared --
+  {200}    2.4886    7.171     111.6    DETECTED
+  {222}    4.3111    0.613     15.3     DETECTED
+  {420}    5.5665    1.963     129.3    UNUSABLE - overlaps fcc(2, 2, 0), fcc(2, 2, 0), fcc(2, 2, 0)
+
+========================================================================
+Sam8-NO7265.chi   benchmark, 1200C/4fpm, 8 % strain
+  hkl      2theta    % of max  S/N      verdict
+  -- UNIQUE --
+  {111}    2.1552    0.082     4.7      marginal
+  {311}    4.1275    0.291     1.0      absent
+  {331}    5.4254    0.226     0.2      absent
+  {511}    6.4685    0.920     3.1      UNUSABLE - overlaps fcc(3, 1, 1), fcc(3, 1, 1), fcc(3, 1, 1)
+  {333}    6.4685    0.920     3.1      UNUSABLE - overlaps fcc(3, 1, 1), fcc(3, 1, 1), fcc(3, 1, 1)
+  -- B2-shared --
+  {200}    2.4886    0.533     32.8     DETECTED
+  {222}    4.3111    0.213     1.6      absent
+  {420}    5.5665    2.818     39.3     UNUSABLE - overlaps fcc(2, 2, 0), fcc(2, 2, 0), fcc(2, 2, 0)
+
+========================================================================
+Sam8-NO7268.chi   benchmark, 1200C/4fpm, 8 % strain
+  hkl      2theta    % of max  S/N      verdict
+  -- UNIQUE --
+  {111}    2.1552    0.106     4.7      marginal
+  {311}    4.1275    0.391     0.6      absent
+  {331}    5.4254    0.409     0.4      absent
+  {511}    6.4685    0.782     3.3      UNUSABLE - overlaps fcc(3, 1, 1), fcc(3, 1, 1), fcc(3, 1, 1)
+  {333}    6.4685    0.782     3.3      UNUSABLE - overlaps fcc(3, 1, 1), fcc(3, 1, 1), fcc(3, 1, 1)
+  -- B2-shared --
+  {200}    2.4886    0.372     15.2     DETECTED
+  {222}    4.3111    0.212     1.1      absent
+  {420}    5.5665    2.839     22.1     UNUSABLE - overlaps fcc(2, 2, 0), fcc(2, 2, 0), fcc(2, 2, 0)
