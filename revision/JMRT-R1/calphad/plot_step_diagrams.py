@@ -136,8 +136,7 @@ def main():
                 if np.nanmax(ordered) >= MIN_SHOW:
                     ocol = colours.get('%s[ordered]' % stem, PALETTE[2])
                     ax.fill_between(temps, 0, 100 * ordered, color=ocol, alpha=0.45,
-                                    lw=0, label=pretty('%s[ordered]' % stem)
-                                    + '\n(portion of the bcc that is ordered)')
+                                    lw=0, label=pretty('%s[ordered]' % stem))
 
             for label in plain:
                 if present.get(label, 0) < MIN_SHOW:
@@ -153,11 +152,20 @@ def main():
             ax.set_xlim(temps.min(), temps.max())
             ax.set_ylim(-2, 102)
             ax.grid(alpha=0.25, lw=0.6)
-            ax.legend(fontsize=7.5, loc='center left', framealpha=0.92)
+
+        # One shared legend below the axes. Per-panel legends sat on top of the
+        # curves they were labelling.
+        handles = OrderedDict()
+        for ax in axes:
+            for handle, label in zip(*ax.get_legend_handles_labels()):
+                handles.setdefault(label, handle)
 
         axes[0].set_ylabel('Equilibrium phase fraction (mol %)')
+        fig.legend(list(handles.values()), list(handles.keys()), loc='lower center',
+                   ncol=min(len(handles), 6), fontsize=8, frameon=False,
+                   handlelength=1.8, columnspacing=1.8)
         fig.suptitle('Equilibrium step diagram — %s' % db, fontsize=11)
-        fig.tight_layout(rect=(0, 0, 1, 0.94))
+        fig.tight_layout(rect=(0, 0.07, 1, 0.94))
         out = os.path.join(OUTDIR, 'step_%s.png' % db.replace('.', '-'))
         fig.savefig(out, dpi=200)
         plt.close(fig)

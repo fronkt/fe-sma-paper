@@ -171,6 +171,31 @@ conceding R3#12 and winning it.
       generative AI was used to prepare the manuscript text. Sections 2.6, 3.4, 4.1 and 4.2
       were drafted with AI assistance, so that statement must be updated before resubmission
 
+### Revisions after review (2026-08-07 / 08)
+
+- [x] **wt% vs at%** — Fig. 7 panels never stated their unit, so the compositions looked
+      inconsistent with Table 1 (which is wt%). Conversion re-verified from Table 1: it
+      reproduces the figure exactly. Chemistries now live in the caption with the unit named
+- [x] **mpea-02b Si renormalization disclosed** — the database carries no Si, so Si is
+      dropped and the remainder renormalized; §2.6 now gives the composition actually
+      solved, Fe–30.5Mn–12.2Al–4.3Ni–0.46C, and notes the ≤0.6 at% shift
+- [x] **B2 shading is a partition, not a phase** — confirmed `ordered ≤ total` at every
+      temperature in both alloys. Below ≈1090 °C the benchmark bcc is *fully* ordered, so
+      equilibrium there is B2 + γ, **not** coherent B2 in an α matrix. §3.4, §4.1 and the
+      Conclusions were corrected: the coherent nanostructure is the kinetically arrested
+      approach to that equilibrium, reached by quenching single-phase α and ageing it
+- [x] **Experimental C-free heat named as future work** in §4.2 — the paper previously had
+      no future-work statement at all, while R1#1 had asked for exactly that control
+- [x] **S. Cai, 2026-08-08 — Fig. 7 reduced to two panels.** Carbon-free panel removed; the
+      result is unchanged and now carried by Table 3 (all three databases) plus explicit
+      solvus numbers in §3.4. Panels labelled by role (benchmark / LLM-hypothesized) instead
+      of by chemistry. Legend moved below the axes in both the paper figure and the
+      diagnostic `plot_step_diagrams.py`, where per-panel legends had sat on the curves
+- [ ] **Wording check for S. Cai** — panels read "(a) Omori-alloy / benchmark" and
+      "(b) AI-alloy / LLM-hypothesized", keeping the short names §2.1 defines while carrying
+      his descriptors. Trivial to switch to his literal "Omori Benchmark" / "LLM-Hypothesized"
+      if he prefers, but then §2.1's naming should change with it
+
 ## Tier 3b — independent XRD re-analysis (done 2026-08-05, E: drive online)
 
 Read `revision/JMRT-R1/xrd/ANALYSIS.md` before editing any text.

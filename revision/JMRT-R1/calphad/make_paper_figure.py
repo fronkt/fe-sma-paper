@@ -31,15 +31,13 @@ T_SOLUTION = 1200.0
 MIN_SHOW = 0.005
 NONCONV = '__NONCONVERGED__'
 
-# Compositions are Table 1 (wt%) converted to at% -- state the unit on the figure,
-# because Table 1 is in wt% and Al roughly doubles on conversion.
+# S. Cai, 2026-08-08: drop the carbon-free panel (the result stays in Table 3) and
+# label the panels by alloy role rather than by chemistry -- the wt%/at% mismatch
+# against Table 1 made the composition strings more confusing than useful. The
+# chemistries now live in the caption.
 PANELS = [
-    ('benchmark', '(a)  Omori-alloy',
-     'Fe–34.1Mn–15.2Al–7.8Ni–0.04C  (at%)'),
-    ('llm', '(b)  AI-alloy',
-     'Fe–29.8Mn–11.9Al–4.2Ni–2.0Si–0.45C  (at%)'),
-    ('llm_noC', '(c)  AI-alloy, carbon removed',
-     'all other elements held fixed'),
+    ('benchmark', '(a)  Omori-alloy', 'benchmark'),
+    ('llm', '(b)  AI-alloy', 'LLM-hypothesized'),
 ]
 
 C_BCC = '#c1272d'
@@ -65,7 +63,7 @@ def main():
     df = pd.read_csv(CSV)
     sub = df[(df['database'] == DATABASE) & (df['label'] != NONCONV)]
 
-    fig, axes = plt.subplots(1, 3, figsize=(12.6, 4.4), sharey=True)
+    fig, axes = plt.subplots(1, len(PANELS), figsize=(9.6, 4.4), sharey=True)
     handles = OrderedDict()
 
     for i, (ax, (alloy, tag, comp)) in enumerate(zip(axes, PANELS)):
@@ -93,7 +91,7 @@ def main():
             line, = ax.plot(temps, 100 * y, color=colour, lw=2.1, zorder=3)
             handles.setdefault(name, line)
 
-        ax.set_title('%s\n%s' % (tag, comp), fontsize=9.5, linespacing=1.35)
+        ax.set_title('%s\n%s' % (tag, comp), fontsize=11, linespacing=1.4)
         ax.set_xlabel('Temperature (°C)')
         ax.set_xlim(400, 1400)
         ax.set_ylim(-2, 102)
