@@ -107,22 +107,38 @@ def phases_at(eq, ti, cfg, layout):
 def solvus(temps_c, per_T, cfg):
     """Lowest temperature above which bcc is the only solid phase.
 
-    Returns None if no single-phase bcc field exists anywhere in the scanned window,
-    which is the interesting answer for this alloy.
+    Returns (T_solvus, excursions). T_solvus is None if no single-phase bcc field
+    exists anywhere in the scanned window, which would be the interesting answer.
+
+    An earlier version invalidated the solvus on *any* later non-single-phase point,
+    which let one bad temperature move the reported value by 60 C: at Ni = 5.4 at.%
+    in the C-free series, 1210 C returns 100% FCC sandwiched between 100% BCC at both
+    1200 and 1220 C. An isolated single-point flip with no two-phase transition on
+    either side is a solver artifact, not a re-entrant gamma field. So the first
+    crossing is reported and any later excursions are returned alongside it rather
+    than being allowed to silently shift the number or be silently dropped.
     """
-    single = None
+    single, excursions = None, []
     for tc, seen in zip(temps_c, per_T):
-        solid = {k: f for k, f in seen.items()
-                 if not k.startswith('LIQUID')}
-        if not solid:
+        solid = {k: f for k, f in seen.items() if not k.startswith('LIQUID')}
+        if not solid or sum(solid.values()) <= 0:
+            excursions.append((tc, 'not converged'))
             continue
-        bcc = sum(f for k, f in solid.items() if k.startswith(cfg['bcc']))
+        # Share of the SOLID, not of unity: fractions include liquid, so past the solidus
+        # bcc drops below the threshold while still being the only solid phase. Normalising
+        # against unity reads sixteen consecutive melting steps in mc_fe as gamma re-entry.
+        # Also match every bcc description -- mc_fe models BCC_A2 and BCC_B2 as separate
+        # phases, so testing cfg['bcc'] alone misses the disordered one entirely.
+        bcc = (sum(f for k, f in solid.items()
+                   if k.startswith(('B2_BCC', 'BCC_A2', 'BCC_B2', 'BCC_4SL')))
+               / sum(solid.values()))
         if bcc > 0.999:
             if single is None:
                 single = tc
-        else:
-            single = None          # a later gamma re-entry invalidates an earlier open
-    return single
+        elif single is not None:
+            excursions.append((tc, ', '.join('%s %.3f' % kv for kv in
+                                             sorted(solid.items(), key=lambda x: -x[1]))))
+    return single, excursions
 
 
 def run(cfg, report, rows):
@@ -154,13 +170,16 @@ def run(cfg, report, rows):
             temps_c = [round(float(t) - 273.15, 1) for t in T_HI]
             per_T = [phases_at(eq, i, cfg, layout) for i in range(len(T_HI))]
 
-            sol = solvus(temps_c, per_T, cfg)
+            sol, excursions = solvus(temps_c, per_T, cfg)
             at1200 = per_T[temps_c.index(1200.0)]
             desc = ', '.join('%s %.1f%%' % (k, 100 * f)
                              for k, f in sorted(at1200.items(), key=lambda kv: -kv[1]))
             report.write(u'%6.1f  %10s  %s\n'
                          % (ni, ('%.0f C' % sol) if sol else 'none <=1400',
                             desc or '*** NOT CONVERGED ***'))
+            for tc, what in excursions:
+                report.write(u'        !! %g C above the solvus is not single-phase bcc: %s\n'
+                             % (tc, what))
 
             for tc, seen in zip(temps_c, per_T):
                 for label, f in seen.items():
@@ -182,13 +201,33 @@ def run(cfg, report, rows):
 
 
 def main():
+    """Run every database, or just the ones named on the command line.
+
+    Naming a subset merges into the existing CSV instead of replacing it, matching
+    step_diagrams.py. Without this a `python ni_sensitivity.py mc_fe` silently discards
+    the mpea-02b scan, which takes about twenty minutes to produce.
+    """
     os.makedirs(OUTDIR, exist_ok=True)
     wanted = [a for a in sys.argv[1:] if not a.startswith('-')]
     runs = [c for c in RUNS if c['key'] in wanted] if wanted else RUNS
+    if wanted and not runs:
+        raise SystemExit('no database matches %s (have: %s)'
+                         % (wanted, ', '.join(c['key'] for c in RUNS)))
 
-    report = io.open(os.path.join(OUTDIR, 'ni_sensitivity.txt'), 'w', encoding='utf-8')
-    report.write(u'Ni sensitivity, %.1f-%.1f at.%% in %.1f steps, iron balancing.\n'
-                 % (NI_MIN, NI_MAX, NI_STEP))
+    path = os.path.join(OUTDIR, 'ni_sensitivity.csv')
+    txt = os.path.join(OUTDIR, 'ni_sensitivity.txt')
+    fields = ['database', 'series', 'ni_at', 'T_C', 'label', 'fraction', 'alpha_solvus_C']
+
+    kept = []
+    if wanted and os.path.exists(path):
+        with open(path, newline='', encoding='utf-8') as fh:
+            kept = [r for r in csv.DictReader(fh) if r['database'] not in wanted]
+
+    mode = 'a' if wanted and os.path.exists(txt) else 'w'
+    report = io.open(txt, mode, encoding='utf-8')
+    report.write(u'\nNi sensitivity, %.1f-%.1f at.%% in %.1f steps, iron balancing.%s\n'
+                 % (NI_MIN, NI_MAX, NI_STEP,
+                    '  [re-run of %s]' % ', '.join(wanted) if wanted else ''))
     report.write(u'Mn, Al, Si and C held at measured values; C removed in the C_free series.\n')
 
     rows = []
@@ -199,14 +238,13 @@ def main():
             report.write(u'\n!!! %s FAILED: %s: %s\n' % (cfg['key'], type(exc).__name__, exc))
             print('FAILED %s: %s' % (cfg['key'], exc))
 
-    path = os.path.join(OUTDIR, 'ni_sensitivity.csv')
     with open(path, 'w', newline='', encoding='utf-8') as fh:
-        w = csv.DictWriter(fh, fieldnames=['database', 'series', 'ni_at', 'T_C',
-                                           'label', 'fraction', 'alpha_solvus_C'])
+        w = csv.DictWriter(fh, fieldnames=fields)
         w.writeheader()
+        w.writerows(kept)
         w.writerows(rows)
     report.close()
-    print('wrote %d rows -> %s' % (len(rows), path))
+    print('wrote %d new rows (+%d kept) -> %s' % (len(rows), len(kept), path))
 
 
 if __name__ == '__main__':

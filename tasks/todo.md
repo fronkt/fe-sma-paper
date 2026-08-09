@@ -272,11 +272,26 @@ Pure text edits. Nothing here can be wrong for reasons outside the manuscript.
       in-situ/loading-stage diffraction measurement; and the experimental carbon-free heat.
       With the reason none of them is expected to overturn the diagnosis — it rests on where
       the α field lies, a property of the composition rather than the treatment.
-- [ ] **R3#9 Ni sensitivity run** — `calphad/ni_sensitivity.py` written and running: Ni stepped
-      4.2 → 7.8 at.% with Fe balancing, two series (C at the measured 0.45 at.%, and C-free),
-      α-solvus and 1200 °C constitution extracted per composition, plus a coarse 400–950 °C
-      sweep to test whether more Ni opens a usable solution-and-age window. mpea-02b is the
-      primary; mc_fe runs the endpoints as a cross-check. **Write-up pending the result.**
+- [x] **R3#9 Ni sensitivity run — done, and the answer is emphatic** *(2026-08-09)*.
+      `calphad/ni_sensitivity.py`, 20 compositions × 62 temperatures on mpea-02b. Full
+      write-up in `calphad/results/NI-SENSITIVITY.md`.
+      - **With C at the measured 0.45 at%, the α solvus does not move at all: 1340 °C at
+        every Ni from 4.2 to 7.8 at%**, not one 10 °C grid step. Removing C puts it at
+        1150–1190 °C at every Ni. **Carbon ≈190 °C; nickel ≈0 °C.**
+      - Raising Ni at fixed C makes 1200 °C *more* austenitic (bcc 71.1 → 59.6 %), so
+        restoring the benchmark's nickel would have made the duplex problem slightly worse.
+      - Ni does control **how much** ordered bcc forms — 5.5 → 13.9 % at 700 °C — but always
+        coexisting with 86–94 % γ, never as coherent B2 in an α matrix.
+      - The line for the paper: **nickel sets how much B2 the alloy could form; carbon sets
+        whether there is ever an α matrix to form it in.** Not competing explanations.
+      - Written into §3.4 (result) and §4.2 (interpretation, replacing the one-line
+        "held at its measured value in the control").
+      - Disclosed: 5 of 1240 points non-converged (400–425 °C, low Ni), reported as gaps not
+        zeros; one solver artifact at C-free/Ni 5.4/1210 °C, which the first version of
+        `solvus()` let shift that entry from 1160 to 1220 °C. Fixed and disclosed inline.
+      - ⏳ **mc_fe endpoint cross-check still running** (pdens=2000, 6 elements, ~8 GB). Not
+        load-bearing — mpea-02b is the only database with Ni and C together and is the
+        primary throughout. Add its section to NI-SENSITIVITY.md if/when it lands.
 
 - [ ] Update **`highlights.md`** and the **JMRT cover letter** to match the tempered claims
 
