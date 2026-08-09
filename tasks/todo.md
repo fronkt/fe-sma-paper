@@ -196,8 +196,23 @@ Pure text edits. Nothing here can be wrong for reasons outside the manuscript.
       *(R1#3)*
 - [x] **§4.3** *(2026-08-08; renumbered 4.2->4.3)* — downgrade recovery / recrystallisation / grain growth from conclusion to
       inference; say what evidence would settle it *(R3#11)*
-- [ ] **Ni-equivalent arithmetic** written up as the bridging quantitative argument, with its
-      stainless-calibration limitation stated *(supports R1#1, R3#9)*
+- [x] **Ni-equivalent arithmetic** *(2026-08-09)* — **and the plan for it was wrong.**
+      This file previously specified Ni_eq = 32.7 (LLM) vs 26.2 (benchmark) with the carbon
+      term at +13.5 vs +1.3. Those were computed on **at.%**; Schaeffler is defined on
+      **wt.%**. Recomputed on the correct basis the ranking *reverses*:
+      | basis | LLM | benchmark | Δ |
+      |---|---|---|---|
+      | at.% (as planned) | 32.60 | 26.05 | **+6.55** — supports the paper |
+      | wt.% (as defined) | 23.85 | 27.48 | **−3.63** — contradicts the paper |
+      >
+      > Written into §4.2 as the correlation **and its failure**, with the three reasons:
+      > no aluminium term, though Al is 6.2/8.0 wt% and the strongest ferrite stabiliser
+      > present; the wt.%/at.% sensitivity of the carbon term (3.2 units vs 13.5); and
+      > Cr_eq ≈ 1.7 and 0.0 against a Schaeffler calibration band of 15–30, because neither
+      > alloy contains chromium. This is a **stronger** answer to R1#1 and R3#9 than the
+      > correlation would have been — a composition-only potency heuristic pointing the
+      > wrong way is exactly the failure mode the paper is about. Logged in
+      > `tasks/lessons.md`. *(supports R1#1, R3#9)*
 - [x] **Read Rahnama 2017, Saha 2022, Heo 2012, then position §2.1 and §4.3 against the
       lightweight-steel literature** *(2026-08-08)* *(R3#2 — the single strongest comment in
       all three reviews)*. Four places changed:
@@ -236,6 +251,33 @@ Pure text edits. Nothing here can be wrong for reasons outside the manuscript.
 > ⚠️ **Deliberately NOT added to the abstract: the 62/34/4 phase fractions**, which
 > R2 Abstract#2 also asks for. Promoting an unrefined number to page one is exactly the
 > exposure identified in xrd/RIETVELD-FILES-ANALYSIS.md. Add them once S. Cai answers.
+### Group A writing pass (2026-08-09)
+
+- [x] **R3#5 — the route may be wrong for this composition.** New §4.1 paragraph making the
+      ageing asymmetry explicit: the LLM-alloy *received* the 200 °C/3 h age reported to
+      improve pseudo-elasticity in this family and showed nothing (Fig. 2f, indistinguishable
+      from the unaged Fig. 2e), while the benchmark of Fig. 3b received **no age at all** and
+      still transformed. The shared route is therefore biased in the LLM-alloy's favour and
+      the null result cannot be blamed on a withheld treatment — while conceding that no
+      route was optimised for either alloy.
+- [x] **R3#6 — ex-situ XRD cannot exclude a fully reversible transformation.** §3.3 rewritten
+      to put the evidence in order: a transformation reversible enough to leave no diffraction
+      signature would still have produced recoverable strain *during* unloading, and every
+      unloading segment across eight anneal conditions returns nothing beyond σ/E; Fig. 3a's
+      heating step closes the retained-martensite route. The mechanical measurement is primary,
+      diffraction corroborative. What ex-situ genuinely cannot do — observe under load — is
+      named and sent to future work.
+- [x] **Future-work trio named explicitly in §4.4** (serves R3#5 and R3#6 together): an ageing
+      window optimised for this composition rather than inherited from the benchmark; an
+      in-situ/loading-stage diffraction measurement; and the experimental carbon-free heat.
+      With the reason none of them is expected to overturn the diagnosis — it rests on where
+      the α field lies, a property of the composition rather than the treatment.
+- [ ] **R3#9 Ni sensitivity run** — `calphad/ni_sensitivity.py` written and running: Ni stepped
+      4.2 → 7.8 at.% with Fe balancing, two series (C at the measured 0.45 at.%, and C-free),
+      α-solvus and 1200 °C constitution extracted per composition, plus a coarse 400–950 °C
+      sweep to test whether more Ni opens a usable solution-and-age window. mpea-02b is the
+      primary; mc_fe runs the endpoints as a cross-check. **Write-up pending the result.**
+
 - [ ] Update **`highlights.md`** and the **JMRT cover letter** to match the tempered claims
 
 ## Tier 2 — needs files already in this repo
