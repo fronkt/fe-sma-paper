@@ -1,0 +1,950 @@
+
+
+########## 697-7-SMA-constant.is_tcyclic-697-7.pdf  (8 pages) ##########
+Monday, September 22, 2025 11:54:13 AM
+Customer
+Production Number
+Purchase Order Number
+Alloy Type
+Lot Number
+Operator
+Production Machine
+Instron TT-
+Load Cell Used
+Method description 904 ALTERED- Special Non-Uniform Non-Validated MultiCycle Test
+5" GL / .25 CHS
+Gage Length 5.00000 in
+Results Table 1
+Spool
+No.
+Diame
+ter
+[in]
+Peak Load
+[lbf]
+Tensile Str
+[psi]
+Elong
+[%]
+Yield
+Load
+[lbf]
+Yield
+Str
+[psi]
+Modulu
+s
+[Msi]
+Operat
+or
+1
+500C
+2FPM
+f72
+0.0400
+0 248.350 197631 2.7 ----- ----- -----
+2
+600C
+2FPM
+f72
+0.0402
+3 238.983 188008 3.7 ----- ----- -----
+3
+700C
+2FPM
+f72
+0.0402
+2 227.977 179439 6.5 ----- ----- -----
+4
+800C
+2FPM
+f72
+0.0400
+7 209.219 165910 8.4 ----- ----- -----
+5
+900C
+2FPM
+f72
+0.0400
+9 174.839 138508 16.0 ----- ----- -----
+6
+1000
+C2FP
+M f72
+0.0398
+4 144.687 116065 33.7 ----- ----- -----
+7
+1100
+C2FP
+M f72
+0.0392
+5 139.214 115057 24.2 ----- ----- -----
+8
+1200
+C2FP
+M f72
+0.0397
+7 147.296 118574 9.1 ----- ----- -----
+Frank-SMA-constant.is_tcyclic 9/22/2025 11:53:42 AM Page 1 of 8
+Monday, September 22, 2025 11:54:13 AM
+Spool
+No.
+Diame
+ter
+[in]
+Peak Load
+[lbf]
+Tensile Str
+[psi]
+Elong
+[%]
+Yield
+Load
+[lbf]
+Yield
+Str
+[psi]
+Modulu
+s
+[Msi]
+Operat
+or
+9
+1200
+C2FP
+M -
+HYD
+ROG
+EN
+ATM
+72
+0.0399
+8 127.467 101537 6.2 ----- ----- -----
+10
+1200
+C2FP
+M -
+200c3
+hrs
+0.0399
+8 -1.706 -1359 0.1 ----- ----- -----
+11
+1200
+C2FP
+M -
+200c3
+hrs
+0.0399
+8 152.648 121595 11.0 ----- ----- -----
+12
+1200
+C40m
+-
+200c3
+hrs
+0.0399
+8 143.112 113999 1.4 ----- ----- -----
+Mean 0.0399
+5 162.674 129580 10.3 ----- ----- -----
+Standard deviation 0.00 67.15 52814.42 9.97 ----- ----- -----
+Mean + 3 SD 0.0407
+2 364.116 288024 40.2 ----- ----- -----
+Mean - 3 SD 0.0391
+8 -38.768 -28863 -19.7 ----- ----- -----
+Minimum 0.0392
+5 -1.706 -1359 0.1 ----- ----- -----
+Maximum 0.0402
+3 248.350 197631 33.7 ----- ----- -----
+Frank-SMA-constant.is_tcyclic 9/22/2025 11:53:42 AM Page 2 of 8
+Monday, September 22, 2025 11:54:13 AM
+Frank-SMA-constant.is_tcyclic 9/22/2025 11:53:42 AM Page 3 of 8
+Monday, September 22, 2025 11:54:13 AM
+Frank-SMA-constant.is_tcyclic 9/22/2025 11:53:42 AM Page 4 of 8
+Monday, September 22, 2025 11:54:13 AM
+Frank-SMA-constant.is_tcyclic 9/22/2025 11:53:42 AM Page 5 of 8
+Monday, September 22, 2025 11:54:13 AM
+Frank-SMA-constant.is_tcyclic 9/22/2025 11:53:42 AM Page 6 of 8
+Monday, September 22, 2025 11:54:13 AM
+Frank-SMA-constant.is_tcyclic 9/22/2025 11:53:42 AM Page 7 of 8
+Monday, September 22, 2025 11:54:13 AM
+Frank-SMA-constant.is_tcyclic 9/22/2025 11:53:42 AM Page 8 of 8
+
+
+########## Fe-SMA-6MM GAUGE TESTING.is_tcyclic-697-7.pdf  (2 pages) ##########
+Monday, September 22, 2025 12:24:39 PM
+Customer
+Production Number
+Purchase Order Number
+Alloy Type
+Lot Number
+Operator
+Production Machine
+Instron TT-
+Load Cell Used
+Method description 904 ALTERED- Special Non-Uniform Non-Validated MultiCycle Test
+5" GL / .25 CHS
+Gage Length 0.23600 in
+Results Table 1
+Spool
+No.
+Diame
+ter
+[in]
+Peak Load
+[lbf]
+Tensile Str
+[psi]
+Elong
+[%]
+Yield
+Load
+[lbf]
+Yield
+Str
+[psi]
+Modulu
+s
+[Msi]
+Operat
+or
+1 0.0390
+0 140.831 117891 9.1 59.605 49895 2.8411
+Mean 0.0390
+0 140.831 117891 9.1 59.605 49895 2.8411
+Standard deviation ----- ----- ----- ----- ----- ----- -----
+Mean + 3 SD ----- ----- ----- ----- ----- ----- -----
+Mean - 3 SD ----- ----- ----- ----- ----- ----- -----
+Minimum 0.0390
+0 140.831 117891 9.1 59.605 49895 2.8411
+Maximum 0.0390
+0 140.831 117891 9.1 59.605 49895 2.8411
+Fe-SMA-6MM GAUGE TESTING.is_tcyclic 9/22/2025 12:22:17 PM Page 1 of 2
+Monday, September 22, 2025 12:24:39 PM
+Fe-SMA-6MM GAUGE TESTING.is_tcyclic 9/22/2025 12:22:17 PM Page 2 of 2
+
+
+########## Fe-SMA-FC.is_tcyclic-697-6.pdf  (8 pages) ##########
+Saturday, September 20, 2025 10:43:47 AM
+Customer
+Production Number
+Purchase Order Number
+Alloy Type
+Lot Number
+Operator
+Production Machine
+Instron TT-
+Load Cell Used
+Method description 904 ALTERED- Special Non-Uniform Non-Validated MultiCycle Test
+5" GL / .25 CHS
+Gage Length 5.00000 in
+Results Table 1
+Spool
+No.
+Diamete
+r
+[in]
+Peak Load
+[lbf]
+Tensile Str
+[psi]
+Elong
+[%]
+Yield
+Load
+[lbf]
+Yield Str
+[psi]
+Modulus
+[Msi]
+Operato
+r
+1
+1000c4
+fpm
+f72
+0.01080 12.124 132349 27.6 ----- ----- -----
+2
+1000c4
+fpm
+f72
+400c20
+hrs
+0.01169 15.437 143830 27.0 ----- ----- -----
+3 600c4f
+pm 0.01410 51.958 332752 2.3 43.295 277275 23.3624
+4 700c4f
+pm 0.01415 45.840 291505 2.2 ----- ----- -----
+5 800c4f
+pm 0.01410 27.675 177236 24.0 ----- ----- -----
+6 900c4f
+pm 0.01415 24.602 156449 29.7 ----- ----- -----
+7 1000c4
+fpm 0.01404 21.731 140363 33.4 ----- ----- -----
+8 1100c4
+fpm 0.01399 21.120 137391 29.7 ----- ----- -----
+9 1200c4
+fpm 0.01384 20.473 136087 23.9 ----- ----- -----
+Fe-SMA-FC.is_tcyclic 9/8/2025 11:29:52 AM Page 1 of 8
+Saturday, September 20, 2025 10:43:47 AM
+Spool
+No.
+Diamete
+r
+[in]
+Peak Load
+[lbf]
+Tensile Str
+[psi]
+Elong
+[%]
+Yield
+Load
+[lbf]
+Yield Str
+[psi]
+Modulus
+[Msi]
+Operato
+r
+10
+1200c4
+fpm
+200C1
+HR
+0.01370 20.212 137114 25.2 ----- ----- -----
+11
+1200c4
+fpm
+200C3
+HR
+0.01370 19.980 135540 25.5 ----- ----- -----
+12
+1200c4
+fpm
+200C2
+0HR
+0.01375 19.196 129276 14.9 ----- ----- -----
+13 1250c5
+min 0.01410 14.970 95871 12.5 ----- ----- -----
+14 1250c2
+0min 0.01410 13.347 85481 6.3 ----- ----- -----
+15
+1200c4
+0m
+200c3g
+rs
+0.01410 20.403 130667 0.8 ----- ----- -----
+16 1200c8
+0m 0.01280 12.950 100639 0.5 ----- ----- -----
+17
+1200C
+30 min
+- 900C
+15 min
+2
+cycles
+- 1200
+C 30
+min
+0.05090 167.581 82357 1.0 ----- ----- -----
+18
+1200C
+30 min
+- 900C
+15 min
+2
+cycles
+- 1200
+C 30
+min
+0.05090 179.302 88117 1.0 ----- ----- -----
+Fe-SMA-FC.is_tcyclic 9/8/2025 11:29:52 AM Page 2 of 8
+Saturday, September 20, 2025 10:43:47 AM
+Spool
+No.
+Diamete
+r
+[in]
+Peak Load
+[lbf]
+Tensile Str
+[psi]
+Elong
+[%]
+Yield
+Load
+[lbf]
+Yield Str
+[psi]
+Modulus
+[Msi]
+Operato
+r
+19
+3
+cycles
+- 1200
+C 60
+min+
+etching
+200c3h
+0.04180 95.075 69283 0.5 ----- ----- -----
+Mean 0.01898 42.315 142227 15.2 43.295 277275 23.3624
+Stand
+ard
+deviati
+on
+0.01 50.17 66449.69 12.62 ----- ----- -----
+Mean
++ 3
+SD
+0.05798 192.829 341576 53.0 ----- ----- -----
+Mean
+- 3 SD
+-
+0.02001 -108.200 -57122 -22.7 ----- ----- -----
+Minim
+um 0.01080 12.124 69283 0.5 43.295 277275 23.3624
+Maxim
+um 0.05090 179.302 332752 33.4 43.295 277275 23.3624
+Fe-SMA-FC.is_tcyclic 9/8/2025 11:29:52 AM Page 3 of 8
+Saturday, September 20, 2025 10:43:47 AM
+Fe-SMA-FC.is_tcyclic 9/8/2025 11:29:52 AM Page 4 of 8
+Saturday, September 20, 2025 10:43:47 AM
+Fe-SMA-FC.is_tcyclic 9/8/2025 11:29:52 AM Page 5 of 8
+Saturday, September 20, 2025 10:43:47 AM
+Fe-SMA-FC.is_tcyclic 9/8/2025 11:29:52 AM Page 6 of 8
+Saturday, September 20, 2025 10:43:47 AM
+Fe-SMA-FC.is_tcyclic 9/8/2025 11:29:52 AM Page 7 of 8
+Saturday, September 20, 2025 10:43:47 AM
+Fe-SMA-FC.is_tcyclic 9/8/2025 11:29:52 AM Page 8 of 8
+
+
+########## Fe-SMA-oct-11-25.is_tcyclic.pdf  (6 pages) ##########
+Tuesday, October 28, 2025 9:52:12 AM
+Customer
+Production Number
+Purchase Order Number
+Alloy Type
+Lot Number
+Operator
+Production Machine
+Instron TT-
+Load Cell Used
+Method description 904 ALTERED- Special Non-Uniform Non-Validated MultiCycle Test
+5" GL / .25 CHS
+Gage Length 1.00000 in
+Results Table 1
+Spool
+No.
+Diame
+ter
+[in]
+Peak Load
+[lbf]
+Tensile Str
+[psi]
+Elong
+[%]
+Yield
+Load
+[lbf]
+Yield
+Str
+[psi]
+Modulu
+s
+[Msi]
+Operat
+or
+1
+FeMn
+ALNi-
+1200
+C-3
+time
+0.0207
+5 40.542 119890 64.8 ----- ----- -----
+2
+FeMn
+AlNiSi
+-C-
+1200
+C-3
+time
+0.0140
+2 22.828 147869 51.3 ----- ----- -----
+3
+FeMn
+AlNiSi
+-C-
+1200
+C-3
+time+
+200c3
+hrs
+0.0207
+5 -0.269 -795 0.3 ----- ----- -----
+Fe-SMA-oct-11-25.is_tcyclic 10/28/2025 9:21:34 AM Page 1 of 6
+Tuesday, October 28, 2025 9:52:12 AM
+Spool
+No.
+Diame
+ter
+[in]
+Peak Load
+[lbf]
+Tensile Str
+[psi]
+Elong
+[%]
+Yield
+Load
+[lbf]
+Yield
+Str
+[psi]
+Modulu
+s
+[Msi]
+Operat
+or
+4
+FeMn
+AlNiSi
+-C-
+1200
+C-3
+time+
+200c3
+hrs
+0.0207
+5 18.053 53385 7.2 ----- ----- -----
+5
+FeMn
+AlNiSi
+-C-
+1200
+C-3
+time
+0.0207
+5 33.007 97606 3.7 ----- ----- -----
+6
+FeMn
+AlNiSi
+C-
+1300
+C-3
+time
+0.0140
+0 15.237 98980 4.1 ----- ----- -----
+7
+FeMn
+AlNiSi
+C-
+1200c
+4fpm
+0.0136
+3 16.973 116329 5.9 ----- ----- -----
+8
+FeMn
+AlNi-
+1200c
+4fpm
+0.0215
+0 37.543 103410 4.5 ----- ----- -----
+Mean 0.0182
+7 22.989 92084 17.7 ----- ----- -----
+Standard deviation 0.00 13.53 45986.74 25.23 ----- ----- -----
+Mean + 3 SD 0.0292
+0 63.587 230044 93.4 ----- ----- -----
+Mean - 3 SD 0.0073
+4 -17.608 -45876 -58.0 ----- ----- -----
+Minimum 0.0136
+3 -0.269 -795 0.3 ----- ----- -----
+Maximum 0.0215
+0 40.542 147869 64.8 ----- ----- -----
+Fe-SMA-oct-11-25.is_tcyclic 10/28/2025 9:21:34 AM Page 2 of 6
+Tuesday, October 28, 2025 9:52:12 AM
+Fe-SMA-oct-11-25.is_tcyclic 10/28/2025 9:21:34 AM Page 3 of 6
+Tuesday, October 28, 2025 9:52:12 AM
+Fe-SMA-oct-11-25.is_tcyclic 10/28/2025 9:21:34 AM Page 4 of 6
+Tuesday, October 28, 2025 9:52:12 AM
+Fe-SMA-oct-11-25.is_tcyclic 10/28/2025 9:21:34 AM Page 5 of 6
+Tuesday, October 28, 2025 9:52:12 AM
+Fe-SMA-oct-11-25.is_tcyclic 10/28/2025 9:21:34 AM Page 6 of 6
+
+
+########## Frankie-Fe-SMA-6mm gauge lenght testing.is_tcyclic-697-6.pdf  (2 pages) ##########
+Monday, September 8, 2025 12:45:18 PM
+Customer
+Production Number
+Purchase Order Number
+Alloy Type
+Lot Number
+Operator
+Production Machine
+Instron TT-
+Load Cell Used
+Method description 904 ALTERED- Special Non-Uniform Non-Validated MultiCycle Test
+5" GL / .25 CHS
+Gage Length 0.23600 in
+Results Table 1
+Spool
+No.
+Diame
+ter
+[in]
+Peak Load
+[lbf]
+Tensile Str
+[psi]
+Elong
+[%]
+Yield
+Load
+[lbf]
+Yield
+Str
+[psi]
+Modulu
+s
+[Msi]
+Operat
+or
+1 0.5000
+0 56.114 286 5.7 ----- ----- -----
+2
+3CYC
+LE
+agg+
+200c3
+hr
+0.0418
+0 200.233 145913 11.9 ----- ----- -----
+Mean 0.2709
+0 128.173 73099 8.8 ----- ----- -----
+Standard deviation 0.32 101.91 102973.72 4.38 ----- ----- -----
+Mean + 3 SD 1.2428
+9 433.895 382020 22.0 ----- ----- -----
+Mean - 3 SD
+-
+0.7010
+9
+-177.549 -235822 -4.3 ----- ----- -----
+Minimum 0.0418
+0 56.114 286 5.7 ----- ----- -----
+Maximum 0.5000
+0 200.233 145913 11.9 ----- ----- -----
+Frankie-Fe-SMA-6mm gauge lenght
+testing.is_tcyclic
+9/8/2025 12:41:03 PM Page 1 of 2
+Monday, September 8, 2025 12:45:18 PM
+Frankie-Fe-SMA-6mm gauge lenght
+testing.is_tcyclic
+9/8/2025 12:41:03 PM Page 2 of 2
+
+
+########## RD0679-7 Heat treatment in quartz tube.is_tcyclic.pdf  (5 pages) ##########
+Monday, October 6, 2025 1:25:34 PM
+Customer
+Production Number
+Purchase Order Number
+Alloy Type
+Lot Number
+Operator
+Production Machine
+Instron TT-
+Load Cell Used
+Method description 904 ALTERED- Special Non-Uniform Non-Validated MultiCycle Test
+5" GL / .25 CHS
+Gage Length 1.00000 in
+Results Table 1
+Spool
+No.
+Diame
+ter
+[in]
+Peak Load
+[lbf]
+Tensile Str
+[psi]
+Elong
+[%]
+Yield
+Load
+[lbf]
+Yield
+Str
+[psi]
+Modulu
+s
+[Msi]
+Operat
+or
+1 0.0100
+0 5.285 67289 0.4 ----- ----- -----
+2
+679-7
+AGG
+ht
+0.0212
+0 19.480 55185 4.2 ----- ----- -----
+3
+AGG
++
+200C
+3HRS
+0.0218
+0 2.980 7984 1.8 ----- ----- -----
+4
+AGG
++
+200C
+3HRS
+0.0218
+0 3.157 8459 1.0 ----- ----- -----
+5
+AGG
++
+200C
+3HRS
+0.0217
+0 6.798 18381 0.7 ----- ----- -----
+6
+AGG
++
+200C
+3HRS
+0.0217
+0 2.672 7224 0.4 ----- ----- -----
+RD0679-7 Heat treatment.is_tcyclic 10/6/2025 1:24:07 PM Page 1 of 5
+Monday, October 6, 2025 1:25:34 PM
+Spool
+No.
+Diame
+ter
+[in]
+Peak Load
+[lbf]
+Tensile Str
+[psi]
+Elong
+[%]
+Yield
+Load
+[lbf]
+Yield
+Str
+[psi]
+Modulu
+s
+[Msi]
+Operat
+or
+7
+AGG
++
+200C
+3HRS
+0.0217
+0 7.191 19443 0.8 ----- ----- -----
+Mean 0.0199
+9 6.795 26281 1.3 ----- ----- -----
+Standard deviation 0.00 5.89 24637.03 1.34 ----- ----- -----
+Mean + 3 SD 0.0332
+1 24.464 100192 5.3 ----- ----- -----
+Mean - 3 SD 0.0067
+6 -10.874 -47630 -2.7 ----- ----- -----
+Minimum 0.0100
+0 2.672 7224 0.4 ----- ----- -----
+Maximum 0.0218
+0 19.480 67289 4.2 ----- ----- -----
+RD0679-7 Heat treatment.is_tcyclic 10/6/2025 1:24:07 PM Page 2 of 5
+Monday, October 6, 2025 1:25:34 PM
+RD0679-7 Heat treatment.is_tcyclic 10/6/2025 1:24:07 PM Page 3 of 5
+Monday, October 6, 2025 1:25:34 PM
+RD0679-7 Heat treatment.is_tcyclic 10/6/2025 1:24:07 PM Page 4 of 5
+Monday, October 6, 2025 1:25:34 PM
+RD0679-7 Heat treatment.is_tcyclic 10/6/2025 1:24:07 PM Page 5 of 5
+
+
+########## RD0697-7 FeMnAlNi-AGG heat treatment in argon.pdf  (4 pages) ##########
+Wednesday, October 1, 2025 5:41:26 AM
+Customer
+Production Number
+Purchase Order Number
+Alloy Type
+Lot Number
+Operator
+Production Machine
+Instron TT-
+Load Cell Used
+Method description 904 ALTERED- Special Non-Uniform Non-Validated MultiCycle Test
+5" GL / .25 CHS
+Gage Length 2.00000 in
+Results Table 1
+Spool
+No.
+Diame
+ter
+[in]
+Peak Load
+[lbf]
+Tensile Str
+[psi]
+Elong
+[%]
+Yield
+Load
+[lbf]
+Yield
+Str
+[psi]
+Modulu
+s
+[Msi]
+Operat
+or
+1 AGG
+HT
+0.0231
+5 20.805 49428 0.5 ----- ----- -----
+2 AGG
+HT
+0.0231
+5 33.713 80096 0.7 ----- ----- -----
+3
+AGG
+HT+
+200C
+3HR
+0.0228
+5 20.254 49391 0.6 ----- ----- -----
+4
+AGG
+HT+
+200C
+3HR
+0.0228
+5 26.077 63592 0.6 ----- ----- -----
+5
+AGG
+HT+
+200C
+3HR
+ETCH
+ED
+0.0183
+0 32.198 122415 2.4 ----- ----- -----
+Mean 0.0220
+6 26.609 72984 1.0 ----- ----- -----
+Standard deviation 0.00 6.25 30388.14 0.84 ----- ----- -----
+Mean + 3 SD 0.0283
+8 45.349 164149 3.5 ----- ----- -----
+RD0697-7 FeMnAlNi-AGG heat
+treatment.is_tcyclic
+9/30/2025 2:55:48 PM Page 1 of 4
+Wednesday, October 1, 2025 5:41:26 AM
+Spool
+No.
+Diame
+ter
+[in]
+Peak Load
+[lbf]
+Tensile Str
+[psi]
+Elong
+[%]
+Yield
+Load
+[lbf]
+Yield
+Str
+[psi]
+Modulu
+s
+[Msi]
+Operat
+or
+Mean - 3 SD 0.0157
+4 7.870 -18180 -1.5 ----- ----- -----
+Minimum 0.0183
+0 20.254 49391 0.5 ----- ----- -----
+Maximum 0.0231
+5 33.713 122415 2.4 ----- ----- -----
+RD0697-7 FeMnAlNi-AGG heat
+treatment.is_tcyclic
+9/30/2025 2:55:48 PM Page 2 of 4
+Wednesday, October 1, 2025 5:41:26 AM
+RD0697-7 FeMnAlNi-AGG heat
+treatment.is_tcyclic
+9/30/2025 2:55:48 PM Page 3 of 4
+Wednesday, October 1, 2025 5:41:26 AM
+RD0697-7 FeMnAlNi-AGG heat
+treatment.is_tcyclic
+9/30/2025 2:55:48 PM Page 4 of 4
+
+
+########## TESTING-697-7 AGG-in quartz tube 10-4-25.is_tcyclic.pdf  (3 pages) ##########
+Monday, October 6, 2025 2:09:54 PM
+Customer
+Production Number
+Purchase Order Number
+Alloy Type
+Lot Number
+Operator
+Production Machine
+Instron TT-
+Load Cell Used
+Method description 904 ALTERED- Special Non-Uniform Non-Validated MultiCycle Test
+5" GL / .25 CHS
+Gage Length 1.00000 in
+Results Table 1
+Spool
+No.
+Diame
+ter
+[in]
+Peak Load
+[lbf]
+Tensile Str
+[psi]
+Elong
+[%]
+Yield
+Load
+[lbf]
+Yield
+Str
+[psi]
+Modulu
+s
+[Msi]
+Operat
+or
+1 0.0217
+0 9.614 25995 1.8 ----- ----- -----
+2 0.0217
+0 5.445 14723 1.7 ----- ----- -----
+3 0.0217
+0 8.200 22173 2.6 ----- ----- -----
+4 0.0217
+0 9.973 26967 3.9 ----- ----- -----
+Mean 0.0217
+0 8.308 22465 2.5 ----- ----- -----
+Standard deviation 0.00 2.06 5560.34 0.99 ----- ----- -----
+Mean + 3 SD 0.0217
+0 14.477 39146 5.5 ----- ----- -----
+Mean - 3 SD 0.0217
+0 2.139 5784 -0.5 ----- ----- -----
+Minimum 0.0217
+0 5.445 14723 1.7 ----- ----- -----
+Maximum 0.0217
+0 9.973 26967 3.9 ----- ----- -----
+testing.is_tcyclic 10/6/2025 2:06:41 PM Page 1 of 3
+Monday, October 6, 2025 2:09:54 PM
+testing.is_tcyclic 10/6/2025 2:06:41 PM Page 2 of 3
+Monday, October 6, 2025 2:09:54 PM
+testing.is_tcyclic 10/6/2025 2:06:41 PM Page 3 of 3

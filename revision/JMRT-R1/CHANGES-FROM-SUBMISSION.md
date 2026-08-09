@@ -281,3 +281,58 @@ The working method:
 The comparison script lives in the session scratchpad as `compare.py`. Note that this
 Word build's `CompareDocuments` has **no `CompareMoves` parameter** — position 15 is the
 `BSTR` author name — so the call must be positional with 17 arguments, not 18.
+
+---
+
+## 7. Group D — the file-blocked comments (2026-08-09)
+
+Both blockers cleared. The E: drive mounted (**D2**) and the LLM session turned up on it
+(**D3**), in `697-6-7 Fe-Mn-Al-Ni-Si\New Fe-SMA Alloy Hypotheses_.pdf`. Full analyses in
+`llm-provenance/LLM-PROVENANCE.md`, `processing/PROCESSING-AND-REPLICATES.md` and
+`calphad/results/AGENT-WINDOW.md`. Deliverables rebuilt at **386 tracked revisions**
+(202 insertions, 184 deletions), up from 343.
+
+### What changed in the manuscript
+
+| § | Change | Comment |
+|---|---|---|
+| 2.1 | LLM provenance rewritten: tool, 76 sources accessed 19 May 2025, report compiled 4 June 2025, six candidate families, A2 ranked **joint second**, first-ranked candidate never made, **verbatim prompt not preserved** | R2 Exp#1 |
+| 2.1 | **"Within one of the AI-suggested composition ranges" deleted** — it was not true. The melt is inside A2 on Si/Ni/C and outside on Mn (32.3 vs ≤30) and Al (6.4 vs ≥8 wt%, i.e. 12.1 vs 14.9–21.5 at%) | R1#2, integrity |
+| 2.1 | "synthesized under identical conditions" → "synthesized and processed alongside it" | R3#1 |
+| 2.4 | Gauge length **13 mm → 127 mm**, crosshead 0.25 in/min, strain rate 8.3 × 10⁻⁴ s⁻¹, moduli flagged as apparent (crosshead strain, no extensometer) | verified from raw data |
+| 2.4 | **"One specimen was tested per anneal condition"** — Table 2 is n = 1 and now says so | R2 Exp#3 |
+| 3.3, 5 | two further "processed identically" claims softened to the same nominal anneal | R3#1 |
+| 3.4 | New paragraph: **no composition inside the agent's own A2 window opens the α field at 1200 °C** — midpoint 1380 °C (worse than what was made), ferritic corner 1230–1240 °C and ordered, austenitic corner none ≤1400 °C; Al alone buys 21 points of α but only 60 °C of solvus | R1#2 |
+| 3.4 | mc_fe cross-check of the same four points: same conclusion by a different route | — |
+| 4.1 | New paragraph on what the report did and did not predict: bcc parent + coherent 5–15 nm β, 5–8 % strain at 400–700 MPa, **no phase fractions, no phase diagram, no solution window**; **D0₃ and Fe₃Al occur nowhere in 41 pages**; κ-carbide present but attached to a different candidate at 5–12 wt% Al | R1#2 |
+| 4.4 | Reframed: the report **itself recommended CALPHAD screening** (its only mention of it) and the melt proceeded without it — a workflow failure, not a knowledge failure | R3#12 |
+
+### What Group D found that no reviewer asked about
+
+1. **Processing was not identical, factually.** R3#1 objected on logic; the process note shows
+   different melts (the benchmark was VIM'd, found full of voids, and **remelted on Arcast**),
+   different casting, different hot-roll temperatures (850 vs 900 °C) and different process-anneal
+   atmospheres. §2.1's melt description is wrong in several specifics. **Not corrected here** —
+   see the blocker list below; it needs S. Cai, not my reading of a lab note.
+2. **The gauge length was 127 mm, not 13 mm.** Reconstructing the raw traces reproduces Table 2's
+   UTS to within 0.5 % and its elongation column to three significant figures *only* on a 5 in
+   gauge; and 0.25 in/min over 5 in gives 8.3 × 10⁻⁴ s⁻¹, which is the strain rate §2.4 already
+   claimed. Both independent checks point the same way. No reported number changes.
+3. **Table 2's "As drawn" row has no locatable source.** It is not among the 19 spools of
+   `Fe-SMA-FC.is_tcyclic`, and no trace on the drive matches 1925 MPa at 2.0 %.
+4. **σ₀.₂ and E were derived by the authors, not printed by the instrument.** The report gives
+   yield for one spool only. The extraction method is undocumented.
+5. **Table 1's dashes mean "not determined" for the LLM-alloy.** Only the benchmark got the
+   19-element tramp scan; the LLM-alloy certificate lists five elements and nothing else.
+6. **The silicon shortfall may have been load-bearing in the other direction.** In mc_fe the
+   solidus tracks Si closely (1240 °C at 1.11 wt%, 1180 at 2.20, 1010 at 4.00), which would put the
+   *intended* composition partly molten at its own solution temperature. One database, contradicted
+   by the other; recorded in `AGENT-WINDOW.md`, deliberately kept out of the manuscript.
+
+### Delivered but not yet in the paper
+
+- **`mechanical/Figure_2_rebuilt.png|pdf`** — Fig. 2 rebuilt from the raw exports at Elsevier
+  double-column width with no clipped tick labels, and carrying **all eight anneal conditions**
+  instead of six, which answers R2 R&D#3 and #4 together. Not swapped in yet: the as-drawn panel
+  cannot be reproduced until item 3 above is resolved. `mechanical/rebuild_figure2.py` picks it up
+  automatically once the trace exists.

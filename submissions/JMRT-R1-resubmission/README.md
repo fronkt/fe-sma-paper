@@ -14,7 +14,7 @@
 
 | File | Upload as | Notes |
 |---|---|---|
-| `Cai_Fe-SMA_JMRT_R1_marked-up.docx` | **Revised Manuscript (Marked-up)** | 339 tracked revisions — 180 insertions, 159 deletions — against the file actually submitted. Includes the renumbered bibliography (24 → 35). |
+| `Cai_Fe-SMA_JMRT_R1_marked-up.docx` | **Revised Manuscript (Marked-up)** | 386 tracked revisions — 202 insertions, 184 deletions — against the file actually submitted. Includes the renumbered bibliography (24 → 35). |
 | `Cai_Fe-SMA_JMRT_R1_clean.docx` | **Revised Manuscript (Clean)** | Identical content with all revisions accepted. |
 | `Cai_Fe-SMA_JMRT_as-submitted-2026-07-15.docx` | *do not upload* | The original submission, kept here so the pair can be diffed without leaving the folder. |
 
@@ -30,7 +30,9 @@ not these** — see *How to rebuild* below.
 | **Updated `highlights.md`** and cover letter | Must match the tempered claims; currently still worded for the original submission |
 | **Revision title sign-off** | Co-authors. Drafted in `front_JMRT.md`, flagged `NEEDS CO-AUTHOR SIGN-OFF` |
 | **Generative-AI declaration sign-off** | Frank. The submitted version of this statement was **false**; the rewrite is in the manuscript but the scope is the authors' call, not a drafting decision |
-| **Figures at final resolution** | Fig. 2 still needs rebuilding from source (R2 R&D#3 — clipped tick labels); the AGG figure (R1#4, R3#4) is unbuilt pending Frank's D7 reading |
+| **Figures at final resolution** | Fig. 2 **has been rebuilt** from the raw Instron exports — `revision/JMRT-R1/mechanical/Figure_2_rebuilt.png` — with the clipped tick labels fixed and all eight anneal conditions shown, but it is not swapped in yet because the as-drawn trace is missing from the drive (S. Cai). The AGG figure (R1#4, R3#4) is unbuilt pending Frank's D7 reading |
+| **Supplementary Material: the LLM report** | §2.1 now promises the 41-page Gemini Deep Research report as Supplementary Material. The file is at `revision/JMRT-R1/llm-provenance/Gemini-DeepResearch_New-Fe-SMA-Alloy-Hypotheses_2025-06-04.pdf` and must be uploaded, or the promise removed |
+| **§2.1 melt-and-draw description** | S. Cai. The process note shows the two alloys took materially different routes and that several specifics in §2.1 are wrong (ingot size, melt mass, hot-roll temperature, remelt). See `revision/JMRT-R1/processing/PROCESSING-AND-REPLICATES.md` §2 — this is the largest open correction in the paper |
 
 ## Status of the revision
 

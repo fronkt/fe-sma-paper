@@ -108,3 +108,50 @@ YAML metadata block on concatenation and silently truncates the build. Use `***`
 message into arguments, producing `pathspec ... did not match` errors.
 
 **Rule.** `git commit -F <file>` for anything longer than one line.
+
+## Look for the primary artifact before writing around its absence
+
+The Gemini Deep Research report was listed as a blocker (D3) for weeks on the assumption it
+was lost, and §2.1 was written to paraphrase a prompt nobody had. It was sitting on the E:
+drive the whole time, in the same folder as the chemistry certificates, under a filename
+whose trailing underscore is the signature of a Google Docs export.
+
+**Why:** the paraphrase was not merely thin, it was wrong. The manuscript claimed the
+composition came from "within one of the AI-suggested composition ranges"; it is outside that
+range on two of six elements, one of them aluminium by a third. A reviewer given the report as
+Supplementary Material would have found that in ten minutes.
+
+**How to apply:** when a blocker is "the source file is probably gone", spend ten minutes
+searching for it before writing prose that assumes its absence. Search by *artifact signature*
+(exporter naming conventions, producer metadata, modification dates) as well as by keyword —
+`grep -ri gemini` found nothing; `ls` in the right folder found it immediately. And check the
+date: the report's export timestamp and the ingot request in the process note are the same day.
+
+## Reconstruct the table from the raw data, not just the summary report
+
+Table 2 was verified twice against the Instron PDF and passed. It only came apart when the raw
+CSV traces were reduced independently: the elongation column reproduces exactly on a 127 mm
+gauge, and §2.4 claimed 13 mm.
+
+**Why:** a summary report and the paper can agree with each other and both be describing the
+measurement wrongly. The independent check is the one that recomputes the reported quantity
+from the rawest available input.
+
+**How to apply:** when a method section states a parameter that also appears implicitly in the
+data (gauge length, area, rate), close the loop. Here two independent routes agreed — the
+elongation column and the stated strain rate both imply 5 in — which is what made the
+correction safe to make without asking anyone.
+
+## Test the counterfactual before reporting the deviation
+
+Finding that the melt sat outside the agent's proposed range was the session's most alarming
+result: it threatened to convert "the AI's composition failed" into "we didn't build the AI's
+composition." The right response was not to soften the prose but to run the window and find
+out — and the window fails everywhere, for a reason (carbon) the agent specified itself.
+
+**Why:** disclosing a deviation without testing whether it mattered invites exactly the
+objection the disclosure was meant to pre-empt, and hands the reviewer the stronger reading.
+
+**How to apply:** when a newly found fact undermines a paper's central claim, cost out the
+calculation that would settle it before writing a single hedged sentence. Two hours of CPU
+turned a liability into a result.

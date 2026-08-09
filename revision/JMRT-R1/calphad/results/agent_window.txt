@@ -1,0 +1,160 @@
+
+Hypothesis A2 window vs the alloy as made.  [re-run of mpea-02b]
+A2 (wt.%): Fe bal, Mn 20-30, Al 8-12, Si 1-4, Ni 3-6, C 0.1-0.3
+as made (wt.%): Fe bal, Mn 32.3, Al 6.4, Si 2.2, Ni 4.6, C 0.1
+
+==============================================================================
+mpea-02b   elements: FE MN AL NI C   [dropped, folded into Fe: SI]
+
+--- mpea-02b / C_measured ---
+point           composition (at.%)                            a-solvus  phases at 1200 C
+as_made         Fe49.6 Mn29.9 Al12.1 Ni4.0 Si4.0 C0.4           1330 C  B2_BCC[A2] 76.0%, A1_FCC 24.0%
+A2_midpoint     Fe50.7 Mn22.3 Al18.1 Ni3.8 Si4.4 C0.8           1380 C  B2_BCC[A2] 86.7%, A1_FCC 13.3%
+A2_ferritic     Fe49.4 Mn17.3 Al21.2 Ni4.9 Si6.8 C0.4           1240 C  B2_BCC[ordered] 98.2%, A1_FCC 1.8%
+        !! 1230 C above the solvus is not single-phase bcc: not converged
+A2_austenitic   Fe52.0 Mn27.5 Al14.9 Ni2.6 Si1.8 C1.3       none <=1400  B2_BCC[A2] 64.0%, A1_FCC 36.0%
+Al_6.4wt        Fe49.6 Mn29.9 Al12.1 Ni4.0 Si4.0 C0.4           1330 C  B2_BCC[A2] 76.0%, A1_FCC 24.0%
+Al_7.1wt        Fe48.6 Mn29.7 Al13.3 Ni4.0 Si4.0 C0.4           1320 C  B2_BCC[A2] 84.2%, A1_FCC 15.8%
+Al_7.8wt        Fe47.7 Mn29.5 Al14.5 Ni3.9 Si3.9 C0.4           1310 C  B2_BCC[A2] 89.0%, A1_FCC 11.0%
+Al_8.5wt        Fe46.7 Mn29.3 Al15.7 Ni3.9 Si3.9 C0.4           1300 C  B2_BCC[A2] 91.9%, A1_FCC 8.1%
+Al_9.2wt        Fe45.8 Mn29.1 Al16.9 Ni3.9 Si3.9 C0.4           1290 C  B2_BCC[A2] 93.8%, A1_FCC 6.2%
+Al_9.9wt        Fe44.9 Mn28.9 Al18.1 Ni3.9 Si3.9 C0.4           1280 C  B2_BCC[A2] 95.2%, A1_FCC 4.8%
+Al_10.6wt       Fe44.0 Mn28.8 Al19.2 Ni3.8 Si3.8 C0.4           1280 C  B2_BCC[A2] 96.1%, A1_FCC 3.9%
+Al_11.3wt       Fe43.1 Mn28.6 Al20.3 Ni3.8 Si3.8 C0.4           1270 C  B2_BCC[A2] 96.8%, A1_FCC 3.2%
+Al_12.0wt       Fe42.2 Mn28.4 Al21.5 Ni3.8 Si3.8 C0.4           1270 C  B2_BCC[A2] 97.3%, A1_FCC 2.7%
+
+--- mpea-02b / C_free ---
+point           composition (at.%)                            a-solvus  phases at 1200 C
+as_made         Fe49.6 Mn29.9 Al12.1 Ni4.0 Si4.0 C0.0           1140 C  B2_BCC[A2] 100.0%
+A2_midpoint     Fe50.7 Mn22.3 Al18.1 Ni3.8 Si4.4 C0.0           1000 C  B2_BCC[A2] 100.0%
+A2_ferritic     Fe49.4 Mn17.3 Al21.2 Ni4.9 Si6.8 C0.0           1000 C  B2_BCC[ordered] 100.0%
+A2_austenitic   Fe52.0 Mn27.5 Al14.9 Ni2.6 Si1.8 C0.0           1010 C  B2_BCC[A2] 100.0%
+Al_6.4wt        Fe49.6 Mn29.9 Al12.1 Ni4.0 Si4.0 C0.0           1140 C  B2_BCC[A2] 100.0%
+Al_7.1wt        Fe48.6 Mn29.7 Al13.3 Ni4.0 Si4.0 C0.0           1100 C  B2_BCC[A2] 100.0%
+Al_7.8wt        Fe47.7 Mn29.5 Al14.5 Ni3.9 Si3.9 C0.0           1050 C  B2_BCC[A2] 100.0%
+Al_8.5wt        Fe46.7 Mn29.3 Al15.7 Ni3.9 Si3.9 C0.0           1010 C  B2_BCC[A2] 100.0%
+Al_9.2wt        Fe45.8 Mn29.1 Al16.9 Ni3.9 Si3.9 C0.0           1000 C  B2_BCC[A2] 100.0%
+Al_9.9wt        Fe44.9 Mn28.9 Al18.1 Ni3.9 Si3.9 C0.0           1000 C  B2_BCC[A2] 100.0%
+Al_10.6wt       Fe44.0 Mn28.8 Al19.2 Ni3.8 Si3.8 C0.0           1000 C  B2_BCC[A2] 100.0%
+Al_11.3wt       Fe43.1 Mn28.6 Al20.3 Ni3.8 Si3.8 C0.0           1000 C  B2_BCC[A2] 100.0%
+Al_12.0wt       Fe42.2 Mn28.4 Al21.5 Ni3.8 Si3.8 C0.0           1000 C  B2_BCC[A2] 100.0%
+
+Hypothesis A2 window vs the alloy as made.  [re-run of mc_fe]
+A2 (wt.%): Fe bal, Mn 20-30, Al 8-12, Si 1-4, Ni 3-6, C 0.1-0.3
+as made (wt.%): Fe bal, Mn 32.3, Al 6.4, Si 2.2, Ni 4.6, C 0.1
+
+==============================================================================
+mc_fe   elements: FE MN AL NI SI C
+
+--- mc_fe / C_measured ---
+point           composition (at.%)                            a-solvus  phases at 1200 C
+as_made         Fe49.6 Mn29.9 Al12.1 Ni4.0 Si4.0 C0.4           1200 C  BCC_A2 72.1%, LIQUID 27.9%
+        !! 1370 C above the solvus is not single-phase bcc: not converged
+        !! 1380 C above the solvus is not single-phase bcc: not converged
+        !! 1390 C above the solvus is not single-phase bcc: not converged
+        !! 1400 C above the solvus is not single-phase bcc: not converged
+A2_midpoint     Fe50.7 Mn22.3 Al18.1 Ni3.8 Si4.4 C0.8           1140 C  BCC_A2 61.4%, LIQUID 38.6%
+        !! 1360 C above the solvus is not single-phase bcc: not converged
+        !! 1370 C above the solvus is not single-phase bcc: not converged
+        !! 1380 C above the solvus is not single-phase bcc: not converged
+        !! 1390 C above the solvus is not single-phase bcc: not converged
+        !! 1400 C above the solvus is not single-phase bcc: not converged
+A2_ferritic     Fe49.4 Mn17.3 Al21.2 Ni4.9 Si6.8 C0.4           1030 C  LIQUID 56.6%, BCC_A2 43.4%
+        !! 1240 C above the solvus is not single-phase bcc: FCC_A1 0.120
+        !! 1250 C above the solvus is not single-phase bcc: FCC_A1 0.086
+        !! 1260 C above the solvus is not single-phase bcc: FCC_A1 0.050
+        !! 1270 C above the solvus is not single-phase bcc: FCC_A1 0.014
+        !! 1280 C above the solvus is not single-phase bcc: not converged
+        !! 1290 C above the solvus is not single-phase bcc: not converged
+        !! 1300 C above the solvus is not single-phase bcc: not converged
+        !! 1310 C above the solvus is not single-phase bcc: not converged
+        !! 1320 C above the solvus is not single-phase bcc: not converged
+        !! 1330 C above the solvus is not single-phase bcc: not converged
+        !! 1340 C above the solvus is not single-phase bcc: not converged
+        !! 1350 C above the solvus is not single-phase bcc: not converged
+        !! 1360 C above the solvus is not single-phase bcc: not converged
+        !! 1370 C above the solvus is not single-phase bcc: not converged
+        !! 1380 C above the solvus is not single-phase bcc: not converged
+        !! 1390 C above the solvus is not single-phase bcc: not converged
+        !! 1400 C above the solvus is not single-phase bcc: not converged
+A2_austenitic   Fe52.0 Mn27.5 Al14.9 Ni2.6 Si1.8 C1.3       none <=1400  FCC_A1 100.0%
+        !! 1360 C above the solvus is not single-phase bcc: not converged
+        !! 1370 C above the solvus is not single-phase bcc: not converged
+        !! 1380 C above the solvus is not single-phase bcc: not converged
+        !! 1390 C above the solvus is not single-phase bcc: not converged
+        !! 1400 C above the solvus is not single-phase bcc: not converged
+
+--- mc_fe / C_free ---
+point           composition (at.%)                            a-solvus  phases at 1200 C
+as_made         Fe49.6 Mn29.9 Al12.1 Ni4.0 Si4.0 C0.0           1180 C  BCC_A2 83.0%, LIQUID 17.0%
+        !! 1380 C above the solvus is not single-phase bcc: not converged
+        !! 1390 C above the solvus is not single-phase bcc: not converged
+        !! 1400 C above the solvus is not single-phase bcc: not converged
+A2_midpoint     Fe50.7 Mn22.3 Al18.1 Ni3.8 Si4.4 C0.0           1000 C  BCC_A2 72.9%, LIQUID 27.1%
+A2_ferritic     Fe49.4 Mn17.3 Al21.2 Ni4.9 Si6.8 C0.0           1000 C  LIQUID 53.5%, BCC_A2 46.5%
+        !! 1380 C above the solvus is not single-phase bcc: not converged
+        !! 1390 C above the solvus is not single-phase bcc: not converged
+        !! 1400 C above the solvus is not single-phase bcc: not converged
+A2_austenitic   Fe52.0 Mn27.5 Al14.9 Ni2.6 Si1.8 C0.0           1000 C  BCC_A2 100.0%
+        !! 1350 C above the solvus is not single-phase bcc: FCC_A1 0.214
+
+Hypothesis A2 window vs the alloy as made.  [re-run of mc_fe]
+A2 (wt.%): Fe bal, Mn 20-30, Al 8-12, Si 1-4, Ni 3-6, C 0.1-0.3
+as made (wt.%): Fe bal, Mn 32.3, Al 6.4, Si 2.2, Ni 4.6, C 0.1
+
+==============================================================================
+mc_fe   elements: FE MN AL NI SI C
+
+--- mc_fe / C_measured ---
+point           composition (at.%)                            a-solvus  phases at 1200 C
+measured        Fe51.6 Mn29.8 Al11.9 Ni4.2 Si2.0 C0.5           1250 C  BCC_A2 62.1%, FCC_A1 37.9%
+as_made         Fe49.6 Mn29.9 Al12.1 Ni4.0 Si4.0 C0.4           1200 C  BCC_A2 72.1%, LIQUID 27.9%
+        !! 1370 C above the solvus is not single-phase bcc: not converged
+        !! 1380 C above the solvus is not single-phase bcc: not converged
+        !! 1390 C above the solvus is not single-phase bcc: not converged
+        !! 1400 C above the solvus is not single-phase bcc: not converged
+A2_midpoint     Fe50.7 Mn22.3 Al18.1 Ni3.8 Si4.4 C0.8           1140 C  BCC_A2 61.4%, LIQUID 38.6%
+        !! 1360 C above the solvus is not single-phase bcc: not converged
+        !! 1370 C above the solvus is not single-phase bcc: not converged
+        !! 1380 C above the solvus is not single-phase bcc: not converged
+        !! 1390 C above the solvus is not single-phase bcc: not converged
+        !! 1400 C above the solvus is not single-phase bcc: not converged
+A2_ferritic     Fe49.4 Mn17.3 Al21.2 Ni4.9 Si6.8 C0.4           1030 C  LIQUID 56.6%, BCC_A2 43.4%
+        !! 1240 C above the solvus is not single-phase bcc: FCC_A1 0.120
+        !! 1250 C above the solvus is not single-phase bcc: FCC_A1 0.086
+        !! 1260 C above the solvus is not single-phase bcc: FCC_A1 0.050
+        !! 1270 C above the solvus is not single-phase bcc: FCC_A1 0.014
+        !! 1280 C above the solvus is not single-phase bcc: not converged
+        !! 1290 C above the solvus is not single-phase bcc: not converged
+        !! 1300 C above the solvus is not single-phase bcc: not converged
+        !! 1310 C above the solvus is not single-phase bcc: not converged
+        !! 1320 C above the solvus is not single-phase bcc: not converged
+        !! 1330 C above the solvus is not single-phase bcc: not converged
+        !! 1340 C above the solvus is not single-phase bcc: not converged
+        !! 1350 C above the solvus is not single-phase bcc: not converged
+        !! 1360 C above the solvus is not single-phase bcc: not converged
+        !! 1370 C above the solvus is not single-phase bcc: not converged
+        !! 1380 C above the solvus is not single-phase bcc: not converged
+        !! 1390 C above the solvus is not single-phase bcc: not converged
+        !! 1400 C above the solvus is not single-phase bcc: not converged
+A2_austenitic   Fe52.0 Mn27.5 Al14.9 Ni2.6 Si1.8 C1.3       none <=1400  FCC_A1 100.0%
+        !! 1360 C above the solvus is not single-phase bcc: not converged
+        !! 1370 C above the solvus is not single-phase bcc: not converged
+        !! 1380 C above the solvus is not single-phase bcc: not converged
+        !! 1390 C above the solvus is not single-phase bcc: not converged
+        !! 1400 C above the solvus is not single-phase bcc: not converged
+
+--- mc_fe / C_free ---
+point           composition (at.%)                            a-solvus  phases at 1200 C
+measured        Fe51.6 Mn29.8 Al11.9 Ni4.2 Si2.0 C0.0           1130 C  BCC_A2 100.0%
+as_made         Fe49.6 Mn29.9 Al12.1 Ni4.0 Si4.0 C0.0           1180 C  BCC_A2 83.0%, LIQUID 17.0%
+        !! 1380 C above the solvus is not single-phase bcc: not converged
+        !! 1390 C above the solvus is not single-phase bcc: not converged
+        !! 1400 C above the solvus is not single-phase bcc: not converged
+A2_midpoint     Fe50.7 Mn22.3 Al18.1 Ni3.8 Si4.4 C0.0           1000 C  BCC_A2 72.9%, LIQUID 27.1%
+A2_ferritic     Fe49.4 Mn17.3 Al21.2 Ni4.9 Si6.8 C0.0           1000 C  LIQUID 53.5%, BCC_A2 46.5%
+        !! 1380 C above the solvus is not single-phase bcc: not converged
+        !! 1390 C above the solvus is not single-phase bcc: not converged
+        !! 1400 C above the solvus is not single-phase bcc: not converged
+A2_austenitic   Fe52.0 Mn27.5 Al14.9 Ni2.6 Si1.8 C0.0           1000 C  BCC_A2 100.0%
+        !! 1350 C above the solvus is not single-phase bcc: FCC_A1 0.214

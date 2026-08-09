@@ -1,0 +1,82 @@
+  ----------------------------------------------------------------------------
+             Fe (at%)   Mn(at%)    Al(at%)    Ni(at%)    C (PPM)    Si(at%)
+  ---------- ---------- ---------- ---------- ---------- ---------- ----------
+  697-6      50         30         12         4          1000       4
+
+  697-7      43.5       34         15         7.5                   
+
+                                                                    
+  ----------------------------------------------------------------------------
+
+Request a 5-6 pounds ingot based on Al suggestion: (6/4/25)
+
+54.5Fe-32.3Mn-6.4Al-2.2Si-4.6Ni-0.1C (wt%) or 50Fe-30Mn-12Al-4Si-4Ni
+(at%)-1000ppm C
+
+Added 1730-Fe, 1025-Mn, 203-Al, 69.9-Si, 146-Ni and 3.2-C (all in
+grams), melt at 1650C for 30 minute before pour into a water cooled Cu
+mode.
+
+Only ~ 2pounds get poured into the mode. Hole is too small.
+
+X-ray gun two beam testing results (wt%)
+
+  -------------------------------------------------------------------------------
+  Al      Al +/-  Si      Si +/-  Mn      Mn +/-  Fe      Fe +/-  Ni      Ni +/-
+  ------- ------- ------- ------- ------- ------- ------- ------- ------- -------
+  6.19    0.7     1.97    0.12    26.37   0.25    60.41   0.48    5.06    0.11
+
+  7.83    0.71    2.16    0.12    27.08   0.25    58.32   0.48    4.52    0.1
+  -------------------------------------------------------------------------------
+
+EDM cut two .500” rod, homogenized at 1000C/16HRS in argon
+
+Hot roll at 850C
+
+7/26/25: second trial, hot roll at 850C without homogenization to ~.175”
+square , cold swaged to .173” round. …. Draw to .0142”. heat treating at
+12000c to achieve bamboo structure. Frankie has the process notes.
+
+8/31/25: 2nd process to .0508”, grind to .152”, annealed at 1000C/2FPM,
+draw to .081”, 1000c/2fpm, argon, draw to .0508”. AGG heat treatment and
+testing, see Frank for processing notes
+
+Two cycle AGG, 1200C/30m WQ+900C/15m, 1200C/30m WQ+900C/15m, 1200c30m wq
+
+Three cycle AGG: 1200C/30m WQ+900C/15m, 1200C/30m WQ+900C/15m, 1200C/30m
+WQ+900C/15m 1200C60m wq
+
+7/30/25: duplicate famous composition that was found working before
+(RD0697-7)
+
+43.5Fe-34Mn-15Al-7.5Ni (at%) or 47.08Fe-36.43Mn-7.9Al-8.59Ni (wt%)
+
+(analyzed chemistry: 46.5Fe-36.5Mn-8Al-8.94Ni (wt%)-0.01C)
+
+Melted in VIM, lots of voids, remelt on Arcast, cast .600” dia. 6” long
+rod,
+
+  9/6/25: hot swage at 900c to .475”, hot roll at 900C to .210” square.
+  Anneal at 900c/1min, cold swaged to .200” round. GRIND TO .170”.
+
+- 9/13/25, .170” as grund, .162”, .144”, heavily galled, etch to .134”
+
+- 1000C/2FPM, Hydrogen F72, .128”, .120”, .114”, .102”, .091, .081”,
+  .072”, .064”.
+
+- Annealed at 1200C/4fpm, H2, wire very brittle, couldn’t draw
+
+- 1000C/4FPM Ar, .0605”, 0.057”, .0508”, .045”, .0403” (appears that
+  1200C is not a good annealing temperature…)
+
+- Continue draw to .0253”
+
+- 1200C30m F72, 900C/10m F30, Argon. Repeat 5 times. Material is easily
+  stretched. (9/29/25)
+
+- 1200C/1HR F72 Argon.
+
+10/11/25: Both alloy 697-6 (.014”) and 7(.025”), seal inside a quartz
+tube, 1200c/30m Ar atmosphere, swaitch to cold zone for 10 minutes,
+1200/30, cold zone for10 minutes, 1200C/30m, cold zone 10m, 1200c/30m,
+water quench.
