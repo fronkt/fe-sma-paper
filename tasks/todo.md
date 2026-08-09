@@ -139,22 +139,22 @@ Pure text edits. Nothing here can be wrong for reasons outside the manuscript.
 - [ ] **Title** → LLM-hypothesized + experimental validation + phase stability
       *(drafted in `front_JMRT.md`; needs co-author sign-off)*
       *(R2 Title#1-3, R1#5)*
-- [ ] **Abstract** — state novelty explicitly, add recoverable strain and yield strength
+- [x] **Abstract** *(2026-08-08)* — state novelty explicitly, add recoverable strain and yield strength
       numbers, justify rather than suggest the carbon role, explain why the benchmark is
       superelastic and this alloy is not *(R2 Abs#1-4)*
-- [ ] **§1** — broaden the AI-alloy-design literature beyond LLMs *(R2 Intro#1)*; define the
+- [x] **§1** *(2026-08-08)* — broaden the AI-alloy-design literature beyond LLMs *(R2 Intro#1)*; define the
       prediction-vs-validation gap *(R2 Intro#2)*; expand the composition rationale
       *(R2 Intro#3)*; state objectives and hypotheses at the end *(R2 Intro#4)*
-- [ ] **§3.3** — state plainly that in this system the parent is BCC α and the martensite
+- [x] **§3.3** *(2026-08-08)* — state plainly that in this system the parent is BCC α and the martensite
       product is FCC γ, and that no ε-HCP or α′ was detected *(R2 R&D#6)*
-- [ ] **§3.3** — soften every "no B2" to a detection-limit-bounded statement *(R3#8)*
+- [x] **§3.3** *(2026-08-08, with the number)* — soften every "no B2" to a detection-limit-bounded statement *(R3#8)*
       *(the actual number is a Tier 4 item; write the sentence now, insert the value later)*
 - [ ] **§4.1** — temper carbon causality: composite compositional change, C largest single
       contributor on a γ-stabilising-potency basis, not isolable from two alloys
       *(R1#1, R3#9, R2 Abs#3)*
 - [ ] **§4.1** — add the mechanistic chain for why a 62 % γ / 34 % α duplex deforms by slip
       *(R1#3)*
-- [ ] **§4.2** — downgrade recovery / recrystallisation / grain growth from conclusion to
+- [x] **§4.3** *(2026-08-08; renumbered 4.2->4.3)* — downgrade recovery / recrystallisation / grain growth from conclusion to
       inference; say what evidence would settle it *(R3#11)*
 - [ ] **Ni-equivalent arithmetic** written up as the bridging quantitative argument, with its
       stainless-calibration limitation stated *(supports R1#1, R3#9)*
@@ -162,11 +162,26 @@ Pure text edits. Nothing here can be wrong for reasons outside the manuscript.
       lightweight-steel literature — the composition sits in the Fe-Mn-Al-C field where
       B2/D0₃/κ serve strength and ductility, not reversible transformation *(R3#2 — the
       single strongest comment in all three reviews)*
-- [ ] **§4.3 reposition** — bounded experimental claim (n = 1 case study, AI merely the
+- [x] **§4.4 reposition** *(2026-08-08; section renumbered 4.3->4.4)* — bounded experimental claim (n = 1 case study, AI merely the
       candidate source) + retained methodological claim (LLM compositions need
       thermodynamic pre-screening) *(R3#12, R2 R&D#5)*
-- [ ] **§5** — separate observation from interpretation; broader implications; LLM-only
+- [x] **§5** *(2026-08-08)* — separate observation from interpretation; broader implications; LLM-only
       limitations; recommend thermodynamic pre-screening *(R2 Concl#1-4)*
+### Writing pass 2026-08-08 — also completed
+
+- [x] **R2 R&D#4** — panel-by-panel narration of **Fig. 2** added to §3.2, with the panel
+      mapping verified against the figure itself: (a) as drawn, (b) 600, (c) 800, (d) 1000,
+      (e) 1200 °C, (f) 1200 °C + 200 °C/3 h. The 700/900/1100 °C gap between Table 2's eight
+      conditions and Fig. 2's six panels is now stated and justified in text.
+- [x] **R2 R&D#5** — a paragraph in §4.4 on what a diagnosed negative result is actually
+      good for, which is the part of this comment that was not already covered.
+- [x] **Abstract length checked** — the additions took it to 341 words, over a typical
+      Elsevier cap, so it was tightened to **292** with all three reviewer-requested
+      additions (novelty, numbers, why-the-benchmark-works) verified still present.
+
+> ⚠️ **Deliberately NOT added to the abstract: the 62/34/4 phase fractions**, which
+> R2 Abstract#2 also asks for. Promoting an unrefined number to page one is exactly the
+> exposure identified in xrd/RIETVELD-FILES-ANALYSIS.md. Add them once S. Cai answers.
 - [ ] Update **`highlights.md`** and the **JMRT cover letter** to match the tempered claims
 
 ## Tier 2 — needs files already in this repo
