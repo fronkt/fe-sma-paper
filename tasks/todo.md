@@ -398,7 +398,17 @@ Start the asks now; they have the longest latency in the plan.
 - [ ] **R2-vs-R3 conflict on generalisation** — R2 Concl#2 wants broader AI implications,
       R3#12 wants them narrowed. Name the tension to the editor and land on the split:
       bounded experimental claim, retained methodological claim
-- [ ] Marked-up manuscript with changes tracked
+- [x] **Marked-up manuscript with changes tracked** *(2026-08-08)* —
+      `revision/JMRT-R1/R1-manuscript/Cai_Fe-SMA_JMRT_R1_marked-up.docx` (252 tracked
+      revisions: 136 insertions, 116 deletions) and `..._clean.docx`. Built by rendering
+      `manuscript.md` with the **submitted DOCX as pandoc's `--reference-doc`** so styling
+      carries over, then Word `CompareDocuments` against the submitted file. Doing it this
+      way rather than hand-editing was necessary because the six new CALPHAD references
+      renumber the whole bibliography (24 → 30), which no manual find/replace gets right.
+      The submitted original is untouched; archived at
+      `revision/JMRT-R1/as-submitted/Cai_Fe-SMA_JMRT_as-submitted-2026-07-15.docx`.
+      Verified: all sections present, 0 stale "AI-alloy"/"Omori alloy", references
+      renumbered to 30, 3 tables, 7 figures, encoding intact (95 °, 63 α, 37 γ, 0 mojibake).
 - [ ] Every numeric claim re-checked against source data
 - [ ] Phase fractions consistent across §3.3, §4.1, abstract
 - [ ] All new citations resolve via citeproc; rebuild the DOCX
