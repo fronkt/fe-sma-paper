@@ -10,6 +10,20 @@ Tiers 4–5 need other people.
 
 **Status: plan drafted, not yet approved. No manuscript edits made.**
 
+> 🔴 **AUTHOR LIST MISMATCH — found 2026-08-08 by diffing the submitted PDF
+> (`~/Downloads/JMRT-D-26-06169 (1).pdf`) against this repo.** The JMRT submission has
+> **four** authors — Frank Y. Cai¹\*, S. Cai², **X. Wang³**, J. Yan⁴ — but every
+> `front_*.md` in this repo lists only three and omits **X. Wang (Xiaoming Wang, Purdue)**.
+> There is also **no `front_JMRT.md`**: the JMRT title page was assembled outside the repo,
+> which is how the drift happened. Create `front_JMRT.md` with all four authors before
+> rebuilding anything. Affiliations 1 and 3 are the same text in the submitted version
+> (both "School of Engineering Technologies, Purdue University, West Lafayette") — worth
+> merging to a shared superscript, but that is a change to the title page, so confirm it.
+>
+> Everything else diffs clean: §2.5, §3.1, §3.2, §3.3 and the §4 base text are word-for-word
+> identical to the submission. The only body-text differences are the intentional CALPHAD
+> additions and the two §4.1 deletions already logged below.
+
 > **CALPHAD blocker D1 is CLEARED (2026-08-05).** Thermo-Calc is no longer required.
 > `pycalphad` 0.11.2 is installed and verified on this machine, and three open TDB
 > databases cover the system. A smoke test already reproduces the benchmark alloy's
@@ -223,6 +237,21 @@ Read `revision/JMRT-R1/xrd/ANALYSIS.md` before editing any text.
       fit (bcc + fcc, **no D0₃**) reporting **70.3 % fcc**. And §3.3 says 34 % α while §4.1
       says 37 %. Three numbers, no agreement, and the fit statistics cannot be produced if a
       reviewer asks. **Get the refinement from J. Yan (SSRF) or S. Cai.**
+      > **S. Cai, 2026-08-08 — partly answered.** Fig. 5 is the **heat-treated (undeformed)**
+      > specimen, 1200 °C / 1 min; the caption and §3.3's use of it are correct. The
+      > `Rietveld-sample 6.jpg` filename is not the SSRF `Sam6` numbering. Still outstanding:
+      > the file itself, R_wp/GoF, ESDs, and the 34 vs 37 vs 70.3 reconciliation.
+- [ ] **Take up S. Cai's offer of a refinement of the deformed specimen (Sample 6).** A
+      before/after pair under the same phase model turns "relative peak intensities are
+      essentially unchanged" (currently qualitative, Fig. 6a) into **phase fractions before and
+      after 10 % strain** — quantitative proof of no stress-induced transformation in the AI
+      alloy, which is the paper's central claim. Also cross-checks the 62/34/4 numbers.
+      Only meaningful **with ESDs**: without them, 62 → 61 says nothing *(R1#3, R2 R&D#1)*
+- [x] **Benchmark refinement / B2 detection limit from a fit — CLOSED, not obtainable.**
+      S. Cai: the Omori alloy grain-grows heavily at 1200 °C, its rings break into a few
+      discrete spots (visible in **Fig. 4c, d**), and no Rietveld model can be matched to it.
+      R3#8 must therefore be answered from the raw superlattice ratios in `xrd/ANALYSIS.md`
+      (≥4–7× bound), not from a refinement. **Written into §2.5 and §3.3 on 2026-08-08**
 - [ ] **M_s may be above room temperature.** CALPHAD puts the LLM-alloy at 62–71 % bcc at
       1200 °C; the quenched material is fcc-rich; γ is the martensite product in this system.
       If α transformed to γ *during the quench*, the alloy is already martensitic before
@@ -290,6 +319,12 @@ Start the asks now; they have the longest latency in the plan.
 - [ ] **R1#5** — note graciously that the manuscript already reads "AI" (PDF text extraction
       gives 25× "AI alloy", 0× "Al-alloy"; it is a rendering-font collision in Editorial
       Manager) and that we adopted "LLM-" anyway
+- [ ] **Frame the Omori alloy as a control, not a subject** *(S. Cai, 2026-08-08)*. Where a
+      comment presses on the benchmark's transformation behaviour, answer: it is the
+      reference condition, not the object of study; its superelasticity is established across
+      the literature and reproduced here (Figs. 3b, 6b); we neither need nor claim a
+      quantitative phase-fraction measurement for it. The paper's question is why the
+      **AI alloy** — same processing — does not transform and is γ-dominated
 - [ ] **R2-vs-R3 conflict on generalisation** — R2 Concl#2 wants broader AI implications,
       R3#12 wants them narrowed. Name the tension to the editor and land on the split:
       bounded experimental claim, retained methodological claim
