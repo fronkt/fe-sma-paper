@@ -8,21 +8,38 @@ Previous phase-ordered draft of this plan: `tasks/todo-archive-2026-08-05-jmrt-p
 files already in this repo. Tier 3 is now unblocked (see the CALPHAD note below).
 Tiers 4–5 need other people.
 
-**Status: plan drafted, not yet approved. No manuscript edits made.**
+**Status (2026-08-08, evening): Tier 0 executed in `manuscript.md`. Tiers 1–6 open.**
 
-> 🔴 **AUTHOR LIST MISMATCH — found 2026-08-08 by diffing the submitted PDF
-> (`~/Downloads/JMRT-D-26-06169 (1).pdf`) against this repo.** The JMRT submission has
-> **four** authors — Frank Y. Cai¹\*, S. Cai², **X. Wang³**, J. Yan⁴ — but every
-> `front_*.md` in this repo lists only three and omits **X. Wang (Xiaoming Wang, Purdue)**.
-> There is also **no `front_JMRT.md`**: the JMRT title page was assembled outside the repo,
-> which is how the drift happened. Create `front_JMRT.md` with all four authors before
-> rebuilding anything. Affiliations 1 and 3 are the same text in the submitted version
-> (both "School of Engineering Technologies, Purdue University, West Lafayette") — worth
-> merging to a shared superscript, but that is a change to the title page, so confirm it.
+> ✅ **AUTHOR LIST — RESOLVED 2026-08-08.** `front_JMRT.md` now exists with all four
+> authors (Frank Y. Cai¹\*, S. Cai², **X. Wang³**, J. Yan⁴). Two things inside it still
+> need a human: the **revision title** (changed to the R2-Title-compliant one, needs
+> co-author sign-off) and the **duplicate affiliations 1 and 3** (identical Purdue text,
+> left exactly as submitted because renumbering the author block is a co-author call).
 >
-> Everything else diffs clean: §2.5, §3.1, §3.2, §3.3 and the §4 base text are word-for-word
-> identical to the submission. The only body-text differences are the intentional CALPHAD
-> additions and the two §4.1 deletions already logged below.
+> Everything else diffs clean against the submitted PDF: §2.5, §3.1, §3.2, §3.3 and the
+> §4 base text were word-for-word identical. The only body-text differences were the
+> intentional CALPHAD additions and the two §4.1 deletions logged below.
+
+> 🔴 **RIETVELD FILES ARRIVED 2026-08-08 — and they change §2.5/§3.3.** Full analysis in
+> `revision/JMRT-R1/xrd/RIETVELD-FILES-ANALYSIS.md`. Headlines:
+>
+> 1. **62/34/4 belongs to sample 5, the undeformed specimen** — §3.3's attribution is
+>    correct and that question is closed.
+> 2. **But those fractions were never refined.** In `sample-5-2.prn.lst` all three phase
+>    fractions are `not refinable`, all scale factors pinned at 1.0, and the twelve refined
+>    parameters are instrument geometry plus Popa crystallite size. The values are exactly
+>    0.62 / 0.34 / 0.04 in a file that reports elsewhere to eight significant figures.
+>    **There are no ESDs on the published fractions because nothing was refined.**
+> 3. **Where fractions *were* refined (zip1, sample 6), D0₃ came out 1.56(11) %, not 4 %.**
+>    α landed on 34.68(14) %, almost exactly the published value. The 4 % is not robust.
+> 4. Lattice parameters are fixed in every run; `goodness_of_fit_all` ≈0.085 is not a
+>    usable χ² and must not be quoted.
+> 5. Good news: it really is MAUD 2.33, and **E-WIMV ODF texture refinement is present in
+>    all three runs across all 73 spectra** — the texture concern is answered.
+>
+> **Frank chose zip2 as canonical.** Consequence: neither panel of the new Fig. 5 has
+> refined fractions, so the before/after supports only the *qualitative* claim.
+> **The one blocking question is where sample 5's 0.62/0.34/0.04 came from.**
 
 > **CALPHAD blocker D1 is CLEARED (2026-08-05).** Thermo-Calc is no longer required.
 > `pycalphad` 0.11.2 is installed and verified on this machine, and three open TDB
@@ -37,37 +54,90 @@ Tiers 4–5 need other people.
 
 Pure text edits. Nothing here can be wrong for reasons outside the manuscript.
 
-- [ ] **Rename alloys throughout** → "LLM-alloy" / "benchmark alloy"; keep "AI-guided"
-      only for the general field. *(closes R1#5, R2 Title#1)*
-- [ ] Fix the **34 % / 37 % α inconsistency** — §4.1 says ≈37 %, §3.3 says 34 %;
-      34 + 62 + 4 = 100, so 34 is correct *(self-audit #1)*
-- [ ] Resolve the **matrix / island contradiction** — §3.1 calls the 34 % α the "matrix"
-      while the 62 % γ is "blocky islands" *(self-audit #2; R1#3 comes within a sentence
-      of finding this)*
-- [ ] Fix **element ordering**: title says Fe-Mn-Al-Ni-Si-C, abstract says Fe-Mn-Al-Si-Ni-C
-      *(self-audit #3)*
-- [ ] Delete the **"composition is the sole variable"** sentence in §1 *(R3#1)*
-- [ ] Fix **"very close to nominal"** for Si — measured 1.11 vs nominal 2.2 wt.%, i.e. half
-      *(R3#3)*
-- [ ] Adopt **measured at.%** as each alloy's working identity, stated once and used
-      consistently *(R3#3)*
-- [ ] Soften **"the benchmark relies on B2"** — add parent-phase stability, transformation
-      temperature, grain size, orientation, texture; cite Omori *APL* 101 (2012) 231907 and
-      La Roca *JALCOM* 708 (2017) 422–427 *(R3#10)*
-- [ ] Delete **"single-phase-controlled structural metal"** — wrong for a two-phase alloy
-      *(part of R3#11)*
-- [ ] Add the **0.06 wt.% P note** for the benchmark — residual from commercial melting
-      stock, below the embrittlement threshold at this grain size *(R1#8)*
-- [ ] Add a sentence on the **33 % elongation at 1000 °C** and what it implies for
-      structural, non-SMA use *(R1#9)*
-- [ ] **Revisit Si in the Discussion** — §2.1 gives a rationale that is never picked up again
-      *(R1#6)*
-- [ ] Fix the ambiguous **"unloaded to zero stress, and continued to zero strain"** in §2.4
-      — say what was under control *(self-audit #6)*
+**All executed 2026-08-08 unless marked otherwise.** Verified by grep against `manuscript.md`.
+
+- [x] **Rename alloys throughout** → "LLM-alloy" / "benchmark alloy"; "AI-guided" and
+      "AI-assisted" kept for the general field. 52 occurrences renamed, 0 stale.
+      *(closes R1#5, R2 Title#1)*
+- [x] **34 % / 37 % α inconsistency** — already correct in the repo (§4.1 reads ≈34 %).
+      The **submitted PDF** carries the ≈37 % error, so this must still be called out in
+      the response letter as a correction. *(self-audit #1)*
+- [x] Resolve the **matrix / island contradiction** — §3.1 now declines to name either
+      constituent as the matrix, and says why (a 2-D section through an interpenetrating
+      duplex structure cannot establish 3-D continuity). Consequential edits made in §4.1 ¶2
+      and ¶3, where the matrix assignment was load-bearing. *(self-audit #2, R1#3)*
+- [x] **Element ordering** — abstract now reads Fe-Mn-Al-Ni-Si-C, matching the title.
+- [x] Delete the **"composition is the sole variable"** sentence in §1, replaced with the
+      weaker true statement plus a forward reference to §4.1 *(R3#1)*
+- [x] Fix **"very close to nominal"** for Si — §2.1 now reports the ≈50 % Si recovery
+      honestly and attributes it to oxidation loss in VIM *(R3#3)*
+- [x] Adopt **measured at.%** as the LLM-alloy's working identity
+      (51.5Fe-29.8Mn-11.9Al-4.2Ni-2.0Si-0.45C), stated in §2.1 *(R3#3)*
+- [~] Soften **"the benchmark relies on B2"** — prose done in §4.1 (now "contribute to,
+      rather than solely determine", with R3's full list of factors). **Citations NOT added:**
+      Omori *APL* 101 (2012) 231907 and La Roca *JALCOM* 708 (2017) 422 are not in
+      `references.bib` and adding entries without verified author lists would be worse than
+      omitting them. See the new "Citations to add" item in Tier 1. *(R3#10)*
+- [x] Delete **"single-phase-controlled structural metal"** → "a structural metal whose
+      flow stress is grain-size controlled" *(part of R3#11)*
+- [x] Add the **0.06 wt.% P note** for the benchmark, with the conservative-comparison
+      argument *(R1#8)*
+- [x] Add a paragraph on the **33 % elongation at 1000 °C** — respectable but not
+      exceptional for duplex γ+α Fe-Mn-Al, which is the point: a serviceable structural
+      metal that is not an SMA *(R1#9)*
+- [~] **Revisit Si in the Discussion** — §4.2 already exonerates Si thermodynamically.
+      Still missing the second half of the triage answer: that the measured 2.04 at% (half
+      the intent) delivered neither the intended solid-solution strengthening nor a decisive
+      shift in α stability, and may have contributed to D0₃ ordering. Blocked on the **Heo
+      2012** citation. *(R1#6)*
+- [x] Fix the ambiguous **"unloaded to zero stress, and continued to zero strain"** in §2.4
+      — now "unloaded to zero stress, after which the crosshead was returned to its starting
+      position (nominal zero strain)". **Confirm with S. Cai (D5)** that this is what was
+      done. *(self-audit #6)*
+
+### New Tier 0 items created by the Rietveld files (done 2026-08-08)
+
+- [x] **§2.5** — MAUD version 2.33 named, three-phase model spelled out with its fixed
+      lattice parameters, E-WIMV ODF treatment described and justified by the wire's fibre
+      texture, profile residuals cross-referenced to §3.3.
+- [x] **Fig. 5 → two panels**, new caption with R_wp/R_p for each and the fixed cells.
+      Figure file swapped; the old single-panel version is archived at
+      `figures/archive-2026-08-08-Figure_5-single-panel.jpg`.
+- [x] **§3.3** — explains the R_wp gap between panels (21.4 % vs 12.5 %) by grain
+      statistics: the undeformed wire is beaded, deformation subdivides grains and improves
+      powder averaging. Consistent with the benchmark argument two paragraphs later.
+- [x] **Declarations** — the generative-AI statement was **false as submitted** ("No
+      generative AI tools were used to draft, edit, or otherwise prepare the text").
+      Rewritten to separate the two roles: Gemini as the study method, and AI assistance in
+      the CALPHAD scripting, Rietveld extraction and drafting of this revision.
+      🔴 **Frank must verify the scope of this statement before submission — it is the
+      authors' declaration to make, not a drafting decision.**
+
+### Held back deliberately — do NOT write until S. Cai answers
+
+- [ ] 🔴 **The §3.3 phase-fraction sentences.** §3.3 and §4.1 still present 62/34/4 as
+      the output of quantitative Rietveld refinement. Per the analysis above it was not
+      refined. Nothing was changed, because the honest wording depends entirely on his
+      answer to "where did 0.62/0.34/0.04 come from?"
+- [ ] 🔴 **Any before/after phase-fraction comparison** in §3.3 (62→60.8, 34→35.1,
+      4→4.05). Same reason.
+- [ ] **Soften the "≈4 % D0₃ bulk constituent" argument** in §4.1 once the above resolves —
+      a refinement of the same specimen put it at 1.6 %.
 
 ## Tier 1 — writing, no new data (one focused session)
 
+- [ ] 🔴 **Citations to add to `references.bib`** — five references the reviewers supplied
+      or the answers depend on, none of which is currently in the bib. Each needs its full
+      author list and exact title looked up; do not guess them.
+      | Key needed | Reference | Unblocks |
+      |---|---|---|
+      | `omori2012apl` | Omori *et al.*, *Appl. Phys. Lett.* **101** (2012) 231907 | R3#10 |
+      | `laroca2017jalcom` | La Roca *et al.*, *J. Alloys Compd.* **708** (2017) 422 | R3#10 |
+      | `rahnama2017acta` | Rahnama *et al.*, *Acta Mater.* **132** (2017) 627–643 | R3#2, R1#9 |
+      | `saha2022jom` | Saha *et al.*, *JOM* **74** (2022) 3181–3190 | R3#2, R1#9 |
+      | `heo2012mmta` | Heo *et al.*, *Metall. Mater. Trans. A* **43** (2012) 1731–1735 | R1#6, R3#2 |
 - [ ] **Title** → LLM-hypothesized + experimental validation + phase stability
+      *(drafted in `front_JMRT.md`; needs co-author sign-off)*
       *(R2 Title#1-3, R1#5)*
 - [ ] **Abstract** — state novelty explicitly, add recoverable strain and yield strength
       numbers, justify rather than suggest the carbon role, explain why the benchmark is
