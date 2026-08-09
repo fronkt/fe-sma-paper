@@ -8,7 +8,21 @@ Previous phase-ordered draft of this plan: `tasks/todo-archive-2026-08-05-jmrt-p
 files already in this repo. Tier 3 is now unblocked (see the CALPHAD note below).
 Tiers 4–5 need other people.
 
-**Status (2026-08-08, evening): Tier 0 executed in `manuscript.md`. Tiers 1–6 open.**
+**Status (2026-08-08, late): Tier 0 complete. Tier 1 complete except the two §4.1 carbon-
+causality items and the Ni-equivalent arithmetic. Tier 3 complete except the Ni sensitivity
+run. Tiers 2, 4, 5, 6 open. 29 of 45 reviewer comments answered, 6 partial, 6 blocked on
+S. Cai or Frank, 4 untouched (R1#4, R3#4, R3#7 need only the D7 micrograph call).**
+
+> **Two small consistency fixes made in passing (2026-08-08).** One §3.3 occurrence of the
+> ordered phase was written `DO₃` (letter O) against 20 correct `D0₃` — normalized. Two
+> `aluminium` spellings introduced in the new §4.2 text were changed to `aluminum` to match
+> the pre-existing §2.3 usage. **Left alone deliberately:** `behaviour` (5) vs `behavior` (7)
+> is a pre-existing mix in text the reviewers already read; fixing it would add tracked-change
+> noise the editor has to read for no reviewer benefit. Copyediting will catch it.
+>
+> Also: `front_JMRT.md` ended with a `---` horizontal rule, which pandoc parsed as the start
+> of a second YAML metadata block when concatenated with `manuscript.md`. Changed to `***`
+> (renders identically, never starts YAML). This was silently corrupting the build.
 
 > ✅ **AUTHOR LIST — RESOLVED 2026-08-08.** `front_JMRT.md` now exists with all four
 > authors (Frank Y. Cai¹\*, S. Cai², **X. Wang³**, J. Yan⁴). Two things inside it still
@@ -73,11 +87,12 @@ Pure text edits. Nothing here can be wrong for reasons outside the manuscript.
       honestly and attributes it to oxidation loss in VIM *(R3#3)*
 - [x] Adopt **measured at.%** as the LLM-alloy's working identity
       (51.5Fe-29.8Mn-11.9Al-4.2Ni-2.0Si-0.45C), stated in §2.1 *(R3#3)*
-- [~] Soften **"the benchmark relies on B2"** — prose done in §4.1 (now "contribute to,
-      rather than solely determine", with R3's full list of factors). **Citations NOT added:**
-      Omori *APL* 101 (2012) 231907 and La Roca *JALCOM* 708 (2017) 422 are not in
-      `references.bib` and adding entries without verified author lists would be worse than
-      omitting them. See the new "Citations to add" item in Tier 1. *(R3#10)*
+- [x] Soften **"the benchmark relies on B2"** — prose done in §4.1 ("contribute to, rather
+      than solely determine", with R3's full list of factors). **Citations now added**
+      *(2026-08-08)*: `omori2012apl` on the coherent-B2 microstructure, and `laroca2017jalcom`
+      behind a new clause noting that the precipitates are not a purely mechanical
+      contribution — by drawing Ni and Al out of solution they change the matrix composition
+      and therefore its transformation temperatures. *(R3#10)*
 - [x] Delete **"single-phase-controlled structural metal"** → "a structural metal whose
       flow stress is grain-size controlled" *(part of R3#11)*
 - [x] Add the **0.06 wt.% P note** for the benchmark, with the conservative-comparison
@@ -85,11 +100,13 @@ Pure text edits. Nothing here can be wrong for reasons outside the manuscript.
 - [x] Add a paragraph on the **33 % elongation at 1000 °C** — respectable but not
       exceptional for duplex γ+α Fe-Mn-Al, which is the point: a serviceable structural
       metal that is not an SMA *(R1#9)*
-- [~] **Revisit Si in the Discussion** — §4.2 already exonerates Si thermodynamically.
-      Still missing the second half of the triage answer: that the measured 2.04 at% (half
-      the intent) delivered neither the intended solid-solution strengthening nor a decisive
-      shift in α stability, and may have contributed to D0₃ ordering. Blocked on the **Heo
-      2012** citation. *(R1#6)*
+- [x] **Revisit Si in the Discussion** *(2026-08-08)* — §4.2 exonerated Si thermodynamically;
+      a new paragraph now adds the second half, that exoneration is not the same as inertness.
+      At 2.04 at% (half the intent) Si delivered neither the solid-solution strengthening it
+      was specified for nor a decisive shift in α stability, while Heo *et al.* document it as
+      a promoter of the (Fe,Mn)₃(Al,Si) D0₃ ordered phase in ferrite — the phase actually
+      observed. Stated as a documented second role that the design rationale never engaged
+      with, explicitly **not** as a causal claim (two heats, no Si-free control). *(R1#6)*
 - [x] Fix the ambiguous **"unloaded to zero stress, and continued to zero strain"** in §2.4
       — now "unloaded to zero stress, after which the crosshead was returned to its starting
       position (nominal zero strain)". **Confirm with S. Cai (D5)** that this is what was
@@ -126,16 +143,39 @@ Pure text edits. Nothing here can be wrong for reasons outside the manuscript.
 
 ## Tier 1 — writing, no new data (one focused session)
 
-- [ ] 🔴 **Citations to add to `references.bib`** — five references the reviewers supplied
-      or the answers depend on, none of which is currently in the bib. Each needs its full
-      author list and exact title looked up; do not guess them.
-      | Key needed | Reference | Unblocks |
+- [x] 🔴 **Citations added to `references.bib`** *(2026-08-08)* — all five verified against
+      Crossref by DOI (exact volume/page match, author lists as deposited, not guessed).
+      Bibliography now 30 → **35**; all resolve through citeproc with no unresolved keys.
+      | Key | Reference | Unblocks |
       |---|---|---|
-      | `omori2012apl` | Omori *et al.*, *Appl. Phys. Lett.* **101** (2012) 231907 | R3#10 |
-      | `laroca2017jalcom` | La Roca *et al.*, *J. Alloys Compd.* **708** (2017) 422 | R3#10 |
-      | `rahnama2017acta` | Rahnama *et al.*, *Acta Mater.* **132** (2017) 627–643 | R3#2, R1#9 |
-      | `saha2022jom` | Saha *et al.*, *JOM* **74** (2022) 3181–3190 | R3#2, R1#9 |
-      | `heo2012mmta` | Heo *et al.*, *Metall. Mater. Trans. A* **43** (2012) 1731–1735 | R1#6, R3#2 |
+      | `omori2012apl` | Omori, Nagasako, Okano, Endo, Kainuma, *APL* **101** (2012) 231907 — "Microstructure and martensitic transformation in the Fe-Mn-Al-Ni SMA with B2-type coherent fine particles" | R3#10 |
+      | `laroca2017jalcom` | La Roca, Baruj, Sobrero, Malarría, Sade, *JALCOM* **708** (2017) 422–427 — "Nanoprecipitation effects on phase stability of Fe-Mn-Al-Ni alloys" | R3#10 |
+      | `rahnama2017acta` | Rahnama, Kotadia, Sridhar, *Acta Mater.* **132** (2017) 627–643 — "Effect of Ni alloying on … two duplex light-weight steels" | R3#2, R1#9 |
+      | `saha2022jom` | Saha *et al.* (11 authors), *JOM* **74** (2022) 3181–3190 — "Revealing the localization of NiAl-type nano-scale B2 precipitates within the BCC phase…" | R3#2, R1#9 |
+      | `heo2012mmta` | Heo, Song, Park, Bhadeshia, Suh, *MMTA* **43** (2012) 1731–1735 — "Influence of silicon in low density Fe-C-Mn-Al steel" | R1#6, R3#2 |
+      >
+      > **All three lightweight-steel papers were read, not just cited.** The findings that
+      > mattered:
+      > - **Heo 2012 is the R1#6 answer.** Substituting Si for Al in a Fe-Mn-Al-C low-density
+      >   steel is reported as *undesirable* because Si promotes (Fe,Mn)₅(Si,Al)C **and the
+      >   (Fe,Mn)₃(Al,Si) D0₃ ordered phase in ferrite**, with serious loss of ductility.
+      >   **D0₃ in α is exactly what this alloy formed.** Si now has a documented mechanism
+      >   in the manuscript instead of a shrug.
+      > - **Rahnama 2017**: Fe-15Mn-10Al-0.8C-5Ni vs the same without Ni. Ni is added
+      >   *specifically* to form NiAl B2; α→B2 ordering is treated as an embrittlement
+      >   liability to manage, not a mechanism to exploit. Also states that B2 **and D0₃** are
+      >   both known ordering products of this steel family, and gives the family property
+      >   envelope (YS 500–940 MPa, UTS 710–1020 MPa, elongation 8–78%).
+      > - **Saha 2022**: Fe-16Mn-9Al-0.9C-5Ni, γ-majority with banded BCC — the same
+      >   constitution as the LLM-alloy. Nanoscale NiAl B2 sits *inside* the BCC constituent
+      >   and shows **limited stability at 1200 °C** (coarsens at 1110 °C, breaks up by 1200 °C).
+      >   Independent support for §4.1's claim that no useful B2 is available on this route.
+      >
+      > Optional further citation, **not added** (would go beyond the five the reviewers
+      > named): the 2025 review "B2-strengthened Fe-Mn-Al-C-Ni steels as a promising
+      > environmentally friendly structural material", *Crit. Rev. Solid State Mater. Sci.*,
+      > doi:10.1080/10408436.2025.2542362 — a single citation establishing Fe-Mn-Al-C-Ni as a
+      > recognised structural-steel family. Frank's call.
 - [ ] **Title** → LLM-hypothesized + experimental validation + phase stability
       *(drafted in `front_JMRT.md`; needs co-author sign-off)*
       *(R2 Title#1-3, R1#5)*
@@ -158,10 +198,24 @@ Pure text edits. Nothing here can be wrong for reasons outside the manuscript.
       inference; say what evidence would settle it *(R3#11)*
 - [ ] **Ni-equivalent arithmetic** written up as the bridging quantitative argument, with its
       stainless-calibration limitation stated *(supports R1#1, R3#9)*
-- [ ] **Read Rahnama 2017, Saha 2022, Heo 2012**, then position §2.1 and §4.3 against the
-      lightweight-steel literature — the composition sits in the Fe-Mn-Al-C field where
-      B2/D0₃/κ serve strength and ductility, not reversible transformation *(R3#2 — the
-      single strongest comment in all three reviews)*
+- [x] **Read Rahnama 2017, Saha 2022, Heo 2012, then position §2.1 and §4.3 against the
+      lightweight-steel literature** *(2026-08-08)* *(R3#2 — the single strongest comment in
+      all three reviews)*. Four places changed:
+      - **§2.1** — the measured chemistry is now placed in both fields at the point it is
+        introduced: same Ni-Al pairing at essentially the same Ni level as Fe-15Mn-10Al-0.8C-5Ni
+        and Fe-16Mn-9Al-0.9C-5Ni, differing chiefly in ~2× the Mn and ~⅛ the C.
+      - **§4.1** — D0₃ reframed from an unexplained metastable oddity into the ordering
+        product this alloy family is *known* to give, with Saha's evidence that NiAl B2 is
+        only marginally stable at 1200 °C in a γ-majority Ni-alloyed FeMnAlC steel.
+      - **§4.2** — a new paragraph stating the core R3#2 answer: the two families are built
+        from the same four elements and give the same ordered phases, but put them to
+        opposite purposes (reversible transformation vs. strengthening in a structure never
+        intended to transform). Lands on "a composition can sit in two literatures at once
+        while satisfying the design intent of only one."
+      - **§4.3** — Table 2's 1000–1200 °C conditions shown to sit inside the low-density-steel
+        property envelope on all three measures; the colder anneals are outside it for
+        reasons of *form* (0.36 mm wire at ≈85% drawing reduction), not chemistry.
+        Conclusion: an unoptimized member of the first family, not a failed member of the second.
 - [x] **§4.4 reposition** *(2026-08-08; section renumbered 4.3->4.4)* — bounded experimental claim (n = 1 case study, AI merely the
       candidate source) + retained methodological claim (LLM compositions need
       thermodynamic pre-screening) *(R3#12, R2 R&D#5)*
@@ -413,9 +467,11 @@ Start the asks now; they have the longest latency in the plan.
 - [ ] **R2-vs-R3 conflict on generalisation** — R2 Concl#2 wants broader AI implications,
       R3#12 wants them narrowed. Name the tension to the editor and land on the split:
       bounded experimental claim, retained methodological claim
-- [x] **Marked-up manuscript with changes tracked** *(2026-08-08)* —
-      `revision/JMRT-R1/R1-manuscript/Cai_Fe-SMA_JMRT_R1_marked-up.docx` (252 tracked
-      revisions: 136 insertions, 116 deletions) and `..._clean.docx`. Built by rendering
+- [x] **Marked-up manuscript with changes tracked** *(2026-08-08; rebuilt after the writing
+      pass and the reference pass)* —
+      `revision/JMRT-R1/R1-manuscript/Cai_Fe-SMA_JMRT_R1_marked-up.docx` (**339 tracked
+      revisions: 180 insertions, 159 deletions**; was 252, then 300) and `..._clean.docx`.
+      Bibliography now 35 entries. Built by rendering
       `manuscript.md` with the **submitted DOCX as pandoc's `--reference-doc`** so styling
       carries over, then Word `CompareDocuments` against the submitted file. Doing it this
       way rather than hand-editing was necessary because the six new CALPHAD references
