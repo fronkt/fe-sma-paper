@@ -255,7 +255,7 @@ them, are enumerated in `tasks/todo.md`:
 | Group | Comments | Blocked on |
 |---|---|---|
 | A | R1#1, R3#5, R3#6, R3#9 | nothing — in progress |
-| B | R1#4, R3#4, R3#7 | Frank's D7 call on the AGG micrograph, and the R3#7 integrity decision |
+| ~~B~~ | ~~R1#4, R3#4, R3#7~~ | **done 2026-08-12** — D7 closed, Fig. 8 built, §3.5 written, benchmark curves added, integrity numbers stated. See §8 |
 | C | R1#3, R1#7, R2 Abs#2, R2 Exp#2, R2 R&D#1 | S. Cai — chiefly the phase-fraction question |
 | D | R1#2 (part), R2 Exp#1, R2 Exp#3, R2 R&D#3 | the Gemini transcript (D3) and the E: drive (D2) |
 
@@ -336,3 +336,64 @@ Both blockers cleared. The E: drive mounted (**D2**) and the LLM session turned 
   instead of six, which answers R2 R&D#3 and #4 together. Not swapped in yet: the as-drawn panel
   cannot be reproduced until item 3 above is resolved. `mechanical/rebuild_figure2.py` picks it up
   automatically once the trace exists.
+
+---
+
+## 8. Group B — the AGG comparison and the benchmark's own numbers (2026-08-12)
+
+**D7 is closed.** Frank's instruction was to agree with the reviewers; the drive supports that
+without qualification, and supplies more than the reviewers could have known. Working:
+`processing/AGG-MICROGRAPH-PROVENANCE.md`.
+
+### The correction this produced
+
+Every archived Fig. 2 panel was matched by md5 to its source on E: and then measured against its
+own burned-in scale bar. `Fig2b` — the panel the paper has been calling the LLM-alloy after AGG —
+is **868 µm across against a 0.36 mm wire**. It is rod stock, most probably the 0.0418 in
+(1.06 mm) specimen that the Instron record labels `3CYCLE agg+200c3hr` for heat 697-6. The
+benchmark panel `Fig2c` measures 630 µm against its recorded 0.0253 in stock, which is what
+validates the measurement and makes the anomaly trustworthy.
+
+**The published Fig. 2 pair was never like-for-like**: an LLM-alloy rod set beside a benchmark
+wire, with the difference read as a difference between alloys. The correct 0.36 mm panel
+(`FeMnAlNiSiC-3 cycle AGG ht.jpg`, measuring 330 µm) was on the drive, in the same folder,
+unused. The conclusion is not in danger — the correct panel shows *less* coarsening than the rod
+does, so "the LLM-alloy does not bamboo" is strengthened — but the evidence as drawn could not
+have carried it.
+
+### What changed in the manuscript
+
+| § | Change | Comment |
+|---|---|---|
+| 3.2 | Benchmark stepwise cyclic curves added as **Fig. 3c, d**, and the body text now states the benchmark's own recovery: ≈0.44 % (12 s) and ≈0.09 % (5 min) recoverable transformation strain against 5–8 % in the literature, with reverse transformation close to absent at 5 min | R3#7 |
+| 3.2 | Claim reframed as *"no detectable transformation in the LLM-alloy under a route that produced measurable, if modest, transformation in the benchmark"*, with the note that the route was biased in the LLM-alloy's favour (it got the 200 °C/3 h age; the benchmark got none) | R3#7, A4 integrity flag |
+| 3.3 | The one-line AGG sentence now names the treatment and points forward to §3.5 | R1#4 |
+| **3.5 (new)** | **"Response to the abnormal-grain-growth treatment"** — benchmark bamboos completely at 0.64 mm; LLM-alloy does not coarsen at all at 0.36 mm; at ≈1 mm rod it coarsens and is arrested at a continuous band of fine equiaxed grains. Mechanism tied to the §3.4 equilibrium result: a duplex alloy has a second phase to pin boundaries, a single-phase one does not. Section-size limits stated. Closes with the consequence for the hypothesis — the alloy neither transforms nor accepts the grain structure, for the same reason | R1#4, R3#4 |
+| Fig. 8 (new) | Four panels: benchmark bamboo, LLM 0.36 mm wire, LLM ≈1 mm rod arrested, boundary cracking after AGG + age | R1#4, R3#4 |
+
+Numbered **3.5, not 3.4** as the plan said: §3.4 Equilibrium phase stability already existed, and
+putting the AGG section after it avoids renumbering Figs. 4–7 *and* reads better — the AGG result
+becomes the consequence of the equilibrium result rather than a separate observation.
+
+Fig. 3 was extended rather than a new figure inserted into §3.2, for the same renumbering reason.
+The two-panel original is kept at `figures/archive-2026-08-12-Figure_3-two-panel.jpg` and is the
+build input, so the script is idempotent.
+
+### Deliberately held
+
+**`Fig3b`, the LLM-alloy AGG cyclic curve, is not published.** Its ≈460 MPa yield, ≈810 MPa peak
+and 9.2 % fracture strain match no row of the eight Instron reports on the drive; the nearest
+697-6 AGG entries are 1.293 mm/568 MPa/1.0 %, 1.293 mm/608 MPa/1.0 % and 1.062 mm/1006 MPa/11.9 %.
+Publishing an unidentified panel in the revision that corrects `Fig2b` for being unidentified
+would not be coherent. §3.5 carries the AGG mechanical result as report numbers instead, which
+are traceable, including the one specimen that reached 1006 MPa at 11.9 % — stated because it
+cuts against the damage narrative and a reader is entitled to it.
+
+### Housekeeping
+
+- `figures/captions.md` had drifted two renames and two panels behind. It is now derived:
+  `python figures/extract_captions.py` regenerates it from `manuscript.md`.
+- The response letter is **one document per reviewer, not one per comment** — corrected from the
+  portal by Frank, 2026-08-12. §C7 of the triage said otherwise and has been struck. Consequence:
+  an answer shared between reviewers is written out in full for each, never cross-referenced, since
+  no reviewer sees another's reply.

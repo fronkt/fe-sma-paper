@@ -257,10 +257,13 @@ These will surface in round two if they are not fixed now.
    absent without comment.
 6. **§2.4 wording** — "unloaded to zero stress, and continued to zero strain" is ambiguous about
    what was controlled. Rewrite alongside the R1#7 fix.
-7. **Reviewer 2 is not mentioned in the "Opposed Reviewers" workflow** — irrelevant to science,
-   but note the JMRT portal requires a reply to *every* comment before the response can be sent.
-   All 45 comments below need an individual reply box filled, including the ones answered by a
-   shared response — cross-reference rather than leaving blanks.
+7. **Reviewer 2 is not mentioned in the "Opposed Reviewers" workflow** — irrelevant to science.
+   ~~The JMRT portal requires a reply to every comment; all 45 need an individual reply box.~~
+   **Corrected 2026-08-12 by Frank, from the portal itself: the response is submitted per
+   *reviewer*, not per comment — three responses, not forty-five boxes.** Each reviewer's
+   document should number that reviewer's own comments and answer them in order, and an answer
+   shared between reviewers must be written out in full for each of them rather than
+   cross-referenced, since no reviewer sees another's reply.
 
 ---
 

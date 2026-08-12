@@ -155,3 +155,49 @@ objection the disclosure was meant to pre-empt, and hands the reviewer the stron
 **How to apply:** when a newly found fact undermines a paper's central claim, cost out the
 calculation that would settle it before writing a single hedged sentence. Two hours of CPU
 turned a liability into a result.
+
+## A published panel is a claim about a specimen — measure it before you defend it
+
+`Fig2b` was defended, discussed and re-cropped for two journal submissions as "the LLM-alloy
+after AGG". Measured against its own scale bar it is 868 µm across, and the wire it was
+supposed to be is 360 µm. The correct 0.36 mm panel was on the same drive, in the same folder,
+unused. The whole published Fig. 2 pair — LLM rod against benchmark wire — was never
+like-for-like.
+
+**Why:** figure filenames are captions someone typed once, not measurements. Every other layer
+of review takes the filename at face value, so nothing downstream can catch this; the check has
+to happen at the image.
+
+**How to apply:** before writing a sentence about a micrograph, measure the specimen against the
+bar burned into that panel and reconcile it with a dimension the paper states independently.
+Here the benchmark panel measuring 630 µm against the recorded 0.0253 in stock is what proved
+the method sound and made the 868 µm anomaly trustworthy — check a panel you expect to pass, not
+only the one you suspect.
+
+## Apply a correction's standard to the rest of the same figure set, immediately
+
+Having caught `Fig2b`, the archived cyclic panels went under the same test. `Fig3b` matches no
+row in any of the eight Instron reports on the drive, so it stayed out of this revision. It
+would have been incoherent to publish an unidentified panel in the revision that corrects
+another panel for being unidentified.
+
+**Why:** a correction sets a standard. Applying it to one file and not its siblings is worse
+than not having found it — it produces a document that looks audited and is not.
+
+**How to apply:** when a provenance failure is found, enumerate every artifact of the same class
+in the same commit and run the same check. Report the ones that fail as held, with the evidence,
+rather than quietly keeping them.
+
+## Ask what the submission system actually wants before designing around it
+
+The plan carried "all 45 comments need an individual reply box" for two weeks, and shaped the
+response-letter strategy around cross-referencing shared answers between reviewers. JMRT takes
+one response *per reviewer*. Cross-referencing across reviewers would have sent Reviewer 1 to a
+reply they cannot see.
+
+**Why:** this was inferred from the review letter's structure, never verified against the portal,
+and it silently changed a deliverable's shape.
+
+**How to apply:** any claim about an external system's requirements is an assumption until
+someone with the account confirms it. Mark it as an assumption in the plan, and ask early —
+the cost of asking is one line, the cost of being wrong is a rewritten deliverable.

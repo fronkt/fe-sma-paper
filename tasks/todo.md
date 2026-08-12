@@ -300,25 +300,42 @@ Pure text edits. Nothing here can be wrong for reasons outside the manuscript.
 Highest value per unit effort in the whole plan. The data exists; it was cut during the
 Materials & Design revision.
 
-- [ ] **D7 — Frank confirms the AGG micrograph reading.** The archived image does not show
-      "no AGG"; it shows large grains, some apparently spanning the wire, arrested by a
-      continuous band of fine equiaxed grains — heterogeneous coarsening pinned by
-      second-phase bands. This is exactly the mechanism R1#4 asks about. **Blocks the two
-      items below.**
-- [ ] **New AGG figure** — LLM-alloy vs benchmark after the identical 3-cycle route, from
-      `figures/archive-2026-06-pre-MD-revision/Fig2b_*` and `Fig2c_*` *(R1#4, R3#4)*
-- [ ] **New §3.4 "Response to the abnormal-grain-growth treatment"** — currently one
-      sentence; R1 correctly calls it a second, independent failure mode *(R1#4, R3#4)*
-- [ ] **Add the LLM-alloy AGG cyclic curve** (`Fig3b_AI_3cycle_AGG_cyclic.png`)
-- [ ] **Add the benchmark cyclic curves** (`Fig3c_*`, `Fig3d_*`) so R3#7's comparison is on
-      the page *(R3#7)*
-      > ⚠️ **Integrity flag.** The 2026-08-03 memo found the benchmark itself gives only
-      > 0.44 % (20 fpm) and 0.09 % (0.8 fpm) recoverable transformation strain against
-      > 5–8 % in the literature, and at 0.8 fpm reverse transformation is absent. Once these
-      > curves are on the page a reviewer can compute this. State the number and own it.
-      > Frame the claim as *"no detectable transformation in the LLM-alloy under a route
-      > that produced measurable, if modest, transformation in the benchmark."*
-- [ ] Update `figures/captions.md`
+**Executed 2026-08-12 on Frank's instruction to agree with the reviewers.** Full working in
+`revision/JMRT-R1/processing/AGG-MICROGRAPH-PROVENANCE.md`.
+
+- [x] **D7 — CLOSED.** Frank's call is to agree with the reviewers, and the drive supports it
+      without qualification. It also exposed a bigger problem than D7 asked about: **the
+      archived `Fig2b` is not the 0.36 mm wire.** It measures 868 µm against its own 400 µm
+      bar, so it is rod stock (≈1 mm, most likely the 0.0418 in 3-cycle specimen). The
+      published Fig. 2 pair set an LLM-alloy *rod* beside a benchmark *wire*. The correct
+      0.36 mm panel was on the drive unused and measures 330 µm.
+- [x] **New AGG figure** — `figures/Figure_8.jpg`, built by `figures/build_agg_figure.py` from
+      `figures/sources-AGG/`: (a) benchmark 0.64 mm bamboo, (b) LLM 0.36 mm no coarsening,
+      (c) LLM ≈1 mm rod arrested at a fine-grain band, (d) boundary cracks after AGG + age.
+      *(R1#4, R3#4)*
+- [x] **New §3.5 "Response to the abnormal-grain-growth treatment"** — written. Numbered 3.5,
+      not 3.4 as planned here: §3.4 Equilibrium phase stability already existed, and placing
+      the AGG section after it both avoids renumbering Figs. 4–7 and lets the AGG result be
+      read as the consequence of the equilibrium one. *(R1#4, R3#4)*
+- [ ] ⏸️ **LLM-alloy AGG cyclic curve** (`Fig3b_AI_3cycle_AGG_cyclic.png`) — **held, not
+      published.** Its ≈460 MPa yield / ≈810 MPa peak / 9.2 % fracture matches no row of the
+      eight Instron reports on the drive (nearest 697-6 AGG entries: 1.293 mm/568 MPa/1.0 %,
+      1.293 mm/608 MPa/1.0 %, 1.062 mm/1006 MPa/11.9 %). Publishing an unidentified panel in
+      the same revision that corrects `Fig2b` for being unidentified would not be coherent.
+      **Unblocks the moment its spool is named.** The AGG mechanical result is in §3.5 as
+      report numbers instead, which are traceable.
+- [x] **Benchmark cyclic curves** (`Fig3c_*`, `Fig3d_*`) — added as panels (c) and (d) of
+      Fig. 3 by `figures/build_fig3_with_benchmark.py`. Appended to Fig. 3 rather than made a
+      new figure because they are the same test on the same alloys, and a new figure in §3.2
+      would renumber Figs. 4–7 for 26 cosmetic tracked changes. *(R3#7)*
+      > ✅ **Integrity flag discharged.** §3.2 now states in the body text that the benchmark
+      > gives ≈0.44 % (12 s) and ≈0.09 % (5 min) recoverable transformation strain against
+      > 5–8 % in the literature, that at 5 min reverse transformation is close to absent, and
+      > frames the claim as *"no detectable transformation in the LLM-alloy under a route that
+      > produced measurable, if modest, transformation in the benchmark."*
+- [x] Update `figures/captions.md` — it had drifted (still "AI alloy"/"Omori alloy", two panels
+      behind on Fig. 3). Now **derived**: `python figures/extract_captions.py` regenerates it
+      from `manuscript.md`, so it cannot drift again.
 
 ## Tier 3 — CALPHAD (unblocked, ~a day of compute + a day of writing)
 
@@ -510,8 +527,13 @@ Start the asks now; they have the longest latency in the plan.
 
 ## Tier 6 — response letter and verification
 
-- [ ] Point-by-point reply to **all 45 comments** (R1×9, R2×24, R3×12). JMRT requires a reply
-      in every box, so cross-reference shared answers rather than leaving any blank
+- [ ] Point-by-point reply covering **all 45 comments** (R1×9, R2×24, R3×12), submitted as
+      **three responses — one per reviewer, not one per comment**. *(Corrected 2026-08-12 by
+      Frank, who has the portal open; an earlier note here and in `comment-triage.md` §C7 said
+      the portal wanted 45 individual boxes.)* Practical consequence: each reviewer gets one
+      continuous document that numbers their own comments and answers them in order, so shared
+      answers are written out once per reviewer rather than cross-referenced across reviewers —
+      a reviewer must not be sent to another reviewer's reply to find their answer
 - [ ] **R1#5** — note graciously that the manuscript already reads "AI" (PDF text extraction
       gives 25× "AI alloy", 0× "Al-alloy"; it is a rendering-font collision in Editorial
       Manager) and that we adopted "LLM-" anyway
