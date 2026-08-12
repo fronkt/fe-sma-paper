@@ -201,3 +201,20 @@ and it silently changed a deliverable's shape.
 **How to apply:** any claim about an external system's requirements is an assumption until
 someone with the account confirms it. Mark it as an assumption in the plan, and ask early —
 the cost of asking is one line, the cost of being wrong is a rewritten deliverable.
+
+## Two mechanisms that co-occur in one alloy are not one mechanism
+
+New evidence (S. Cai, 2026-08-12) says the LLM-alloy's diffraction pattern after the AGG
+treatment is *spottier* than Fig. 4a, not "similar" to it — the grains coarsened. My first read
+was that this cut against Sec. 3.5. It does not. The paper's claim is that the treatment does not
+produce **bamboo** structure, and coarsening is a different thing. In the benchmark the two arrive
+together, which is exactly why they get conflated.
+
+**Why:** in the reference system the mechanisms are correlated, so a single word ("coarsening")
+was doing duty for both. The moment an alloy separates them, the shared word turns a correct
+claim into a wrong one — in either direction, and the wrong ones are equally easy to write.
+
+**How to apply:** when the whole point of a result is that alloy B behaves unlike alloy A, list
+the phenomena that are welded together in A and check each is named separately in the text. Here
+that was grain *size* versus grain *span/shape*; Sec. 3.5 now says which one it is claiming, in
+the sentence that makes the claim.
