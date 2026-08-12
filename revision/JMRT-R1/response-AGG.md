@@ -108,6 +108,19 @@ declined to build a super-elasticity argument on cyclic curves from this conditi
 specimens that fracture at ~1% elongation cannot be cycled meaningfully, and a hysteresis loop
 measured on a cracked specimen would not be interpretable as transformation.
 
+There is also a reason such a measurement could not produce a new result, which we set out
+rather than leave implicit. The AGG treatment coarsens this alloy more than a 1-minute anneal at
+1200 °C but less than a 40-minute anneal at the same temperature, so in grain size the AGG
+condition lies *between* two conditions already characterised mechanically. Both bounds are
+reported: the 1-minute condition in Figure 2e and Figure 3a, and the 40-minute condition in
+Section 3.5. Neither shows any transformation. In both — and in every other condition in Figure
+2 — the unloading segments are straight and parallel to the initial elastic loading line,
+returning toward zero stress without hysteresis and with recovery no greater than σ/E. A cyclic
+curve from a condition bracketed by two curves that each show no transformation cannot itself
+show one. It can differ only in strength and ductility, and the direction of both is already
+known from the 11.0% → 1.4% elongation loss between the two bounds. Such a measurement would
+refine a number; it would not test the claim.
+
 That embrittlement is itself a result, and it bears on the Reviewer's underlying question.
 Coarsening costs this alloy its ductility long before bamboo dimensions are approached:
 holding ≈1 mm rod at 1200 °C for 40 minutes instead of 1 minute — at the same diameter and
@@ -142,6 +155,15 @@ the experimental programme.
 4. **Not claimed anywhere:** that texture *was* measured, or that an ODF refinement exists.
    The reply says the diffraction gives no indication of a texture change and that texture
    could not alter the conclusion — both defensible without new data.
-5. **S. Cai's IPF** ({111}+{100} γ, strong {110} α) is deliberately *not* used. If he wants it
+5. **The bracketing claim is the experimentalist's judgement, not a measurement.** S. Cai and
+   F. Cai state (2026-08-12) that AGG coarsens this alloy more than the 1-minute anneal and less
+   than the 40-minute anneal. No grain-size measurement of the AGG condition against those two
+   exists in the record. The claim is sound and is the basis of the strongest part of the R3
+   reply, but if a reviewer asks for numbers we do not have them — and note that Fig. 8b (wire)
+   looks close to the 1-minute end while Fig. 8c (rod) looks closer to the 40-minute end, so the
+   bracket is geometry-dependent. Measuring the three grain sizes is a ~1 hour task on
+   micrographs already in hand and would convert the argument from judgement to data. Worth doing
+   before submission.
+6. **S. Cai's IPF** ({111}+{100} γ, strong {110} α) is deliberately *not* used. If he wants it
    in, it needs its specimen identified first — his own description, "typical for cold drawn
    wires," suggests the drawn condition rather than post-AGG, which would not answer R3#4.

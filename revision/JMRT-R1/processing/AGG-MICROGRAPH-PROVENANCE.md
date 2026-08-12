@@ -152,3 +152,26 @@ bamboo as a second failure, which it is not.
 Caveat to carry: rows 8/11/12 are ≈1 mm rod. Table 2 is 0.36 mm wire and gives 23.9 % at
 1200 °C / 1 min. The 11.0 → 1.4 comparison is internally valid (constant diameter and age)
 but is not a wire result, and Sec. 3.5 states the diameter for that reason.
+
+## 6. Why no AGG-condition cyclic stress–strain will be run (2026-08-12)
+
+Decision: S. Cai / F. Cai, 2026-08-12. **Not doing it.**
+
+Grounds — a bracketing argument, not unavailability:
+
+- In grain size the AGG condition lies **above the 1 min anneal and below the 40 min anneal**
+  at 1200 °C. Both bounds are already characterised mechanically (§3.5 table above).
+- Neither bound shows any transformation. Every unloading segment in Fig. 2 is straight and
+  parallel to the elastic loading line; recovery never exceeds σ/E.
+- A curve bracketed by two curves that each show no transformation cannot show one. It can
+  differ only in strength and ductility, and the sign of both is fixed by the 11.0 % → 1.4 %
+  elongation loss between the bounds.
+- Independently: specimens fracturing at ~1 % elongation cannot be cycled meaningfully, and a
+  loop measured on a cracked specimen (Fig. 8d) is not interpretable as transformation.
+
+**Caveat — this bracket is judgement, not measurement.** No grain-size measurement of the AGG
+condition against the 1 min and 40 min conditions exists in the record. It is also
+geometry-dependent: Fig. 8b (0.36 mm wire) sits near the 1 min end, Fig. 8c (≈1 mm rod) nearer
+the 40 min end. Measuring all three from micrographs already in hand is roughly an hour's work
+and would convert the strongest paragraph of the R3#4 reply from judgement to data. Recommended
+before submission. Stated in §3.5 and in `response-AGG.md`.
