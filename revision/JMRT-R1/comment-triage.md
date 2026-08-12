@@ -86,8 +86,16 @@ database is present. The physics needs a database with assessed Fe-Mn-Al-Ni-Si-C
 **R1#4 · R3#4 → CONCEDE+DATA · highest value per unit effort in the whole revision**
 
 Both reviewers correctly identify that the abnormal-grain-growth result is one sentence (§3.3,
-line 92) with no figure, and R1 is right that it constitutes a **second, independent failure
-mode**. What neither reviewer knows is that the data exists — it was cut during the
+line 92) with no figure.
+
+> **Superseded 2026-08-12.** This section previously read "R1 is right that it constitutes a
+> **second, independent failure mode**." It is not a second failure. Bamboo structure amplifies
+> a transformation rather than creating one, and coarsening embrittles this alloy (11.0 % → 1.4 %
+> elongation, 1 min → 40 min at 1200 °C, constant diameter and age) long before bamboo dimensions
+> are reached — so bamboo was never a target for the LLM-alloy. The benchmark shows detectable
+> transformation in *non-bamboo* conditions (≈0.5 %, ≈0.44 %, ≈0.09 %, §3.2) while the LLM-alloy
+> shows nothing anywhere. AGG therefore cannot settle the question either way. Replies drafted in
+> `response-AGG.md`; manuscript reframed in §3.5. What neither reviewer knows is that the data exists — it was cut during the
 Materials & Design revision and is sitting in `figures/archive-2026-06-pre-MD-revision/`:
 
 | File | What it shows |
