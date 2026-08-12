@@ -124,3 +124,31 @@ known from the submitted paper:
   and were not usable regardless.
 - **Panel (c)'s rod diameter**, per §2 above — 1.06 mm against 1.29 mm. The caption says "rod stock,
   ≈1 mm" rather than picking one.
+
+## 5. Why bamboo is not a target for this alloy (added 2026-08-12)
+
+Source: S. Cai, 2026-08-12, and `instron-reports-extracted.txt`
+(`Frank-SMA-constant.is_tcyclic`, 2025-09-22, ≈1 mm rod, 0.03998 in).
+
+| Spool row | Condition | Elong. [%] |
+|-----------|-----------|-----------|
+| 8  | 1200 °C / 1 min, no age      | 9.1  |
+| 11 | 1200 °C / 1 min, + 200 °C/3 h | 11.0 |
+| 12 | 1200 °C / 40 min, + 200 °C/3 h | **1.4** |
+
+Rows 11 and 12 differ only in anneal time: same diameter, same age. Elongation falls
+by a factor of eight. The 40-minute microstructure is Fig. 1c (grains > 100 µm).
+
+The 2-cycle AGG rod specimens (568 and 608 MPa at 1.0 % elongation, Sec. 3.5) are the
+same effect reached by a different route.
+
+Consequence: coarsening embrittles this alloy well before bamboo dimensions (a grain
+spanning the full 360 µm section) are approached. The AGG treatment was run because the
+benchmark comparison required it, not because bamboo was a goal for the LLM-alloy. What
+AGG produced was growth of the duplex structure — both constituents coarsening together,
+still interlocked. Sec. 3.5 and Sec. 4.2 now say this; earlier drafts wrote the absent
+bamboo as a second failure, which it is not.
+
+Caveat to carry: rows 8/11/12 are ≈1 mm rod. Table 2 is 0.36 mm wire and gives 23.9 % at
+1200 °C / 1 min. The 11.0 → 1.4 comparison is internally valid (constant diameter and age)
+but is not a wire result, and Sec. 3.5 states the diameter for that reason.

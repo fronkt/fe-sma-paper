@@ -218,3 +218,22 @@ claim into a wrong one — in either direction, and the wrong ones are equally e
 the phenomena that are welded together in A and check each is named separately in the text. Here
 that was grain *size* versus grain *span/shape*; Sec. 3.5 now says which one it is claiming, in
 the sentence that makes the claim.
+
+## Ask why a target is a target before writing its absence as a failure
+
+Sec. 3.5 was written so that the LLM-alloy "neither transforms nor accepts the grain
+structure" — the missing bamboo counted as a second, independent failure. Frank: bamboo
+does not give enough elongation in this alloy. The 1200 °C/40 min condition is already at
+1.4 % and nearly breaks, so bamboo was never something worth achieving here. AGG was run to
+complete the benchmark comparison, and what it grew was the duplex structure.
+
+**Why:** I inherited the benchmark's goal structure along with its processing route. In the
+Omori alloy bamboo *is* the target, so its absence reads as failure; I never checked whether
+the target transfers. The disproof was already inside the repo — `instron-reports-extracted.txt`
+rows 11 and 12, same diameter, same age, 11.0 % against 1.4 %.
+
+**How to apply:** when a paper's structure is "alloy B put through alloy A's route," every
+goal in that route is an assumption about B, not a fact. Before writing "B failed to achieve
+X," ask what X would be worth to B — and look for the condition already in the data that
+answers it. A negative result is only as good as its account of what would have counted as
+success.
