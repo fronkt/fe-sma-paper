@@ -19,10 +19,15 @@ nothing in any condition. So AGG is not the missing experiment.
 
 ## Reviewer 1, comment 4
 
-> The authors should elevate this point, explicitly present the microstructure after the AGG
-> treatment (which is currently absent from the figures), and discuss how the multi-phase
-> stability prevents grain boundary migration — this would strengthen the case that the AI
-> design is fundamentally incompatible with the processing route.
+> 4. The manuscript claims that the AI-designed alloy did not exhibit abnormal grain growth (AGG)
+> even under the cyclic heat treatment intended to produce a bamboo-like structure. This
+> observation, however, is buried in a single sentence in Section 3.3. Given that AGG is a central
+> requirement for achieving super-elasticity in this alloy family, the fact that the AI-designed
+> alloy fails to undergo AGG is a second, independent mode of failure. The authors should elevate
+> this point, explicitly present the microstructure after the AGG treatment (which is currently
+> absent from the figures), and discuss how the multi-phase stability prevents grain boundary
+> migration — this would strengthen the case that the AI design is fundamentally incompatible
+> with the processing route.
 
 **Response.** We agree, and we have made this change. The abnormal-grain-growth result was
 previously a single sentence with no supporting figure; it is now a section of its own with a
@@ -45,16 +50,28 @@ state is the equilibrium state at 1200 °C rather than an incompletely transform
 benchmark, single-phase α at that temperature, has nothing to pin a migrating boundary. We
 have added this comparison to Section 3.5 and connected it explicitly to Section 3.4.
 
-We would, however, qualify the Reviewer's framing on one point, because we think the revised
-manuscript now makes a stronger claim than the one suggested. It is not that the alloy is
+We would, however, respectfully qualify the Reviewer's framing on two points, because in
+following the comment we found that the evidence supports a different and, we think, stronger
+conclusion than the one proposed.
+
+First, on the facts: the revised manuscript no longer says the alloy "did not exhibit AGG."
+It does coarsen — Figure 8c shows it plainly at rod section, and the AGG-condition diffraction
+pattern is spottier than Figure 4a, which is the signature of fewer and larger crystallites
+(Section 3.3). What it does not form is *bamboo* structure, in which single grains span the
+section. We now separate grain size from grain span throughout Section 3.5, since the treatment
+changes the first and not the second.
+
+Second, on the interpretation: we do not believe the absence of bamboo constitutes a second,
+independent mode of failure, and we have not written it as one. It is not that the alloy is
 incompatible with the AGG processing route; it is that the route would not help it. Bamboo
 structure does not confer a transformation — it removes the inter-granular constraint that
 limits one, and thereby raises the recoverable strain of a material that already transforms.
-The benchmark demonstrates this within our own data set: at 1200 °C for 1 minute, 12 seconds
-and 5 minutes it is fine-grained and not bamboo, and it transforms in all three conditions
-(≈0.5%, ≈0.44% and ≈0.09% recoverable strain, Section 3.2), against the 5–8% the same
-composition reaches once bamboo is developed. The tendency is detectable an order of
-magnitude below the grain structure that optimises it. In the LLM-alloy no such signal
+The benchmark demonstrates this within our own data set: none of the three single-anneal
+conditions in Figure 3 is a bamboo structure — bamboo requires the cyclic treatment, and these
+specimens received one anneal — yet the benchmark transforms in all three (≈0.5%, ≈0.44% and
+≈0.09% recoverable strain, Section 3.2), against the 5–8% the same composition reaches once
+bamboo is developed. The tendency is detectable an order of magnitude below the grain structure
+that optimises it. In the LLM-alloy no such signal
 appears in any condition examined: not across the eight anneal conditions of Table 2, not
 with the 200 °C/3 h age applied, and not after the AGG treatment. Abnormal grain growth
 multiplies a transformation strain; there is nothing here for it to multiply. This is now
@@ -64,14 +81,31 @@ stated in Section 3.5.
 
 ## Reviewer 3, comment 4
 
-> ...without presenting the grain size, formation of bamboo-like grains, grain orientation,
-> texture, or corresponding cyclic stress–strain results after this treatment.
+> 4. Section 2.2 describes a cyclic heat treatment for abnormal grain growth. However, the main
+> text only briefly states that the XRD pattern of the AGG-treated sample is similar to Fig. 4a,
+> without presenting the grain size, formation of bamboo-like grains, grain orientation, texture,
+> or corresponding cyclic stress-strain results after this treatment. The key mechanical
+> specimens in Figs. 2 and 3 were not in this cyclic heat-treated condition. The key heat
+> treatment specifically included in the Methods does not enter the core evidence chain, and the
+> reporting of the results is incomplete.
 
 **Response.** We thank the Reviewer for pressing on this, and we have substantially expanded
 the treatment of the AGG condition: it was one sentence in the submitted manuscript and is now
 Section 3.5 with a new four-panel Figure 8. We address the five items in turn, and we ask the
 Reviewer's indulgence in explaining why we believe two of them would not change the
 manuscript's conclusion.
+
+*The heat treatment does not enter the core evidence chain.* We accept this criticism as
+originally stated, and it is the one we have worked hardest to remedy. In the submitted
+manuscript a treatment given a subsection of the Methods appeared in the Results as a single
+sentence and in no figure, which is a genuine defect of construction. It now has its own results
+section (3.5) and its own figure (Figure 8, four panels), it is connected to the equilibrium
+calculations of Section 3.4 as the mechanism that explains it, and it is cited in the Discussion
+(Section 4.2). We also correct a claim the Reviewer quotes: the AGG-condition diffraction pattern
+is *not* "similar to Fig. 4a" in the way that sentence implied. It contains the same phases, but
+its Debye rings resolve into markedly more discrete spots, indicating coarser grains. Section 3.3
+now states the phase-constitution result and the grain-size result separately, because only the
+first was ever intended and the second was being lost.
 
 *Formation of bamboo-like grains, and grain size.* Both are now shown directly. Figure 8a is
 the benchmark after three cycles: bamboo throughout its 0.64 mm section, grains spanning the
@@ -132,14 +166,42 @@ We would therefore respectfully submit that pursuing abnormal grain growth furth
 experiment that would settle the question. The purpose of bamboo structure in this alloy family
 is to remove inter-granular constraint and so *maximise* a recoverable strain; it does not
 create the underlying transformation. Our own benchmark data show the tendency is detectable
-without it: at 1200 °C for 1 minute, 12 seconds and 5 minutes the benchmark is fine-grained
-and not bamboo, and it recovers ≈0.5%, ≈0.44% and ≈0.09% of strain respectively (Section 3.2),
-against 5–8% once bamboo is developed. A material with the tendency shows something at small
-grain size. The LLM-alloy shows nothing, anywhere. This is now argued explicitly in Section
+without it: at 1200 °C for 1 minute, 12 seconds and 5 minutes the benchmark has received a
+single anneal and is not bamboo, and it recovers ≈0.5%, ≈0.44% and ≈0.09% of strain
+respectively (Section 3.2), against 5–8% once bamboo is developed. A material with the tendency
+shows something without bamboo. The LLM-alloy shows nothing, anywhere — and not because its
+grains are finer, since it shows nothing after the 40-minute anneal that takes it past 100 µm
+either (Section 3.5). A quantity that stays at zero across a fivefold change in grain size is
+not one that grain size governs. This is now argued explicitly in Section
 3.5, and it is the reason we did not pursue the AGG route further rather than an omission from
 the experimental programme.
 
 ---
+
+## Open risks — read before submitting
+
+**A. The §3.3 AGG diffraction specimen is not identified.** S. Cai's 2026-08-12 message says
+"X-ray image of Ai alloy after AGG treatment" without stating whether it is the 0.36 mm wire or
+the ≈1 mm rod. Both replies and §3.3 now rest on that pattern. If it is the rod, then §3.5's
+"the wire coarsened too" reading is unsupported and Fig. 8b may genuinely show little coarsening.
+**This is the same class of error as the Fig. 2b specimen mix-up found on 2026-08-10.** Ask
+before submitting; it is one line of email.
+
+**B. "The diffraction gives no indication of a texture change" is the weakest sentence in the
+R3 reply.** A spotty pattern makes texture assessment *harder*, not easier — with few large
+grains the azimuthal intensity is dominated by individual grain orientations rather than by
+texture. A diffractionist on the review panel can say so. Two ways out, both cheap: (i) delete
+the clause and rest the paragraph on the in-principle argument, which stands alone and is the
+strong part; or (ii) use S. Cai's inverse pole figure in one sentence with no figure — it reports
+{111}+{100} in γ and strong {110} in α, the drawing texture, which is exactly what the reply
+asserts on expectation. Option (ii) converts an assertion into a measurement without adding a
+texture figure, but requires knowing which specimen the IPF is from (see note 6).
+
+**C. Unaddressed from S. Cai, 2026-08-12.** Two of his five messages are not reflected anywhere:
+the five `697-11-AGG` micrographs sent under "How do you explain this?..", and `microstructure.jpg`
+whose panel (d) he identifies as the LLM-alloy after AGG. 697-11 is a heat number that appears
+nowhere in the manuscript, the repo, the process note, or the E: drive. Neither can be acted on
+until the attachments are saved to `from-SCai-2026-08-12/`. **His question is still open.**
 
 ## Notes for Frank
 
