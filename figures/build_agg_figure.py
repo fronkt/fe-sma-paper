@@ -1,4 +1,5 @@
-"""Build Fig. 8 — response of both alloys to the three-cycle AGG treatment.
+"""Build Fig. 10 (Fig. 8 before the 2026-08-14 renumbering) — response of both alloys
+to the three-cycle AGG treatment.
 
 Sources are in `sources-AGG/`, copied from the E: drive and identified by md5 against
 the originals; see `revision/JMRT-R1/processing/AGG-MICROGRAPH-PROVENANCE.md` for the
@@ -67,7 +68,7 @@ def main():
         draw.text((bx + LABEL_PAD - l, by + LABEL_PAD // 2 - t), text,
                   font=font, fill="black")
 
-    out = HERE / "Figure_8.jpg"
+    out = HERE / "Figure_10.jpg"
     canvas.save(out, dpi=(TARGET_DPI, TARGET_DPI), quality=95, optimize=True)
     print(f"wrote {out.name}  ({canvas.size[0]}x{canvas.size[1]} px, "
           f"{out.stat().st_size / 1e6:.1f} MB)")

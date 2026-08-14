@@ -4,6 +4,23 @@ Patterns worth not repeating. Reviewed at the start of a session on this project
 
 ---
 
+## 2026-08-14 · File forensics is an inference, not a verdict — the authors may know more
+
+**What happened.** The status report asserted that the 62/34/4 Rietveld fractions "were
+never refined," presenting the conclusion of `xrd/RIETVELD-FILES-ANALYSIS.md` (fractions
+flagged not-refinable in `sample-5-2.prn.lst`) as settled fact. Frank corrected it: the
+refinement was done. The analysis file was a point-in-time reading of the *files that
+happened to be in the repo*, and `todo.md` itself had recorded the question as open
+("where did 0.62/0.34/0.04 come from?"), not answered.
+
+**Rule.** When repo analysis documents conclude something negative about the authors'
+own data ("not refined", "not on the drive", "lost"), report it as an open question with
+its evidence, not as a verdict — the co-authors hold state that never reached the repo.
+This project has now had *three* instances of authorial work existing outside the repo
+(two Word forks, one refinement). Absence from the repo is weak evidence of absence.
+
+---
+
 ## 2026-08-09 · Check an empirical correlation on its defined basis before quoting it
 
 **What happened.** `revision/JMRT-R1/comment-triage.md` proposed answering R1#1 and R3#9

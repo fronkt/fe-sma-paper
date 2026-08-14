@@ -10,7 +10,7 @@ but restyled for the paper:
     the whole argument is read off that vertical line
   * no figure-level title; the caption carries it
 
-Writes figures/Figure_7.png. Run plot_step_diagrams.py instead for the diagnostic
+Writes figures/Figure_9.png. Run plot_step_diagrams.py instead for the diagnostic
 versions of all three databases.
 """
 import os
@@ -24,7 +24,7 @@ import pandas as pd
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CSV = os.path.join(HERE, 'results', 'step_diagrams.csv')
-OUT = os.path.abspath(os.path.join(HERE, '..', '..', '..', 'figures', 'Figure_7.png'))
+OUT = os.path.abspath(os.path.join(HERE, '..', '..', '..', 'figures', 'Figure_9.png'))
 
 DATABASE = 'mpea-02b'
 T_SOLUTION = 1200.0

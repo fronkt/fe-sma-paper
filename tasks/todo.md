@@ -13,6 +13,18 @@ causality items and the Ni-equivalent arithmetic. Tier 3 complete except the Ni 
 run. Tiers 2, 4, 5, 6 open. 29 of 45 reviewer comments answered, 6 partial, 6 blocked on
 S. Cai or Frank, 4 untouched (R1#4, R3#4, R3#7 need only the D7 micrograph call).**
 
+> **2026-08-14 — S. Cai's 08-13 package merged; figures renumbered to 10.** Full account in
+> `CHANGES-FROM-SUBMISSION.md` §9. His DOCX was built on the as-submitted manuscript, so only
+> his *additions* were ported: four-panel Fig. 1 (new AGG panel d + lamellar/EBSD caveat in
+> §3.1), new Fig. 7 (γ/α inverse pole figures + §3.3 texture paragraph), new Fig. 8 (AGG
+> diffraction image, now cited where §3.3 described it), AGG-suppression mechanisms in §3.5,
+> P source unknown in §2.1, tenfold carbon contrast in the abstract. CALPHAD figure is now
+> **Fig. 9** (his requested number), AGG collage **Fig. 10**. **NOT merged, per Frank:** his
+> §4.3 CALPHAD interpretation ("both alloys primarily α at 1200 °C… cannot be explained by
+> phase stability"), which Table 3/Fig. 9 contradict — needs a conversation with S. Cai
+> before resubmission. Optional open item: a citation for the drawn-wire fiber-texture
+> statement in §3.3 (his draft had an empty bracket; left uncited as textbook knowledge).
+
 > **Two small consistency fixes made in passing (2026-08-08).** One §3.3 occurrence of the
 > ordered phase was written `DO₃` (letter O) against 20 correct `D0₃` — normalized. Two
 > `aluminium` spellings introduced in the new §4.2 text were changed to `aluminum` to match
@@ -130,16 +142,15 @@ Pure text edits. Nothing here can be wrong for reasons outside the manuscript.
       🔴 **Frank must verify the scope of this statement before submission — it is the
       authors' declaration to make, not a drafting decision.**
 
-### Held back deliberately — do NOT write until S. Cai answers
+### Held back deliberately — RESOLVED 2026-08-14
 
-- [ ] 🔴 **The §3.3 phase-fraction sentences.** §3.3 and §4.1 still present 62/34/4 as
-      the output of quantitative Rietveld refinement. Per the analysis above it was not
-      refined. Nothing was changed, because the honest wording depends entirely on his
-      answer to "where did 0.62/0.34/0.04 come from?"
-- [ ] 🔴 **Any before/after phase-fraction comparison** in §3.3 (62→60.8, 34→35.1,
-      4→4.05). Same reason.
-- [ ] **Soften the "≈4 % D0₃ bulk constituent" argument** in §4.1 once the above resolves —
-      a refinement of the same specimen put it at 1.6 %.
+- [x] 🟢 **The hold is lifted: Frank confirms the 62/34/4 fractions WERE refined**
+      (2026-08-14), superseding `xrd/RIETVELD-FILES-ANALYSIS.md`'s "not refinable" reading,
+      which was drawn from the single `.lst` file that reached the repo. The manuscript's
+      existing quantitative wording stands unchanged. Remaining ask (not blocking): have
+      the refinement file on hand in case a reviewer requests fit statistics or ESDs, and
+      reconcile the zip1/sample-6 run that returned D0₃ at 1.56(11) % if a reviewer pushes
+      on the ≈4 % figure.
 
 ## Tier 1 — writing, no new data (one focused session)
 
@@ -445,7 +456,9 @@ Read `revision/JMRT-R1/xrd/ANALYSIS.md` before editing any text.
 
 ### 🔴 Three items that must be settled before text is written
 
-- [ ] **The 62 / 34 / 4 refinement is not on the E: drive.** No MAUD, GSAS or refinement
+- [ ] *(downgraded from blocking 2026-08-14 — Frank confirms the refinement was done; what
+      remains is obtaining the file itself for the record)* **The 62 / 34 / 4 refinement is
+      not on the E: drive.** No MAUD, GSAS or refinement
       project anywhere. The only artifact is `X-ray fitting.jpg` (2025-11-26): a **two-phase**
       fit (bcc + fcc, **no D0₃**) reporting **70.3 % fcc**. And §3.3 says 34 % α while §4.1
       says 37 %. Three numbers, no agreement, and the fit statistics cannot be produced if a
