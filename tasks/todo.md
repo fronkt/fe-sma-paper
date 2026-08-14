@@ -581,8 +581,13 @@ Start the asks now; they have the longest latency in the plan.
 - [ ] **R2-vs-R3 conflict on generalisation** — R2 Concl#2 wants broader AI implications,
       R3#12 wants them narrowed. Name the tension to the editor and land on the split:
       bounded experimental claim, retained methodological claim
-- [x] **Marked-up manuscript with changes tracked** *(2026-08-08; rebuilt after the writing
-      pass and the reference pass)* —
+- [x] **Marked-up manuscript with changes tracked** *(2026-08-08; REBUILT 2026-08-14 after
+      the S. Cai merge + Fig. 2 rebuild: now **461 tracked revisions** — 221 insertions,
+      200 deletions, 40 formatting — 10 figures, 3 tables, verified 0 stale names /
+      0 unresolved keys / encoding intact. Build is now `pandoc front_JMRT.md manuscript.md
+      …` + `revision/JMRT-R1/R1-manuscript/build_docx_pair.py`; pair copied into
+      `submissions/JMRT-R1-resubmission/`. Rebuild the pair after every future
+      manuscript.md edit round — see tasks/lessons.md)* —
       `revision/JMRT-R1/R1-manuscript/Cai_Fe-SMA_JMRT_R1_marked-up.docx` (**339 tracked
       revisions: 180 insertions, 159 deletions**; was 252, then 300) and `..._clean.docx`.
       Bibliography now 35 entries. Built by rendering

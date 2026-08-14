@@ -4,6 +4,26 @@ Patterns worth not repeating. Reviewed at the start of a session on this project
 
 ---
 
+## 2026-08-14 · The deliverable is the DOCX pair, not manuscript.md
+
+**What happened.** Two days of substantive edits (S. Cai merge, Fig. 2 rebuild, figure
+renumbering, affiliation fix) were made in `manuscript.md` and reported as "done" while
+`revision/JMRT-R1/R1-manuscript/*.docx` — the files JMRT actually receives — sat at the
+2026-08-08 build. Frank had to point it out.
+
+**Rule.** `manuscript.md` is the *source*; the marked-up + clean DOCX pair is the
+*deliverable*. A round of manuscript edits is not complete until
+`build_docx_pair.py` has been rerun and the pair verified (10 images, 3 tables, 0 stale
+alloy names, 0 `[@`, non-zero α/γ). Rebuilding is cheap now that the compare script
+lives in the repo — there is no reason to defer it.
+
+**Bonus trap caught by the verifier.** PowerShell 5.1 `Get-Content` without `-Encoding`
+reads UTF-8-without-BOM as ANSI: the first rebuild mojibaked every α/γ/° (169 Â
+characters, 621 phantom revisions). Let pandoc take both input files itself, and treat
+the α/γ counts as the encoding canary in every future DOCX verification.
+
+---
+
 ## 2026-08-14 · File forensics is an inference, not a verdict — the authors may know more
 
 **What happened.** The status report asserted that the 62/34/4 Rietveld fractions "were
