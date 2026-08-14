@@ -15,7 +15,11 @@ renumbering, affiliation fix) were made in `manuscript.md` and reported as "done
 *deliverable*. A round of manuscript edits is not complete until
 `build_docx_pair.py` has been rerun and the pair verified (10 images, 3 tables, 0 stale
 alloy names, 0 `[@`, non-zero α/γ). Rebuilding is cheap now that the compare script
-lives in the repo — there is no reason to defer it.
+lives in the repo — there is no reason to defer it. The pair syncs to **three** places:
+`revision/JMRT-R1/R1-manuscript/` (build output), `submissions/JMRT-R1-resubmission/`
+(upload package), and **`C:\Users\frank\Downloads\`** — Frank's working copies, the ones
+he actually opens and sends; leaving those stale is what made this correction necessary
+(second follow-up, 2026-08-14).
 
 **Bonus trap caught by the verifier.** PowerShell 5.1 `Get-Content` without `-Encoding`
 reads UTF-8-without-BOM as ANSI: the first rebuild mojibaked every α/γ/° (169 Â
