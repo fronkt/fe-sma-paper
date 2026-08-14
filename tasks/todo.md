@@ -528,6 +528,17 @@ Start the asks now; they have the longest latency in the plan.
       as a ninth panel automatically). *(R2 R&D#3, R2 R&D#4)*
 - [ ] **B2 detection limit** estimated from the Rietveld refinement, to bound "no B2"
       quantitatively *(R3#8)* *(needs D2)*
+- [ ] **Figure print-resolution audit (2026-08-14).** Repo-built figures are fine
+      (Fig. 2 = 600 dpi, Fig. 3 = 484, Fig. 9 = 513, Fig. 10 = 484, all at 190 mm double
+      column). Four supplied files are below Elsevier's 300-dpi floor even at 90 mm single
+      column: **Fig. 4** (796 px wide → 225 dpi), **Fig. 6** (767 px → 216 dpi),
+      **Fig. 8** (475 px → 134 dpi), and **Fig. 1** (1195 px → 337 dpi at single column
+      but only ~217 dpi at the 140 mm a 4-panel montage wants). Fig. 5 (277 dpi @ 90 mm)
+      and Fig. 7 (315 dpi @ 90 mm, plus an overlapping colorbar label) are borderline-OK
+      at single column. Remedies: Fig. 6 is rebuildable from the .chi spectra on E:;
+      Figs. 1/4/8 need re-export from source (SSRF tifs in `E:\FE-SMA\2026-1\`, micrograph
+      originals) or higher-res files from S. Cai. Not reviewer-blocking (only Fig. 2 was
+      named), but production will bounce them at acceptance.
 - [ ] **D3** locate the original **Gemini 2.5 Deep Research transcript** — prompt,
       constraints, candidate ranges, predicted phase constitution. Needed to document the
       LLM workflow reproducibly *(R2 Exp#1)*, and to answer R1#2's sharpest question: did
