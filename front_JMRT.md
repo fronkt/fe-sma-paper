@@ -8,21 +8,17 @@ title: "Experimental Validation of an LLM-Hypothesized Fe-Mn-Al-Ni-Si-C Alloy: P
      Submitted title was: "Mechanical Responses of an AI-Hypothesized Super-elastic
      Fe-Mn-Al-Ni-Si-C Alloy" -->
 
-Frank Y. Cai^1^\*, S. Cai^2^, X. Wang^3^, J. Yan^4^
+Frank Y. Cai^1^\*, S. Cai^2^, X. Wang^1^, J. Yan^3^
 
 ^1^School of Engineering Technologies, Purdue University, West Lafayette, Indiana 47907, USA
 
 ^2^Fort Wayne Metals, Fort Wayne, Indiana [ZIP — confirm], USA
 
-^3^School of Engineering Technologies, Purdue University, West Lafayette, Indiana 47907, USA
-
-^4^Shanghai Synchrotron Radiation Facility, Shanghai [postal code — confirm], China
+^3^Shanghai Synchrotron Radiation Facility, Shanghai [postal code — confirm], China
 
 \*Corresponding author. E-mail: cai485@purdue.edu
 
-<!-- Affiliations 1 and 3 are identical text, exactly as they appear in the submitted
-     JMRT PDF. Convention would merge them into a single superscript. Left as submitted
-     because renumbering the author block is a co-author decision, not an editorial one.
-     See tasks/todo.md, Tier 0. -->
+<!-- Duplicate Purdue affiliations (1 and 3 in the submitted PDF) merged into a single
+     superscript 1 with co-author agreement, 2026-08-14; SSRF renumbered 4 -> 3. -->
 
 ***

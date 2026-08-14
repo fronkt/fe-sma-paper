@@ -33,7 +33,10 @@ from matplotlib.ticker import MultipleLocator
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SRC = 'E:/FE-SMA/mechanical/Fe-SMA-FC.is_tcyclic_Exports'
-OUT = os.path.join(HERE, 'Figure_2_rebuilt.png')
+# Adopted as the manuscript figure 2026-08-14 (was Figure_2_rebuilt.png here); the PDF
+# proof stays in this folder.
+OUT = os.path.abspath(os.path.join(HERE, '..', '..', '..', 'figures', 'Figure_2.png'))
+PDF = os.path.join(HERE, 'Figure_2_rebuilt.pdf')
 
 LBF_N = 4.4482216
 IN_MM = 25.4
@@ -112,8 +115,8 @@ def main():
     axes[0][3].set_xlabel(u'Engineering strain (%)', fontsize=7, labelpad=1.5)
 
     fig.savefig(OUT, dpi=600)
-    fig.savefig(OUT.replace('.png', '.pdf'))
-    print('wrote %s (+ .pdf)' % OUT)
+    fig.savefig(PDF)
+    print('wrote %s (+ %s)' % (OUT, PDF))
 
     print('\nreconstruction check against Table 2:')
     check = {3: (2293, 2.3), 4: (2009, 2.2), 5: (1216, 24.0), 6: (1078, 29.7),

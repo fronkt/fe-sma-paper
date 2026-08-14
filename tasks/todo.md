@@ -39,8 +39,9 @@ S. Cai or Frank, 4 untouched (R1#4, R3#4, R3#7 need only the D7 micrograph call)
 > ✅ **AUTHOR LIST — RESOLVED 2026-08-08.** `front_JMRT.md` now exists with all four
 > authors (Frank Y. Cai¹\*, S. Cai², **X. Wang³**, J. Yan⁴). Two things inside it still
 > need a human: the **revision title** (changed to the R2-Title-compliant one, needs
-> co-author sign-off) and the **duplicate affiliations 1 and 3** (identical Purdue text,
-> left exactly as submitted because renumbering the author block is a co-author call).
+> co-author sign-off) and ~~the **duplicate affiliations 1 and 3**~~ — **RESOLVED
+> 2026-08-14 with co-author agreement**: merged into a single Purdue superscript 1
+> (Frank Y. Cai¹, S. Cai², X. Wang¹, J. Yan³), SSRF renumbered 4 → 3.
 >
 > Everything else diffs clean against the submitted PDF: §2.5, §3.1, §3.2, §3.3 and the
 > §4 base text were word-for-word identical. The only body-text differences were the
@@ -513,8 +514,18 @@ Start the asks now; they have the longest latency in the plan.
       way to settle whether the 62/34 phase fractions are transposed and what the 4 % minor
       phase actually is. Also unblocks the three items below
 - [ ] **Replicate counts and scatter** for Table 2 *(R2 Exp#3)* *(needs D2)*
-- [ ] **Rebuild Fig. 2** from source — clipped tick labels, panels too small, and
-      700/900/1100 °C missing relative to Table 2 *(R2 R&D#3, R2 R&D#4)* *(needs D2)*
+- [x] **Rebuild Fig. 2 — DONE 2026-08-14** (E: reconnected). `figures/Figure_2.png` is now
+      written by `revision/JMRT-R1/mechanical/rebuild_figure2.py` from the raw
+      `Fe-SMA-FC.is_tcyclic` exports: **all eight annealed panels** (600–1200 °C + aged, so
+      R2 R&D#4's missing 700/900/1100 °C curves are now shown rather than excused),
+      per-spool diameters, 127 mm gauge, explicit tick locators (the R&D#3 clipping fix).
+      Reconstruction check reproduces every Table 2 UTS/elongation to ≤0.5%. §3.2 narration
+      re-lettered (1200 °C is now **2g**, aged **2h**). **The as-drawn panel is gone**: no
+      raw trace for it exists anywhere on the drive; it stays as a Table 2 row. Old 6-panel
+      figure archived at `figures/archive-2026-08-14-Figure_2-six-panel.jpg`. ⚠️ Response
+      letter: state that Fig. 2 was rebuilt from raw exports and the as-drawn condition
+      is tabulated (and ask S. Cai for the as-drawn export if he has it — it can be added
+      as a ninth panel automatically). *(R2 R&D#3, R2 R&D#4)*
 - [ ] **B2 detection limit** estimated from the Rietveld refinement, to bound "no B2"
       quantitatively *(R3#8)* *(needs D2)*
 - [ ] **D3** locate the original **Gemini 2.5 Deep Research transcript** — prompt,
