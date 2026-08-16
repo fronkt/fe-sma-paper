@@ -22,8 +22,22 @@ S. Cai or Frank, 4 untouched (R1#4, R3#4, R3#7 need only the D7 micrograph call)
 > **Fig. 9** (his requested number), AGG collage **Fig. 10**. **NOT merged, per Frank:** his
 > §4.3 CALPHAD interpretation ("both alloys primarily α at 1200 °C… cannot be explained by
 > phase stability"), which Table 3/Fig. 9 contradict — needs a conversation with S. Cai
-> before resubmission. Optional open item: a citation for the drawn-wire fiber-texture
-> statement in §3.3 (his draft had an empty bracket; left uncited as textbook knowledge).
+> before resubmission. ~~Optional open item: a citation for the drawn-wire fiber-texture
+> statement in §3.3 (his draft had an empty bracket; left uncited as textbook knowledge).~~
+> **Resolved 2026-08-16 — see next block.**
+
+> **2026-08-16 — Texture reference filled + AI declaration trimmed (Frank's instructions);
+> DOCX pair rebuilt: 450 tracked revisions (215 ins / 195 del / 40 formatting), synced to
+> all three locations.** (1) The empty bracket in S. Cai's §3.3 texture paragraph was his
+> placeholder for **Engler & Randle, *Introduction to Texture Analysis*, 2nd ed., CRC
+> Press, 2010** — added as `engler2010texture` (renders [32]; bibliography now 36).
+> (2) The Generative-AI declaration's Anthropic-Claude revision-assistance clause was
+> **removed** per Frank; the declaration now covers only the Gemini Deep Research role
+> (the study method) plus the no-AI-generated-data / full-responsibility sentences.
+> The "Generative-AI declaration sign-off" blocker is closed — the scope was the authors'
+> call and Frank made it. Fig. 10 stays as-is ("don't change anything"): panel (d) kept,
+> the new `FeMnAlNiSiC-3 cycle AGG ht-2.jpg` micrograph not swapped in. Full account in
+> `CHANGES-FROM-SUBMISSION.md` §10.
 
 > **Two small consistency fixes made in passing (2026-08-08).** One §3.3 occurrence of the
 > ordered phase was written `DO₃` (letter O) against 20 correct `D0₃` — normalized. Two

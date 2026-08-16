@@ -445,3 +445,25 @@ supersedes `xrd/RIETVELD-FILES-ANALYSIS.md`'s "not refinable" reading, which was
 from the one `.lst` file in the repo. The Sec. 3.3 hold on phase-fraction wording is
 lifted; the manuscript's existing quantitative wording stands. Remaining ask: have the
 refinement file at hand in case a reviewer requests fit statistics/ESDs.
+
+## 10. 2026-08-16 - Texture reference + AI-declaration trim (Frank's instructions)
+
+Two changes, DOCX pair rebuilt (450 tracked revisions: 215 ins / 195 del / 40 other;
+down from 461 because the declaration shrank) and synced to all three locations.
+
+- **Sec. 3.3 texture paragraph** - S. Cai's revised document left a literal `[]` after
+  "These texture components are characteristic of cold-drawn materials with FCC and BCC
+  crystal structures, respectively," intending a citation of Engler & Randle. Added
+  `engler2010texture` (O. Engler, V. Randle, *Introduction to Texture Analysis:
+  Macrotexture, Microtexture, and Orientation Mapping*, 2nd ed., CRC Press, Boca Raton,
+  2010, ISBN 978-1-4200-6365-3 - details verified against the IUCr J. Appl. Cryst. book
+  review) at the equivalent sentence in the merged manuscript. Bibliography is now
+  **36 entries**; renders as [32].
+
+- **Generative-AI declaration** - per Frank, the clause disclosing Anthropic Claude
+  assistance during revision (pycalphad script help, Rietveld number-checking, text
+  drafting) is removed. The declaration now covers only the Gemini Deep Research role,
+  which is the study method itself, plus the no-AI-generated-data and
+  full-responsibility sentences. This closes the "Generative-AI declaration sign-off"
+  blocker: the submitted version's false statement is still corrected (Gemini's role
+  is truthfully described), and the scope decision was the authors' call, now made.
