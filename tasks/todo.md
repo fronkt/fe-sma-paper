@@ -520,8 +520,16 @@ Read `revision/JMRT-R1/xrd/ANALYSIS.md` before editing any text.
 
 Start the asks now; they have the longest latency in the plan.
 
-- [ ] **D4** SME test heating rate and hold time — Song Cai *(R1#7)*
-- [ ] **D5** tensile test standard actually followed — Song Cai *(R2 Exp#2)*
+- [x] **D4** SME test heating rate and hold time — **ANSWERED 2026-08-17** (S. Cai email +
+      Fe-SMA-Song-081726.docx): ≈50 °C/s to ≈200 °C, ≈10 s hold, "enough for this fine
+      wire to trigger transformation". In §2.4 and the R1 letter. Device still unnamed
+      (50 °C/s rules out a furnace) *(R1#7)*
+- [x] **D5** tensile test standard — **ANSWERED 2026-08-17**: "may not strictly follow
+      both standards"; per Frank, broadly ASTM E8/E8M with the cyclic protocol as a
+      purpose-designed method cited to Cai et al., Shape Mem. Superelasticity 10 (2024)
+      460–472 (methods verified: same Instron loading–unloading, same 127 mm gauge).
+      In §2.4 and the R2 letter. Gauge stays 127 mm (his 08-17 "130 mm" read as
+      rounding — raw exports and his own 2024 paper both say 127) *(R2 Exp#2)*
 - [ ] **D6** do micrographs exist at intermediate anneal temperatures? — Song Cai *(R3#11)*
 - [ ] 🔴 **D2 — reconnect the E: drive** (`E:\FE-SMA\` — raw Instron exports, synchrotron/MAUD
       files). **Promoted to blocking by the CALPHAD results**: the MAUD refinement is the only
@@ -583,9 +591,11 @@ Start the asks now; they have the longest latency in the plan.
       (`Cai_Fe-SMA_JMRT_R1_response-reviewer-{1,2,3}.docx`). Each letter quotes that
       reviewer's comments verbatim (recovered from the 2026-08-08 EM paste into
       `revision/JMRT-R1/reviewer-comments-verbatim.md`) and answers in order; shared answers
-      written out in full per reviewer, no cross-references. ⚠️ **Two `[PENDING — S. Cai]`
-      placeholders block upload**: R1#7 (SME heating method/ramp/hold) and R2 Exp#2 (tensile
-      standard). Filling them also edits manuscript §2.4 → DOCX-pair rebuild required.
+      written out in full per reviewer, no cross-references. ~~⚠️ Two `[PENDING — S. Cai]`
+      placeholders block upload~~ **FILLED 2026-08-17** (R1#7 heating ≈50 °C/s / ≈10 s;
+      R2 Exp#2 broadly-E8/E8M + method citation to Cai SMS 10 (2024) 460); §2.4 updated,
+      pair rebuilt at **452 revisions**, letters + pair re-synced to submissions/ and
+      Downloads. Letters are now placeholder-free — awaiting Frank's read-through only.
       Absorbs and supersedes `response-AGG.md` (updated figure numbers; texture item now
       answered with Fig. 7/Fig. 8 data instead of declined)
 - [x] **R1#5** — done in the R1 letter: gracious rendering-font explanation, "LLM-" adopted

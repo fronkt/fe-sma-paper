@@ -2,13 +2,16 @@
 
 **Journal:** Journal of Materials Research and Technology
 **Decision being answered:** major revision, 45 comments (R1 × 9, R2 × 24, R3 × 12)
-**Package assembled:** 2026-08-09 · **manuscript pair rebuilt 2026-08-16** (S. Cai merge,
-Fig. 2 rebuild, figure renumbering to 10, affiliation fix; then Engler & Randle texture
-reference filled into S. Cai's blank `[]` and the AI declaration trimmed per Frank)
+**Package assembled:** 2026-08-09 · **manuscript pair rebuilt 2026-08-17** (S. Cai merge,
+Fig. 2 rebuild, figure renumbering to 10, affiliation fix; Engler & Randle texture
+reference and AI-declaration trim on 08-16; then S. Cai's 08-17 answers — SME heating
+≈50 °C/s with ≈10 s hold, and the ASTM E8/E8M + method-citation sentence — into §2.4)
 
-> ⚠️ **This package is not yet complete and must not be uploaded as it stands.**
-> See *Not yet in this folder* below. The two manuscript files are current and correct;
-> what is missing is the response letter and three human sign-offs.
+> ⚠️ **Uploadable content is now complete, but hold for human sign-offs.**
+> The manuscript pair and all three response letters are current, correct and
+> placeholder-free. Still owed before upload: Frank's read-through of the letters,
+> the revision-title co-author sign-off, and the Supplementary Material upload
+> (see *Not yet in this folder* below).
 
 ---
 
@@ -16,10 +19,10 @@ reference filled into S. Cai's blank `[]` and the AI declaration trimmed per Fra
 
 | File | Upload as | Notes |
 |---|---|---|
-| `Cai_Fe-SMA_JMRT_R1_marked-up.docx` | **Revised Manuscript (Marked-up)** | 450 tracked revisions — 215 insertions, 195 deletions, 40 formatting — against the file actually submitted. Includes the renumbered bibliography (24 → 36) and the ten-figure set. |
+| `Cai_Fe-SMA_JMRT_R1_marked-up.docx` | **Revised Manuscript (Marked-up)** | 452 tracked revisions — 217 insertions, 195 deletions, 40 formatting — against the file actually submitted. Includes the renumbered bibliography (24 → 37) and the ten-figure set. |
 | `Cai_Fe-SMA_JMRT_R1_clean.docx` | **Revised Manuscript (Clean)** | Identical content with all revisions accepted. |
 | `Cai_Fe-SMA_JMRT_as-submitted-2026-07-15.docx` | *do not upload* | The original submission, kept here so the pair can be diffed without leaving the folder. |
-| `Cai_Fe-SMA_JMRT_R1_response-reviewer-{1,2,3}.docx` | **Response to Reviewers** (one per reviewer — the portal takes per-reviewer responses) | Drafted 2026-08-16 from `response-to-reviewer-{1,2,3}.md` (edit the .md, rebuild with pandoc). ⚠️ **Two `[PENDING — S. Cai]` placeholders remain**: R1 comment 7 (SME heating method/ramp/hold) and R2 Experimental comment 2 (tensile standard number). Both letters say so in place. **Do not upload until both are filled and the same facts are inserted into manuscript §2.4** (which then requires a DOCX-pair rebuild). Verbatim comments recovered to `revision/JMRT-R1/reviewer-comments-verbatim.md`. |
+| `Cai_Fe-SMA_JMRT_R1_response-reviewer-{1,2,3}.docx` | **Response to Reviewers** (one per reviewer — the portal takes per-reviewer responses) | Drafted 2026-08-16 from `response-to-reviewer-{1,2,3}.md` (edit the .md, rebuild with pandoc). **Placeholders filled 2026-08-17 from S. Cai's email**: R1 comment 7 (≈50 °C/s to ≈200 °C, ≈10 s hold) and R2 Experimental comment 2 (broadly ASTM E8/E8M; cyclic protocol is a purpose-designed method cited to Cai et al., Shape Mem. Superelasticity 10 (2024) 460–472). The same facts are in manuscript §2.4 and the pair is rebuilt. Awaiting Frank's read-through only. Verbatim comments in `revision/JMRT-R1/reviewer-comments-verbatim.md`. |
 
 Both revised files are byte-identical copies of
 `revision/JMRT-R1/R1-manuscript/`, which is the build output directory. **Edit the source,
@@ -29,7 +32,7 @@ not these** — see *How to rebuild* below.
 
 | Missing | Blocked on |
 |---|---|
-| ~~Response letters~~ — **drafted 2026-08-16, see above** | Two S. Cai facts (SME heating protocol; tensile standard) + Frank's read-through |
+| ~~Response letters~~ — **complete 2026-08-17, see above** | Frank's read-through only |
 | **Updated `highlights.md`** and cover letter | Must match the tempered claims; currently still worded for the original submission |
 | **Revision title sign-off** | Co-authors. Drafted in `front_JMRT.md`, flagged `NEEDS CO-AUTHOR SIGN-OFF` |
 | **Figures at production resolution** | Fig. 2 (rebuilt, 600 dpi) **is swapped in**, the AGG figure is built (now Fig. 10), and S. Cai's Figs. 1/5/7/8 are merged — but Figs. 1, 4, 6 and 8 are below Elsevier's 300-dpi floor (audit + remedies in `tasks/todo.md`, 2026-08-14). Ask S. Cai for the as-drawn Instron export (Fig. 2 gains it automatically) and higher-res Fig. 1 panels |
@@ -38,11 +41,15 @@ not these** — see *How to rebuild* below.
 
 ## Status of the revision
 
-**As of 2026-08-14: ~41 of 45 comments answered in the manuscript.** Still open: R1#7
-(SME heating rate/hold — S. Cai), R2 Exp#2 (tensile standard — S. Cai, plus the
-13 mm-vs-127 mm gauge discrepancy), title sign-off, and the three response letters.
+**As of 2026-08-17: all 45 comments answered in the manuscript and letters.** R1#7 and
+R2 Exp#2 were closed with S. Cai's 08-17 email (heating ≈50 °C/s, ≈10 s hold; broadly
+E8/E8M with the cyclic method cited to his 2024 SMS paper). The gauge length stays
+127 mm — the raw Instron exports and S. Cai's own published method (SMS 10 (2024) 460)
+both say 127 mm; his 08-17 draft's "130 mm" reads as rounding. Still open: title
+sign-off, Frank's read-through of the letters, and the packaging items below.
 Everything is enumerated in `tasks/todo.md`; every change is documented in
-`revision/JMRT-R1/CHANGES-FROM-SUBMISSION.md` (§9 covers the 2026-08-14 S. Cai merge).
+`revision/JMRT-R1/CHANGES-FROM-SUBMISSION.md` (§9 covers the 2026-08-14 S. Cai merge,
+§11 the 2026-08-17 closure).
 
 ~~The 62 / 34 / 4 phase fractions are not yet quotable~~ — **superseded 2026-08-14:
 Frank confirms the fractions were refined** (the "not refinable" reading came from the

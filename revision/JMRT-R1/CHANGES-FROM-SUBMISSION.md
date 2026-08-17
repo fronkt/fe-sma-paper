@@ -467,3 +467,31 @@ down from 461 because the declaration shrank) and synced to all three locations.
   full-responsibility sentences. This closes the "Generative-AI declaration sign-off"
   blocker: the submitted version's false statement is still corrected (Gemini's role
   is truthfully described), and the scope decision was the authors' call, now made.
+
+## 11. 2026-08-17 - S. Cai's answers close the last two reviewer facts (R1#7, R2 Exp#2)
+
+Source: S. Cai email of 2026-08-17 ("Last revisions needed" thread) plus his attached
+Fe-SMA-Song-081726.docx, which differs from his 08-13 fork by exactly one paragraph
+(Sec. 2.4) - archived at `from-SCai-2026-08-17/`. Pair rebuilt: **452 tracked
+revisions** (217 ins / 195 del / 40 formatting); all canaries pass; bibliography now
+**37 entries**.
+
+- **Sec. 2.4, SME heating stage (answers R1 comment 7)** - the loading-unloading-heating
+  test now states the specimen was heated to ~200 C at a rate of ~50 C/s and held ~10 s
+  before reloading, with the note that a 0.36 mm wire reaches temperature through its
+  full cross-section well within the hold. Heating device still unnamed (S. Cai did not
+  name it; 50 C/s excludes a furnace). Letter R1 response 7 filled accordingly.
+
+- **Sec. 2.4, test standard (answers R2 Experimental comment 2)** - added: specimen
+  handling and monotonic-tension elements broadly follow ASTM E8/E8M; the cyclic
+  protocol itself is a purpose-designed method for reversible-transformation /
+  maximum-strain-recovery evaluation of fine superelastic wire, cited to
+  **[cai2024niticu]** = Cai, Schaffer, Shi, Gao, Kaderavek, Shape Mem. Superelasticity
+  10 (2024) 460-472, doi 10.1007/s40830-024-00504-x (open access; its methods section
+  verified to describe the same Instron loading-unloading protocol with the same 127 mm
+  gauge and crosshead-derived strains). Letter R2 Exp response 2 filled accordingly,
+  including why ASTM F2516 is deliberately not cited (different cycle, NiTi-specific).
+
+- **Gauge length stays 127 mm** - S. Cai's 08-17 draft says 130 mm, but the raw Instron
+  exports measure 127 mm and his own 2024 method paper states 127 mm; 130 is read as
+  rounding. Flagged to Frank rather than changed.
