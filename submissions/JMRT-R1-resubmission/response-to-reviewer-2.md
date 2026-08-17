@@ -1,0 +1,115 @@
+# Response to Reviewer 2
+
+**Manuscript:** JMRT-D-26-06169, revised title *Experimental Validation of an LLM-Hypothesized Fe-Mn-Al-Ni-Si-C Alloy: Phase Stability Governs the Absence of Super-elasticity* (submitted as *Mechanical Responses of an AI-Hypothesized Super-elastic Fe-Mn-Al-Ni-Si-C Alloy*)
+
+We thank the Reviewer for a thorough, well-organized review. Every one of the twenty-four points has been acted on, and three of them (the title suggestions, taken together) are now the title of the paper. Section and figure numbers below refer to the revised manuscript unless stated otherwise; the revision adds two Methods subsections (2.6 and an expanded 2.1), two Results sections (3.4 and 3.5) and four figures (Figs. 7–10), so some numbering has shifted from the submitted version.
+
+---
+
+## Title
+
+**Comment 1.** *Suggestion and consider specifying "LLM-hypothesized" instead of the broader term "AI-hypothesized" for greater precision.*
+
+**Comment 2.** *Adding the phrase "experimental validation" would better reflect the manuscript's main contribution.*
+
+**Comment 3.** *The title is technically appropriate but could highlight the role of phase stability in the observed mechanical response.*
+
+**Response (1–3).** All three suggestions are adopted, together, in the revised title: *Experimental Validation of an LLM-Hypothesized Fe-Mn-Al-Ni-Si-C Alloy: Phase Stability Governs the Absence of Super-elasticity*. It specifies LLM rather than AI (comment 1), leads with the experimental-validation contribution (comment 2), and names phase stability as the governing mechanism (comment 3) — which the new thermodynamic analysis of the revision (Secs. 2.6, 3.4, responses below) now substantiates quantitatively. The change also repairs a defect the submitted title carried: it could be mis-parsed as claiming the alloy *is* super-elastic. Consistent with comment 1, the test alloy is renamed the "LLM-alloy" throughout the text, tables and captions, with the reference alloy as the "benchmark alloy"; "AI-guided alloy design" is retained in the keyword list as the accepted name of the general field, distinct from the specific LLM agent examined here.
+
+## Abstract
+
+**Comment 1.** *The novelty of experimentally validating an LLM-generated alloy should be stated more explicitly.*
+
+**Response.** The abstract now states it in its second sentence: "We report what is, to our knowledge, the first experimental test of an LLM-hypothesized shape memory alloy carried from proposal through processing to mechanical and synchrotron characterization." The corresponding gap statement in the Introduction has been sharpened to match (see Introduction, comment 2 below).
+
+**Comment 2.** *Quantitative mechanical results (e.g., recoverable strain or yield strength) should be included to support the conclusions.*
+
+**Response.** The abstract now carries the numbers the Reviewer names, on both sides of the comparison: 0.2% proof stress from 1948 to 502 MPa across the anneal series and elongation peaking at 33% for the LLM-alloy; strain recovery indistinguishable from elastic springback in the LLM-alloy against ≈0.5% recoverable transformation strain in the benchmark; and the quantitative core of the new thermodynamic result (single-phase α at ≈1340 °C versus an accessible ≈1150 °C once carbon is deleted, and the ≈0.10 wt% carbon threshold — ten times the 0.010 wt% measured in the benchmark).
+
+**Comment 3.** *The influence of carbon on phase stability should be briefly justified rather than only suggested.*
+
+**Response.** Agreed — in the submitted abstract the carbon claim was asserted; it is now justified by calculation, in the abstract and in the paper. The abstract states the mechanism and its evidential basis in two sentences: equilibrium CALPHAD calculations across three independent databases, validated against the benchmark, locate the cause — the benchmark solution-treats to single-phase BCC α at 1200 °C whereas the LLM-alloy is two-phase there and reaches single-phase α only at ≈1340 °C, above its accessible processing range; and deleting carbon alone from the measured chemistry lowers that field to ≈1150 °C and restores the single-phase state. The full analysis is Secs. 2.6 and 3.4 (Fig. 9, Table 3), and the causal claim elsewhere in the paper has been tempered to exactly what the calculation supports (Sec. 4.2).
+
+**Comment 4.** *The abstract should briefly explain why the benchmark alloy exhibits super-elasticity while the AI alloy does not.*
+
+**Response.** The abstract now carries both halves of that explanation: the benchmark is introduced as "an alloy whose super-elasticity depends on coherent B2 NiAl precipitates within a continuous BCC α parent," and the LLM-alloy's failure is attributed to the phase-stability mismatch that denies it exactly that parent state — it cannot be solution-treated to single-phase α at any accessible temperature, so the coherent-precipitate-in-α microstructure the benchmark relies on is unavailable to it (developed in Secs. 3.4 and 4.1).
+
+## Introduction
+
+**Comment 1.** *The literature review should include more recent studies on AI-driven alloy design beyond LLM applications.*
+
+**Response.** The opening of the Introduction now surveys the family rather than the single technique: property-targeted screening over databases and surrogate models (the AIMS framework for shape memory alloys), generative inverse design that samples compositions directly from a target property, and LLM-based hypothesis generation over the published literature, alongside the GNoME-scale deep-learning prediction work already cited. The paragraph closes on what these approaches share — a composition that has never been made — which is the premise the paper tests.
+
+**Comment 2.** *The scientific gap between computational alloy prediction and experimental validation should be better defined.*
+
+**Response.** A dedicated gap paragraph now follows (Sec. 1, second paragraph): generating candidates is cheap and fast; synthesizing and testing one is neither, and is correspondingly rare; and publishing a candidate that *failed* is rarer still, even though a diagnosed failure constrains the design space at least as usefully as a success. The paragraph also states the specific technical gap the present case exemplifies — models that optimize thermodynamic stability need not check that the phase fields their target microstructure requires are reachable by any processing route the laboratory can actually run.
+
+**Comment 3.** *The rationale for selecting this specific alloy composition should be explained more thoroughly.*
+
+**Response.** This is now treated at three levels. Section 1 (final paragraph) states the agent's hypothesis in its own terms — reduced Ni for cost, Si to stabilize and strengthen the α parent, ≈1000 ppm C for interstitial strengthening and fine carbides, all while retaining the α parent and β-NiAl precipitation and without requiring bamboo grain structure. Section 2.1 now documents where the composition came from within the agent's report (Hypothesis A2, ranked joint second of six candidate families; its proposed composition window; and the fact that the melt lies outside that window in Mn and Al, a deviation whose consequences are then tested by calculation in Sec. 3.4 rather than set aside). Section 2.1 also positions the composition against the literature it actually sits in — the Ni-alloyed Fe-Mn-Al-C low-density steels — which is central to the interpretation in Sec. 4.2.
+
+**Comment 4.** *The research objectives and hypotheses should be clearly stated at the end of the introduction.*
+
+**Response.** Done. The Introduction now ends with the hypothesis paragraph described above, closing with an explicit statement of objective and the paper's roadmap: "Our objective is to determine not merely whether that hypothesis holds but where precisely it fails: Secs. 3.1–3.3 establish what the alloy did, Secs. 3.4 and 4.2 establish why, and Sec. 4.4 asks what a design workflow would have had to do differently to catch it before any metal was melted." This paragraph also replaces a sentence at the end of the submitted Introduction ("compositional differences are the sole variable…") that another reviewer correctly identified as overclaiming, so the section now ends on a stated objective rather than an overstated premise.
+
+## Experimental procedure
+
+**Comment 1.** *The alloy design workflow generated by the LLM should be described in sufficient detail to ensure reproducibility.*
+
+**Response.** Section 2.1 now documents the workflow to the limit of what the surviving record supports, and is explicit about where that limit lies. The agent and configuration (Gemini Deep Research), the report's compilation date (4 June 2025), source count (76 sources, accessed 19 May 2025), its six candidate families with their ranking, the full composition window of the hypothesis selected, and its stated performance target (5–8% recoverable strain at 400–700 MPa) are all stated in the text — and the entire 41-page report is now supplied as **Supplementary Material**, so the reader has the complete generative artifact rather than our summary of it. One element is honestly unrecoverable: the verbatim prompt was not preserved and the report does not embed it. The revision reports that gap rather than papering over it, and draws the methodological lesson explicitly — provenance is the first thing an AI-assisted design claim needs, and it is easily lost.
+
+**Comment 2.** *Standard No. of tensile test must be mentioned.*
+
+**Response.** **[PENDING — S. Cai: confirm the standard actually followed (e.g., ASTM E8/E8M for the monotonic/cyclic tension, with the fine-wire deviations stated; if the cyclic protocol followed a NiTi-style model, ASTM F2516) — insert the standard number here and in Sec. 2.4 before submission. Do not submit this letter with this placeholder in place.]** Independent of the standard number, Section 2.4 now reports the test parameters a reader needs to assess the data: displacement control, 127 mm gauge length, 0.25 in min⁻¹ crosshead speed (nominal strain rate 8.3 × 10⁻⁴ s⁻¹), strain computed as crosshead extension over gauge length without extensometry, and the consequence stated plainly — the elastic portions carry load-train compliance, so the moduli in Table 2 are apparent rather than true.
+
+**Comment 3.** *Statistical repeatability of the mechanical tests should be reported.*
+
+**Response.** Section 2.4 now states the replication plainly rather than leaving it to be inferred: one specimen was tested per anneal condition, the values in Table 2 are single measurements, and no scatter is reported for them because none was measured. Replicate specimens exist only for the abnormal-grain-growth treatments, and those replicates — including their large specimen-to-specimen scatter (two 2-cycle AGG specimens at 568 and 608 MPa / 1.0% elongation against a three-cycle-plus-age specimen at 1006 MPa / 11.9%) — are reported and discussed in Sec. 3.5, where the scatter is itself part of the finding (boundary cracking after the AGG treatment, Fig. 10d). We accept that a single-specimen anneal sweep limits the precision of any individual Table 2 entry; the trends across the eight conditions, which is what the paper's argument uses, span factors of 2–15 in the reported properties and are far outside any plausible single-specimen scatter.
+
+## Results and Discussion
+
+**Comment 1.** *The discussion should quantitatively correlate phase fractions with the observed mechanical behaviour.*
+
+**Response.** Section 4.1 now makes this correlation explicit and quantitative. The refined fractions (≈62% γ / 34% α / 4% D0₃, Sec. 3.3) are tied to the mechanical record in three steps: a structure that is ≈62% γ is one in which most of the material is already in the *product* phase of this family's transformation (parent BCC α → martensite FCC γ — the nomenclature is now spelled out in Sec. 3.3, see comment 6 below), so the parent available to transform is the ≈34% minority; the calculated equilibrium at 1200 °C (62–71% α, Table 3) inverted against the measured quenched state (≈62% γ) is discussed as evidence that a partial α → γ transformation ran during cooling, placing the martensite start above room temperature and leaving nothing for stress to induce; and the yield strengths of Table 2 (≈500–670 MPa in the well-annealed conditions) set the stress at which slip in the majority γ preempts any transformation of the α it surrounds. The D0₃ fraction is correlated negatively: at ≈4% and present as a bulk constituent rather than a coherent dispersion, it supplies none of the slip resistance that nanoscale B2 supplies in the benchmark (Sec. 4.1).
+
+**Comment 2.** *The proposed role of carbon in suppressing super-elasticity should be supported by thermodynamic calculations.*
+
+**Response.** This is the largest single addition to the revision, and we thank the Reviewer for insisting on it. New Sec. 2.6 (methods) and Sec. 3.4 (results), with Fig. 9 and Table 3, present equilibrium CALPHAD step diagrams for both alloys from 400 to 1400 °C, computed from the measured ICP-AES chemistries in three independently assessed open databases, reporting only their points of agreement. The calculations are validated against the benchmark (they reproduce its single-phase α field at 1200 °C and its ≈20% ordered bcc, neither fitted). The carbon result is obtained by a virtual control — the measured LLM-alloy chemistry with carbon deleted and everything else held fixed — and reproduces across all three databases: carbon at ≈0.10 wt% moves the single-phase α solvus by ≈190 °C (≈1340 °C with carbon, ≈1150 °C without), which is the difference between a solution treatment that cannot be run and one that can. A nickel scan separates the other suspect element cleanly (nickel does not move the solvus at all with carbon present; it controls the amount of ordered bcc instead). Section 4.2 rebuilds the carbon discussion on this footing, including its limits — carbon is decisive at the solution-treatment temperature specifically, and the calculated control is a guide to, not a substitute for, the carbon-free heat named as future work.
+
+**Comment 3.** *Fig. 2 is small and unclearly.*
+
+**Response.** Fig. 2 has been rebuilt completely from the raw Instron test records rather than rescaled: it is now an eight-panel figure rendered at 600 dpi at journal column width, with uniform axes across panels and legible tick labels. (The submitted figure, besides being small, had clipped tick labels — "2.5" rendering as "2." — which the rebuild eliminates.) The caption now also states what stress and strain are computed from, including the measured per-spool wire diameters and the 127 mm gauge.
+
+**Comment 4.** *Fig. 2 e, should be presented and discussed.*
+
+**Response.** Done, and the defect was broader than the one panel: the submitted text never referred to *any* Fig. 2 panel by letter, and the submitted figure showed six of the eight conditions in Table 2 without comment on the missing two. The rebuilt Fig. 2 presents all seven annealed conditions plus the aged condition — (a) 600, (b) 700, (c) 800, (d) 900, (e) 1000, (f) 1100, (g) 1200 °C, (h) 1200 °C + 200 °C/3 h age — and Sec. 3.2 now walks through the figure panel by panel, including the panel the Reviewer names (1000 °C: yielding falls to ≈670 MPa followed by steady work hardening, the elongation peak of the series). The eighth Table 2 row, the as-drawn state, fractures at 2.0% with essentially no plastic range; the text states that its properties are read from the table. The panel-by-panel narration closes on the feature common to all eight panels that carries the paper's argument: every unloading segment is straight, parallel to the elastic loading line, and returns no strain beyond σ/E.
+
+**Comment 5.** *The implications of this negative result for future AI-assisted alloy design deserve deeper discussion.*
+
+**Response.** Section 4.4 has been substantially expanded, and the thermodynamic analysis added in this revision converts what was a general caution into a concrete workflow prescription. The section now states: the specific screening step that would have caught this composition (an equilibrium step diagram evaluated not for the existence of the desired phase but for whether the phase fields the *intended processing route* requires overlap the temperatures at which that route can be run — a two-part test this alloy fails twice over); the finding that the agent's own report recommended CALPHAD screening but did not perform it, so the failure sits in the workflow's termination rather than in the model's knowledge; the resulting distinction we believe generalises — design workflows that terminate in a verified calculation versus those that terminate in a plausible narrative; an explicit paragraph bounding the scope (one composition, one agent session, one route is a case study; the three specific open tests are named); and a paragraph on what a published, diagnosed negative result is good for — it converts "this family may or may not work" into "compositions whose single-phase α field lies above the practical annealing limit will not work, and here is how to check in advance."
+
+**Comment 6.** *Is there any formation Martensite phase in microstructure, this should be present and discuss.*
+
+**Response.** This question exposed a genuine readability failure in the submitted manuscript, and we thank the Reviewer for it: the paper never stated what "martensite" *is* in this alloy family, whose convention is the reverse of the one familiar from carbon steels. Section 3.3 now says it explicitly: in Fe-Mn-Al-Ni alloys the parent phase is BCC α and the martensite formed from it is FCC γ — so the γ phase is the transformation product, and an alloy rich in γ is one in which *less* parent remains available to transform, not one closer to transforming. On the direct question: the refinement resolved γ, α and D0₃ Fe₃Al and nothing else — no ε-HCP martensite and no α′ were required to fit any pattern from either alloy — and the γ in the annealed LLM-alloy is thermally stable retained γ rather than a stress-induced product (its fractions are unchanged by 10% deformation, Figs. 4a–b, 6a). The revision then goes one step further in exactly the direction the Reviewer's question points (Secs. 3.1, 4.1): the lath-like, transformation-refined morphology of the AGG-treated wire (Fig. 1d) and the inversion between the calculated 1200 °C equilibrium (α-majority) and the measured quenched state (γ-majority) both suggest that part of the observed γ formed *thermally on cooling* — i.e., that the alloy's martensite start lies above room temperature and the transformation had already run before any load was applied. This is presented as the reading the data favor, with calorimetry named as the confirming experiment.
+
+## Conclusion
+
+**Comment 1.** *The conclusions should distinguish experimental observations from the authors' interpretations.*
+
+**Response.** The Conclusions have been restructured to enforce exactly this separation: an observation paragraph beginning "What was observed is the following" (castability, the 1948→502 MPa proof-stress sweep, the 33% elongation peak, no unloading departure from elastic springback in any condition, the benchmark's ≈0.5% recovery, and the diffraction results), followed by a separate paragraph beginning "What we interpret from this is…" (slip-dominated deformation because the parent phase is largely absent), and then the calculation-based diagnosis with its own evidential status stated. A closing paragraph lists three limitations that bound the conclusions.
+
+**Comment 2.** *Emphasize the broader implications for AI-assisted materials discovery rather than this alloy alone.*
+
+**Response.** The Conclusions now state the broader implication as their penultimate paragraph, and — because the calculations make it demonstrable — as a specific, transferable procedure rather than a sentiment: LLM-proposed compositions should be screened for competing phase stability and interstitial content before synthesis, by an equilibrium calculation checked against the intended processing route's temperature window, at a cost of minutes with openly available databases; and the failure mode found here is generic and diagnosable in advance, which is what makes a single negative result transferable. We should be transparent with the Reviewer that another referee pressed in the opposite direction — toward narrowing the paper to an alloy case study. The revision resolves the tension by splitting the claim: the *experimental* findings are explicitly bounded as a case study (one composition, one agent session, one route — first limitation in the Conclusions), while the *methodological* claim, which rests on the diagnosis rather than the sample size, is retained and emphasized as the Reviewer asks.
+
+**Comment 3.** *Discuss the limitations of relying solely on LLM-generated compositions.*
+
+**Response.** The Conclusions' limitations paragraph now addresses this head-on, with the specific limitation this case demonstrates: composition-only reasoning of the kind the agent performed is intrinsically blind to the distinction that decided this case — not whether a phase is stable, but whether the temperature at which it becomes stable can be reached in the equipment available. An LLM reasoning from literature correlations has no reliable way to represent that constraint, and instructing it to consult thermodynamic data did not supply one (its report recommended CALPHAD screening without performing it, Sec. 4.4). Section 4.4 develops the same point: a generated composition should be treated as a hypothesis to be screened, not as a result.
+
+**Comment 4.** *Include recommendations for integrating thermodynamic screening into AI-guided alloy design.*
+
+**Response.** Adopted, and — thanks to the calculations this revision adds — the recommendation is now *demonstrated* rather than merely made. Section 4.4 specifies the screen concretely (the two-part step-diagram test against the processing window, requiring no proprietary software and no measurement on the candidate itself, minutes on a desktop computer), Sec. 4.2 shows it operating on this alloy (it rejects the composition at the point where the intended 1200 °C solution treatment is found to lie ≈140 °C below the single-phase field), and the Conclusions carry the recommendation with the demonstration behind it. The final sentence of the abstract states it in one line: such a check costs minutes with openly available databases.
+
+---
+
+We thank the Reviewer again; the twenty-four comments were unusually actionable, and the manuscript is measurably better for all of them.

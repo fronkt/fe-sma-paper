@@ -1,5 +1,17 @@
 # Response drafts — the AGG comments (R1#4, R3#4)
 
+> **SUPERSEDED 2026-08-16** by the full per-reviewer letters in
+> `submissions/JMRT-R1-resubmission/response-to-reviewer-{1,3}.md`, which absorb these
+> drafts with three updates: figure numbers moved to the post-merge scheme (AGG collage
+> is **Fig. 10**, post-AGG diffraction **Fig. 8**, and the 1200 °C / aged cyclic panels
+> are **Fig. 2g/2h**); the R3 texture item is now **answered with data** (S. Cai's IPF
+> figure is in the manuscript as Fig. 7, and §3.3 reports the drawing texture surviving
+> the AGG treatment in Fig. 8) instead of declined — which retires open risk B below; and
+> the decline of AGG-condition cyclic curves now cites §3.5's own bracketing paragraph.
+> Open risk A (which specimen the §3.3 AGG diffraction pattern is from) and note 5
+> (the bracketing claim is judgement, not measurement) **still stand** and carry over
+> to the letters.
+
 **Status:** draft for Frank's approval. Not yet in a submitted letter.
 
 JMRT takes **one response document per reviewer**, so each reviewer sees only their own.

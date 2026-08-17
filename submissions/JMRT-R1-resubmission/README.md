@@ -19,6 +19,7 @@ reference filled into S. Cai's blank `[]` and the AI declaration trimmed per Fra
 | `Cai_Fe-SMA_JMRT_R1_marked-up.docx` | **Revised Manuscript (Marked-up)** | 450 tracked revisions — 215 insertions, 195 deletions, 40 formatting — against the file actually submitted. Includes the renumbered bibliography (24 → 36) and the ten-figure set. |
 | `Cai_Fe-SMA_JMRT_R1_clean.docx` | **Revised Manuscript (Clean)** | Identical content with all revisions accepted. |
 | `Cai_Fe-SMA_JMRT_as-submitted-2026-07-15.docx` | *do not upload* | The original submission, kept here so the pair can be diffed without leaving the folder. |
+| `Cai_Fe-SMA_JMRT_R1_response-reviewer-{1,2,3}.docx` | **Response to Reviewers** (one per reviewer — the portal takes per-reviewer responses) | Drafted 2026-08-16 from `response-to-reviewer-{1,2,3}.md` (edit the .md, rebuild with pandoc). ⚠️ **Two `[PENDING — S. Cai]` placeholders remain**: R1 comment 7 (SME heating method/ramp/hold) and R2 Experimental comment 2 (tensile standard number). Both letters say so in place. **Do not upload until both are filled and the same facts are inserted into manuscript §2.4** (which then requires a DOCX-pair rebuild). Verbatim comments recovered to `revision/JMRT-R1/reviewer-comments-verbatim.md`. |
 
 Both revised files are byte-identical copies of
 `revision/JMRT-R1/R1-manuscript/`, which is the build output directory. **Edit the source,
@@ -28,7 +29,7 @@ not these** — see *How to rebuild* below.
 
 | Missing | Blocked on |
 |---|---|
-| **Response letters — three documents, one per reviewer** (portal takes per-reviewer responses, not 45 boxes; corrected by Frank from the portal 2026-08-12) | Tier 6 in `tasks/todo.md`; shared answers written out in full for each reviewer |
+| ~~Response letters~~ — **drafted 2026-08-16, see above** | Two S. Cai facts (SME heating protocol; tensile standard) + Frank's read-through |
 | **Updated `highlights.md`** and cover letter | Must match the tempered claims; currently still worded for the original submission |
 | **Revision title sign-off** | Co-authors. Drafted in `front_JMRT.md`, flagged `NEEDS CO-AUTHOR SIGN-OFF` |
 | **Figures at production resolution** | Fig. 2 (rebuilt, 600 dpi) **is swapped in**, the AGG figure is built (now Fig. 10), and S. Cai's Figs. 1/5/7/8 are merged — but Figs. 1, 4, 6 and 8 are below Elsevier's 300-dpi floor (audit + remedies in `tasks/todo.md`, 2026-08-14). Ask S. Cai for the as-drawn Instron export (Fig. 2 gains it automatically) and higher-res Fig. 1 panels |

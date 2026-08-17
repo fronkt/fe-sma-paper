@@ -576,25 +576,26 @@ Start the asks now; they have the longest latency in the plan.
 
 ## Tier 6 — response letter and verification
 
-- [ ] Point-by-point reply covering **all 45 comments** (R1×9, R2×24, R3×12), submitted as
+- [x] Point-by-point reply covering **all 45 comments** (R1×9, R2×24, R3×12), submitted as
       **three responses — one per reviewer, not one per comment**. *(Corrected 2026-08-12 by
-      Frank, who has the portal open; an earlier note here and in `comment-triage.md` §C7 said
-      the portal wanted 45 individual boxes.)* Practical consequence: each reviewer gets one
-      continuous document that numbers their own comments and answers them in order, so shared
-      answers are written out once per reviewer rather than cross-referenced across reviewers —
-      a reviewer must not be sent to another reviewer's reply to find their answer
-- [ ] **R1#5** — note graciously that the manuscript already reads "AI" (PDF text extraction
-      gives 25× "AI alloy", 0× "Al-alloy"; it is a rendering-font collision in Editorial
-      Manager) and that we adopted "LLM-" anyway
-- [ ] **Frame the Omori alloy as a control, not a subject** *(S. Cai, 2026-08-08)*. Where a
-      comment presses on the benchmark's transformation behaviour, answer: it is the
-      reference condition, not the object of study; its superelasticity is established across
-      the literature and reproduced here (Figs. 3b, 6b); we neither need nor claim a
-      quantitative phase-fraction measurement for it. The paper's question is why the
-      **AI alloy** — same processing — does not transform and is γ-dominated
-- [ ] **R2-vs-R3 conflict on generalisation** — R2 Concl#2 wants broader AI implications,
-      R3#12 wants them narrowed. Name the tension to the editor and land on the split:
-      bounded experimental claim, retained methodological claim
+      Frank.)* **DRAFTED 2026-08-16:**
+      `submissions/JMRT-R1-resubmission/response-to-reviewer-{1,2,3}.md` + DOCX builds
+      (`Cai_Fe-SMA_JMRT_R1_response-reviewer-{1,2,3}.docx`). Each letter quotes that
+      reviewer's comments verbatim (recovered from the 2026-08-08 EM paste into
+      `revision/JMRT-R1/reviewer-comments-verbatim.md`) and answers in order; shared answers
+      written out in full per reviewer, no cross-references. ⚠️ **Two `[PENDING — S. Cai]`
+      placeholders block upload**: R1#7 (SME heating method/ramp/hold) and R2 Exp#2 (tensile
+      standard). Filling them also edits manuscript §2.4 → DOCX-pair rebuild required.
+      Absorbs and supersedes `response-AGG.md` (updated figure numbers; texture item now
+      answered with Fig. 7/Fig. 8 data instead of declined)
+- [x] **R1#5** — done in the R1 letter: gracious rendering-font explanation, "LLM-" adopted
+      anyway
+- [x] **Frame the Omori alloy as a control, not a subject** — done: R3#7 reply gives the
+      "what it withholds is a number for how much, not the fact that it transformed" answer;
+      no benchmark phase-fraction claim anywhere
+- [x] **R2-vs-R3 conflict on generalisation** — handled symmetrically and openly: R2 Concl#2
+      reply discloses R3's opposite pull, R3#12 reply concedes the bounds and argues for the
+      retained methodological claim on its merits (diagnosis, not sample size)
 - [x] **Marked-up manuscript with changes tracked** *(2026-08-08; REBUILT 2026-08-14 after
       the S. Cai merge + Fig. 2 rebuild: now **461 tracked revisions** — 221 insertions,
       200 deletions, 40 formatting — 10 figures, 3 tables, verified 0 stale names /
