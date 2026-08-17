@@ -33,10 +33,10 @@ not these** — see *How to rebuild* below.
 | Missing | Blocked on |
 |---|---|
 | ~~Response letters~~ — **complete 2026-08-17, see above** | Frank's read-through only |
-| **Updated `highlights.md`** and cover letter | Must match the tempered claims; currently still worded for the original submission |
+| ~~Updated `highlights.md` and cover letter~~ — **done 2026-08-17**: `Highlights.docx` + `CoverLetter.docx` in this folder, worded for the revision | Frank's read-through |
 | **Revision title sign-off** | Co-authors. Drafted in `front_JMRT.md`, flagged `NEEDS CO-AUTHOR SIGN-OFF` |
 | **Figures at production resolution** | Fig. 2 (rebuilt, 600 dpi) **is swapped in**, the AGG figure is built (now Fig. 10), and S. Cai's Figs. 1/5/7/8 are merged — but Figs. 1, 4, 6 and 8 are below Elsevier's 300-dpi floor (audit + remedies in `tasks/todo.md`, 2026-08-14). Ask S. Cai for the as-drawn Instron export (Fig. 2 gains it automatically) and higher-res Fig. 1 panels |
-| **Supplementary Material: the LLM report** | §2.1 now promises the 41-page Gemini Deep Research report as Supplementary Material. The file is at `revision/JMRT-R1/llm-provenance/Gemini-DeepResearch_New-Fe-SMA-Alloy-Hypotheses_2025-06-04.pdf` and must be uploaded, or the promise removed |
+| ~~Supplementary Material: the LLM report~~ — **staged 2026-08-17** as `Supplementary-Material_LLM-design-report.pdf` in this folder | Upload it with the package (item type: Supplementary Material) |
 | **§2.1 melt-and-draw description** | S. Cai. The process note shows the two alloys took materially different routes and that several specifics in §2.1 are wrong (ingot size, melt mass, hot-roll temperature, remelt). See `revision/JMRT-R1/processing/PROCESSING-AND-REPLICATES.md` §2 — this is the largest open correction in the paper |
 
 ## Status of the revision
