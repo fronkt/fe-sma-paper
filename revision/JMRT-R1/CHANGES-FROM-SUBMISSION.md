@@ -495,3 +495,31 @@ revisions** (217 ins / 195 del / 40 formatting); all canaries pass; bibliography
 - **Gauge length stays 127 mm** - S. Cai's 08-17 draft says 130 mm, but the raw Instron
   exports measure 127 mm and his own 2024 method paper states 127 mm; 130 is read as
   rounding. Flagged to Frank rather than changed.
+
+## 12. 2026-08-18 - S. Cai closes the last two co-author blockers (no manuscript change)
+
+Source: S. Cai's answer relayed by Frank: "Title is fine with me. Tested wire was
+homogenized. Benchmark underwent same."
+
+- **Revision title SIGNED OFF.** The flag in `front_JMRT.md` is updated from
+  NEEDS CO-AUTHOR SIGN-OFF to signed off by S. Cai 2026-08-18.
+
+- **Sec. 2.1 processing route CONFIRMED as written - the planned rewrite is cancelled.**
+  The process-note reading (PROCESSING-AND-REPLICATES.md sec. 2) had flagged that the
+  LLM-alloy's 1000 C/16 h homogenization was recorded for the first trial only and was
+  unrecorded for the benchmark. S. Cai confirms the tested wire came from homogenized
+  material and the benchmark received the same treatment, which is exactly what Sec. 2.1
+  already says. The note's other divergences (poured mass, mould geometry, EDM vs swage,
+  roll temperature, H2 anneals, final diameters) are readings of an informal log spanning
+  more than one trial and are overruled by the co-author who performed the processing;
+  they stay recorded in the processing note only. The Introduction's R3#1 fix (claiming a
+  *nominal* shared route, not identity) and Sec. 3.5's 0.64 mm benchmark AGG wire remain
+  as merged.
+
+- **No rebuild.** manuscript.md untouched; the DOCX pair remains the 08-17 build at
+  452 tracked revisions / 37 references. Gauge-length question also closed on 08-18:
+  the raw Instron reports print "Gage Length 5.00000 in" = 127.0 mm exactly, so the
+  manuscript's 127 mm stands; "130 mm" was metric rounding (and "13 mm" a typo).
+
+**Remaining before upload: Frank's read-through of the three response letters. Nothing
+else is owed by any co-author.**

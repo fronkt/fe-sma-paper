@@ -202,8 +202,11 @@ Pure text edits. Nothing here can be wrong for reasons outside the manuscript.
       > environmentally friendly structural material", *Crit. Rev. Solid State Mater. Sci.*,
       > doi:10.1080/10408436.2025.2542362 — a single citation establishing Fe-Mn-Al-C-Ni as a
       > recognised structural-steel family. Frank's call.
-- [ ] **Title** → LLM-hypothesized + experimental validation + phase stability
-      *(drafted in `front_JMRT.md`; needs co-author sign-off)*
+- [x] **Title** → LLM-hypothesized + experimental validation + phase stability
+      *(drafted in `front_JMRT.md`; **S. Cai signed off 2026-08-18** — "Title is fine with me",
+      relayed by Frank. Same message confirmed the tested wire was homogenized and the
+      benchmark underwent the same, closing the §2.1 route question — see
+      `revision/JMRT-R1/processing/PROCESSING-AND-REPLICATES.md` §2 addendum)*
       *(R2 Title#1-3, R1#5)*
 - [x] **Abstract** *(2026-08-08)* — state novelty explicitly, add recoverable strain and yield strength
       numbers, justify rather than suggest the carbon role, explain why the benchmark is

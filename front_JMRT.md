@@ -4,7 +4,8 @@ title: "Experimental Validation of an LLM-Hypothesized Fe-Mn-Al-Ni-Si-C Alloy: P
 
 <!-- Title above is the revision title recommended in revision/JMRT-R1/comment-triage.md;
      it satisfies R2 Title#1 (LLM not AI), #2 (experimental validation), #3 (phase stability)
-     and R1#5 in one change. NEEDS CO-AUTHOR SIGN-OFF before submission.
+     and R1#5 in one change. SIGNED OFF by S. Cai 2026-08-18 ("Title is fine with me",
+     relayed by F. Cai).
      Submitted title was: "Mechanical Responses of an AI-Hypothesized Super-elastic
      Fe-Mn-Al-Ni-Si-C Alloy" -->
 

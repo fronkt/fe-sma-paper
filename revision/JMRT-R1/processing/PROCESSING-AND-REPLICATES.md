@@ -123,6 +123,18 @@ But §2.1 as written is wrong in specifics and must be corrected:
 > rewritten. What is safe to do now, and is required by R3#1 regardless, is to stop claiming the
 > routes were identical.
 
+> ✅ **RESOLVED 2026-08-18 — S. Cai confirmed the route** (via Frank: *"Tested wire was
+> homogenized. Benchmark underwent same."*). This answers the two homogenisation unknowns in
+> the table above in the manuscript's favour: the tested LLM-alloy wire came from the
+> homogenised trial (not the second, unhomogenised one), and the benchmark received the same
+> 1000 °C/16 h homogenisation (the note simply did not record it). **§2.1 therefore stands as
+> written and is NOT rewritten from this note.** The note's other divergences (poured mass,
+> mould geometry, EDM vs swage, 850 vs 900 °C roll, H₂ process anneals, final diameters) remain
+> uncorroborated lab-note readings of what may be different trials, are overruled by the
+> co-author who performed the processing, and are kept here only as a record. The manuscript
+> already carries the two divergence facts that matter to the science: the Introduction claims
+> only a *nominal* shared route (R3#1), and §3.5 states the benchmark AGG wire is 0.64 mm.
+
 Related, and needing the same confirmation: the benchmark tensile stock on the drive is at
 0.01772 in (0.450 mm) while the LLM-alloy wire is 0.0142 in (0.36 mm). If Fig. 3's two panels come
 from those two stocks, the comparison is across a 1.25× diameter difference and should say so.
@@ -168,9 +180,9 @@ Do not cite that file. It is noted here only so it is not mistaken for a record 
 
 | item | who | blocks |
 |---|---|---|
-| Confirm the processing table in §2 against the real route | **S. Cai** | R3#1, §2.1 rewrite |
+| ~~Confirm the processing table in §2 against the real route~~ **CONFIRMED 2026-08-18** — tested wire homogenised, benchmark same; §2.1 stands | ~~S. Cai~~ | closed |
 | Source of Table 2's "As drawn" row | **S. Cai** | R2 Exp#3 completeness |
 | How σ₀.₂ and E were extracted from the raw curves | **S. Cai / Frank** | R2 Exp#3 |
-| Tensile standard actually followed (D5) | **S. Cai** | R2 Exp#2 |
-| SME test heating rate and hold (D4) | **S. Cai** | R1#7 |
+| ~~Tensile standard actually followed (D5)~~ **ANSWERED 2026-08-17** — broadly E8/E8M + cited method | ~~S. Cai~~ | closed |
+| ~~SME test heating rate and hold (D4)~~ **ANSWERED 2026-08-17** — ≈50 °C/s, ≈10 s hold | ~~S. Cai~~ | closed |
 | Whether Fig. 3's panels are 0.36 mm vs 0.45 mm stock | **Frank** | R3#1, R3#7 |
