@@ -632,3 +632,39 @@ protocol, which Fig. 3b's 0.5% heating recovery does.
 Pair rebuilt: **445 tracked revisions** (214/192/39 - the deleted Fig. 3c/d
 paragraph took its insertions with it); all canaries pass; letters rebuilt from
 the .md sources. Everything synced (Downloads clean.docx pending - open in Word).
+
+## 16. 2026-08-18 (fourth pass) - Fig. 10 REMOVED entirely; letters trimmed
+
+**Fig. 10 removed** (F. Cai: "fig 10 should be removed entirely since fig 1
+exists"). The rationale holds: Fig. 1d already presents the LLM-alloy's post-AGG
+optical microstructure (same specimen class as the removed panel a, full section
+width, own scale bar), and Fig. 8 the post-AGG diffraction - so R1#4's demand to
+"explicitly present the microstructure after the AGG treatment" is met by figures
+already in the paper. Being the last figure, removal renumbers nothing. Sec. 3.5
+now reports the rod's arrested coarsening and the surface boundary cracking as
+text observations; the wire reference re-points to Fig. 1d (5 references in the
+clean DOCX). Letters and CoverLetter updated ("four figures" -> "three figures
+plus panel 1d"; R1#4 response rebuilt around Fig. 1d + Fig. 8; all Fig. 10 panel
+citations removed). The paper is now NINE figures. build_agg_figure.py retired
+with a provenance note; last output archived as
+archive-2026-08-18-Figure_10-three-panel.jpg.
+
+**Letter trim pass** (F. Cai: responses "a bit lengthy"). R1 responses 3407 ->
+2918 words (#1 509->340, #2 517->335, #3 479->341); R3 4352 -> 4070 (#4 805->652,
+#9 400->325, #12 489->435). Deliberately kept at full length: R1#4 (the AGG
+elevation showcase), R3#2 (the adopted comment), R3#7 (the Omori pushback). R2's
+letter (avg 122 words/response) was already at the norm and is untouched. Trims
+replace re-argued science with pointers to the revised sections; no content
+positions changed.
+
+**Build-infrastructure fix recorded**: build_docx_pair.py now refuses to run when
+attached to a Word instance with open documents (it previously attached to the
+author's interactive session and its error path called word.Quit() on it). After
+force-killing hung instances, Word's Safe-Mode recovery prompt blocks all
+subsequent COM launches (near-zero CPU, no output) - the fix is to open Word
+visibly once, decline Safe Mode, and close it.
+
+Pair rebuilt from the nine-figure manuscript: **445 tracked revisions**
+(214/192/39); canaries pass (9 images / 3 tables / 0 stale names / 0 raw keys /
+alpha 102, gamma 61 / no mojibake / 0 Fig. 10 refs); pair + three letters +
+CoverLetter synced to submissions/ and Downloads.

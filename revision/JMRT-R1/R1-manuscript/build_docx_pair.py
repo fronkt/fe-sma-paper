@@ -17,6 +17,7 @@ no CompareMoves parameter, so a positional call miscounts).
 import os
 import sys
 
+import pythoncom
 import win32com.client
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -39,8 +40,18 @@ def main(revised_path):
             raise SystemExit('missing: %s' % p)
 
     # dynamic dispatch: skips the gen_py typelib cache, which is corrupt on this
-    # machine (CLSIDToClassMap AttributeError) and is not needed for named args
+    # machine (CLSIDToClassMap AttributeError) and is not needed for named args.
+    # GUARD: plain Dispatch ATTACHES to a running Word instance if there is one.
+    # On 2026-08-18 that meant this script opened its documents inside the
+    # author's interactive Word session and word.Quit() in the error path tried
+    # to close it. Refuse to run against a session with open documents; require
+    # Word to be closed instead. (A CLSCTX_LOCAL_SERVER CoCreateInstance was
+    # tried as an always-isolated alternative and hung - do not repeat it.)
     word = win32com.client.dynamic.Dispatch('Word.Application')
+    if word.Documents.Count:
+        raise SystemExit('refusing to run: attached to a Word instance with %d '
+                         'document(s) open - close Word and rerun'
+                         % word.Documents.Count)
     word.Visible = False
     word.DisplayAlerts = 0
     try:

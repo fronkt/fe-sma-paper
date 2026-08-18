@@ -1,4 +1,9 @@
-"""Build Fig. 10 (Fig. 8 before the 2026-08-14 renumbering) — response of both alloys
+"""RETIRED 2026-08-18: Fig. 10 was REMOVED from the manuscript entirely (F. Cai) —
+the post-AGG microstructure is carried by Fig. 1d (optical) and Fig. 8 (diffraction),
+and the rod/crack observations are reported in Sec. 3.5 text. The last built output
+is archived as archive-2026-08-18-Figure_10-three-panel.jpg. Kept for provenance.
+
+Build Fig. 10 (Fig. 8 before the 2026-08-14 renumbering) — response of both alloys
 to the three-cycle AGG treatment.
 
 REDESIGNED 2026-08-18 on F. Cai's instruction: the burned-in scale bars (200/400/

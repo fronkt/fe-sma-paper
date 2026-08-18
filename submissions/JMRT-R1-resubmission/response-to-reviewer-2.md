@@ -2,7 +2,7 @@
 
 **Manuscript:** JMRT-D-26-06169, revised title *Experimental Validation of an LLM-Hypothesized Fe-Mn-Al-Ni-Si-C Alloy: Phase Stability Governs the Absence of Super-elasticity* (submitted as *Mechanical Responses of an AI-Hypothesized Super-elastic Fe-Mn-Al-Ni-Si-C Alloy*)
 
-We thank the Reviewer for a thorough, well-organized review. Every one of the twenty-four points has been acted on, and three of them (the title suggestions, taken together) are now the title of the paper. Section and figure numbers below refer to the revised manuscript unless stated otherwise; the revision adds two Methods subsections (2.6 and an expanded 2.1), two Results sections (3.4 and 3.5) and four figures (Figs. 7–10), so some numbering has shifted from the submitted version.
+We thank the Reviewer for a thorough, well-organized review. Every one of the twenty-four points has been acted on, and three of them (the title suggestions, taken together) are now the title of the paper. Section and figure numbers below refer to the revised manuscript unless stated otherwise; the revision adds two Methods subsections (2.6 and an expanded 2.1), two Results sections (3.4 and 3.5) and three figures (Figs. 7–9), so some numbering has shifted from the submitted version.
 
 ---
 
@@ -64,7 +64,7 @@ We thank the Reviewer for a thorough, well-organized review. Every one of the tw
 
 **Comment 3.** *Statistical repeatability of the mechanical tests should be reported.*
 
-**Response.** Section 2.4 now states the replication plainly rather than leaving it to be inferred: one specimen was tested per anneal condition, the values in Table 2 are single measurements, and no scatter is reported for them because none was measured. Replicate specimens exist only for the abnormal-grain-growth treatments, and those replicates — including their large specimen-to-specimen scatter (two 2-cycle AGG specimens at 568 and 608 MPa / 1.0% elongation against a three-cycle-plus-age specimen at 1006 MPa / 11.9%) — are reported and discussed in Sec. 3.5, where the scatter is itself part of the finding (boundary cracking after the AGG treatment, Fig. 10c). We accept that a single-specimen anneal sweep limits the precision of any individual Table 2 entry; the trends across the eight conditions, which is what the paper's argument uses, span factors of 2–15 in the reported properties and are far outside any plausible single-specimen scatter.
+**Response.** Section 2.4 now states the replication plainly rather than leaving it to be inferred: one specimen was tested per anneal condition, the values in Table 2 are single measurements, and no scatter is reported for them because none was measured. Replicate specimens exist only for the abnormal-grain-growth treatments, and those replicates — including their large specimen-to-specimen scatter (two 2-cycle AGG specimens at 568 and 608 MPa / 1.0% elongation against a three-cycle-plus-age specimen at 1006 MPa / 11.9%) — are reported and discussed in Sec. 3.5, where the scatter is itself part of the finding (boundary cracking observed on the specimen surface after the AGG treatment, Sec. 3.5). We accept that a single-specimen anneal sweep limits the precision of any individual Table 2 entry; the trends across the eight conditions, which is what the paper's argument uses, span factors of 2–15 in the reported properties and are far outside any plausible single-specimen scatter.
 
 ## Results and Discussion
 

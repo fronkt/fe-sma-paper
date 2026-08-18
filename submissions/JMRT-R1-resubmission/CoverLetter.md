@@ -15,8 +15,9 @@ The revision responds to every comment. The principal changes are:
    absent super-elasticity, requested independently by Reviewers 1 and 3.
 
 2. **The abnormal-grain-growth result is now reported in full** (new Sec. 3.5,
-   new Figs. 8 and 10) rather than in a single sentence, with post-AGG
-   diffraction, micrographs and replicate mechanical data.
+   new Fig. 8, and the post-AGG micrograph in Fig. 1d) rather than in a single
+   sentence, with post-AGG diffraction, microstructure and replicate mechanical
+   data.
 
 3. **New characterization.** SEM/EDS phase identification, quantitative Rietveld
    phase fractions with texture analysis (new Fig. 7), measured interstitial

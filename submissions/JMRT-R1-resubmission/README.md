@@ -20,10 +20,10 @@ Figs. 4/6/8 rebuilt from raw SSRF data at 400 dpi on 08-18)
 
 | File | Upload as | Notes |
 |---|---|---|
-| `Cai_Fe-SMA_JMRT_R1_marked-up.docx` | **Revised Manuscript (Marked-up)** | 445 tracked revisions — 214 insertions, 192 deletions, 39 formatting — against the file actually submitted. Includes the renumbered bibliography (24 → 37) and the ten-figure set. |
+| `Cai_Fe-SMA_JMRT_R1_marked-up.docx` | **Revised Manuscript (Marked-up)** | 445 tracked revisions — 214 insertions, 192 deletions, 39 formatting — against the file actually submitted. Includes the renumbered bibliography (24 → 37) and the nine-figure set. |
 | `Cai_Fe-SMA_JMRT_R1_clean.docx` | **Revised Manuscript (Clean)** | Identical content with all revisions accepted. |
 | `Cai_Fe-SMA_JMRT_as-submitted-2026-07-15.docx` | *do not upload* | The original submission, kept here so the pair can be diffed without leaving the folder. |
-| `Cai_Fe-SMA_JMRT_R1_response-reviewer-{1,2,3}.docx` | **Response to Reviewers** (one per reviewer — the portal takes per-reviewer responses) | Drafted 2026-08-16 from `response-to-reviewer-{1,2,3}.md` (edit the .md, rebuild with pandoc). **Placeholders filled 2026-08-17 from S. Cai's email**: R1 comment 7 (≈50 °C/s to ≈200 °C, ≈10 s hold) and R2 Experimental comment 2 (broadly ASTM E8/E8M; cyclic protocol is a purpose-designed method cited to Cai et al., Shape Mem. Superelasticity 10 (2024) 460–472). The same facts are in manuscript §2.4 and the pair is rebuilt. Awaiting Frank's read-through only. Verbatim comments in `revision/JMRT-R1/reviewer-comments-verbatim.md`. |
+| `Cai_Fe-SMA_JMRT_R1_response-reviewer-{1,2,3}.docx` | **Response to Reviewers** (one per reviewer — the portal takes per-reviewer responses) | Drafted 2026-08-16 from `response-to-reviewer-{1,2,3}.md` (edit the .md, rebuild with pandoc); placeholders filled 08-17 from S. Cai's email; **08-18: R3#7 rewritten as the Omori pushback, Fig. 3c/d and Fig. 10 references removed, and R1/R3 trimmed** (R1 2918 words, R3 4070; R1#4, R3#2 and R3#7 deliberately full-length). Awaiting Frank's read-through only. Verbatim comments in `revision/JMRT-R1/reviewer-comments-verbatim.md`. |
 
 Both revised files are byte-identical copies of
 `revision/JMRT-R1/R1-manuscript/`, which is the build output directory. **Edit the source,
