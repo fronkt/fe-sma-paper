@@ -553,17 +553,23 @@ Start the asks now; they have the longest latency in the plan.
       as a ninth panel automatically). *(R2 R&D#3, R2 R&D#4)*
 - [ ] **B2 detection limit** estimated from the Rietveld refinement, to bound "no B2"
       quantitatively *(R3#8)* *(needs D2)*
-- [ ] **Figure print-resolution audit (2026-08-14).** Repo-built figures are fine
-      (Fig. 2 = 600 dpi, Fig. 3 = 484, Fig. 9 = 513, Fig. 10 = 484, all at 190 mm double
-      column). Four supplied files are below Elsevier's 300-dpi floor even at 90 mm single
-      column: **Fig. 4** (796 px wide → 225 dpi), **Fig. 6** (767 px → 216 dpi),
-      **Fig. 8** (475 px → 134 dpi), and **Fig. 1** (1195 px → 337 dpi at single column
-      but only ~217 dpi at the 140 mm a 4-panel montage wants). Fig. 5 (277 dpi @ 90 mm)
-      and Fig. 7 (315 dpi @ 90 mm, plus an overlapping colorbar label) are borderline-OK
-      at single column. Remedies: Fig. 6 is rebuildable from the .chi spectra on E:;
-      Figs. 1/4/8 need re-export from source (SSRF tifs in `E:\FE-SMA\2026-1\`, micrograph
-      originals) or higher-res files from S. Cai. Not reviewer-blocking (only Fig. 2 was
-      named), but production will bounce them at acceptance.
+- [ ] **Figure print-resolution audit (2026-08-14; Figs. 4/6/8 FIXED 2026-08-18).**
+      Repo-built figures are fine (Fig. 2 = 600 dpi, Fig. 3 = 484, Fig. 9 = 513,
+      Fig. 10 = 484, all at 190 mm double column).
+      **DONE 2026-08-18** — `figures/build_fig4_6_8_from_ssrf.py` rebuilds Figs. 4, 6, 8
+      from the raw SSRF data on E: (4288² uint16 tifs + .chi integrations): Fig. 4 now
+      3040×3040 (400 dpi at 190 mm, was 225 dpi), Fig. 6 2240×2600 (was 216 dpi), Fig. 8
+      1560×1560 (was 134 dpi). Beam center (2120, 2230) fitted by Friedel autocorrelation
+      (CeO2 calibrant frame agrees); one uniform field of view for all five 2D panels;
+      every annotation arrow verified against a numerically-located spot centroid; Fig. 6
+      reproduces the published curves (raw chi; Sam8 ÷ 1.625 per spectra.xlsx cell AG4).
+      Old files archived as `archive-2026-08-18-Figure_{4,6,8}-lowres.jpg`. Pair rebuilt
+      (452 revisions, canaries pass) and synced to all three locations.
+      **STILL OPEN: Fig. 1** (1195 px → ~217 dpi at the 140 mm a 4-panel montage wants) —
+      needs higher-res micrograph originals from S. Cai (asked in the draft email).
+      Fig. 5 (277 dpi @ 90 mm) and Fig. 7 (315 dpi @ 90 mm, plus an overlapping colorbar
+      label) are borderline-OK at single column. Not reviewer-blocking (only Fig. 2 was
+      named), but production would bounce sub-300-dpi files at acceptance.
 - [ ] **D3** locate the original **Gemini 2.5 Deep Research transcript** — prompt,
       constraints, candidate ranges, predicted phase constitution. Needed to document the
       LLM workflow reproducibly *(R2 Exp#1)*, and to answer R1#2's sharpest question: did

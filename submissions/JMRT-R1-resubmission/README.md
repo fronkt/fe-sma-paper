@@ -2,10 +2,11 @@
 
 **Journal:** Journal of Materials Research and Technology
 **Decision being answered:** major revision, 45 comments (R1 × 9, R2 × 24, R3 × 12)
-**Package assembled:** 2026-08-09 · **manuscript pair rebuilt 2026-08-17** (S. Cai merge,
+**Package assembled:** 2026-08-09 · **manuscript pair rebuilt 2026-08-18** (S. Cai merge,
 Fig. 2 rebuild, figure renumbering to 10, affiliation fix; Engler & Randle texture
-reference and AI-declaration trim on 08-16; then S. Cai's 08-17 answers — SME heating
-≈50 °C/s with ≈10 s hold, and the ASTM E8/E8M + method-citation sentence — into §2.4)
+reference and AI-declaration trim on 08-16; S. Cai's 08-17 answers — SME heating
+≈50 °C/s with ≈10 s hold, and the ASTM E8/E8M + method-citation sentence — into §2.4;
+Figs. 4/6/8 rebuilt from raw SSRF data at 400 dpi on 08-18)
 
 > ✅ **Uploadable content is complete and every co-author blocker is closed.**
 > The manuscript pair and all three response letters are current, correct and
@@ -35,7 +36,7 @@ not these** — see *How to rebuild* below.
 | ~~Response letters~~ — **complete 2026-08-17, see above** | Frank's read-through only |
 | ~~Updated `highlights.md` and cover letter~~ — **done 2026-08-17**: `Highlights.docx` + `CoverLetter.docx` in this folder, worded for the revision | Frank's read-through |
 | ~~Revision title sign-off~~ — **signed off 2026-08-18** by S. Cai ("Title is fine with me"), flag in `front_JMRT.md` updated | — |
-| **Figures at production resolution** | Fig. 2 (rebuilt, 600 dpi) **is swapped in**, the AGG figure is built (now Fig. 10), and S. Cai's Figs. 1/5/7/8 are merged — but Figs. 1, 4, 6 and 8 are below Elsevier's 300-dpi floor (audit + remedies in `tasks/todo.md`, 2026-08-14). Ask S. Cai for the as-drawn Instron export (Fig. 2 gains it automatically) and higher-res Fig. 1 panels |
+| **Figures at production resolution** | **Figs. 4, 6, 8 FIXED 2026-08-18** — rebuilt from the raw SSRF detector frames and .chi integrations on E: at 400 dpi (`figures/build_fig4_6_8_from_ssrf.py`; pair rebuilt and re-synced). Only **Fig. 1** remains below the floor (~217 dpi at 140 mm) — needs S. Cai's higher-res micrograph originals; Figs. 5/7 are borderline-OK. Not submission-blocking |
 | ~~Supplementary Material: the LLM report~~ — **staged 2026-08-17** as `Supplementary-Material_LLM-design-report.pdf` in this folder | Upload it with the package (item type: Supplementary Material) |
 | ~~§2.1 melt-and-draw description~~ — **confirmed 2026-08-18** by S. Cai: tested wire was homogenized, benchmark underwent the same. §2.1 stands as written; the process note's other divergences were readings of a different trial and are overruled by the co-author who ran the processing (see `PROCESSING-AND-REPLICATES.md` §2 addendum) | — |
 

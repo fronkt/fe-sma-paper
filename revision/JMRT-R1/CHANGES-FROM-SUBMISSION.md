@@ -523,3 +523,37 @@ homogenized. Benchmark underwent same."
 
 **Remaining before upload: Frank's read-through of the three response letters. Nothing
 else is owed by any co-author.**
+
+## 13. 2026-08-18 - Figures 4, 6 and 8 rebuilt from raw SSRF data at print resolution
+
+E: drive reconnected. `figures/build_fig4_6_8_from_ssrf.py` (new, repo-tracked)
+regenerates the three sub-300-dpi supplied figures from source:
+
+- **Fig. 4** (2D diffraction montage): now 3040x3040 px (~400 dpi at 190 mm double
+  column; was 796 px / 225 dpi). Panels re-rendered from the raw 4288x4288 uint16
+  detector frames (Sam5-NO7286, Sam6-NO7280, Sam7-NO7271, Sam8-NO7265 per
+  2026-1/sample list.txt). Beam center (2120, 2230) fitted by Friedel-pair
+  autocorrelation and confirmed on the CeO2 calibrant frame; ring geometry
+  r = 18275*tan(2theta) px consistent to <0.1% across all six indexed rings. All four
+  panels now share one field of view chosen so every labeled reflection - including
+  the D03/B2 superlattice rings - is inside the frame (the old panels were viewer
+  screenshots at four different zooms, one with a ruler artifact). Annotation arrows
+  point at numerically-located spot centroids; the faint {111}/{311}Fe3Al, {200}Fe3Al
+  and {100}B2 targets are 4-6 sigma equatorial features verified in the band
+  r +/- 15 px of each ring.
+- **Fig. 6** (integrated spectra): now 2240x2600 px (was 767 px / 216 dpi). Replotted
+  from the .chi integrations of the same four frames; reproduces the published curves
+  exactly (raw intensities; Sam8 divided by 1.625, the exposure normalization in
+  spectra.xlsx cell AG4 - decoded from the source workbook on E:). Same peak labels;
+  cleaner axes.
+- **Fig. 8** (AGG 2D pattern): now 1560x1560 px (was 475 px / 134 dpi - the worst in
+  the paper, and a NEW figure this revision). Same field of view as the Fig. 4 panels,
+  which makes the caption's "same reflections as Fig. 4a" comparison exact. The three
+  labels point at verified spot centroids on the {111}g, {110}a and {200}g rings.
+
+Old files kept as `figures/archive-2026-08-18-Figure_{4,6,8}-lowres.jpg`. Captions
+unchanged. DOCX pair rebuilt - still **452 tracked revisions** (217/195/40; image
+replacement does not add revisions) - canaries pass (10 images / 3 tables / 0 stale
+names / 0 raw keys / alpha 102, gamma 61 / no mojibake), synced to R1-manuscript/,
+submissions/JMRT-R1-resubmission/ and Downloads. Still below the production floor:
+only Fig. 1 (needs S. Cai's higher-res micrograph originals).
