@@ -175,3 +175,18 @@ geometry-dependent: Fig. 8b (0.36 mm wire) sits near the 1 min end, Fig. 8c (≈
 the 40 min end. Measuring all three from micrographs already in hand is roughly an hour's work
 and would convert the strongest paragraph of the R3#4 reply from judgement to data. Recommended
 before submission. Stated in §3.5 and in `response-AGG.md`.
+
+---
+
+## 7. 2026-08-18 - Fig. 10 redesigned to a common scale (supersedes the scale-bar note in the header)
+
+On F. Cai instruction: burned-in bars removed; panels (a)-(c) cropped to a common
+0.36 x 0.36 mm field at one magnification (all 0.671 um/px) with identical drawn
+100-um bars; stock diameters moved to the caption; (d) cropped square around the
+cracks, no bar (3.25 um/px stereo cannot support a 0.36 mm field).
+
+Panel (c) source CHANGED: now `Fe-SMA-3 CYCLE AGG 4.jpg` (in sources-AGG as
+`c_LLM_rod_3cycleAGG_arrested_highmag.jpg`) - the 200-um-bar (0.671 um/px)
+sibling of `Fe-SMA-3 CYCLE AGG.jpg`, same specimen and section, showing the same
+arrested band at 2x the magnification. The identification logic of sec. 2 is
+unchanged: the specimen is still the ~1 mm rod, and the caption still says so.

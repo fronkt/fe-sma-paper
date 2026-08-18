@@ -557,3 +557,41 @@ replacement does not add revisions) - canaries pass (10 images / 3 tables / 0 st
 names / 0 raw keys / alpha 102, gamma 61 / no mojibake), synced to R1-manuscript/,
 submissions/JMRT-R1-resubmission/ and Downloads. Still below the production floor:
 only Fig. 1 (needs S. Cai's higher-res micrograph originals).
+
+## 14. 2026-08-18 (later) - Figs. 4/8 reverted to the as-submitted framing; Fig. 10
+## redesigned to a common scale (F. Cai's instructions)
+
+**Figs. 4 and 8** - Frank's call: keep the original framing and only scale up, so
+reviewers see the figure they already reviewed. Multi-scale template matching of the
+old panels against the raw frames recovered the original view exactly (all four
+Fig. 4 panels one screenshot zoom, scale 5.106, upper-right quadrant with the beam
+center at the bottom-left corner; Fig. 8 at scale 4.087; match scores 0.46-0.71,
+proof overlays reproduce every spot). Panels re-rendered at 400 dpi in those crops;
+old label positions measured under a grid overlay and mapped through the recovered
+transforms. This REVERSES the earlier claim in sec. 13 that the old superlattice
+labels pointed outside the frame - in the quadrant view they were inside, and panel
+c's {100}B2 arrow is verified correct (target at r = 786 vs 795 expected). One real
+correction kept: old panel b's {200}Fe3Al arrow pointed at a {311}Fe3Al-ring spot
+(r = 1311); it now points at the true {200}Fe3Al equatorial streak, which required
+extending the crop 40 px past the equator. Screenshot artifacts (ruler strip in a,
+selection rectangle in c) are gone. Fig. 6 unchanged from sec. 13.
+
+**Fig. 10** - Frank's instructions: remove the burned-in scale bars, make the panels
+look the same size, field of view <= 0.36 mm, scale bar 100 or 150 um, stock
+diameters in the caption. Implemented in `build_agg_figure.py`: panels (a)-(c) are
+now 0.36 x 0.36 mm fields at one common magnification (all three sources are
+0.671 um/px Clemex exports), each with an identical drawn 100-um bar; panel (c) now
+uses `Fe-SMA-3 CYCLE AGG 4.jpg` (copied to sources-AGG as `c_..._highmag.jpg`), the
+2x-magnification sibling of the same specimen/section, because the old 1.342 um/px
+overview cannot yield a sharp 0.36 mm crop. Panel (d) (stereo, 3.25 um/px) cannot
+support a 0.36 mm field at print resolution; it is cropped square around the
+boundary cracks (1.82 mm field) with no bar, and the caption says it is a
+lower-magnification surface view. Caption rewritten accordingly - the "three
+magnifications ... no common scale" sentence is gone, the three stock sizes
+(0.64 mm wire / 0.36 mm wire / ~1 mm rod) stay in the caption, and sec. 3.5's
+size-disclosure paragraph is untouched. Old figure archived as
+`archive-2026-08-18-Figure_10-mixed-scale-bars.jpg`. Effective print resolution
+537 source px/panel => ~310 dpi at single-column placement.
+
+Pair rebuilt (452 revisions - the caption edit sits inside an inserted block, so
+the run count is unchanged); canaries pass; new caption verified in the clean DOCX.

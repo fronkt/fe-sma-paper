@@ -1,35 +1,49 @@
 """Build Fig. 10 (Fig. 8 before the 2026-08-14 renumbering) — response of both alloys
 to the three-cycle AGG treatment.
 
-Sources are in `sources-AGG/`, copied from the E: drive and identified by md5 against
-the originals; see `revision/JMRT-R1/processing/AGG-MICROGRAPH-PROVENANCE.md` for the
-match table and the measured specimen sizes.
+REDESIGNED 2026-08-18 on F. Cai's instruction: the burned-in scale bars (200/400/
+250 um at three magnifications) are gone, panels (a)-(c) are cropped to one common
+field of view of 0.36 x 0.36 mm at one magnification (all three sources are
+0.671 um/px Clemex exports, 200-um bar = 298 px), and each carries an identical
+drawn 100 um scale bar. The stock diameters (0.64 mm wire / 0.36 mm wire / ~1 mm
+rod) move to the caption. Panel (d), the stereomicroscope surface view, is a
+3.25 um/px macro photo (250-um bar = 77 px) and cannot support a 0.36 mm field at
+print resolution; it is cropped square around the boundary cracks (1.82 mm field)
+and carries no bar - the caption says it is a lower-magnification surface view.
 
-Each panel keeps its own burned-in scale bar because the four specimens were imaged at
-three different magnifications and at three different stock diameters. A single common
-scale would have to crop three of them.
+Sources in `sources-AGG/`, copied from the E: drive and identified by md5; see
+`revision/JMRT-R1/processing/AGG-MICROGRAPH-PROVENANCE.md`. Panel (c) now uses
+`Fe-SMA-3 CYCLE AGG 4.jpg` (as `c_..._highmag.jpg`), the 2x-magnification sibling
+of the previous panel's source - same specimen, same section, same arrested band -
+because the previous 1.342 um/px overview cannot yield a sharp 0.36 mm crop.
 
-Panel (d) is a stereomicroscope surface view, not a section; it is included because the
-boundary cracking it shows is what the 25-49 % strength scatter in the AGG tensile sets
-is made of.
+Effective print resolution: 537 source px per panel; at single-column width
+(panel ~44 mm) that is ~310 dpi, above Elsevier's 300-dpi floor. The figure is
+intended for single-column placement.
 """
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 HERE = Path(__file__).parent
 SRC = HERE / "sources-AGG"
-TARGET_DPI = 600
-PANEL_W = 1800          # px per panel at 600 dpi -> 3 in printed panel width
+PANEL_PX = 1080         # display px per panel
 GAP = 24
 LABEL_SIZE = 96
 LABEL_PAD = 24
+UM_PER_PX = 0.671       # panels a-c source scale
+FIELD_UM = 360.0        # common field of view, a-c
+CROP = round(FIELD_UM / UM_PER_PX)   # 537 px
 
+# (label, file, crop x0, crop y0, crop size, draw_bar)
 PANELS = [
-    ("a", "a_benchmark_0.64mm_3cycleAGG_bamboo.jpg"),
-    ("b", "b_LLM_0.36mm_3cycleAGG_nocoarsening.jpg"),
-    ("c", "c_LLM_rod_3cycleAGG_arrested.jpg"),
-    ("d", "d_LLM_rod_3cycleAGG_200C3h_cracks.tif"),
+    ("a", "a_benchmark_0.64mm_3cycleAGG_bamboo.jpg", 300, 80, CROP, True),
+    ("b", "b_LLM_0.36mm_3cycleAGG_nocoarsening.jpg", 420, 80, CROP, True),
+    ("c", "c_LLM_rod_3cycleAGG_arrested_highmag.jpg", 480, 90, CROP, True),
+    ("d", "d_LLM_rod_3cycleAGG_200C3h_cracks.tif", 770, 240, 560, False),
 ]
+
+BAR_UM = 100.0
+BAR_PX = round(BAR_UM / FIELD_UM * PANEL_PX)   # 300 display px
 
 
 def load_font(size):
@@ -41,35 +55,51 @@ def load_font(size):
     return ImageFont.load_default()
 
 
-def fit(img, w):
-    return img.resize((w, round(img.height * w / img.width)), Image.LANCZOS)
-
-
 def main():
-    imgs = [fit(Image.open(SRC / f).convert("RGB"), PANEL_W) for _, f in PANELS]
-    top_h = max(imgs[0].height, imgs[1].height)
-    bot_h = max(imgs[2].height, imgs[3].height)
-    canvas = Image.new("RGB", (2 * PANEL_W + GAP, top_h + bot_h + GAP), "white")
-    positions = [(0, 0), (PANEL_W + GAP, 0),
-                 (0, top_h + GAP), (PANEL_W + GAP, top_h + GAP)]
-    for img, pos in zip(imgs, positions):
-        canvas.paste(img, pos)
-
+    canvas = Image.new("RGB", (2 * PANEL_PX + GAP, 2 * PANEL_PX + GAP), "white")
+    positions = [(0, 0), (PANEL_PX + GAP, 0), (0, PANEL_PX + GAP),
+                 (PANEL_PX + GAP, PANEL_PX + GAP)]
     font = load_font(LABEL_SIZE)
-    draw = ImageDraw.Draw(canvas)
-    for (label, _), (x, y) in zip(PANELS, positions):
+    bar_font = load_font(56)
+
+    for (label, fname, x0, y0, size, draw_bar), pos in zip(PANELS, positions):
+        img = Image.open(SRC / fname).convert("RGB")
+        tile = img.crop((x0, y0, x0 + size, y0 + size)).resize(
+            (PANEL_PX, PANEL_PX), Image.LANCZOS)
+        d = ImageDraw.Draw(tile)
+
+        # corner badge, sized to the glyphs (build_composites.py once clipped
+        # the closing paren by assuming a fixed width - keep measuring)
         text = f"({label})"
-        # Size the badge to the glyphs. build_composites.py assumed a fixed width and
-        # clipped the closing paren on every panel; do not repeat that here.
-        l, t, r, b = draw.textbbox((0, 0), text, font=font)
-        bx, by = x + LABEL_PAD, y + LABEL_PAD
-        draw.rectangle([bx, by, bx + (r - l) + 2 * LABEL_PAD, by + (b - t) + LABEL_PAD],
-                       fill="white", outline="black", width=3)
-        draw.text((bx + LABEL_PAD - l, by + LABEL_PAD // 2 - t), text,
-                  font=font, fill="black")
+        l, t, r, b = d.textbbox((0, 0), text, font=font)
+        d.rectangle([LABEL_PAD, LABEL_PAD,
+                     LABEL_PAD + (r - l) + 2 * LABEL_PAD,
+                     LABEL_PAD + (b - t) + LABEL_PAD],
+                    fill="white", outline="black", width=3)
+        d.text((2 * LABEL_PAD - l, LABEL_PAD + LABEL_PAD // 2 - t), text,
+               font=font, fill="black")
+
+        if draw_bar:
+            bt = "100 µm"
+            l2, t2, r2, b2 = d.textbbox((0, 0), bt, font=bar_font)
+            tw, th = r2 - l2, b2 - t2
+            pad = 18
+            bw = max(BAR_PX, tw) + 2 * pad
+            bh = 14 + 10 + th + 2 * pad
+            bx = PANEL_PX - 36 - bw
+            by = PANEL_PX - 36 - bh
+            d.rectangle([bx, by, bx + bw, by + bh], fill="white",
+                        outline="black", width=3)
+            cx = bx + bw // 2
+            d.rectangle([cx - BAR_PX // 2, by + pad,
+                         cx + BAR_PX // 2, by + pad + 14], fill="black")
+            d.text((cx - tw // 2 - l2, by + pad + 14 + 10 - t2), bt,
+                   font=bar_font, fill="black")
+
+        canvas.paste(tile, pos)
 
     out = HERE / "Figure_10.jpg"
-    canvas.save(out, dpi=(TARGET_DPI, TARGET_DPI), quality=95, optimize=True)
+    canvas.save(out, dpi=(600, 600), quality=95, optimize=True)
     print(f"wrote {out.name}  ({canvas.size[0]}x{canvas.size[1]} px, "
           f"{out.stat().st_size / 1e6:.1f} MB)")
 

@@ -20,13 +20,27 @@ CeO2 calibrant frame NO7412 gives the identical center):
   beam center (2120, 2230);  ring radius r = 18275 * tan(2theta) px
   (consistent to <0.1 % across all six indexed rings)
 
-All five panels use one field of view - x in [center+600, center+2100],
-y centered on the equator, 1500 x 1500 px - chosen so every labeled reflection,
-including the D03/B2 superlattice rings at r = 688-795 px, is inside the frame.
-Annotation arrows point at spot centroids located numerically in the band
-r +/- 15 px of each ring; the faint Fe3Al/B2 targets are 4-6 sigma features on
-the equator (they vanish in the azimuthal average, which is why Fig. 6 shows
-only a small bump at 2.49 deg).
+The panels reproduce the AS-SUBMITTED framing so reviewers see the figure they
+already reviewed, only sharper. Multi-scale template matching of the old panels
+against the raw frames recovered the original view: all four Fig. 4 panels were
+one viewer screenshot zoom (scale 5.106 raw px per screenshot px) showing the
+UPPER-RIGHT QUADRANT, beam center at the bottom-left corner (match scores
+0.46-0.71; the recovered crops reproduce every spot and arc). The uniform crop
+used here, x [2040:3970], y [400:2270], is those four crops' mean, with the
+bottom edge extended 40 px past the equator so that panel b's true {200}Fe3Al
+reflection - an equatorial streak that sat just outside the old frame - is
+inside. Fig. 8's own recovered crop is x [2050:3925], y [380:2175] (scale
+4.087). Old label positions were measured off the old panels under a grid
+overlay and mapped through the recovered transforms; arrows are re-aimed at
+numerically verified spot centroids on their rings. Two corrections against
+the old figure: panel b's {200}Fe3Al arrow pointed at a spot at r = 1311 px,
+which is the {311}Fe3Al ring - it now points at the real {200}Fe3Al equatorial
+streak (r = 800, a 4-5 sigma feature) - and two screenshot artifacts (a ruler
+strip in panel a, a selection rectangle in panel c) are gone. Old panel c's
+{100}B2 arrow was verified correct (target at r = 786). The left edge of every
+panel is the vertical axis through the beam center (the wire axis), which is
+why Fig. 8's three labels stack vertically: ring crossings of that axis at
+r = 1266/1127/1095 px.
 
 Fig. 6 reproduces the published curves exactly: raw intensities for Sam5/6/7,
 Sam8 divided by 1.625 - the exposure normalization used in the source
@@ -45,7 +59,8 @@ CHI_DIR = r"E:\FE-SMA\synchrotron.chi"
 OUT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 CX, CY = 2120, 2230          # beam center, px
-OFF, W = 600, 1500           # panel: x in [CX+OFF, CX+OFF+W], y in [CY-W/2, CY+W/2]
+FIG4_CROP = (2040, 400, 3970, 2270)   # x0, y0, x1, y1 - upper-right quadrant
+FIG8_CROP = (2050, 380, 3925, 2175)
 
 ORANGE, TEAL = "#ED7D31", "#44546A"
 
@@ -68,10 +83,11 @@ B100 = r"$\{100\}_{\mathrm{B2}}$"
 B200 = r"$\{200\}_{\mathrm{B2}}$"
 
 
-def panel(tif):
+def panel(tif, crop_box):
     """Inverted-grayscale display crop: median -> white, 99.7th pct -> black."""
     a = np.array(Image.open(os.path.join(TIF_DIR, tif + ".tif"))).astype(np.float64)
-    crop = a[CY - W // 2:CY + W // 2, CX + OFF:CX + OFF + W]
+    x0, y0, x1, y1 = crop_box
+    crop = a[y0:y1, x0:x1]
     lo, hi = np.percentile(a, 50), np.percentile(a, 99.7)
     return 1.0 - np.clip((crop - lo) / (hi - lo), 0, 1)
 
@@ -97,37 +113,40 @@ def note(ax, text, label_xy, tip_xy=None, fs=13):
 
 
 def build_fig4():
-    fig, axes = plt.subplots(2, 2, figsize=(7.6, 7.6))
+    # panel aspect 1930 x 1870
+    fig, axes = plt.subplots(2, 2, figsize=(7.6, 7.42))
     fig.subplots_adjust(left=0.004, right=0.996, top=0.996, bottom=0.004,
                         wspace=0.015, hspace=0.015)
     a, b, c, d = axes.ravel()
+    # label positions: old-figure label layout mapped through the recovered
+    # per-panel transforms (a: -16,+31  b: +25,-10  c: -26,-5  d: +15,-5)
+    # into the uniform crop; arrow tips on verified features.
 
-    dress(a, panel("Sam5-NO7286"), "a)")
-    note(a, F111, (215, 1040), (97, 780))
-    note(a, G111, (330, 950), (494, 772))
-    note(a, A110, (360, 520), (521, 726))
-    note(a, G200, (760, 430), (668, 590))
-    note(a, F311, (800, 1140), (600, 1308))
-    note(a, A200, (1020, 1080), None)
-    note(a, G220, (760, 240), (1164, 420))
+    dress(a, panel("Sam5-NO7286", FIG4_CROP), "a)")
+    note(a, G220, (597, 143), None)
+    note(a, A110, (392, 378), (95, 675))
+    note(a, F311, (877, 399), (774, 700))
+    note(a, G111, (699, 950), None)
+    note(a, A200, (1388, 950), None)
+    note(a, F111, (290, 1588), (481, 1280))
 
-    dress(b, panel("Sam6-NO7280"), "b)")
-    note(b, G220, (830, 150), None)
-    note(b, A211, (1170, 330), None)
-    note(b, G200, (470, 380), None)
-    note(b, A200, (860, 640), None)
-    note(b, F200, (330, 1000), (204, 772))
+    dress(b, panel("Sam6-NO7280", FIG4_CROP), "b)")
+    note(b, G220, (663, 118), None)
+    note(b, A211, (1327, 322), None)
+    note(b, G200, (561, 644), None)
+    note(b, A200, (1404, 899), None)
+    note(b, F200, (918, 1599), (880, 1810))
 
-    dress(c, panel("Sam7-NO7271"), "c)")
-    note(c, G220, (860, 180), None)
-    note(c, A110, (300, 490), (518, 712))
-    note(c, G111, (330, 1030), (485, 878))
-    note(c, A200, (900, 920), None)
-    note(c, B100, (300, 1200), (200, 768))
-    note(c, B200, (1150, 1445), (904, 1290))
+    dress(c, panel("Sam7-NO7271", FIG4_CROP), "c)")
+    note(c, G220, (919, 199), None)
+    note(c, A110, (510, 414), (95, 678))
+    note(c, G111, (791, 991), None)
+    note(c, A200, (1327, 904), None)
+    note(c, B100, (408, 1604), (634, 1268))
+    note(c, B200, (1560, 1552), None)
 
-    dress(d, panel("Sam8-NO7265"), "d)")
-    note(d, G200, (770, 530), (678, 730))
+    dress(d, panel("Sam8-NO7265", FIG4_CROP), "d)")
+    note(d, G200, (669, 633), None)
 
     fig.savefig(os.path.join(OUT_DIR, "Figure_4.jpg"), dpi=400,
                 pil_kwargs={"quality": 95})
@@ -135,12 +154,13 @@ def build_fig4():
 
 
 def build_fig8():
-    fig, ax = plt.subplots(figsize=(3.9, 3.9))
+    # panel aspect 1875 x 1795
+    fig, ax = plt.subplots(figsize=(3.9, 3.73))
     fig.subplots_adjust(left=0.008, right=0.992, top=0.992, bottom=0.008)
-    dress(ax, panel("Sam1-NO7325"))
-    note(ax, G200, (840, 900), (678, 776), fs=11)
-    note(ax, A110, (320, 480), (515, 707), fs=11)
-    note(ax, G111, (280, 1240), (438, 1098), fs=11)
+    dress(ax, panel("Sam1-NO7325", FIG8_CROP))
+    note(ax, G200, (225, 360), (85, 578), fs=11)
+    note(ax, A110, (887, 552), (105, 715), fs=11)
+    note(ax, G111, (307, 993), (95, 763), fs=11)
     fig.savefig(os.path.join(OUT_DIR, "Figure_8.jpg"), dpi=400,
                 pil_kwargs={"quality": 95})
     plt.close(fig)
