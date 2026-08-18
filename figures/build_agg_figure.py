@@ -35,11 +35,14 @@ FIELD_UM = 360.0        # common field of view, a-c
 CROP = round(FIELD_UM / UM_PER_PX)   # 537 px
 
 # (label, file, crop x0, crop y0, crop size, draw_bar)
+# 2026-08-18 (later): benchmark bamboo panel REMOVED on F. Cai's instruction — the
+# Omori alloy's response to this treatment is established literature and is stated
+# in Sec. 3.5 rather than shown; the figure is now LLM-alloy only, three panels in
+# one row. The R3#7/R1#4 letter responses explain the position.
 PANELS = [
-    ("a", "a_benchmark_0.64mm_3cycleAGG_bamboo.jpg", 300, 80, CROP, True),
-    ("b", "b_LLM_0.36mm_3cycleAGG_nocoarsening.jpg", 420, 80, CROP, True),
-    ("c", "c_LLM_rod_3cycleAGG_arrested_highmag.jpg", 480, 90, CROP, True),
-    ("d", "d_LLM_rod_3cycleAGG_200C3h_cracks.tif", 770, 240, 560, False),
+    ("a", "b_LLM_0.36mm_3cycleAGG_nocoarsening.jpg", 420, 80, CROP, True),
+    ("b", "c_LLM_rod_3cycleAGG_arrested_highmag.jpg", 480, 90, CROP, True),
+    ("c", "d_LLM_rod_3cycleAGG_200C3h_cracks.tif", 770, 240, 560, False),
 ]
 
 BAR_UM = 100.0
@@ -56,9 +59,9 @@ def load_font(size):
 
 
 def main():
-    canvas = Image.new("RGB", (2 * PANEL_PX + GAP, 2 * PANEL_PX + GAP), "white")
-    positions = [(0, 0), (PANEL_PX + GAP, 0), (0, PANEL_PX + GAP),
-                 (PANEL_PX + GAP, PANEL_PX + GAP)]
+    n = len(PANELS)
+    canvas = Image.new("RGB", (n * PANEL_PX + (n - 1) * GAP, PANEL_PX), "white")
+    positions = [(i * (PANEL_PX + GAP), 0) for i in range(n)]
     font = load_font(LABEL_SIZE)
     bar_font = load_font(56)
 

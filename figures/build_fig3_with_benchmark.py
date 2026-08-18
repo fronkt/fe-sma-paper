@@ -1,77 +1,39 @@
-"""Rebuild Fig. 3 with the benchmark's stepwise cyclic curves added as (c) and (d).
+"""Rebuild Fig. 3 — REVERTED 2026-08-18 to the two-panel (a)/(b) form.
 
-R3#7: "no corresponding stepwise cyclic curves for the benchmark". The panels exist; they
-were cut during the Materials & Design revision and live in
-`archive-2026-06-pre-MD-revision/`.
+History: R3#7 asked for corresponding stepwise cyclic curves for the benchmark, and
+on 2026-08-12 the two archived Omori panels (1200 C/5 min and 12 s) were appended as
+(c)/(d). On 2026-08-18 F. Cai reversed that call: the paper's purpose is to test
+whether the LLM-hypothesized alloy can transform, the Omori alloy's superelasticity
+is established literature, and its role here is a protocol control only — which
+panel (b) (0.5% heating recovery) already demonstrates. The R3#7 response now argues
+that position instead of presenting the curves; see response-to-reviewer-3.md.
 
-They are appended to Fig. 3 rather than made a new figure because they are the same
-experiment on the same two alloys as (a) and (b), and because inserting a new figure into
-Sec. 3.2 would renumber Figs. 4-7 and put 26 cosmetic tracked changes in front of the
-editor for no reviewer benefit.
+The (c)/(d) panels remain in `archive-2026-06-pre-MD-revision/` and the four-panel
+composite is archived as `archive-2026-08-18-Figure_3-four-panel.jpg` should the
+editor insist.
 
-Panels (a) and (b) are carried over as the single existing `Figure_3.jpg`, which already
-contains both and already carries its own "a)" / "b)" labels; only (c) and (d) get new
-badges. Restyling all four from raw data is the right long-term fix and is not this pass -
-the Instron spool behind each archived panel has to be identified first, for the same
-reason `Fig2b` had to be (see AGG-MICROGRAPH-PROVENANCE.md).
+Panels (a)/(b) are carried over as `archive-2026-08-12-Figure_3-two-panel.jpg`,
+which already carries its own "a)" / "b)" labels, upscaled to the same 3624-px
+width as the sibling repo-built figures (its effective resolution is set by the
+1200-px source either way — same situation as Fig. 1, and rebuildable from raw
+only via S. Cai's SME-test exports).
 """
 from pathlib import Path
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image
 
 HERE = Path(__file__).parent
-ARCHIVE = HERE / "archive-2026-06-pre-MD-revision"
 TARGET_DPI = 600
 PANEL_W = 1800
 GAP = 24
-LABEL_SIZE = 96
-LABEL_PAD = 24
-
-
-def load_font(size):
-    for name in ("arialbd.ttf", "arial.ttf", "DejaVuSans-Bold.ttf", "DejaVuSans.ttf"):
-        try:
-            return ImageFont.truetype(name, size)
-        except OSError:
-            continue
-    return ImageFont.load_default()
-
-
-def fit(img, w):
-    return img.resize((w, round(img.height * w / img.width)), Image.LANCZOS)
-
-
-def badge(draw, font, text, x, y):
-    l, t, r, b = draw.textbbox((0, 0), text, font=font)
-    draw.rectangle([x, y, x + (r - l) + 2 * LABEL_PAD, y + (b - t) + LABEL_PAD],
-                   fill="white", outline="black", width=3)
-    draw.text((x + LABEL_PAD - l, y + LABEL_PAD // 2 - t), text, font=font, fill="black")
 
 
 def main():
-    # (c) and (d) are Excel exports whose y-axis numbers run to the very left edge, so the
-    # badge needs a gutter of its own or it lands on top of "1000".
-    GUTTER = 200
-    top = fit(Image.open(HERE / "archive-2026-08-12-Figure_3-two-panel.jpg").convert("RGB"),
-              2 * PANEL_W + GAP)
-    c = fit(Image.open(ARCHIVE / "Fig3c_Omori_1200C_5min_cyclic.png").convert("RGB"),
-            PANEL_W - GUTTER)
-    d = fit(Image.open(ARCHIVE / "Fig3d_Omori_1200C_12sec_cyclic.png").convert("RGB"),
-            PANEL_W - GUTTER)
-
-    bot_h = max(c.height, d.height)
-    canvas = Image.new("RGB", (2 * PANEL_W + GAP, top.height + bot_h + GAP), "white")
-    canvas.paste(top, (0, 0))
-    canvas.paste(c, (GUTTER, top.height + GAP))
-    canvas.paste(d, (PANEL_W + GAP + GUTTER, top.height + GAP))
-
-    font = load_font(LABEL_SIZE)
-    draw = ImageDraw.Draw(canvas)
-    badge(draw, font, "(c)", LABEL_PAD, top.height + GAP + LABEL_PAD)
-    badge(draw, font, "(d)", PANEL_W + GAP + LABEL_PAD, top.height + GAP + LABEL_PAD)
-
+    src = Image.open(HERE / "archive-2026-08-12-Figure_3-two-panel.jpg").convert("RGB")
+    w = 2 * PANEL_W + GAP
+    out_img = src.resize((w, round(src.height * w / src.width)), Image.LANCZOS)
     out = HERE / "Figure_3.jpg"
-    canvas.save(out, dpi=(TARGET_DPI, TARGET_DPI), quality=95, optimize=True)
-    print(f"wrote {out.name}  ({canvas.size[0]}x{canvas.size[1]} px, "
+    out_img.save(out, dpi=(TARGET_DPI, TARGET_DPI), quality=95, optimize=True)
+    print(f"wrote {out.name}  ({out_img.size[0]}x{out_img.size[1]} px, "
           f"{out.stat().st_size / 1e6:.1f} MB)")
 
 

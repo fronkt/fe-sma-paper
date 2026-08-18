@@ -595,3 +595,40 @@ size-disclosure paragraph is untouched. Old figure archived as
 
 Pair rebuilt (452 revisions - the caption edit sits inside an inserted block, so
 the run count is unchanged); canaries pass; new caption verified in the clean DOCX.
+
+## 15. 2026-08-18 (third pass) - Omori content stripped; R3#7 answered by pushback
+## (F. Cai: "Fight back on the reviews calling for more info on omori")
+
+REVERSES the R3#7 compliance of the 08-12 pass. The paper's stance is now: the
+Omori alloy is a control, not a subject; its superelasticity is settled literature;
+the control's job is to validate the route and the loading-unloading-heating
+protocol, which Fig. 3b's 0.5% heating recovery does.
+
+- **Fig. 3 back to two panels** (a LLM / b benchmark). The stepwise benchmark
+  panels (c: 1200 C/5 min, d: 12 s) are REMOVED, along with the Sec. 3.2 paragraph
+  quoting their 0.44%/0.09% recoveries (that data also read as the benchmark
+  "only marginally transforming" - see the Shaolou Wei memo - so removal also
+  de-risks the story). Four-panel version archived as
+  archive-2026-08-18-Figure_3-four-panel.jpg; panels stay in
+  archive-2026-06-pre-MD-revision/. build_fig3_with_benchmark.py now documents the
+  reversal and rebuilds the two-panel form.
+- **Fig. 10 drops the benchmark bamboo panel** -> three LLM-only panels in one row
+  (a wire no-bamboo / b rod arrested / c cracks). Sec. 3.5 states the benchmark's
+  bamboo outcome in text with literature citations instead of showing it. R1#4 is
+  still fully satisfied: that comment demands the AI alloy's post-AGG
+  microstructure, which panels a/b/c present. Renumbering rippled through Sec. 3.5,
+  the Fig. 10 caption, and all three letters (10b->10a, 10c->10b, 10d->10c).
+- **R3#7 response REWRITTEN as a respectful refusal**: purpose-of-work argument,
+  Omori's properties documented in the literature (Science 333 (2011) 68-71 cited
+  in the letter), control validates the protocol, "deliberately not added". The
+  corresponding-characterization half of the old response (grain structure,
+  texture asymmetry, precipitation bounds) is retained.
+- Sec. 3.2's narrow-claim sentence retained in trimmed form ("measurable
+  transformation in the benchmark" = the 0.5% of Fig. 3b). Sec. 3.5's
+  bamboo-amplifies-not-creates argument now rests on the 0.5% number alone.
+- R1#4/R3#4 letter responses adjusted to say the benchmark outcome is stated, not
+  shown, and is not a finding of this paper.
+
+Pair rebuilt: **445 tracked revisions** (214/192/39 - the deleted Fig. 3c/d
+paragraph took its insertions with it); all canaries pass; letters rebuilt from
+the .md sources. Everything synced (Downloads clean.docx pending - open in Word).

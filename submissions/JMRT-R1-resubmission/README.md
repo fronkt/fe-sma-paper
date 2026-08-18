@@ -20,7 +20,7 @@ Figs. 4/6/8 rebuilt from raw SSRF data at 400 dpi on 08-18)
 
 | File | Upload as | Notes |
 |---|---|---|
-| `Cai_Fe-SMA_JMRT_R1_marked-up.docx` | **Revised Manuscript (Marked-up)** | 452 tracked revisions — 217 insertions, 195 deletions, 40 formatting — against the file actually submitted. Includes the renumbered bibliography (24 → 37) and the ten-figure set. |
+| `Cai_Fe-SMA_JMRT_R1_marked-up.docx` | **Revised Manuscript (Marked-up)** | 445 tracked revisions — 214 insertions, 192 deletions, 39 formatting — against the file actually submitted. Includes the renumbered bibliography (24 → 37) and the ten-figure set. |
 | `Cai_Fe-SMA_JMRT_R1_clean.docx` | **Revised Manuscript (Clean)** | Identical content with all revisions accepted. |
 | `Cai_Fe-SMA_JMRT_as-submitted-2026-07-15.docx` | *do not upload* | The original submission, kept here so the pair can be diffed without leaving the folder. |
 | `Cai_Fe-SMA_JMRT_R1_response-reviewer-{1,2,3}.docx` | **Response to Reviewers** (one per reviewer — the portal takes per-reviewer responses) | Drafted 2026-08-16 from `response-to-reviewer-{1,2,3}.md` (edit the .md, rebuild with pandoc). **Placeholders filled 2026-08-17 from S. Cai's email**: R1 comment 7 (≈50 °C/s to ≈200 °C, ≈10 s hold) and R2 Experimental comment 2 (broadly ASTM E8/E8M; cyclic protocol is a purpose-designed method cited to Cai et al., Shape Mem. Superelasticity 10 (2024) 460–472). The same facts are in manuscript §2.4 and the pair is rebuilt. Awaiting Frank's read-through only. Verbatim comments in `revision/JMRT-R1/reviewer-comments-verbatim.md`. |
