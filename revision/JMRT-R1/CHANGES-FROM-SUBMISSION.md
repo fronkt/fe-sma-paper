@@ -668,3 +668,39 @@ Pair rebuilt from the nine-figure manuscript: **445 tracked revisions**
 (214/192/39); canaries pass (9 images / 3 tables / 0 stale names / 0 raw keys /
 alpha 102, gamma 61 / no mojibake / 0 Fig. 10 refs); pair + three letters +
 CoverLetter synced to submissions/ and Downloads.
+
+## 17. 2026-08-18 (fifth pass) - Frank's read-through edits recovered from a
+## Word paste; n=1 justification placed (brief in manuscript, full in R2 letter)
+
+Frank edited the marked-up DOCX in Word without saving and pasted the flattened
+tracked-changes text instead. His edits were recovered by diffing the paste
+against the flattened text (w:t + w:delText) of the current marked-up DOCX -
+four real edits, everything else matched:
+
+- **Abstract**: the benchmark-introduction sentence DELETED ("An LLM-hypothesized
+  ... was benchmarked against ... coherent B2 NiAl precipitates within a
+  continuous BCC alpha parent."); next sentence recast as "Although the LLM-alloy
+  was able to achieve good mechanical properties, with 0.2% proof stress ... it
+  showed no super-elasticity ..." (redundant "yet" dropped with Frank's
+  "Although"). Consistent with the de-Omori direction.
+- **Sec. 3.2**: "leave the wire with high strength but brittleness" (was
+  "high-strength but brittle").
+- **Sec. 3.2**: "Read panel by panel," deleted - narration opens "Fig. 2 shows
+  the following."
+- **Sec. 3.3**: "rather than corrected away" deleted from the texture sentence.
+
+Ripple fixed: the R2 Abstract#4 response quoted the deleted abstract sentence -
+rewritten around the phase-stability mechanism the abstract still states.
+
+**n=1 placement (Frank's instruction)**: manuscript Sec. 2.4 carries ONE brief
+sentence (purpose = evaluating potential, not design data; conclusions rest on
+trends far larger than plausible scatter); the R2 Experimental#3 response
+carries the full four-part justification (trend amplitude 2.4x/15x; smooth
+monotonic curves as a specimen-fluke check; the binary no-transformation
+observation effectively replicated ninefold; replication spent on the AGG
+conditions where variance is the finding), closing "no conclusion of the paper
+depends on that precision."
+
+Pair rebuilt: **435 tracked revisions** (209/187/39); canaries pass; all six of
+Frank's edit-checks verified present/absent in the clean DOCX; pair + R2 letter
+synced to submissions/ and Downloads.
