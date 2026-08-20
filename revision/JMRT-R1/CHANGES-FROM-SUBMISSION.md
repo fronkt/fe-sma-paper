@@ -300,7 +300,7 @@ Both blockers cleared. The E: drive mounted (**D2**) and the LLM session turned 
 | 2.1 | **"Within one of the AI-suggested composition ranges" deleted** â€” it was not true. The melt is inside A2 on Si/Ni/C and outside on Mn (32.3 vs â‰¤30) and Al (6.4 vs â‰¥8 wt%, i.e. 12.1 vs 14.9â€“21.5 at%) | R1#2, integrity |
 | 2.1 | "synthesized under identical conditions" â†’ "synthesized and processed alongside it" | R3#1 |
 | 2.4 | Gauge length **13 mm â†’ 127 mm**, crosshead 0.25 in/min, strain rate 8.3 Ã— 10â»â´ sâ»Â¹, moduli flagged as apparent (crosshead strain, no extensometer) | verified from raw data |
-| 2.4 | **"One specimen was tested per anneal condition"** â€” Table 2 is n = 1 and now says so | R2 Exp#3 |
+| 2.4 | ~~**"One specimen was tested per anneal condition"** â€” Table 2 is n = 1 and now says so~~ **SUPERSEDED 2026-08-20: replicates run, Table 2 is n = 3 (§13 below)** | R2 Exp#3 |
 | 3.3, 5 | two further "processed identically" claims softened to the same nominal anneal | R3#1 |
 | 3.4 | New paragraph: **no composition inside the agent's own A2 window opens the Î± field at 1200 Â°C** â€” midpoint 1380 Â°C (worse than what was made), ferritic corner 1230â€“1240 Â°C and ordered, austenitic corner none â‰¤1400 Â°C; Al alone buys 21 points of Î± but only 60 Â°C of solvus | R1#2 |
 | 3.4 | mc_fe cross-check of the same four points: same conclusion by a different route | â€” |
@@ -704,3 +704,78 @@ depends on that precision."
 Pair rebuilt: **435 tracked revisions** (209/187/39); canaries pass; all six of
 Frank's edit-checks verified present/absent in the clean DOCX; pair + R2 letter
 synced to submissions/ and Downloads.
+
+
+---
+
+## 13. 2026-08-20 — Table 2 becomes n = 3, and the carbon-free CALPHAD panel comes back
+
+Two changes, both made after the package was already verified GO-FOR-SUBMIT on 2026-08-19.
+Both are strengthening: one converts a conceded weakness into an answered comment, the
+other restores a figure panel that was cut for space.
+
+### 13.1 Table 2 is now three specimens per condition (R2 Exp#3 — upgraded from concession)
+
+F. Cai ran additional heat treatments and tensile tests on 2026-08-20. Every anneal
+condition, and the as-drawn state, now carries three specimens. Table 2 reports mean ± one
+standard deviation and its caption says so in the Reviewer's own terms: *"Each data point
+is the average of three samples."*
+
+Source file, old-vs-new comparison and one unresolved transcription question are recorded
+in `mechanical/TABLE2-REPLICATES.md`; `processing/PROCESSING-AND-REPLICATES.md` §1 keeps
+the as-submitted n = 1 record and carries a dated addendum pointing here.
+
+**What came out.** The whole n = 1 defence:
+
+- **Sec. 2.4** — the three sentences beginning *"One specimen was tested per anneal
+  condition…"* replaced by one: three specimens per condition, mean of three, ± one SD.
+- **R2 Experimental#3** — the four-part justification (trend amplitude, smooth monotonic
+  curves, the binary observation "effectively replicated ninefold", replication spent on
+  AGG) replaced by Frank's answer: extra testing was done, Table 2 updated, caption states
+  n = 3. What survives from the old reply is the AGG scatter, which is still reported as a
+  finding rather than as noise.
+- **Sec. 3.5** — "the only replicated LLM-alloy condition in the mechanical record" was
+  false once the sweep was replicated; now "the only replicated **AGG** condition".
+- **Sec. 4.3** — "Reading these as a single-specimen survey" → "as a survey rather than a
+  designed experiment". The R3#10 reply quotes this phrase verbatim and was updated with it.
+
+**Numbers that moved.** Every Table 2 value changed, and with them: the abstract and
+Conclusions proof-stress sweep (1948→502 becomes **1908→519 MPa**), the 600–700 °C ranges
+in §3.2 and §4.3 (UTS ≈1876–2254, σ₀.₂ ≈1635–1908 MPa), the Fig. 2 walk-through (≈2250 MPa
+at 2.2 %; ≈675 MPa at 1000 °C; ≈520 MPa at 1200 °C), the recrystallization jump (elongation
+2.2 → 26.1 %, UTS 1876 → 1209, σ₀.₂ 1635 → 1151 MPa), the grain-growth regime (1151 → 519
+MPa; 29.1 % and 25.6 % at 1100/1200 °C), the modulus band (≈150–162 GPa), and the
+low-density-steel envelope comparison in §4.3 and the R1#5 reply (σ₀.₂ 519–675, UTS
+968–978, elongation 25.6–33.0 %). The R2 R&D#1 and R1 γ-yield figures move from
+≈500–670 to ≈520–675 MPa.
+
+**No argument changed.** σ₀.₂ and UTS still fall monotonically 800 → 1200 °C, elongation
+still peaks at 1000 °C, the 800 °C discontinuity is slightly sharper than before, the
+1000–1200 °C conditions still sit inside Rahnama's low-density-steel envelope on all three
+measures and 900 °C still sits just outside it (UTS 1082 > 1020 MPa).
+
+**Fig. 2 is not rebuilt** — F. Cai confirmed the plotted specimen is one of the three, so
+only the caption gained a sentence. See `mechanical/TABLE2-REPLICATES.md` for the one
+cell (700 °C) where that is arithmetically hard to reconcile.
+
+### 13.2 Fig. 9c — the carbon-free control is plotted again (F. Cai)
+
+The virtual carbon-free composition was plotted as a third panel until 2026-08-08, when
+S. Cai asked for it to be dropped and the result left in Table 3. F. Cai reversed that on
+2026-08-20: it is the control the entire carbon argument of §4.2 turns on, and R2 R&D#2
+asked for that argument to be supported by calculation — a panel in which the 1200 °C line
+falls inside the single-phase α field, next to one in which it does not, makes the point
+without arithmetic.
+
+`calphad/make_paper_figure.py` restored to three panels (both decisions are recorded in
+its header comment, neither overwritten); `figures/Figure_9.png` rebuilt at 400 dpi,
+12.6 × 4.4 in. Manuscript changes: §3.4 intro no longer says the control is "reported
+numerically in Table 3 rather than plotted"; the restoration sentence and the §4.2 limits
+paragraph both cite **Fig. 9c**; the caption describes three panels and states what the
+dashed line does in each. The R2 R&D#2 reply now names the panel. Panel labels for (a)
+and (b) were left exactly as they were.
+
+**Note for a later pass, not fixed here:** the in-figure panel titles still read
+"Omori-alloy" and "AI-alloy" while the manuscript text and caption say "benchmark alloy"
+and "LLM-alloy". That mismatch predates this change and was left alone rather than
+widened.

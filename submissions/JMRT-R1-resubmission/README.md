@@ -2,17 +2,29 @@
 
 **Journal:** Journal of Materials Research and Technology
 **Decision being answered:** major revision, 45 comments (R1 × 9, R2 × 24, R3 × 12)
-**Package assembled:** 2026-08-09 · **manuscript pair rebuilt 2026-08-18** (S. Cai merge,
+**Package assembled:** 2026-08-09 · **manuscript pair rebuilt 2026-08-20** (S. Cai merge,
 Fig. 2 rebuild, figure renumbering to 10, affiliation fix; Engler & Randle texture
 reference and AI-declaration trim on 08-16; S. Cai's 08-17 answers — SME heating
 ≈50 °C/s with ≈10 s hold, and the ASTM E8/E8M + method-citation sentence — into §2.4;
-Figs. 4/6/8 rebuilt from raw SSRF data at 400 dpi on 08-18)
+Figs. 4/6/8 rebuilt from raw SSRF data at 400 dpi on 08-18; **08-20: Table 2 replicated to n = 3 and the carbon-free CALPHAD panel restored as Fig. 9c**)
 
 > ✅ **Uploadable content is complete and every co-author blocker is closed.**
 > The manuscript pair and all three response letters are current, correct and
 > placeholder-free; S. Cai signed off on the revision title and confirmed the
-> §2.1 processing route on 2026-08-18. The only thing owed before upload is
-> **Frank's read-through of the three response letters** (~30–45 min).
+> §2.1 processing route on 2026-08-18.
+>
+> **2026-08-20:** F. Cai ran replicate heat treatments and tensile tests, so
+> **Table 2 is now n = 3 (mean ± SD)** and R2 Experimental#3 is answered by
+> experiment instead of conceded — the n = 1 justification is gone from both the
+> manuscript and the R2 letter. The carbon-free CALPHAD control is plotted again
+> as **Fig. 9c**. Pair and letters rebuilt; all canaries pass and every Table 2
+> cell was diffed against the source file. See
+> `revision/JMRT-R1/CHANGES-FROM-SUBMISSION.md` §13 and
+> `revision/JMRT-R1/mechanical/TABLE2-REPLICATES.md` — the latter flags one open
+> question, the 700 °C UTS uncertainty (94 vs 9.4).
+>
+> The only thing owed before upload is **Frank's read-through of the three
+> response letters** (~30–45 min).
 
 ---
 
@@ -20,7 +32,7 @@ Figs. 4/6/8 rebuilt from raw SSRF data at 400 dpi on 08-18)
 
 | File | Upload as | Notes |
 |---|---|---|
-| `Cai_Fe-SMA_JMRT_R1_marked-up.docx` | **Revised Manuscript (Marked-up)** | 445 tracked revisions — 214 insertions, 192 deletions, 39 formatting — against the file actually submitted. Includes the renumbered bibliography (24 → 37) and the nine-figure set. |
+| `Cai_Fe-SMA_JMRT_R1_marked-up.docx` | **Revised Manuscript (Marked-up)** | **529 tracked revisions** — 256 insertions, 233 deletions, 40 formatting — against the file actually submitted. Includes the renumbered bibliography (24 → 37) and the nine-figure set. |
 | `Cai_Fe-SMA_JMRT_R1_clean.docx` | **Revised Manuscript (Clean)** | Identical content with all revisions accepted. |
 | `Cai_Fe-SMA_JMRT_as-submitted-2026-07-15.docx` | *do not upload* | The original submission, kept here so the pair can be diffed without leaving the folder. |
 | `Cai_Fe-SMA_JMRT_R1_response-reviewer-{1,2,3}.docx` | **Response to Reviewers** (one per reviewer — the portal takes per-reviewer responses) | Drafted 2026-08-16 from `response-to-reviewer-{1,2,3}.md` (edit the .md, rebuild with pandoc); placeholders filled 08-17 from S. Cai's email; **08-18: R3#7 rewritten as the Omori pushback, Fig. 3c/d and Fig. 10 references removed, and R1/R3 trimmed** (R1 2918 words, R3 4070; R1#4, R3#2 and R3#7 deliberately full-length). Awaiting Frank's read-through only. Verbatim comments in `revision/JMRT-R1/reviewer-comments-verbatim.md`. |
@@ -49,7 +61,9 @@ broadly E8/E8M with the cyclic method cited to his 2024 SMS paper). The gauge le
 S. Cai's own published method (SMS 10 (2024) 460) says 127 mm; "130 mm" is metric
 rounding of the same 5-inch setting. On 08-18 S. Cai signed off on the revision title and
 confirmed the §2.1 route (tested wire homogenized; benchmark the same), so §2.1 stands as
-written and no rebuild was needed — the pair remains at 452 revisions. Still open: only
+written and no rebuild was needed — the pair remains at 452 revisions. On 08-20 the replicate mechanical
+data landed, which turned R2 Experimental#3 from a conceded limitation into an
+answered comment, and the carbon-free CALPHAD panel was restored. Still open: only
 Frank's read-through of the letters, then upload.
 Everything is enumerated in `tasks/todo.md`; every change is documented in
 `revision/JMRT-R1/CHANGES-FROM-SUBMISSION.md` (§9 covers the 2026-08-14 S. Cai merge,
@@ -83,9 +97,10 @@ python revision/JMRT-R1/R1-manuscript/build_docx_pair.py revised_styled.docx
 
 `build_docx_pair.py` (now in the repo, no longer a scratchpad orphan) runs Word
 `CompareDocuments` with named COM arguments, prints the revision counts, writes the
-marked-up copy, then `AcceptAll()` for the clean copy. Verify afterwards: 10 images,
-3 tables, 0 stale alloy names, 0 `[@` keys, and **non-zero α/γ counts** (the encoding
-canary).
+marked-up copy, then `AcceptAll()` for the clean copy. Verify afterwards: **9 images** (ten until Fig. 10
+was removed on 08-18), 3 tables, 0 stale alloy names, 0 `[@` keys, and **non-zero
+α/γ counts** (the encoding canary). The 08-20 rebuild also diffs every Table 2 cell
+against `revision/JMRT-R1/mechanical/table2-n3-source-2026-08-20.docx`.
 
 Two traps worth remembering:
 

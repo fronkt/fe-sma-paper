@@ -35,9 +35,15 @@ NONCONV = '__NONCONVERGED__'
 # label the panels by alloy role rather than by chemistry -- the wt%/at% mismatch
 # against Table 1 made the composition strings more confusing than useful. The
 # chemistries now live in the caption.
+#
+# F. Cai, 2026-08-20: put the carbon-free panel back. It is the virtual control the
+# carbon argument of Sec. 4.2 turns on, and R2 R&D#2 asked for that argument to be
+# supported by calculation -- showing the restored single-phase alpha field beside
+# the measured composition makes the point in one look. Role labels are kept.
 PANELS = [
     ('benchmark', '(a)  Omori-alloy', 'benchmark'),
     ('llm', '(b)  AI-alloy', 'LLM-hypothesized'),
+    ('llm_noC', '(c)  AI-alloy, carbon removed', 'virtual control, Sec. 2.6'),
 ]
 
 C_BCC = '#c1272d'
@@ -63,7 +69,7 @@ def main():
     df = pd.read_csv(CSV)
     sub = df[(df['database'] == DATABASE) & (df['label'] != NONCONV)]
 
-    fig, axes = plt.subplots(1, len(PANELS), figsize=(9.6, 4.4), sharey=True)
+    fig, axes = plt.subplots(1, len(PANELS), figsize=(12.6, 4.4), sharey=True)
     handles = OrderedDict()
 
     for i, (ax, (alloy, tag, comp)) in enumerate(zip(axes, PANELS)):
@@ -91,7 +97,7 @@ def main():
             line, = ax.plot(temps, 100 * y, color=colour, lw=2.1, zorder=3)
             handles.setdefault(name, line)
 
-        ax.set_title('%s\n%s' % (tag, comp), fontsize=11, linespacing=1.4)
+        ax.set_title('%s\n%s' % (tag, comp), fontsize=10.5, linespacing=1.4)
         ax.set_xlabel('Temperature (°C)')
         ax.set_xlim(400, 1400)
         ax.set_ylim(-2, 102)

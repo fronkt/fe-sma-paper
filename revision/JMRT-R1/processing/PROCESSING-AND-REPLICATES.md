@@ -35,6 +35,16 @@ All seven annealed rows trace to consecutive spools of one Instron run, `Fe-SMA-
 The table is faithfully transcribed and independently reproducible. It is also **unreplicated**, and
 the revision must say so plainly. There is no scatter to quote because no condition was repeated.
 
+> **ADDENDUM 2026-08-20 — superseded, and by experiment rather than by argument.**
+> Everything above remains the correct record of the **as-submitted** data set. It no
+> longer describes the revision. F. Cai ran additional heat treatments and tensile tests
+> on 2026-08-20 so that every anneal condition carries three specimens; Table 2 is now
+> mean ± SD at n = 3, §2.4 says so, and the n = 1 justification has been removed from both
+> the manuscript and the R2 letter. The new values, the old-vs-new comparison and one
+> unresolved transcription question (the 700 °C UTS uncertainty, 94 vs 9.4) are in
+> `../mechanical/TABLE2-REPLICATES.md`. The two open points below — the derived σ₀.₂/E
+> columns and the unlocated "As drawn" row — are *not* closed by the new run.
+
 Two further points the reviewers have not raised but which follow from the same records:
 
 - **The σ₀.₂ and E columns are not in the Instron report.** It prints yield only for spool 3
