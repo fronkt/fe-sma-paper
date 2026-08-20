@@ -68,12 +68,13 @@ either reading and is the one cell still worth a look if the raw curves surface.
 ## Fig. 2 is not rebuilt
 
 F. Cai confirmed that the specimen already plotted in each Fig. 2 panel is one of the
-three now averaged, so the curves stand and only the caption changed ("Each panel shows
-one representative specimen of the three tested per condition; the values in Table 2 are
-means over all three"). Note that the ratio analysis above is consistent with that for 30
-of 32 cells and inconsistent with it for the two 700 °C cells named — i.e. if the 700 °C
-UTS really is ± 9.4, then the specimen plotted in **Fig. 2b** is not one of the three
-averaged in that row.
+three now averaged, so the curves stand and only the caption changed. Because the 700 °C
+UTS was then settled at ± 9.4, the specimen plotted in **Fig. 2b** cannot be one of the
+three averaged in that row — the arithmetic rules it out — so the caption does not make
+the stronger claim. It reads: **"Each panel shows a single representative specimen; the
+values in Table 2 are means of three specimens per condition."** True whichever way the
+700 °C row resolves, and it still tells the reader that the curves are individual
+specimens and the table is not.
 
 ## What is *not* in the repository
 

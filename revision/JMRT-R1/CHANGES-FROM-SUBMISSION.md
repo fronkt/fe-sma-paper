@@ -755,8 +755,15 @@ still peaks at 1000 °C, the 800 °C discontinuity is slightly sharper than befo
 measures and 900 °C still sits just outside it (UTS 1082 > 1020 MPa).
 
 **Fig. 2 is not rebuilt** — F. Cai confirmed the plotted specimen is one of the three, so
-only the caption gained a sentence. See `mechanical/TABLE2-REPLICATES.md` for the one
-cell (700 °C) where that is arithmetically hard to reconcile.
+only the caption gained a sentence. That caption was then reworded once more, on the same
+day and at F. Cai's go-ahead, from "one representative specimen of the three tested per
+condition" to **"a single representative specimen; the values in Table 2 are means of
+three specimens per condition"** — because settling the 700 °C UTS uncertainty at 9.4
+makes the as-submitted 2009 MPa specimen arithmetically impossible as a member of that
+row's triplet, so the stronger claim was false for Fig. 2b specifically. The new wording
+is true whichever way that row resolves and says everything the reader needs. Pair
+rebuilt again: **531 tracked revisions** (257/234/40). See
+`mechanical/TABLE2-REPLICATES.md`.
 
 ### 13.2 Fig. 9c — the carbon-free control is plotted again (F. Cai)
 

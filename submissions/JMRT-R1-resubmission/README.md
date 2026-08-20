@@ -33,7 +33,7 @@ Figs. 4/6/8 rebuilt from raw SSRF data at 400 dpi on 08-18; **08-20: Table 2 rep
 
 | File | Upload as | Notes |
 |---|---|---|
-| `Cai_Fe-SMA_JMRT_R1_marked-up.docx` | **Revised Manuscript (Marked-up)** | **529 tracked revisions** — 256 insertions, 233 deletions, 40 formatting — against the file actually submitted. Includes the renumbered bibliography (24 → 37) and the nine-figure set. |
+| `Cai_Fe-SMA_JMRT_R1_marked-up.docx` | **Revised Manuscript (Marked-up)** | **531 tracked revisions** — 257 insertions, 234 deletions, 40 formatting — against the file actually submitted. Includes the renumbered bibliography (24 → 37) and the nine-figure set. |
 | `Cai_Fe-SMA_JMRT_R1_clean.docx` | **Revised Manuscript (Clean)** | Identical content with all revisions accepted. |
 | `Cai_Fe-SMA_JMRT_as-submitted-2026-07-15.docx` | *do not upload* | The original submission, kept here so the pair can be diffed without leaving the folder. |
 | `Cai_Fe-SMA_JMRT_R1_response-reviewer-{1,2,3}.docx` | **Response to Reviewers** (one per reviewer — the portal takes per-reviewer responses) | Drafted 2026-08-16 from `response-to-reviewer-{1,2,3}.md` (edit the .md, rebuild with pandoc); placeholders filled 08-17 from S. Cai's email; **08-18: R3#7 rewritten as the Omori pushback, Fig. 3c/d and Fig. 10 references removed, and R1/R3 trimmed** (R1 2918 words, R3 4070; R1#4, R3#2 and R3#7 deliberately full-length). Awaiting Frank's read-through only. Verbatim comments in `revision/JMRT-R1/reviewer-comments-verbatim.md`. |
