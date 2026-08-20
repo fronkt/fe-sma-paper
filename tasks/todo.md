@@ -538,7 +538,7 @@ Start the asks now; they have the longest latency in the plan.
       files). **Promoted to blocking by the CALPHAD results**: the MAUD refinement is the only
       way to settle whether the 62/34 phase fractions are transposed and what the 4 % minor
       phase actually is. Also unblocks the three items below
-- [x] **Replicate counts and scatter** for Table 2 *(R2 Exp#3)* *(2026-08-20 — answered by experiment, not by argument: F. Cai ran replicate heat treatments and tensile tests, Table 2 is now mean ± SD at n = 3, and the n = 1 justification came out of §2.4 and the R2 letter. Record in `revision/JMRT-R1/mechanical/TABLE2-REPLICATES.md`; one open cell, the 700 °C UTS uncertainty 94 vs 9.4)*
+- [x] **Replicate counts and scatter** for Table 2 *(R2 Exp#3)* *(2026-08-20 — answered by experiment, not by argument: F. Cai ran replicate heat treatments and tensile tests, Table 2 is now mean ± SD at n = 3, and the n = 1 justification came out of §2.4 and the R2 letter. Record in `revision/JMRT-R1/mechanical/TABLE2-REPLICATES.md`; the 700 °C UTS uncertainty 94 vs 9.4 was queried twice and settled at 9.4)*
 - [x] **Rebuild Fig. 2 — DONE 2026-08-14** (E: reconnected). `figures/Figure_2.png` is now
       written by `revision/JMRT-R1/mechanical/rebuild_figure2.py` from the raw
       `Fe-SMA-FC.is_tcyclic` exports: **all eight annealed panels** (600–1200 °C + aged, so

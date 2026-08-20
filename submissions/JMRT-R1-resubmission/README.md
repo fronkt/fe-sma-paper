@@ -20,8 +20,9 @@ Figs. 4/6/8 rebuilt from raw SSRF data at 400 dpi on 08-18; **08-20: Table 2 rep
 > as **Fig. 9c**. Pair and letters rebuilt; all canaries pass and every Table 2
 > cell was diffed against the source file. See
 > `revision/JMRT-R1/CHANGES-FROM-SUBMISSION.md` §13 and
-> `revision/JMRT-R1/mechanical/TABLE2-REPLICATES.md` — the latter flags one open
-> question, the 700 °C UTS uncertainty (94 vs 9.4).
+> `revision/JMRT-R1/mechanical/TABLE2-REPLICATES.md`. The one transcription question
+> — the 700 °C UTS uncertainty, 94 vs 9.4 — was put to F. Cai twice and settled at
+> **9.4**.
 >
 > The only thing owed before upload is **Frank's read-through of the three
 > response letters** (~30–45 min).

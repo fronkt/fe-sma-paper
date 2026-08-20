@@ -56,12 +56,14 @@ member of its own triplet.
 
 The source file prints the 700 °C UTS uncertainty as `1876.0±94` — the only cell without
 a decimal place. It was read as a dropped decimal point and F. Cai confirmed **9.4** on
-2026-08-20, which is what the manuscript currently carries. The ratio analysis above
-points the other way: **±94 is the value that matches the internal structure of every
-other cell in the table**, and ±9.4 is the one number in 32 that is off by an order of
-magnitude. This is flagged rather than silently changed — it is a one-cell edit either
-way, and it is F. Cai's data. The 700 °C modulus is anomalous under either reading and is
-worth a look at the same time.
+2026-08-20, which is what the manuscript carries. The ratio analysis above points the
+other way — ±94 is the value that matches the internal structure of every other cell,
+and ±9.4 is the one number in 32 that is off by an order of magnitude — so it was put
+to F. Cai a second time with that evidence, and **9.4 was reaffirmed. SETTLED: the
+manuscript carries ± 9.4.** The consequence, recorded so nobody re-derives it later:
+the as-submitted 2009 MPa single measurement is then not one of the three specimens
+averaged in that row. The 700 °C modulus (164.8 vs 156.1 ± 2.0) is anomalous under
+either reading and is the one cell still worth a look if the raw curves surface.
 
 ## Fig. 2 is not rebuilt
 
