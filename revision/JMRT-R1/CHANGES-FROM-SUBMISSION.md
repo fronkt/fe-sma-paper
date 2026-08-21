@@ -786,3 +786,40 @@ and (b) were left exactly as they were.
 "Omori-alloy" and "AI-alloy" while the manuscript text and caption say "benchmark alloy"
 and "LLM-alloy". That mismatch predates this change and was left alone rather than
 widened.
+
+### 13.3 2026-08-21 — the response letters cut by 46% (F. Cai)
+
+Frank, twice: the replies are too long. Measured before touching them — 12,853 words across
+the three letters for 45 comments, with R2 answering ten- and eleven-word comments in 200+
+words (Experimental#2: a 10-word comment, a 219-word reply).
+
+Rewritten on one principle: **state what changed and where it is; give the reasoning only
+where we decline, push back, or are contested.** The quantitative detail belongs in the
+paper, which the reviewer is reading anyway, and repeating it in the letter was most of the
+bulk. Target set with Frank at ~4,000 words of reply.
+
+| | replies before | after | mean before → after |
+|---|---|---|---|
+| R1 | 2,904 | 1,309 | 322 → 145 |
+| R2 | 3,017 | 1,807 | 125 → 75 |
+| R3 | 4,029 | 2,262 | 335 → 188 |
+| **total** | **9,950** | **5,378** | **−46%** |
+
+Nine replies keep room to argue rather than report, because they are the ones that have to
+persuade: R1#4 (the AGG framing pushback — it does coarsen, and it is not a second
+independent failure mode), R3#2 (the lightweight-steel repositioning, adopted as
+interpretation), R3#4, R3#5 (missing prerequisite, not a misplaced precipitation window),
+R3#7 (the deliberate refusal to characterise the benchmark further) and R3#12 (concede the
+overgeneralisation, ask to retain the bounded methodological claim). Everything else is
+now three sentences or fewer.
+
+**The reviewers' own comment text was never touched.** The rewrite ran through
+`retrim.py`, which substitutes only `**Response` blocks and leaves every other line in
+place; each pass re-extracted all verbatim comments and diffed them against `git HEAD` —
+9/24/12 comments, 0 altered, on every pass. Two content corrections were folded in on the
+way: the R2 Experimental#3 reply's "largest relative standard deviation ≈4%" was wrong
+(4% is the largest in the *strength* columns; the largest anywhere is 6.5%, elongation at
+800 °C), and R3's quotation of the §4.3 downgrade phrase tracks the manuscript wording.
+
+Letters rebuilt with plain pandoc and synced to `submissions/` and Downloads. The
+manuscript pair is untouched by this change — no rebuild needed, still 531 revisions.
