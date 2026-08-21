@@ -1,4 +1,4 @@
-# JMRT-D-26-06169 — R1 resubmission package
+﻿# JMRT-D-26-06169 — R1 resubmission package
 
 **Journal:** Journal of Materials Research and Technology
 **Decision being answered:** major revision, 45 comments (R1 × 9, R2 × 24, R3 × 12)
@@ -35,6 +35,8 @@ Figs. 4/6/8 rebuilt from raw SSRF data at 400 dpi on 08-18; **08-20: Table 2 rep
 |---|---|---|
 | `Cai_Fe-SMA_JMRT_R1_marked-up.docx` | **Revised Manuscript (Marked-up)** | **531 tracked revisions** — 257 insertions, 234 deletions, 40 formatting — against the file actually submitted. Includes the renumbered bibliography (24 → 37) and the nine-figure set. |
 | `Cai_Fe-SMA_JMRT_R1_clean.docx` | **Revised Manuscript (Clean)** | Identical content with all revisions accepted. |
+| `figures/Figure_1.jpg` … `Figure_9.png` (9 files) | **Figure** (one item per figure, in order) | Packaged 2026-08-21. Filename = figure number, so `Figure_4.jpg` is Fig. 4 in the text and caption list. Each file is **byte-identical (SHA-256) to the image embedded in the clean DOCX** — the separate uploads and the manuscript cannot drift. Per-file pixel size, stored dpi, effective dpi at 90/190 mm column width, hashes and the manuscript captions are in `figures/FIGURE-MANIFEST.md`. |
+| `Cai_Fe-SMA_JMRT_R1_figures.zip` | *convenience only* | The same nine files zipped (4.16 MB), if the portal accepts a single archive. Prefer the individual uploads. |
 | `Cai_Fe-SMA_JMRT_as-submitted-2026-07-15.docx` | *do not upload* | The original submission, kept here so the pair can be diffed without leaving the folder. |
 | `Cai_Fe-SMA_JMRT_R1_response-reviewer-{1,2,3}.docx` | **Response to Reviewers** (one per reviewer — the portal takes per-reviewer responses) | Drafted 2026-08-16 from `response-to-reviewer-{1,2,3}.md` (edit the .md, rebuild with pandoc); placeholders filled 08-17 from S. Cai's email; **08-18: R3#7 rewritten as the Omori pushback, Fig. 3c/d and Fig. 10 references removed, and R1/R3 trimmed** (R1 2918 words, R3 4070; R1#4, R3#2 and R3#7 deliberately full-length). **08-21: all three letters cut hard at Frank's direction** — reply text 9,950 → 5,378 words (46%), comments untouched and verbatim. Principle: state what changed and where; argue only where we decline or are contested. Awaiting Frank's read-through only. Verbatim comments in `revision/JMRT-R1/reviewer-comments-verbatim.md`. |
 
@@ -49,7 +51,7 @@ not these** — see *How to rebuild* below.
 | ~~Response letters~~ — **complete 2026-08-17, see above** | Frank's read-through only |
 | ~~Updated `highlights.md` and cover letter~~ — **done 2026-08-17**: `Highlights.docx` + `CoverLetter.docx` in this folder, worded for the revision | Frank's read-through |
 | ~~Revision title sign-off~~ — **signed off 2026-08-18** by S. Cai ("Title is fine with me"), flag in `front_JMRT.md` updated | — |
-| **Figures at production resolution** | **Figs. 4, 6, 8 FIXED 2026-08-18** — rebuilt from the raw SSRF detector frames and .chi integrations on E: at 400 dpi (`figures/build_fig4_6_8_from_ssrf.py`; pair rebuilt and re-synced). Only **Fig. 1** remains below the floor (~217 dpi at 140 mm) — needs S. Cai's higher-res micrograph originals; Figs. 5/7 are borderline-OK. Not submission-blocking |
+| **Figures at production resolution** | **Figs. 4, 6, 8 FIXED 2026-08-18** — rebuilt from the raw SSRF detector frames and .chi integrations on E: at 400 dpi (`figures/build_fig4_6_8_from_ssrf.py`; pair rebuilt and re-synced). Remeasured 2026-08-21 while packaging the separate figure files — effective dpi if printed across a full 190 mm page: **Fig. 1 = 160, Fig. 7 = 149, Fig. 5 = 131**, all three under the 300 dpi halftone floor; every other figure clears it (Fig. 8 = 209 at 190 mm but 440 at 90 mm, and it is a single square detector image that will set single-column). Figs. 5 and 7 are tall/narrow and wide/short respectively, so both will most likely set single-column, where they read 277 and 315 dpi — borderline but acceptable. **Fig. 1 is the only genuine shortfall**: a four-panel micrograph composite that must run double-column, and no higher-resolution original exists anywhere in the repo — it needs S. Cai's source micrographs. Not submission-blocking. |
 | ~~Supplementary Material: the LLM report~~ — **staged 2026-08-17** as `Supplementary-Material_LLM-design-report.pdf` in this folder | Upload it with the package (item type: Supplementary Material) |
 | ~~§2.1 melt-and-draw description~~ — **confirmed 2026-08-18** by S. Cai: tested wire was homogenized, benchmark underwent the same. §2.1 stands as written; the process note's other divergences were readings of a different trial and are overruled by the co-author who ran the processing (see `PROCESSING-AND-REPLICATES.md` §2 addendum) | — |
 
