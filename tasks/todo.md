@@ -1,3 +1,17 @@
+# Alem meeting brief — Fe-SMA experimental procedures (2026-08-26)
+
+- [x] Confirm whether the brief should cover only the LLM-alloy processing route or include the benchmark route for comparison.
+- [x] Extract the confirmed processing sequence and all reportable parameters from the experimental record.
+- [x] Draft a short, procedures-only manuscript excluding CALPHAD, phase-diagram, and synchrotron material.
+- [x] Check the draft against the processing record; record the outcome here before delivery.
+
+### Review
+
+- Completed 2026-08-26. The brief contains the confirmed homogenised candidate route, a concise six-step candidate/benchmark processing comparison, and no advanced analysis.
+- Structural QA passed: the DOCX contains the intended 6 x 3 table, all required sections, and the scope exclusion. Visual PNG QA could not run because LibreOffice is unavailable and the installed Word instance did not emit a PDF for conversion.
+
+---
+
 # JMRT major revision — JMRT-D-26-06169
 
 Reviews received 2026-07-27 (R1), 2026-07-28 (R3), 2026-07-31 (R2). 45 comments total.
