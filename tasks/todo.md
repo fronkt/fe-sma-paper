@@ -22,7 +22,7 @@ uploaded 2026-08-21 (author responses carry that date; EM draft is `JMRT-D-26-06
 **Verdicts on Revision 1:** R1 (25/08) "No comment." · R2 (03/09) "recommend acceptance of this
 paper in its current form" · R3 (04/09) eight issues "that directly affect the manuscript's core
 conclusions". **The decision letter is NOT in Gmail — the R1 corresponding address is
-cai485@purdue.edu. Decision type and deadline: [PENDING — Frank].**
+cai485@purdue.edu. Decision (Frank, 2026-09-14): MAJOR REVISION, due 2026-09-22.**
 
 ## Triage of R3's eight Round-2 points — PROPOSED, nothing started
 
@@ -40,8 +40,54 @@ No manuscript edit is made until Frank confirms this plan and the decision type 
 | 7 | Present full cyclic curves, loading–unloading–heating curves, and α/γ fractions for 1200 °C × 40 min AND the AGG condition; the bracket is not a substitute | Cyclic Instron records EXIST on E: for ≈1 mm rod: 1200/1 min (9.1 %), +age (11.0 %), 40 min + age (1.4 %) [`Frank-SMA-constant.is_tcyclic`]; AGG rods: 2-cycle 568/608 MPa at 1.0 %, 3-cycle + age 1006 MPa at 11.9 %, quartz-tube sets. No heating test and no Rietveld for these (Fig. 8 too spotty). The R1-round "not doing it" bracket (2026-08-12) has been rejected by R3 | Data: a new figure or supplement of the existing 40-min + AGG cyclic curves from the raw exports (rod, stated as such). Decide: heating test on an AGG specimen; phase fractions by point-count of Fig. 1a/1c as a partial answer | E: drive; **Song** for any new test |
 | 8 | Measure Ms directly | §4.1 already calls calorimetry "the most informative single experiment remaining" | DSC on the 1200 °C / 1 min wire — FWM runs DSC routinely for NiTi. Recommend doing it: it is the one cheap experiment R3 asks for that the paper itself promised | **Song / FWM** |
 
+### Verified 2026-09-14 after the adversarial check — these change the plan
+
+Found by workflow wf_828e1921-24b (memo: `revision/JMRT-R2/disposition-check-2026-09-14.md`), then
+checked by hand against the repo records. Only what is listed here is verified.
+
+1. **CALPHAD liquid-phase bug — CONFIRMED.** `calphad/results/step_diagrams.txt:8` and `:57` log
+   `absent : LIQUID:L` for the mpea-02b and PrecHiMn-04 runs: `step_diagrams.py:62,77` request
+   `'LIQUID:L'`, pycalphad names the phase `'LIQUID'`, and `run()` (line 150) silently drops unknown
+   names. The same string is in `ni_sensitivity.py:53` and `agent_window.py:72`. Consequence: Fig. 9a–c,
+   Table 3, the 1340 / 1390 °C solvi, "mpea-02b returns no liquid at all below 1400 °C", the Ni scan
+   and the A2-window scan were all computed with **no liquid phase**; only mc_fe (correct name) could
+   melt, which is the whole "databases disagree on the solidus" story. Liquid-included re-run
+   started (`scratchpad/liquid_check.py` → `liquid_check.txt`, 1000–1400 °C). Then: fix the three
+   scripts, archive `results/` with a dated header, re-run everything, regenerate Fig. 9 + Table 3,
+   and re-word every solvus/solidus sentence (abstract, §3.4, §4.1, §4.2, §5). Own it in the
+   response — it is R3#6's exact point, and the correction is a strength if the α field turns out to
+   be unreachable in the solid state in every database.
+2. **The 40-min / aged rod record sits in a report tagged 697-7 = benchmark.**
+   `instron-reports-extracted.txt:3` `697-7-SMA-constant.is_tcyclic-697-7.pdf`; rows 9–12 at 0.0399 in;
+   row 9 is "1200 C 2FPM – HYDROGEN ATM" (the benchmark was H2-annealed, the LLM alloy argon;
+   `process-note-SCai.txt:64,41`). §3.5 ¶3 ("11.0 → 1.4 %") and `AGG-MICROGRAPH-PROVENANCE.md §5`
+   attribute these rows to the LLM alloy on S. Cai's 2026-08-12 reading. **Song must confirm which heat.**
+   If benchmark: §3.5 ¶3 is withdrawn and no 40-min LLM mechanical data exist for R3#7.
+3. **The "1006 MPa at 11.9 %" three-cycle-plus-age specimen was tested on a 0.236 in = 6 mm gauge**
+   (`instron-reports-extracted.txt:578–624`); the other AGG rod reports use 1 or 2 in gauges. Only the
+   Table 2 wire sweep (`Fe-SMA-FC…-697-6`, 9/8/2025) and the 697-7 sweep are at 5.000 in = 127 mm.
+   "Every Instron header prints 5.000 in" (my earlier statement) is false. §2.4 / §3.5 and the R3#4
+   reply must give the gauge per dataset.
+4. **Fig. 1d's 0.36 mm wire came from the 10/11/25 quartz-tube run — 1200 °C/30 min ↔ cold zone
+   10 min ×4, water quench, NO 900 °C step** (`process-note-SCai.txt:79–82`;
+   `PROCESSING-AND-REPLICATES.md:107`). The 2-/3-cycle 1200 ↔ 900 °C schedules of §2.2 were run on
+   rod (`process-note-SCai.txt:44–47`). §2.2 needs per-specimen schedules; R3#3's "was this the actual
+   route?" has a real answer: not for the specimen shown.
+5. Wire WAS exposed at 1250 °C for 5 and 20 min (elongation 23.9 → 12.5 → 6.3 %;
+   `calphad/results/AGENT-WINDOW.md:106–109`). Disclose in §2.2 as the evidence behind the 1200 °C ceiling.
+6. No loading–unloading–heating record is among the eight Instron reports extracted; Fig. 3 is the
+   authors' plot. Song must supply the record (gauge, diameter, date) for R3#4.
+
+**Measurement verdict after the check (adopted):** DTA (#6) declined with reasoning — the argument
+no longer uses the solidus once liquid is included. **One new measurement required by both personas:
+a 0.36 mm wire put through the §2.2 route + the 3 % loading–unloading–heating test (#7)**, Song, ~1 day
+Instron plus furnace cycling; if it slips past the 22nd, submit everything else and request an
+extension for this item only. DSC for Ms (#8) optional, reported strictly as a bound. SEM-BSE point
+count on the 40-min mount if it exists. Option B (re-prompt) declined. Optical image analysis of
+Fig. 1a/1c rejected (no phase contrast).
+
 ### Decisions owed before work starts
-- [ ] Decision type and deadline from the JMRT letter (cai485@purdue.edu).
+- [x] Decision type and deadline from the JMRT letter — **major revision, due 2026-09-22** (Frank, 2026-09-14). An adversarial disposition check (workflow wf_828e1921-24b) is testing each proposed response from Reviewer-3 and editor lenses before any work starts.
 - [ ] #2: text-only (A) or add the constrained re-prompt + CALPHAD screen (B).
 - [ ] #7/#8: which new measurements Song can run (DSC for Ms; heating test on an AGG specimen; DTA for solidus).
 - [ ] Plug in E: — needed for #4 (Fig. 3 record) and #7 (40-min + AGG cyclic exports).
