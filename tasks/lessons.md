@@ -4,6 +4,41 @@ Patterns worth not repeating. Reviewed at the start of a session on this project
 
 ---
 
+## 2026-09-14 · A phase you did not name is a phase the calculation cannot form
+
+**What happened.** `step_diagrams.py`, `ni_sensitivity.py` and `agent_window.py` asked pycalphad for
+`'LIQUID:L'`. The TDB type suffix is not part of the phase name — pycalphad calls it `'LIQUID'` — and
+`run()` filters requested phases against `dbf.phases` and logs the rest as `absent`. The log said
+`absent : LIQUID:L` for two of three databases and nobody read it. Fig. 9, Table 3, the 1340 / 1390 °C
+solvi, "no liquid below 1400 °C" and the "databases disagree on the solidus" paragraph were all
+computed for an alloy that could not melt. With liquid included the alloy melts at ≈1295 °C while
+γ is still present — the claim gets stronger, and every quoted temperature is wrong. Found by an
+adversarial check five weeks after the numbers went into a manuscript under review.
+
+**Rule.** Never filter a requested phase list silently. Assert that every requested phase exists
+in the database, or at minimum treat any `absent` line naming a phase you *expected* (LIQUID,
+the parent, the ordered phase) as a failed run. And read the run log before the results: the
+defect was on line 8.
+
+---
+
+## 2026-09-14 · "Every" is a claim about a list — enumerate the list first
+
+**What happened.** I told Frank "every Instron report header prints 5.000 in = 127 mm" from a
+memory note about the Table 2 sweep. The eight reports on record carry four gauges (5.000, 2.000,
+1.000, 0.236 in); the §3.5 "1006 MPa at 11.9 %" specimen was tested on the 6 mm gauge and its
+elongation is not comparable to anything at 127 mm. The same file set also showed that the
+40-min rod record §3.5 attributes to the LLM-alloy sits in a report tagged `697-7` (benchmark)
+with a hydrogen-anneal row — a reading, not a header, had assigned it.
+
+**Rule.** Before writing "every", "all", "none" about a set of records, list the records and the
+field in question in the same step (`grep 'Gage Length'`, not recall). A universal claim sourced
+from memory is the same defect as a negative-existence claim without its search list. And when a
+record's own tag (file suffix, header) disagrees with a later attribution, the tag wins until the
+person who made the record says otherwise — put it to them, do not resolve it by preference.
+
+---
+
 ## 2026-08-14 · The deliverable is the DOCX pair, not manuscript.md
 
 **What happened.** Two days of substantive edits (S. Cai merge, Fig. 2 rebuild, figure

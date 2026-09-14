@@ -51,8 +51,25 @@ checked by hand against the repo records. Only what is listed here is verified.
    names. The same string is in `ni_sensitivity.py:53` and `agent_window.py:72`. Consequence: Fig. 9a–c,
    Table 3, the 1340 / 1390 °C solvi, "mpea-02b returns no liquid at all below 1400 °C", the Ni scan
    and the A2-window scan were all computed with **no liquid phase**; only mc_fe (correct name) could
-   melt, which is the whole "databases disagree on the solidus" story. Liquid-included re-run
-   started (`scratchpad/liquid_check.py` → `liquid_check.txt`, 1000–1400 °C). Then: fix the three
+   melt, which is the whole "databases disagree on the solidus" story. **Liquid-included
+   re-run DONE** (`revision/JMRT-R2/calphad-liquid-check-2026-09-14/`, 1000–1400 °C, pdens 500):
+   - mpea-02b / LLM-alloy: 1200 °C = 71.1 α + 28.9 γ (Table 3 row unchanged); γ persists to 1290 °C
+     (7.4 %); **liquid appears at ≈1295 °C while γ is still present** (1300 °C = 96.3 α + 3.7 L).
+     **There is no single-phase α field in the solid state.** The "≈1340 °C solvus" and "no liquid
+     below 1400 °C" were artifacts.
+   - mpea-02b / carbon-free: single-phase α from ≈1150 °C to ≈1370 °C (solidus ≈1375 °C) — the
+     1150 °C figure and the carbon conclusion STAND, now with a 220 °C-wide window.
+   - mpea-02b / benchmark: single-phase α ≈1140–1320 °C; solidus ≈1325 °C (was "none below 1400").
+   - PrecHiMn-04 / LLM-alloy: 1200 °C = 64.5 α + 35.5 γ (unchanged); solidus ≈1295 °C; no
+     single-phase α anywhere below it. The "≈1390 °C solvus" was an artifact. ⚠ rows 1210–1290 °C
+     return 100 % γ (re-entrant) — solver-suspect at pdens 500; do not quote without a high-pdens check.
+   - PrecHiMn-04 / carbon-free: single-phase α ≈1160–1290 °C; solidus ≈1295 °C.
+   - mpea-02b 1330–1340 °C rows flip to γ + L then back — solver noise, same caveat.
+   **Corrected claim:** in all three databases the carbon-bearing alloy begins to melt
+   (≈1240 °C mc_fe, ≈1295 °C mpea-02b and PrecHiMn-04) before it is ever single-phase α, while the
+   carbon-free variant is single-phase α from ≈1130–1160 °C up to its solidus. The databases now
+   AGREE on the solidus to within ≈55 °C; the "databases disagree on the solidus" paragraph goes.
+   Then: fix the three
    scripts, archive `results/` with a dated header, re-run everything, regenerate Fig. 9 + Table 3,
    and re-word every solvus/solidus sentence (abstract, §3.4, §4.1, §4.2, §5). Own it in the
    response — it is R3#6's exact point, and the correction is a strength if the α field turns out to
