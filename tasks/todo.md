@@ -12,6 +12,42 @@
 
 ---
 
+# JMRT Round 2 — JMRT-D-26-06169R1 (reviews received 2026-09-14)
+
+Source: `Downloads/JMRT-D-26-06169-reviews.zip` — the Editorial Manager review history (17 pp.:
+Round-1 reports, our 21-Aug responses, Revision-1 verdicts) plus R2's original comment .doc.
+Archived verbatim at `revision/JMRT-R2/reviewer-comments-verbatim.md`. The R1 resubmission was
+uploaded 2026-08-21 (author responses carry that date; EM draft is `JMRT-D-26-06169R1`).
+
+**Verdicts on Revision 1:** R1 (25/08) "No comment." · R2 (03/09) "recommend acceptance of this
+paper in its current form" · R3 (04/09) eight issues "that directly affect the manuscript's core
+conclusions". **The decision letter is NOT in Gmail — the R1 corresponding address is
+cai485@purdue.edu. Decision type and deadline: [PENDING — Frank].**
+
+## Triage of R3's eight Round-2 points — PROPOSED, nothing started
+
+Every item below is text or data-presentation except where a person is named in the last column.
+No manuscript edit is made until Frank confirms this plan and the decision type is known.
+
+| # | R3 asks | What the record holds | Proposed action | Needs |
+|---|---|---|---|---|
+| 1 | Conclusions changed "beyond ordinary refinement" → rigor concern; state which original conclusions still hold | Every *experimental* conclusion of the 07-15 submission stands unchanged: castable; no SE/SME in any condition; γ + α duplex with minor ordered Fe-Al; slip; benchmark transforms. What changed: the mechanism went from asserted ("likely promoted by carbon") to calculated (α-field closure); a Ms reading was added; over-definite statements were removed at R3's own request (R1-round #1, #11) | Text only: a "held / changed / why" table in the response, one paragraph in §5 | — |
+| 2 | Limitations "further weaken" the contribution; the finding is an incomplete prompting/screening workflow, not an AI limitation; what is novel about "screen with CALPHAD first"? | §4.4 already concedes the workflow framing; R3 wants the contribution stated | Text: name the contribution as (i) first physical test of an LLM-hypothesized SMA carried through processing, (ii) diagnosed mechanism with a validated in-silico control, (iii) a demonstrated pre-screen. **Option B:** constrained re-prompt + CALPHAD screen of the new candidates (computational, ~1 day) — answers R3 head-on but adds attackable content | **Frank: A or B** |
+| 3 | Clarify the cyclic route (1200 °C WQ → 900 °C); consistent with Ref 18? Why a benchmark-type schedule on an alloy that cannot reach single-phase α, and what was expected | §2.2 route as written. Chronology: the AGG runs (2025) preceded the CALPHAD work (Aug 2026), so the treatment was applied before its futility was calculable | Text: chronology + intent (the comparison required it; the hypothesis said bamboo was unnecessary and that was tested) + a verified comparison with Ref 18 | Omori 2016 lit check (subagent running) |
+| 4 | 13 mm vs 127 mm gauge; Fig. 3 "still uses the original curves"; which tests were repeated/reprocessed | 13 mm was a typographical error in the submitted text. Every Instron report header prints `Gage Length 5.00000 in` = 127.0 mm. Fig. 2 was re-plotted from the raw exports at 127 mm; Fig. 3 is the machine's original plot at the same gauge; no strain data were reprocessed. Strain rate: 0.25 in/min ÷ 5 in = 8.3 × 10⁻⁴ s⁻¹ (the submitted "1 × 10⁻³" was rounded) | Text (§2.4 + response), stated per figure | E: drive — confirm Fig. 3's own Instron record (and the open R1 item: 0.36 vs 0.45 mm stock) |
+| 5 | Fig. 3a tests one microstructural state (1200 °C × 1 min); bound conclusions to conditions tested | Fig. 2 unloading evidence spans 8 conditions; the heating test spans 1 | Text: experimental claim = conditions tested; composition-level claim = CALPHAD, and only within the accessible processing window | — |
+| 6 | 1340 °C solvus vs 1240 °C solidus from a single database; DSC/DTA recommended | §3.4 already notes the databases disagree on the solidus | Text: rest the argument on the 1200 °C experimental ceiling + the solvus (agreed by mpea-02b and PrecHiMn-04); demote the solidus to "one database indicates"; name high-T DTA as the verification | optional DTA (Song / FWM) |
+| 7 | Present full cyclic curves, loading–unloading–heating curves, and α/γ fractions for 1200 °C × 40 min AND the AGG condition; the bracket is not a substitute | Cyclic Instron records EXIST on E: for ≈1 mm rod: 1200/1 min (9.1 %), +age (11.0 %), 40 min + age (1.4 %) [`Frank-SMA-constant.is_tcyclic`]; AGG rods: 2-cycle 568/608 MPa at 1.0 %, 3-cycle + age 1006 MPa at 11.9 %, quartz-tube sets. No heating test and no Rietveld for these (Fig. 8 too spotty). The R1-round "not doing it" bracket (2026-08-12) has been rejected by R3 | Data: a new figure or supplement of the existing 40-min + AGG cyclic curves from the raw exports (rod, stated as such). Decide: heating test on an AGG specimen; phase fractions by point-count of Fig. 1a/1c as a partial answer | E: drive; **Song** for any new test |
+| 8 | Measure Ms directly | §4.1 already calls calorimetry "the most informative single experiment remaining" | DSC on the 1200 °C / 1 min wire — FWM runs DSC routinely for NiTi. Recommend doing it: it is the one cheap experiment R3 asks for that the paper itself promised | **Song / FWM** |
+
+### Decisions owed before work starts
+- [ ] Decision type and deadline from the JMRT letter (cai485@purdue.edu).
+- [ ] #2: text-only (A) or add the constrained re-prompt + CALPHAD screen (B).
+- [ ] #7/#8: which new measurements Song can run (DSC for Ms; heating test on an AGG specimen; DTA for solidus).
+- [ ] Plug in E: — needed for #4 (Fig. 3 record) and #7 (40-min + AGG cyclic exports).
+
+---
+
 # JMRT major revision — JMRT-D-26-06169
 
 Reviews received 2026-07-27 (R1), 2026-07-28 (R3), 2026-07-31 (R2). 45 comments total.
