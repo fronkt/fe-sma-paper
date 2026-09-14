@@ -26,6 +26,12 @@ Phase selection notes (these matter, and getting them wrong quietly doubles phas
 A partitioned phase in a two-phase field appears as two *composition sets* under one
 name. They are reported separately here -- summing them by name would hide exactly the
 alpha + B2 coexistence this paper is about.
+
+  * 2026-09-14 correction. The liquid phase is named LIQUID in all three databases. Until
+    this date the mpea-02b and PrecHiMn-04 lists asked for 'LIQUID:L' (the TDB type suffix
+    is not part of the name), run() dropped the unknown name silently, and those two
+    databases were computed for an alloy that could not melt. run() now refuses to proceed
+    when LIQUID, the bcc phase or the fcc phase is missing from a database.
 """
 import io
 import itertools
@@ -59,7 +65,7 @@ RUNS = [
         file='mpea-02b.tdb',
         note='Hallstedt HEA v2b. Primary run: only database with Ni and C together. No Si.',
         elements=['FE', 'MN', 'AL', 'NI', 'C'],
-        phases=['LIQUID:L', 'B2_BCC', 'A1_FCC', 'KAPPA_E21', 'CEMENTITE_D011',
+        phases=['LIQUID', 'B2_BCC', 'A1_FCC', 'KAPPA_E21', 'CEMENTITE_D011',
                 'M23C6_D84', 'M7C3_D101', 'M5C2', 'GRAPHITE_A9', 'CBCC_A12',
                 'CUB_A13', 'HCP_A3', 'SIGMA_D8B', 'AL8FE5_D82', 'AL8MN5_D810',
                 'AL13FE4', 'AL5FE2', 'AL2FE', 'AL3NI2_D513', 'AL3NI_D011',
@@ -74,7 +80,7 @@ RUNS = [
         note='High-Mn steels. Carries Si and D0_3 (BCC_4SL) but has no Ni, '
              'so the benchmark cannot be run here.',
         elements=['FE', 'MN', 'AL', 'SI', 'C'],
-        phases=['LIQUID:L', 'BCC_4SL', 'A1_FCC', 'KAPPA_E21', 'CEMENTITE_D011',
+        phases=['LIQUID', 'BCC_4SL', 'A1_FCC', 'KAPPA_E21', 'CEMENTITE_D011',
                 'M23C6_D84', 'M7C3_D101', 'M5C2', 'GRAPHITE_A9', 'CBCC_A12',
                 'CUB_A13', 'HCP_A3', 'AL8FE5_D82', 'AL8MN5_D810', 'AL13FE4',
                 'AL5FE2', 'AL2FE', 'AL12MN', 'AL6MN_D2H', 'AL11MN4_HT',
@@ -156,6 +162,17 @@ def run(cfg, report):
     report.write(u'phases  : %s\n' % ' '.join(phases))
     if missing:
         report.write(u'absent  : %s\n' % ' '.join(missing))
+
+    # A phase that is not named cannot form. Liquid, the bcc parent and the fcc product are
+    # the phases every conclusion in this paper is read from, so their absence is a failed
+    # run, not a footnote (2026-09-14: 'LIQUID:L' had been silently dropped for five weeks).
+    required = ['LIQUID', cfg['bcc']] + [p for p in cfg['phases'] if p in ('A1_FCC', 'FCC_A1')]
+    lost = [p for p in required if p not in dbf.phases]
+    if lost:
+        report.write(u'!!! required phase(s) not in database: %s -- run refused\n'
+                     % ' '.join(lost))
+        raise RuntimeError('%s: required phase(s) not in database: %s'
+                           % (cfg['key'], ', '.join(lost)))
 
     layout = dof_layout(dbf, comps, cfg['bcc']) if cfg['bcc'] in dbf.phases else None
     temps = np.arange(T_MIN_C, T_MAX_C + 1, T_STEP_C) + 273.15

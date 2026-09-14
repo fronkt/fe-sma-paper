@@ -105,10 +105,38 @@ Fig. 1a/1c rejected (no phase contrast).
 
 ### Decisions owed before work starts
 - [x] Decision type and deadline from the JMRT letter — **major revision, due 2026-09-22** (Frank, 2026-09-14). An adversarial disposition check (workflow wf_828e1921-24b) is testing each proposed response from Reviewer-3 and editor lenses before any work starts.
-- [ ] #2: text-only (A) or add the constrained re-prompt + CALPHAD screen (B).
-- [ ] #7/#8: which new measurements Song can run (DSC for Ms; heating test on an AGG specimen; DTA for solidus).
-- [ ] Plug in E: — needed for #4 (Fig. 3 record) and #7 (40-min + AGG cyclic exports).
-- [ ] #3: Song confirms the AGG route as run (water quench between steps, or furnace cool?) — the answer decides whether §2.2 is a wording fix or a factual correction.
+- [x] #2: text-only (A) — adopted 2026-09-14 when Frank said to start on the items not gated on Song; Option B was declined by the adversarial check (CALPHAD pass ≠ viability; second undocumented LLM session).
+- [ ] #7/#8: which new measurements Song can run (wire AGG + heating test — required; SEM-BSE count; DSC for Ms — optional). DTA declined. Put to Song in the C1 draft.
+- [ ] Plug in E: — needed for #4 (Fig. 3 record) and #7 (40-min + AGG cyclic exports). **Not mounted at 2026-09-14 start (`ls /e/` → no such directory).**
+- [ ] #3: Song confirms the AGG route as run per specimen — the answer decides whether §2.2 is a wording fix or a factual correction.
+
+### Work plan — started 2026-09-14 (Frank: "get started on the items I can work on now")
+
+Everything below is doable without Song or the E: drive unless marked. Order: A runs in the
+background while B/C proceed; B1 waits for A3.
+
+**A. CALPHAD recomputation**
+- [x] A1 Archive `calphad/results/` → `calphad/results-archive-2026-09-14-noliquid/` (+ README) and `figures/Figure_9.png` → `figures/archive-2026-09-14-Figure_9-noliquid.png` (done 2026-09-14)
+- [x] A2 Fix `'LIQUID:L'` → `'LIQUID'` in `step_diagrams.py`, `ni_sensitivity.py`, `agent_window.py`; refuse to run if LIQUID / bcc / fcc is missing from a database; `solvus()` = single-phase α in the *solid* state (no γ, no liquid) with the solidus in its own column; `summarize_ni_sensitivity.py` aligned (done 2026-09-14)
+- [ ] A3 Re-run: `step_diagrams.py mpea-02b PrecHiMn-04` **done** (log shows LIQUID present in both phase lists; mc_fe rows kept); `ni_sensitivity.py` (all) and `agent_window.py` (all) running
+- [x] A4 Re-check of the solver-suspect rows — **the finding changed shape.** pdens 2000 returned 100 % γ where pdens 500 returned α + γ (PrecHiMn-04 1190–1290 °C, incl. the Table 3 row; mpea-02b 1290–1310 °C). `compare_gm.py` arbitrated by Gibbs energy: the pdens-500 duplex / α + liquid states are LOWER in GM at every temperature checked (mpea-02b 1150–1300 °C; PrecHiMn-04 1200 °C: −100 985.8 vs −100 898.6 J/mol), so the denser grids converged to metastable γ — Table 3 stands. `recheck_prechimn_dense.py`: even a 12 000-point two-phase grid misses the 1200 °C duplex, so the PrecHiMn-04 γ-only band at 1210–1290 °C is suspect for the same reason → `refine_by_gm.py` keeps the lowest-GM state across a ladder of grids per temperature and splices it into the CSV (pass 1 running; pass 2 with a 13-grid ladder on the two LLM-alloy bands to follow)
+- [ ] A5 `plot_step_diagrams.py`; `make_paper_figure.py` with the liquid curve added → new Fig. 9; `summarize_ni_sensitivity.py`
+- [ ] A6 Rewrite the headline numbers of `results/ANALYSIS.md`, `NI-SENSITIVITY.md`, `AGENT-WINDOW.md` under a dated correction header
+**B. Manuscript text (Frank reviews the diff)**
+- [ ] B1 #6 — every solvus/solidus sentence: abstract; §3.4 ¶3 (LLM-alloy), ¶4 (C-free), Ni-scan ¶, mc_fe ¶, A2-window ¶; Table 3; Fig. 9 caption; §4.1 ¶3; §4.2 ¶4, ¶5, ¶9; §5 ¶4 — after A3
+- [ ] B2 #4 — §2.4 gauge per dataset (127 mm for the Table 2 sweep; 6 / 25.4 / 50.8 mm for the AGG rods; Fig. 3 pending Song); §3.5 "1006 MPa at 11.9 %" carries its 6 mm gauge
+- [ ] B3 #5 — claims bounded to the conditions tested (§3.2 ¶3, §3.3 ¶1, §3.5 ¶10, §4.1 ¶1); one three-level evidence statement (measured / calculated / inferred)
+- [ ] B4 #1 — §5 paragraph stating what held and what changed; abstract "locate the cause" and §5 "identify the origin" demoted to "indicate"
+- [ ] B5 #2 — contribution paragraph (§4.4) naming what is claimed as new and what is not; §1 "over 200 published papers" reconciled with the report's 76 sources; §5 Limitation 2 "instructing it to consult thermodynamic data" checked against §2.1
+- [ ] B6 #8 — §4.1 ¶3 Ms-above-RT reading demoted to a possibility (EDS partitioning argues against a martensitic origin of the γ); DSC named as the test; L122/L204 "equilibrium state" reconciled with L206
+- [ ] B7 #3 — §2.2 per-specimen schedules from the record (rod: 1200 °C/30 min WQ ↔ 900 °C/15 min ×2–3, final 1200 °C/30–60 min; Fig. 1d wire: quartz-tube 1200 °C/30 min ↔ cold zone ×4, WQ), chronology + intent, Kassel schedule reference, 1250 °C exposures disclosed — **wording pending Song's confirmation**
+- [ ] B8 #7 — §3.5: state what exists per dataset (gauge, diameter, n); 40-min paragraph **held** until Song confirms the heat of the 697-7 report; AGG heating test pending Song
+**C. Song (draft only — Frank sends)**
+- [ ] C1 Gmail draft + `revision/JMRT-R2/email-to-song-2026-09-14.md`: heat of the 697-7 report; AGG route per specimen; Fig. 3's record; the three measurements
+**D. Letters + package**
+- [ ] D1 `revision/JMRT-R2/response-R3.md` (eight points, verbatim + reply), `response-R1-R2.md`; cover note owning the liquid correction
+- [ ] D2 `build_docx_pair.py` rebuild → `revision/JMRT-R2/R2-manuscript/`, `submissions/`, Downloads; consistency pass (no surviving "1340", "1390", "no liquid at all", "every"-gauge claim)
+- [ ] D3 Submit by 2026-09-22, with the #7 extension request attached if the heating test has not landed
 
 ---
 

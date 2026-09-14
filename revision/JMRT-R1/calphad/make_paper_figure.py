@@ -52,8 +52,15 @@ C_FCC = '#1f6fb4'
 C_MN = '#e08214'
 C_CARB = '#7b52a1'
 
+# 2026-09-14: the liquid phase is drawn too. Until this date the underlying run had
+# silently dropped it (requested as 'LIQUID:L'), so the panels showed bcc persisting to
+# 1400 degC in alloys that in fact melt from ~1295 degC (LLM-alloy) and ~1325 degC
+# (benchmark). The solidus is part of the argument now and must be visible.
+C_LIQ = '#4d4d4d'
+
 PLAIN = OrderedDict([
     ('A1_FCC', (r'fcc $\gamma$', C_FCC)),
+    ('LIQUID', ('liquid', C_LIQ)),
     ('CUB_A13', (r'$\beta$-Mn', C_MN)),
     ('M23C6_D84', (r'M$_{23}$C$_6$', C_CARB)),
 ])

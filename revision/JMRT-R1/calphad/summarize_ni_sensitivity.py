@@ -40,33 +40,39 @@ def is_bcc(label):
     return label.startswith(BCC_PREFIXES)
 
 
-def solvus(per_T):
-    """First temperature at which bcc is the only SOLID phase, plus later excursions.
+LIQUID_TOL = 5e-3        # same threshold as ni_sensitivity.py
 
-    The bcc share must be taken against the solid total, not against unity. Phase
-    fractions include liquid, so once melting begins the bcc fraction falls below 0.999
-    while bcc is still the only solid present -- in mc_fe's carbon-free series that
-    starts around 1250 C and would otherwise be misread as gamma re-entering. The
-    solidus is reported separately so partial melting is explicit rather than hidden.
+
+def solvus(per_T):
+    """First temperature at which bcc is the only phase -- no gamma, no liquid -- below
+    the solidus, plus later excursions, plus the solidus.
+
+    Same rule as ni_sensitivity.solvus() after the 2026-09-14 correction. Until then the
+    bcc share was taken against the SOLID total, so an alloy that melts while still duplex
+    was reported as reaching a "solvus" at the temperature its last gamma dissolved into
+    the liquid. That is not a solution-treatment window. The share is now taken against
+    unity and the scan stops at the solidus; an alloy that never becomes single-phase bcc
+    in the solid state reports no solvus at all, which is the load-bearing answer for the
+    carbon-bearing composition.
     """
-    first, excursions, solidus = None, [], None
-    for T in sorted(per_T):
-        if T < 1000:
-            continue
+    temps = [T for T in sorted(per_T) if T >= 1000]
+    solidus = next((T for T in temps
+                    if sum(f for k, f in per_T[T].items() if k.startswith('LIQUID'))
+                    > LIQUID_TOL), None)
+    first, excursions = None, []
+    for T in temps:
+        if solidus is not None and T >= solidus:
+            break
         phases = per_T[T]
-        liquid = sum(f for k, f in phases.items() if k.startswith('LIQUID'))
-        solid = {k: f for k, f in phases.items() if not k.startswith('LIQUID')}
-        total_solid = sum(solid.values())
-        if liquid > 1e-4 and solidus is None:
-            solidus = T
-        if not solid or total_solid <= 0:
+        total = sum(phases.values())
+        if not phases or total <= 0:
             continue
-        if sum(f for k, f in solid.items() if is_bcc(k)) / total_solid > 0.999:
+        if sum(f for k, f in phases.items() if is_bcc(k)) / total > 0.999:
             if first is None:
                 first = T
         elif first is not None:
             excursions.append((T, ', '.join('%s %.3f' % kv for kv in
-                                            sorted(solid.items(), key=lambda x: -x[1]))))
+                                            sorted(phases.items(), key=lambda x: -x[1]))))
     return first, excursions, solidus
 
 
@@ -92,7 +98,7 @@ def main():
                 desc = ', '.join('%s %.1f%%' % (lbl, 100 * f) for lbl, f
                                  in sorted(at1200.items(), key=lambda x: -x[1]))
                 out.write(u'%6.1f  %10s  %9s  %s\n'
-                          % (k[2], ('%.0f C' % sol) if sol else 'none <=1400',
+                          % (k[2], ('%.0f C' % sol) if sol else 'none (solid)',
                              ('%.0f C' % solidus) if solidus else '>1400',
                              desc or '*** no converged solution ***'))
                 for T, what in exc:

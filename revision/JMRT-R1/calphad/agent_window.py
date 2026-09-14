@@ -69,7 +69,7 @@ T_HI = np.arange(1000, 1401, 10) + 273.15
 RUNS = [
     dict(key='mpea-02b', file='mpea-02b.tdb',
          elements=['FE', 'MN', 'AL', 'NI', 'C'],
-         phases=['LIQUID:L', 'B2_BCC', 'A1_FCC', 'KAPPA_E21', 'CEMENTITE_D011',
+         phases=['LIQUID', 'B2_BCC', 'A1_FCC', 'KAPPA_E21', 'CEMENTITE_D011',
                  'M23C6_D84', 'M7C3_D101', 'M5C2', 'GRAPHITE_A9', 'CBCC_A12',
                  'CUB_A13', 'HCP_A3', 'SIGMA_D8B', 'AL8FE5_D82', 'AL8MN5_D810',
                  'AL13FE4', 'AL5FE2', 'AL2FE', 'AL3NI2_D513', 'AL3NI_D011',
@@ -108,9 +108,10 @@ def named_points():
     return [
         # Control. This is the composition ni_sensitivity.py already scanned, reached here by a
         # different route (wt.% -> at.% -> renormalise). It must reproduce that run's answer --
-        # mpea-02b solvus 1340 C, 71.1 alpha / 28.9 gamma at 1200 C; mc_fe melting from ~1240 C
-        # with 61.9 / 38.1 at 1200 C. If it does not, the discrepancy is in this script, not in
-        # the chemistry, and nothing else in the table can be believed.
+        # mpea-02b: 71.1 alpha / 28.9 gamma at 1200 C, no single-phase alpha in the solid
+        # state, solidus ~1295 C (liquid-included run of 2026-09-14); mc_fe: melting from
+        # ~1240 C with 61.9 / 38.1 at 1200 C. If it does not, the discrepancy is in this
+        # script, not in the chemistry, and nothing else in the table can be believed.
         ('measured', MEASURED_WT),
         ('as_made', AS_MADE_WT),
         ('A2_midpoint', mid),
@@ -160,8 +161,9 @@ def run(cfg, report, rows):
     for carbon_free in (False, True):
         series = 'C_free' if carbon_free else 'C_measured'
         report.write(u'\n--- %s / %s ---\n' % (cfg['key'], series))
-        report.write(u'%-14s  %-42s  %10s  %s\n'
-                     % ('point', 'composition (at.%)', 'a-solvus', 'phases at 1200 C'))
+        report.write(u'%-14s  %-42s  %12s  %10s  %s\n'
+                     % ('point', 'composition (at.%)', 'a-solvus', 'solidus',
+                        'phases at 1200 C'))
 
         for name, wt in points:
             at_pct = wt_to_at(wt)
@@ -174,14 +176,15 @@ def run(cfg, report, rows):
             temps_c = [round(float(t) - 273.15, 1) for t in T_HI]
             per_T = [phases_at(eq, i, cfg, layout) for i in range(len(T_HI))]
 
-            sol, excursions = solvus(temps_c, per_T, cfg)
+            sol, solidus, excursions = solvus(temps_c, per_T, cfg)
             at1200 = per_T[temps_c.index(1200.0)]
             desc = ', '.join('%s %.1f%%' % (k, 100 * f)
                              for k, f in sorted(at1200.items(), key=lambda kv: -kv[1]))
             shown = ' '.join('%s%.1f' % (el.title(), at_pct[el])
                              for el in ('FE', 'MN', 'AL', 'NI', 'SI', 'C') if el in at_pct)
-            report.write(u'%-14s  %-42s  %10s  %s\n'
-                         % (name, shown, ('%.0f C' % sol) if sol else 'none <=1400',
+            report.write(u'%-14s  %-42s  %12s  %10s  %s\n'
+                         % (name, shown, ('%.0f C' % sol) if sol else 'none (solid)',
+                            ('%.0f C' % solidus) if solidus else 'none <=1400',
                             desc or '*** NOT CONVERGED ***'))
             for tc, what in excursions:
                 report.write(u'        !! %g C above the solvus is not single-phase bcc: %s\n'
@@ -193,8 +196,10 @@ def run(cfg, report, rows):
                                      al_wt=wt['AL'], mn_wt=wt['MN'], ni_wt=wt['NI'],
                                      si_wt=wt['SI'], c_wt=wt['C'], T_C=tc,
                                      label=label, fraction=f,
-                                     alpha_solvus_C=sol if sol else ''))
-            print('  %s %s %-14s solvus=%s' % (cfg['key'], series, name, sol))
+                                     alpha_solvus_C=sol if sol else '',
+                                     solidus_C=solidus if solidus else ''))
+            print('  %s %s %-14s solvus=%s  solidus=%s'
+                  % (cfg['key'], series, name, sol, solidus), flush=True)
 
 
 def main():
@@ -208,7 +213,7 @@ def main():
     path = os.path.join(OUTDIR, 'agent_window.csv')
     txt = os.path.join(OUTDIR, 'agent_window.txt')
     fields = ['database', 'series', 'point', 'al_wt', 'mn_wt', 'ni_wt', 'si_wt', 'c_wt',
-              'T_C', 'label', 'fraction', 'alpha_solvus_C']
+              'T_C', 'label', 'fraction', 'alpha_solvus_C', 'solidus_C']
 
     # Merge, never replace -- a subset re-run must not discard the other database's scan.
     kept = []

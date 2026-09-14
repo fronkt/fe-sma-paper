@@ -1,0 +1,49 @@
+Ni sensitivity, 4.2-7.8 at.% in 0.4 steps, iron balancing.
+Mn, Al, Si and C held at measured values; C removed in the C_free series.
+
+==============================================================================
+mpea-02b   elements: FE MN AL NI C
+Ni values (at.%): 4.2, 4.6, 5.0, 5.4, 5.8, 6.2, 6.6, 7.0, 7.4, 7.8
+
+--- mpea-02b / C_measured ---
+Ni at%    a-solvus  phases at 1200 C
+   4.2      1340 C  B2_BCC[A2] 71.1%, A1_FCC 28.9%
+   4.6      1340 C  B2_BCC[A2] 70.1%, A1_FCC 29.9%
+   5.0      1340 C  B2_BCC[A2] 69.0%, A1_FCC 31.0%
+   5.4      1340 C  B2_BCC[A2] 67.9%, A1_FCC 32.1%
+   5.8      1340 C  B2_BCC[A2] 66.7%, A1_FCC 33.3%
+   6.2      1340 C  B2_BCC[A2] 65.4%, A1_FCC 34.6%
+   6.6      1340 C  B2_BCC[A2] 64.1%, A1_FCC 35.9%
+   7.0      1340 C  B2_BCC[A2] 62.7%, A1_FCC 37.3%
+   7.4      1340 C  B2_BCC[A2] 61.2%, A1_FCC 38.8%
+   7.8      1340 C  B2_BCC[A2] 59.6%, A1_FCC 40.4%
+
+--- mpea-02b / C_free ---
+Ni at%    a-solvus  phases at 1200 C
+   4.2      1150 C  B2_BCC[A2] 100.0%
+   4.6      1160 C  B2_BCC[A2] 100.0%
+   5.0      1160 C  B2_BCC[A2] 100.0%
+   5.4      1220 C  B2_BCC[A2] 100.0%
+   5.8      1170 C  B2_BCC[A2] 100.0%
+   6.2      1170 C  B2_BCC[A2] 100.0%
+   6.6      1180 C  B2_BCC[A2] 100.0%
+   7.0      1180 C  B2_BCC[A2] 100.0%
+   7.4      1190 C  B2_BCC[A2] 100.0%
+   7.8      1190 C  B2_BCC[A2] 100.0%
+
+Ni sensitivity, 4.2-7.8 at.% in 0.4 steps, iron balancing.  [re-run of mc_fe]
+Mn, Al, Si and C held at measured values; C removed in the C_free series.
+
+==============================================================================
+mc_fe   elements: FE MN AL NI SI C
+Ni values (at.%): 4.2, 7.8
+
+--- mc_fe / C_measured ---
+Ni at%    a-solvus  phases at 1200 C
+   4.2  none <=1400  BCC_A2 61.9%, FCC_A1 38.1%
+   7.8  none <=1400  BCC_A2 75.8%, FCC_A1 24.2%
+
+--- mc_fe / C_free ---
+Ni at%    a-solvus  phases at 1200 C
+   4.2  none <=1400  BCC_A2 100.0%
+   7.8  none <=1400  BCC_A2 100.0%
