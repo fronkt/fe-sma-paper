@@ -1,0 +1,113 @@
+Gibbs-energy arbitration, LLM-alloy, liquid included (2026-09-14)
+
+=== mpea-02b / llm ===
+
+  1150 C
+    all phases, pdens 500            GM    -96619.38 J/mol   B2_BCC 50.7%, A1_FCC 49.3%
+    all phases, pdens 1000           GM    -96619.38 J/mol   B2_BCC 50.7%, A1_FCC 49.3%  <-- lowest
+    all phases, pdens 2000           GM    -96619.38 J/mol   B2_BCC 50.7%, A1_FCC 49.3%  <-- lowest
+    all phases, pdens 3000           GM    -96619.38 J/mol   B2_BCC 50.7%, A1_FCC 49.3%
+    fcc only, pdens 2000             GM    -96578.83 J/mol   A1_FCC 100.0%
+    bcc + fcc only, pdens 2000       GM    -96619.38 J/mol   B2_BCC 50.7%, A1_FCC 49.3%
+    bcc + fcc + liquid, pdens 3000   GM    -96619.38 J/mol   B2_BCC 50.7%, A1_FCC 49.3%
+
+  1200 C
+    all phases, pdens 500            GM   -101103.60 J/mol   B2_BCC 71.1%, A1_FCC 28.9%
+    all phases, pdens 1000           GM   -101103.60 J/mol   B2_BCC 71.1%, A1_FCC 28.9%
+    all phases, pdens 2000           GM   -101103.60 J/mol   B2_BCC 71.1%, A1_FCC 28.9%  <-- lowest
+    all phases, pdens 3000           GM   -101103.60 J/mol   B2_BCC 71.1%, A1_FCC 28.9%  <-- lowest
+    fcc only, pdens 2000             GM   -101009.47 J/mol   A1_FCC 100.0%
+    bcc + fcc only, pdens 2000       GM   -101103.60 J/mol   B2_BCC 71.1%, A1_FCC 28.9%  <-- lowest
+    bcc + fcc + liquid, pdens 3000   GM   -101103.60 J/mol   B2_BCC 71.1%, A1_FCC 28.9%
+
+  1250 C
+    all phases, pdens 500            GM   -105669.80 J/mol   B2_BCC 84.7%, A1_FCC 15.3%  <-- lowest
+    all phases, pdens 1000           GM   -105669.80 J/mol   B2_BCC 84.7%, A1_FCC 15.3%  <-- lowest
+    all phases, pdens 2000           GM   -105669.80 J/mol   B2_BCC 84.7%, A1_FCC 15.3%  <-- lowest
+    all phases, pdens 3000           GM   -105503.84 J/mol   A1_FCC 100.0%
+    fcc only, pdens 2000             GM   -105503.84 J/mol   A1_FCC 100.0%
+    bcc + fcc only, pdens 2000       GM   -105669.80 J/mol   B2_BCC 84.7%, A1_FCC 15.3%  <-- lowest
+    bcc + fcc + liquid, pdens 3000   GM   -105503.84 J/mol   A1_FCC 100.0%
+
+  1280 C
+    all phases, pdens 500            GM   -108446.81 J/mol   B2_BCC 90.8%, A1_FCC 9.2%  <-- lowest
+    all phases, pdens 1000           GM   -108446.81 J/mol   B2_BCC 90.8%, A1_FCC 9.2%  <-- lowest
+    all phases, pdens 2000           GM   -108446.81 J/mol   B2_BCC 90.8%, A1_FCC 9.2%  <-- lowest
+    all phases, pdens 3000           GM   -108230.50 J/mol   A1_FCC 100.0%
+    fcc only, pdens 2000             GM   -108230.50 J/mol   A1_FCC 100.0%
+    bcc + fcc only, pdens 2000       GM   -108446.81 J/mol   B2_BCC 90.8%, A1_FCC 9.2%
+    bcc + fcc + liquid, pdens 3000   GM   -108230.50 J/mol   A1_FCC 100.0%
+
+  1290 C
+    all phases, pdens 500            GM   -109378.53 J/mol   B2_BCC 92.6%, A1_FCC 7.4%
+    all phases, pdens 1000           GM   -109378.53 J/mol   B2_BCC 92.6%, A1_FCC 7.4%  <-- lowest
+    all phases, pdens 2000           GM   -109144.34 J/mol   A1_FCC 100.0%
+    all phases, pdens 3000           GM   -109144.34 J/mol   A1_FCC 100.0%
+    fcc only, pdens 2000             GM   -109144.34 J/mol   A1_FCC 100.0%
+    bcc + fcc only, pdens 2000       GM   -109378.53 J/mol   B2_BCC 92.6%, A1_FCC 7.4%  <-- lowest
+    bcc + fcc + liquid, pdens 3000   GM   -109144.34 J/mol   A1_FCC 100.0%
+
+  1300 C
+    all phases, pdens 500            GM   -110314.73 J/mol   B2_BCC 96.3%, LIQUID 3.7%
+    all phases, pdens 1000           GM   -110314.73 J/mol   B2_BCC 96.3%, LIQUID 3.7%  <-- lowest
+    all phases, pdens 2000           GM   -110060.65 J/mol   A1_FCC 100.0%
+    all phases, pdens 3000           GM   -110060.65 J/mol   A1_FCC 100.0%
+    fcc only, pdens 2000             GM   -110060.65 J/mol   A1_FCC 100.0%
+    bcc + fcc only, pdens 2000       GM   -110313.26 J/mol   B2_BCC 94.3%, A1_FCC 5.7%
+    bcc + fcc + liquid, pdens 3000   GM   -110060.65 J/mol   A1_FCC 100.0%
+
+=== PrecHiMn-04 / llm ===
+
+  1150 C
+    all phases, pdens 500            GM    -96550.12 J/mol   BCC_4SL 52.8%, A1_FCC 47.2%  <-- lowest
+    all phases, pdens 1000           GM    -96550.12 J/mol   BCC_4SL 52.8%, A1_FCC 47.2%
+    all phases, pdens 2000           GM    -96495.58 J/mol   A1_FCC 100.0%
+    all phases, pdens 3000           GM    -96495.58 J/mol   A1_FCC 100.0%
+    fcc only, pdens 2000             GM    -96495.58 J/mol   A1_FCC 100.0%
+    bcc + fcc only, pdens 2000       GM    -96495.58 J/mol   A1_FCC 100.0%
+    bcc + fcc + liquid, pdens 3000   GM    -96495.58 J/mol   A1_FCC 100.0%
+
+  1200 C
+    all phases, pdens 500            GM   -100985.77 J/mol   BCC_4SL 64.5%, A1_FCC 35.5%  <-- lowest
+    all phases, pdens 1000           GM   -100898.58 J/mol   A1_FCC 100.0%
+    all phases, pdens 2000           GM   -100898.58 J/mol   A1_FCC 100.0%
+    all phases, pdens 3000           GM   -100898.58 J/mol   A1_FCC 100.0%
+    fcc only, pdens 2000             GM   -100898.58 J/mol   A1_FCC 100.0%
+    bcc + fcc only, pdens 2000       GM   -100898.58 J/mol   A1_FCC 100.0%
+    bcc + fcc + liquid, pdens 3000   GM   -100898.58 J/mol   A1_FCC 100.0%
+
+  1250 C
+    all phases, pdens 500            GM   -105365.07 J/mol   A1_FCC 100.0%
+    all phases, pdens 1000           GM   -105365.07 J/mol   A1_FCC 100.0%  <-- lowest
+    all phases, pdens 2000           GM   -105365.07 J/mol   A1_FCC 100.0%
+    all phases, pdens 3000           GM   -105365.07 J/mol   A1_FCC 100.0%  <-- lowest
+    fcc only, pdens 2000             GM   -105365.07 J/mol   A1_FCC 100.0%
+    bcc + fcc only, pdens 2000       GM   -105365.07 J/mol   A1_FCC 100.0%
+    bcc + fcc + liquid, pdens 3000   GM   -105365.07 J/mol   A1_FCC 100.0%  <-- lowest
+
+  1280 C
+    all phases, pdens 500            GM   -108074.87 J/mol   A1_FCC 100.0%
+    all phases, pdens 1000           GM   -108074.87 J/mol   A1_FCC 100.0%
+    all phases, pdens 2000           GM   -108074.87 J/mol   A1_FCC 100.0%  <-- lowest
+    all phases, pdens 3000           GM   -108074.87 J/mol   A1_FCC 100.0%
+    fcc only, pdens 2000             GM   -108074.87 J/mol   A1_FCC 100.0%  <-- lowest
+    bcc + fcc only, pdens 2000       GM   -108074.87 J/mol   A1_FCC 100.0%  <-- lowest
+    bcc + fcc + liquid, pdens 3000   GM   -108074.87 J/mol   A1_FCC 100.0%  <-- lowest
+
+  1290 C
+    all phases, pdens 500            GM   -108983.08 J/mol   A1_FCC 100.0%
+    all phases, pdens 1000           GM   -108983.08 J/mol   A1_FCC 100.0%  <-- lowest
+    all phases, pdens 2000           GM   -108983.08 J/mol   A1_FCC 100.0%
+    all phases, pdens 3000           GM   -108983.08 J/mol   A1_FCC 100.0%  <-- lowest
+    fcc only, pdens 2000             GM   -108983.08 J/mol   A1_FCC 100.0%
+    bcc + fcc only, pdens 2000       GM   -108983.08 J/mol   A1_FCC 100.0%
+    bcc + fcc + liquid, pdens 3000   GM   -108983.08 J/mol   A1_FCC 100.0%  <-- lowest
+
+  1300 C
+    all phases, pdens 500            GM   -109902.21 J/mol   A1_FCC 80.8%, LIQUID 19.2%
+    all phases, pdens 1000           GM   -109902.21 J/mol   A1_FCC 80.8%, LIQUID 19.2%
+    all phases, pdens 2000           GM   -109902.21 J/mol   A1_FCC 80.8%, LIQUID 19.2%
+    all phases, pdens 3000           GM   -109902.21 J/mol   A1_FCC 80.8%, LIQUID 19.2%  <-- lowest
+    fcc only, pdens 2000             GM   -109893.75 J/mol   A1_FCC 100.0%
+    bcc + fcc only, pdens 2000       GM   -109893.75 J/mol   A1_FCC 100.0%
+    bcc + fcc + liquid, pdens 3000   GM   -109902.21 J/mol   A1_FCC 80.8%, LIQUID 19.2%  <-- lowest

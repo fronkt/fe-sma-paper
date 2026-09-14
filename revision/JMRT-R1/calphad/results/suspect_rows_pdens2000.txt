@@ -1,0 +1,28 @@
+Solver-suspect rows re-run at pdens 2000 (LLM-alloy, liquid included)
+
+=== mpea-02b / llm, 1270-1360 C, pdens 2000 ===
+   1270 C : B2_BCC[A2] 88.9%, A1_FCC 11.1%
+   1280 C : B2_BCC[A2] 90.8%, A1_FCC 9.2%
+   1290 C : A1_FCC 100.0%
+   1300 C : A1_FCC 100.0%
+   1310 C : A1_FCC 100.0%
+   1320 C : A1_FCC 94.1%, LIQUID 5.9%
+   1330 C : A1_FCC 64.2%, LIQUID 35.8%
+   1340 C : LIQUID 68.5%, A1_FCC 31.5%
+   1350 C : LIQUID 100.0%
+   1360 C : LIQUID 100.0%
+
+=== PrecHiMn-04 / llm, 1190-1310 C, pdens 2000 ===
+   1190 C : A1_FCC 100.0%
+   1200 C : A1_FCC 100.0%
+   1210 C : A1_FCC 100.0%
+   1220 C : A1_FCC 100.0%
+   1230 C : A1_FCC 100.0%
+   1240 C : A1_FCC 100.0%
+   1250 C : A1_FCC 100.0%
+   1260 C : A1_FCC 100.0%
+   1270 C : A1_FCC 100.0%
+   1280 C : A1_FCC 100.0%
+   1290 C : A1_FCC 100.0%
+   1300 C : A1_FCC 80.8%, LIQUID 19.2%
+   1310 C : A1_FCC 57.3%, LIQUID 42.7%

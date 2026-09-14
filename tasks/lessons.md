@@ -39,6 +39,32 @@ person who made the record says otherwise — put it to them, do not resolve it 
 
 ---
 
+## 2026-09-14 · A denser grid is not a better answer — the lower Gibbs energy is
+
+**What happened.** The pdens-2000 re-check of the liquid-included step diagrams returned
+100 % γ where pdens 500 had returned α + γ — including the PrecHiMn-04 row of Table 3 — and
+for an hour the working assumption was "denser grid wins, Table 3 is wrong." It was the
+reverse: the converged states' molar Gibbs energies (`eq.GM`) showed the duplex lower at
+every temperature checked, and a 12 000-point two-phase grid *still* fell into the metastable
+γ basin at 1200 °C. Then a 1500-point grid found a duplex at 1210–1250 °C with lower GM than
+the "γ-only band" every other grid had agreed on. pycalphad's global search starts from a
+point grid and refines locally; which basin it lands in depends on where the grid points fall,
+not monotonically on how many there are.
+
+**Rule.** When two runs of the same equilibrium disagree, do not pick by grid density,
+recency, or plausibility — compare GM at identical conditions and keep the lower. Where a
+phase fraction jumps discontinuously with temperature inside what should be a two-phase
+field, one of the two rows is a missed minimum; scan a *ladder* of densities and keep the
+lowest-GM state per temperature (`refine_by_gm.py`), and log every candidate so the choice is
+auditable. Disclose the arbitration in the methods; it is part of the calculation.
+
+**Small trap from the same day.** `$CLAUDE_SCRATCHPAD` is not set inside the Bash tool; a
+redirect to `"$CLAUDE_SCRATCHPAD/x.log"` becomes `/x.log`, fails on permissions, and three
+"completed" background runs had run nothing. Use the literal scratchpad path, and read the
+output file before believing an exit code that an `echo` produced.
+
+---
+
 ## 2026-08-14 · The deliverable is the DOCX pair, not manuscript.md
 
 **What happened.** Two days of substantive edits (S. Cai merge, Fig. 2 rebuild, figure

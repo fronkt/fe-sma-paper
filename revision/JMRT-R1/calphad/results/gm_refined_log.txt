@@ -1,0 +1,172 @@
+Grid-arbitrated rows: lowest GM across pdens [500, 1000, 2000, 3000]
+
+=== mpea-02b / benchmark, 1300-1400 C ===
+   1300 C  keep pdens 1000  B2_BCC[A2] 100.0%
+   1310 C  keep pdens 1000  B2_BCC[A2] 100.0%
+   1320 C  keep pdens 2000  B2_BCC[A2] 100.0%
+   1330 C  keep pdens 500   B2_BCC[A2] 96.0%, LIQUID 4.0%
+   1340 C  keep pdens 1000  B2_BCC[A2] 83.1%, LIQUID 16.9%
+   1350 C  keep pdens 500   B2_BCC[A2] 65.3%, LIQUID 34.7%
+   1360 C  keep pdens 500   LIQUID 55.4%, B2_BCC[A2] 44.6%
+   1370 C  keep pdens 2000  LIQUID 78.8%, B2_BCC[A2] 21.2%
+   1380 C  keep pdens 500   LIQUID 100.0%
+   1390 C  keep pdens 2000  LIQUID 100.0%
+   1400 C  keep pdens 1000  LIQUID 100.0%
+
+=== mpea-02b / llm, 1250-1400 C ===
+   1250 C  keep pdens 1000  B2_BCC[A2] 84.7%, A1_FCC 15.3%
+           pdens 500   GM   -105669.80  B2_BCC[A2] 84.7%, A1_FCC 15.3%
+           pdens 1000  GM   -105669.80  B2_BCC[A2] 84.7%, A1_FCC 15.3%
+           pdens 2000  GM   -105669.80  B2_BCC[A2] 84.7%, A1_FCC 15.3%
+           pdens 3000  GM   -105503.84  A1_FCC 100.0%
+   1260 C  keep pdens 500   B2_BCC[A2] 86.8%, A1_FCC 13.2%
+           pdens 500   GM   -106592.42  B2_BCC[A2] 86.8%, A1_FCC 13.2%
+           pdens 1000  GM   -106592.42  B2_BCC[A2] 86.8%, A1_FCC 13.2%
+           pdens 2000  GM   -106592.42  B2_BCC[A2] 86.8%, A1_FCC 13.2%
+           pdens 3000  GM   -106410.24  A1_FCC 100.0%
+   1270 C  keep pdens 500   B2_BCC[A2] 88.9%, A1_FCC 11.1%
+           pdens 500   GM   -107518.10  B2_BCC[A2] 88.9%, A1_FCC 11.1%
+           pdens 1000  GM   -107518.10  B2_BCC[A2] 88.9%, A1_FCC 11.1%
+           pdens 2000  GM   -107518.10  B2_BCC[A2] 88.9%, A1_FCC 11.1%
+           pdens 3000  GM   -107319.13  A1_FCC 100.0%
+   1280 C  keep pdens 1000  B2_BCC[A2] 90.8%, A1_FCC 9.2%
+           pdens 500   GM   -108446.81  B2_BCC[A2] 90.8%, A1_FCC 9.2%
+           pdens 1000  GM   -108446.81  B2_BCC[A2] 90.8%, A1_FCC 9.2%
+           pdens 2000  GM   -108446.81  B2_BCC[A2] 90.8%, A1_FCC 9.2%
+           pdens 3000  GM   -108230.50  A1_FCC 100.0%
+   1290 C  keep pdens 1000  B2_BCC[A2] 92.6%, A1_FCC 7.4%
+           pdens 500   GM   -109378.53  B2_BCC[A2] 92.6%, A1_FCC 7.4%
+           pdens 1000  GM   -109378.53  B2_BCC[A2] 92.6%, A1_FCC 7.4%
+           pdens 2000  GM   -109144.34  A1_FCC 100.0%
+           pdens 3000  GM   -109144.34  A1_FCC 100.0%
+   1300 C  keep pdens 1000  B2_BCC[A2] 96.3%, LIQUID 3.7%
+           pdens 500   GM   -110314.73  B2_BCC[A2] 96.3%, LIQUID 3.7%
+           pdens 1000  GM   -110314.73  B2_BCC[A2] 96.3%, LIQUID 3.7%
+           pdens 2000  GM   -110060.65  A1_FCC 100.0%
+           pdens 3000  GM   -110060.65  A1_FCC 100.0%
+   1310 C  keep pdens 500   B2_BCC[A2] 94.9%, LIQUID 5.1%
+           pdens 500   GM   -111256.51  B2_BCC[A2] 94.9%, LIQUID 5.1%
+           pdens 1000  GM   -111256.51  B2_BCC[A2] 94.9%, LIQUID 5.1%
+           pdens 2000  GM   -110979.42  A1_FCC 100.0%
+           pdens 3000  GM   -110979.42  A1_FCC 100.0%
+   1320 C  keep pdens 1000  B2_BCC[A2] 93.0%, LIQUID 7.0%
+           pdens 500   GM   -112201.97  B2_BCC[A2] 93.0%, LIQUID 7.0%
+           pdens 1000  GM   -112201.97  B2_BCC[A2] 93.0%, LIQUID 7.0%
+           pdens 2000  GM   -111901.28  A1_FCC 94.1%, LIQUID 5.9%
+           pdens 3000  GM   -111901.28  A1_FCC 94.1%, LIQUID 5.9%
+   1330 C  keep pdens 1000  B2_BCC[A2] 90.5%, LIQUID 9.5%
+           pdens 500   GM   -112846.33  A1_FCC 64.2%, LIQUID 35.8%
+           pdens 1000  GM   -113151.57  B2_BCC[A2] 90.5%, LIQUID 9.5%
+           pdens 2000  GM   -112846.33  A1_FCC 64.2%, LIQUID 35.8%
+           pdens 3000  GM   -112846.33  A1_FCC 64.2%, LIQUID 35.8%
+   1340 C  keep pdens 1000  B2_BCC[A2] 87.0%, LIQUID 13.0%
+           pdens 500   GM   -113826.29  LIQUID 68.5%, A1_FCC 31.5%
+           pdens 1000  GM   -114105.98  B2_BCC[A2] 87.0%, LIQUID 13.0%
+           pdens 2000  GM   -113826.29  LIQUID 68.5%, A1_FCC 31.5%
+           pdens 3000  GM   -113826.29  LIQUID 68.5%, A1_FCC 31.5%
+   1350 C  keep pdens 500   B2_BCC[A2] 81.9%, LIQUID 18.1%
+           pdens 500   GM   -115066.25  B2_BCC[A2] 81.9%, LIQUID 18.1%
+           pdens 1000  GM   -114843.74  LIQUID 100.0%
+           pdens 2000  GM   -114843.74  LIQUID 100.0%
+           pdens 3000  GM   -114843.74  LIQUID 100.0%
+   1360 C  keep pdens 500   B2_BCC[A2] 74.5%, LIQUID 25.5%
+           pdens 500   GM   -116034.02  B2_BCC[A2] 74.5%, LIQUID 25.5%
+           pdens 1000  GM   -115878.41  LIQUID 100.0%
+           pdens 2000  GM   -115878.41  LIQUID 100.0%
+           pdens 3000  GM   -115878.41  LIQUID 100.0%
+   1370 C  keep pdens 500   B2_BCC[A2] 63.6%, LIQUID 36.4%
+           pdens 500   GM   -117011.75  B2_BCC[A2] 63.6%, LIQUID 36.4%
+           pdens 1000  GM   -116915.67  LIQUID 100.0%
+           pdens 2000  GM   -116915.67  LIQUID 100.0%
+           pdens 3000  GM   -116915.67  LIQUID 100.0%
+   1380 C  keep pdens 500   LIQUID 51.6%, B2_BCC[A2] 48.4%
+           pdens 500   GM   -118002.89  LIQUID 51.6%, B2_BCC[A2] 48.4%
+           pdens 1000  GM   -117955.52  LIQUID 100.0%
+           pdens 2000  GM   -117955.52  LIQUID 100.0%
+           pdens 3000  GM   -117955.52  LIQUID 100.0%
+   1390 C  keep pdens 500   LIQUID 72.0%, B2_BCC[A2] 28.0%
+           pdens 500   GM   -119011.72  LIQUID 72.0%, B2_BCC[A2] 28.0%
+           pdens 1000  GM   -118997.94  LIQUID 100.0%
+           pdens 2000  GM   -118997.94  LIQUID 100.0%
+           pdens 3000  GM   -118997.94  LIQUID 100.0%
+   1400 C  keep pdens 500   LIQUID 100.0%
+
+=== mpea-02b / llm_noC, 1350-1400 C ===
+   1350 C  keep pdens 3000  B2_BCC[A2] 100.0%
+   1360 C  keep pdens 500   B2_BCC[A2] 100.0%
+   1370 C  keep pdens 500   B2_BCC[A2] 100.0%
+   1380 C  keep pdens 3000  B2_BCC[A2] 81.2%, LIQUID 18.8%
+   1390 C  keep pdens 3000  B2_BCC[A2] 54.2%, LIQUID 45.8%
+   1400 C  keep pdens 3000  LIQUID 76.2%, B2_BCC[A2] 23.8%
+
+=== PrecHiMn-04 / llm, 1150-1400 C ===
+   1150 C  keep pdens 1000  BCC_4SL[A2] 52.8%, A1_FCC 47.2%
+           pdens 500   GM    -96550.12  BCC_4SL[A2] 52.8%, A1_FCC 47.2%
+           pdens 1000  GM    -96550.12  BCC_4SL[A2] 52.8%, A1_FCC 47.2%
+           pdens 2000  GM    -96495.58  A1_FCC 100.0%
+           pdens 3000  GM    -96495.58  A1_FCC 100.0%
+   1160 C  keep pdens 500   BCC_4SL[A2] 55.2%, A1_FCC 44.8%
+           pdens 500   GM    -97431.42  BCC_4SL[A2] 55.2%, A1_FCC 44.8%
+           pdens 1000  GM    -97431.42  BCC_4SL[A2] 55.2%, A1_FCC 44.8%
+           pdens 2000  GM    -97371.03  A1_FCC 100.0%
+           pdens 3000  GM    -97371.03  A1_FCC 100.0%
+   1170 C  keep pdens 500   BCC_4SL[A2] 57.6%, A1_FCC 42.4%
+           pdens 500   GM    -98315.64  BCC_4SL[A2] 57.6%, A1_FCC 42.4%
+           pdens 1000  GM    -98315.64  BCC_4SL[A2] 57.6%, A1_FCC 42.4%
+           pdens 2000  GM    -98249.07  A1_FCC 100.0%
+           pdens 3000  GM    -98249.07  A1_FCC 100.0%
+   1180 C  keep pdens 1000  BCC_4SL[A2] 59.9%, A1_FCC 40.1%
+           pdens 500   GM    -99202.78  BCC_4SL[A2] 59.9%, A1_FCC 40.1%
+           pdens 1000  GM    -99202.78  BCC_4SL[A2] 59.9%, A1_FCC 40.1%
+           pdens 2000  GM    -99129.68  A1_FCC 100.0%
+           pdens 3000  GM    -99129.68  A1_FCC 100.0%
+   1190 C  keep pdens 1000  BCC_4SL[A2] 62.2%, A1_FCC 37.8%
+           pdens 500   GM   -100092.82  BCC_4SL[A2] 62.2%, A1_FCC 37.8%
+           pdens 1000  GM   -100092.82  BCC_4SL[A2] 62.2%, A1_FCC 37.8%
+           pdens 2000  GM   -100012.86  A1_FCC 100.0%
+           pdens 3000  GM   -100012.86  A1_FCC 100.0%
+   1200 C  keep pdens 500   BCC_4SL[A2] 64.5%, A1_FCC 35.5%
+           pdens 500   GM   -100985.77  BCC_4SL[A2] 64.5%, A1_FCC 35.5%
+           pdens 1000  GM   -100898.58  A1_FCC 100.0%
+           pdens 2000  GM   -100898.58  A1_FCC 100.0%
+           pdens 3000  GM   -100898.58  A1_FCC 100.0%
+   1210 C  keep pdens 1000  A1_FCC 100.0%
+   1220 C  keep pdens 3000  A1_FCC 100.0%
+   1230 C  keep pdens 2000  A1_FCC 100.0%
+   1240 C  keep pdens 1000  A1_FCC 100.0%
+   1250 C  keep pdens 2000  A1_FCC 100.0%
+   1260 C  keep pdens 3000  A1_FCC 100.0%
+   1270 C  keep pdens 500   A1_FCC 100.0%
+   1280 C  keep pdens 1000  A1_FCC 100.0%
+   1290 C  keep pdens 1000  A1_FCC 100.0%
+   1300 C  keep pdens 2000  A1_FCC 80.8%, LIQUID 19.2%
+   1310 C  keep pdens 1000  A1_FCC 57.3%, LIQUID 42.7%
+   1320 C  keep pdens 500   LIQUID 69.9%, A1_FCC 30.1%
+   1330 C  keep pdens 2000  LIQUID 100.0%
+   1340 C  keep pdens 2000  LIQUID 100.0%
+   1350 C  keep pdens 1000  LIQUID 100.0%
+   1360 C  keep pdens 1000  LIQUID 100.0%
+   1370 C  keep pdens 1000  LIQUID 100.0%
+   1380 C  keep pdens 500   LIQUID 100.0%
+   1390 C  keep pdens 2000  LIQUID 100.0%
+   1400 C  keep pdens 3000  LIQUID 100.0%
+
+=== PrecHiMn-04 / llm_noC, 1280-1400 C ===
+   1280 C  keep pdens 2000  BCC_4SL[A2] 100.0%
+   1290 C  keep pdens 1000  BCC_4SL[A2] 100.0%
+   1300 C  keep pdens 2000  BCC_4SL[A2] 94.7%, LIQUID 5.3%
+   1310 C  keep pdens 500   BCC_4SL[A2] 88.3%, LIQUID 11.7%
+   1320 C  keep pdens 500   BCC_4SL[A2] 81.5%, LIQUID 18.5%
+   1330 C  keep pdens 1000  BCC_4SL[A2] 74.0%, LIQUID 26.0%
+   1340 C  keep pdens 3000  BCC_4SL[A2] 65.6%, LIQUID 34.4%
+   1350 C  keep pdens 1000  BCC_4SL[A2] 56.0%, LIQUID 44.0%
+   1360 C  keep pdens 1000  LIQUID 55.5%, BCC_4SL[A2] 44.5%
+   1370 C  keep pdens 500   LIQUID 69.5%, BCC_4SL[A2] 30.5%
+   1380 C  keep pdens 2000  LIQUID 87.1%, BCC_4SL[A2] 12.9%
+   1390 C  keep pdens 500   LIQUID 100.0%
+   1400 C  keep pdens 2000  LIQUID 100.0%
+
+=== splice into step_diagrams.csv: rows whose constitution changed ===
+  mpea-02b / llm  1330 C : A1_FCC 64.2%, LIQUID 35.8%  ->  B2_BCC[A2] 90.5%, LIQUID 9.5%
+  mpea-02b / llm  1340 C : LIQUID 68.5%, A1_FCC 31.5%  ->  B2_BCC[A2] 87.0%, LIQUID 13.0%
+  2 of 72 temperatures changed; 1469 rows kept, 113 rows written
