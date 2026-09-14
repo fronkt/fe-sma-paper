@@ -1,0 +1,142 @@
+Grid-arbitrated rows: lowest GM across pdens [1300, 1400, 1500, 1600, 1700, 1800, 1900, 2200, 2500, 4000]  [bands: [('PrecHiMn-04', 'llm')]]
+
+=== PrecHiMn-04 / llm, 1150-1400 C, ladder [1300, 1400, 1500, 1600, 1700, 1800, 1900, 2200, 2500, 4000] ===
+   1150 C  keep pdens 1300  BCC_4SL[A2] 52.8%, A1_FCC 47.2%
+           pdens 1300  GM    -96550.12  BCC_4SL[A2] 52.8%, A1_FCC 47.2%
+           pdens 1400  GM    -96550.12  BCC_4SL[A2] 52.8%, A1_FCC 47.2%
+           pdens 1500  GM    -96550.12  BCC_4SL[A2] 52.8%, A1_FCC 47.2%
+           pdens 1600  GM    -96550.12  BCC_4SL[A2] 52.8%, A1_FCC 47.2%
+           pdens 1700  GM    -96550.12  BCC_4SL[A2] 52.8%, A1_FCC 47.2%
+           pdens 1800  GM    -96550.12  BCC_4SL[A2] 52.8%, A1_FCC 47.2%
+           pdens 1900  GM    -96550.12  BCC_4SL[A2] 52.8%, A1_FCC 47.2%
+           pdens 2200  GM    -96495.58  A1_FCC 100.0%
+           pdens 2500  GM    -96495.58  A1_FCC 100.0%
+           pdens 4000  GM    -96495.58  A1_FCC 100.0%
+   1160 C  keep pdens 1900  BCC_4SL[A2] 55.2%, A1_FCC 44.8%
+           pdens 1300  GM    -97431.42  BCC_4SL[A2] 55.2%, A1_FCC 44.8%
+           pdens 1400  GM    -97431.42  BCC_4SL[A2] 55.2%, A1_FCC 44.8%
+           pdens 1500  GM    -97431.42  BCC_4SL[A2] 55.2%, A1_FCC 44.8%
+           pdens 1600  GM    -97431.42  BCC_4SL[A2] 55.2%, A1_FCC 44.8%
+           pdens 1700  GM    -97431.42  BCC_4SL[A2] 55.2%, A1_FCC 44.8%
+           pdens 1800  GM    -97431.42  BCC_4SL[A2] 55.2%, A1_FCC 44.8%
+           pdens 1900  GM    -97431.42  BCC_4SL[A2] 55.2%, A1_FCC 44.8%
+           pdens 2200  GM    -97371.03  A1_FCC 100.0%
+           pdens 2500  GM    -97371.03  A1_FCC 100.0%
+           pdens 4000  GM    -97371.03  A1_FCC 100.0%
+   1170 C  keep pdens 1400  BCC_4SL[A2] 57.6%, A1_FCC 42.4%
+           pdens 1300  GM    -98315.64  BCC_4SL[A2] 57.6%, A1_FCC 42.4%
+           pdens 1400  GM    -98315.64  BCC_4SL[A2] 57.6%, A1_FCC 42.4%
+           pdens 1500  GM    -98315.64  BCC_4SL[A2] 57.6%, A1_FCC 42.4%
+           pdens 1600  GM    -98315.64  BCC_4SL[A2] 57.6%, A1_FCC 42.4%
+           pdens 1700  GM    -98315.64  BCC_4SL[A2] 57.6%, A1_FCC 42.4%
+           pdens 1800  GM    -98315.64  BCC_4SL[A2] 57.6%, A1_FCC 42.4%
+           pdens 1900  GM    -98315.64  BCC_4SL[A2] 57.6%, A1_FCC 42.4%
+           pdens 2200  GM    -98249.07  A1_FCC 100.0%
+           pdens 2500  GM    -98249.07  A1_FCC 100.0%
+           pdens 4000  GM    -98249.07  A1_FCC 100.0%
+   1180 C  keep pdens 1300  BCC_4SL[A2] 59.9%, A1_FCC 40.1%
+           pdens 1300  GM    -99202.78  BCC_4SL[A2] 59.9%, A1_FCC 40.1%
+           pdens 1400  GM    -99202.78  BCC_4SL[A2] 59.9%, A1_FCC 40.1%
+           pdens 1500  GM    -99202.78  BCC_4SL[A2] 59.9%, A1_FCC 40.1%
+           pdens 1600  GM    -99202.78  BCC_4SL[A2] 59.9%, A1_FCC 40.1%
+           pdens 1700  GM    -99202.78  BCC_4SL[A2] 59.9%, A1_FCC 40.1%
+           pdens 1800  GM    -99202.78  BCC_4SL[A2] 59.9%, A1_FCC 40.1%
+           pdens 1900  GM    -99202.78  BCC_4SL[A2] 59.9%, A1_FCC 40.1%
+           pdens 2200  GM    -99129.68  A1_FCC 100.0%
+           pdens 2500  GM    -99129.68  A1_FCC 100.0%
+           pdens 4000  GM    -99129.68  A1_FCC 100.0%
+   1190 C  keep pdens 1600  BCC_4SL[A2] 62.2%, A1_FCC 37.8%
+           pdens 1300  GM   -100012.86  A1_FCC 100.0%
+           pdens 1400  GM   -100092.82  BCC_4SL[A2] 62.2%, A1_FCC 37.8%
+           pdens 1500  GM   -100092.82  BCC_4SL[A2] 62.2%, A1_FCC 37.8%
+           pdens 1600  GM   -100092.82  BCC_4SL[A2] 62.2%, A1_FCC 37.8%
+           pdens 1700  GM   -100092.82  BCC_4SL[A2] 62.2%, A1_FCC 37.8%
+           pdens 1800  GM   -100092.82  BCC_4SL[A2] 62.2%, A1_FCC 37.8%
+           pdens 1900  GM   -100092.82  BCC_4SL[A2] 62.2%, A1_FCC 37.8%
+           pdens 2200  GM   -100012.86  A1_FCC 100.0%
+           pdens 2500  GM   -100012.86  A1_FCC 100.0%
+           pdens 4000  GM   -100012.86  A1_FCC 100.0%
+   1200 C  keep pdens 1400  BCC_4SL[A2] 64.5%, A1_FCC 35.5%
+           pdens 1300  GM   -100898.58  A1_FCC 100.0%
+           pdens 1400  GM   -100985.77  BCC_4SL[A2] 64.5%, A1_FCC 35.5%
+           pdens 1500  GM   -100985.77  BCC_4SL[A2] 64.5%, A1_FCC 35.5%
+           pdens 1600  GM   -100985.77  BCC_4SL[A2] 64.5%, A1_FCC 35.5%
+           pdens 1700  GM   -100985.77  BCC_4SL[A2] 64.5%, A1_FCC 35.5%
+           pdens 1800  GM   -100985.77  BCC_4SL[A2] 64.5%, A1_FCC 35.5%
+           pdens 1900  GM   -100985.77  BCC_4SL[A2] 64.5%, A1_FCC 35.5%
+           pdens 2200  GM   -100898.58  A1_FCC 100.0%
+           pdens 2500  GM   -100898.58  A1_FCC 100.0%
+           pdens 4000  GM   -100898.58  A1_FCC 100.0%
+   1210 C  keep pdens 1700  BCC_4SL[A2] 66.7%, A1_FCC 33.3%
+           pdens 1300  GM   -101786.85  A1_FCC 100.0%
+           pdens 1400  GM   -101786.85  A1_FCC 100.0%
+           pdens 1500  GM   -101881.60  BCC_4SL[A2] 66.7%, A1_FCC 33.3%
+           pdens 1600  GM   -101881.60  BCC_4SL[A2] 66.7%, A1_FCC 33.3%
+           pdens 1700  GM   -101881.60  BCC_4SL[A2] 66.7%, A1_FCC 33.3%
+           pdens 1800  GM   -101881.60  BCC_4SL[A2] 66.7%, A1_FCC 33.3%
+           pdens 1900  GM   -101786.85  A1_FCC 100.0%
+           pdens 2200  GM   -101786.85  A1_FCC 100.0%
+           pdens 2500  GM   -101786.85  A1_FCC 100.0%
+           pdens 4000  GM   -101786.85  A1_FCC 100.0%
+   1220 C  keep pdens 1600  BCC_4SL[A2] 68.8%, A1_FCC 31.2%
+           pdens 1300  GM   -102677.64  A1_FCC 100.0%
+           pdens 1400  GM   -102677.64  A1_FCC 100.0%
+           pdens 1500  GM   -102780.31  BCC_4SL[A2] 68.8%, A1_FCC 31.2%
+           pdens 1600  GM   -102780.31  BCC_4SL[A2] 68.8%, A1_FCC 31.2%
+           pdens 1700  GM   -102780.31  BCC_4SL[A2] 68.8%, A1_FCC 31.2%
+           pdens 1800  GM   -102780.31  BCC_4SL[A2] 68.8%, A1_FCC 31.2%
+           pdens 1900  GM   -102677.64  A1_FCC 100.0%
+           pdens 2200  GM   -102677.64  A1_FCC 100.0%
+           pdens 2500  GM   -102677.64  A1_FCC 100.0%
+           pdens 4000  GM   -102677.64  A1_FCC 100.0%
+   1230 C  keep pdens 1600  BCC_4SL[A2] 70.9%, A1_FCC 29.1%
+           pdens 1300  GM   -103570.94  A1_FCC 100.0%
+           pdens 1400  GM   -103570.94  A1_FCC 100.0%
+           pdens 1500  GM   -103681.90  BCC_4SL[A2] 70.9%, A1_FCC 29.1%
+           pdens 1600  GM   -103681.90  BCC_4SL[A2] 70.9%, A1_FCC 29.1%
+           pdens 1700  GM   -103681.90  BCC_4SL[A2] 70.9%, A1_FCC 29.1%
+           pdens 1800  GM   -103681.90  BCC_4SL[A2] 70.9%, A1_FCC 29.1%
+           pdens 1900  GM   -103570.94  A1_FCC 100.0%
+           pdens 2200  GM   -103570.94  A1_FCC 100.0%
+           pdens 2500  GM   -103570.94  A1_FCC 100.0%
+           pdens 4000  GM   -103570.94  A1_FCC 100.0%
+   1240 C  keep pdens 1600  BCC_4SL[A2] 73.0%, A1_FCC 27.0%
+           pdens 1300  GM   -104466.76  A1_FCC 100.0%
+           pdens 1400  GM   -104466.76  A1_FCC 100.0%
+           pdens 1500  GM   -104586.35  BCC_4SL[A2] 73.0%, A1_FCC 27.0%
+           pdens 1600  GM   -104586.35  BCC_4SL[A2] 73.0%, A1_FCC 27.0%
+           pdens 1700  GM   -104586.35  BCC_4SL[A2] 73.0%, A1_FCC 27.0%
+           pdens 1800  GM   -104586.35  BCC_4SL[A2] 73.0%, A1_FCC 27.0%
+           pdens 1900  GM   -104466.76  A1_FCC 100.0%
+           pdens 2200  GM   -104466.76  A1_FCC 100.0%
+           pdens 2500  GM   -104466.76  A1_FCC 100.0%
+           pdens 4000  GM   -104466.76  A1_FCC 100.0%
+   1250 C  keep pdens 1500  BCC_4SL[A2] 75.0%, A1_FCC 25.0%
+           pdens 1300  GM   -105365.07  A1_FCC 100.0%
+           pdens 1400  GM   -105365.07  A1_FCC 100.0%
+           pdens 1500  GM   -105493.65  BCC_4SL[A2] 75.0%, A1_FCC 25.0%
+           pdens 1600  GM   -105365.07  A1_FCC 100.0%
+           pdens 1700  GM   -105493.65  BCC_4SL[A2] 75.0%, A1_FCC 25.0%
+           pdens 1800  GM   -105493.65  BCC_4SL[A2] 75.0%, A1_FCC 25.0%
+           pdens 1900  GM   -105365.07  A1_FCC 100.0%
+           pdens 2200  GM   -105365.07  A1_FCC 100.0%
+           pdens 2500  GM   -105365.07  A1_FCC 100.0%
+           pdens 4000  GM   -105365.07  A1_FCC 100.0%
+   1260 C  keep pdens 1600  A1_FCC 100.0%
+   1270 C  keep pdens 2200  A1_FCC 100.0%
+   1280 C  keep pdens 1600  A1_FCC 100.0%
+   1290 C  keep pdens 1400  A1_FCC 100.0%
+   1300 C  keep pdens 1500  A1_FCC 80.8%, LIQUID 19.2%
+   1310 C  keep pdens 1500  A1_FCC 57.3%, LIQUID 42.7%
+   1320 C  keep pdens 1700  LIQUID 69.9%, A1_FCC 30.1%
+   1330 C  keep pdens 4000  LIQUID 100.0%
+   1340 C  keep pdens 1400  LIQUID 100.0%
+   1350 C  keep pdens 1400  LIQUID 100.0%
+   1360 C  keep pdens 1700  LIQUID 100.0%
+   1370 C  keep pdens 2500  LIQUID 100.0%
+   1380 C  keep pdens 4000  LIQUID 100.0%
+   1390 C  keep pdens 1700  LIQUID 100.0%
+   1400 C  keep pdens 1500  LIQUID 100.0%
+
+=== splice into step_diagrams.csv: rows whose constitution changed ===
+  0 of 26 temperatures changed; 1548 rows kept, 40 rows written
