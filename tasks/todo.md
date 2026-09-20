@@ -136,7 +136,7 @@ background while B/C proceed; B1 waits for A3.
 **D. Letters + package**
 - [x] D1 `response-R3.md` complete (eight points, verbatim + reply; ≈4,300 reply words — trim if Frank wants), `response-R1-R2.md` updated, `CoverLetter-R2.md` written (owns both corrections; declares the two outstanding measurements with an extension request for those items only)
 - [x] D2 pair built 2026-09-20 (547 revisions vs the R1 clean file), canaries pass (10 images / 4 tables / 0 mojibake / phrase checks in `CHANGES-R1-TO-R2.md` §4), package in `submissions/JMRT-R2-resubmission/` (README there), pair + R3 letter + cover letter in Downloads
-- [ ] D3 **Frank: read the R3 letter + cover letter; send the Song email; confirm the replicate gauge (§2.4 says 127 mm); upload by 2026-09-22.** If Song's heating test / DSC land first, add as a bound and rebuild.
+- [ ] D3 **Frank submits 2026-09-20.** Replicate gauge CONFIRMED 127 mm by Frank (2026-09-20) — §2.4 stands, no rebuild. Still his: read the R3 letter + cover letter, send the Song email (can follow the upload). If Song's heating test / DSC land later, they go in as a bound at proof or on request.
 
 ### Review (2026-09-20)
 

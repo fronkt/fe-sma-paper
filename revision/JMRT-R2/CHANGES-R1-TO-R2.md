@@ -54,5 +54,5 @@ absent: "[ZIP", "11.0%", "200 published", "1340", "locate the cause", "regardles
 - DSC for Ms — S. Cai (R3 #8).
 - SEM-BSE areal fraction on the 40-min mount — S. Cai (R3 #7, optional).
 - S. Cai's confirmation of the four record readings (40-min report heat; schedules per specimen; 1300 °C and oct-11-25 spools 3–5; Fig. 8 specimen).
-- Frank: gauge of the 2026-08-20 replicates (§2.4 states 127 mm).
+- ~~Frank: gauge of the 2026-08-20 replicates~~ — confirmed 127 mm by Frank, 2026-09-20.
 - Abstract is 281 words (R1 was 276).

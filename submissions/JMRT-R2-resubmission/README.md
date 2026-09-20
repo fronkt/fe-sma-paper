@@ -17,8 +17,8 @@ Revision-1 clean file the reviewers read (**547 tracked revisions**: 288 inserti
 > Song email and fold in his answers to the four record questions (40-min rod heat,
 > AGG schedules per specimen, the 1300 °C / oct-11-25 spool identities, the Fig. 8
 > specimen) — the manuscript is written from the drive record and each of those is
-> stated as the record holds it; (3) confirm the August-2026 Table 2 replicates were run
-> on the 127 mm gauge (Sec. 2.4 says so); (4) upload.
+> stated as the record holds it; (3) ~~confirm the replicate gauge~~ — confirmed 127 mm by
+> Frank, 2026-09-20; (4) upload (Frank: submitting 2026-09-20).
 
 ## What is here
 
