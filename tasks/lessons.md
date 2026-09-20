@@ -4,6 +4,31 @@ Patterns worth not repeating. Reviewed at the start of a session on this project
 
 ---
 
+## 2026-09-20 · "Not among the eight reports" was true of the extraction, not of the drive
+
+**What happened.** Three sessions repeated that no loading–unloading–heating record existed and
+that Fig. 3 was "the authors' plot" whose gauge only S. Cai could supply. The record was on E:
+the whole time — `mechanical/Fe-SMA-TENSILE-HEAT.is_tcyclic` (Jan 2026), under a method name
+nobody searched for, in a folder the August extraction had listed only eight files from. Its
+header settles the gauge (5.000 in) and its traces reproduce both Fig. 3 panels. The same pass
+found the LLM-alloy's own 40-minute wire record (spool 15), which made the disputed benchmark
+rod record unnecessary, and a second tag (`stress strain-697-7.xlsx`) that settled whose record it
+was.
+
+**Rule.** A negative claim about a data set ("no such record", "the eight reports") is a claim
+about the *inventory you built*, and inventories go stale. Before writing that a record does not
+exist: (1) re-list the source directory by date, not by the names you expect; (2) grep the
+headers of every file, not the ones already extracted; (3) date-stamp the inventory in the note
+that cites it. When a tag conflicts with an attribution, look for a *second* independent tag
+(spreadsheet name, diameter chain) before putting the question to a person — it may be answerable
+from the record.
+
+**Second trap, same pass.** The instrument's "Elongation" column includes crosshead travel after
+fracture (quartz-tube wire: report 51.3 %, curve fractures at ≈26 %). Read the trace before
+quoting the column.
+
+---
+
 ## 2026-09-14 · A phase you did not name is a phase the calculation cannot form
 
 **What happened.** `step_diagrams.py`, `ni_sensitivity.py` and `agent_window.py` asked pycalphad for

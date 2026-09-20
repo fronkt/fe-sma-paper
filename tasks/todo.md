@@ -106,9 +106,9 @@ Fig. 1a/1c rejected (no phase contrast).
 ### Decisions owed before work starts
 - [x] Decision type and deadline from the JMRT letter — **major revision, due 2026-09-22** (Frank, 2026-09-14). An adversarial disposition check (workflow wf_828e1921-24b) is testing each proposed response from Reviewer-3 and editor lenses before any work starts.
 - [x] #2: text-only (A) — adopted 2026-09-14 when Frank said to start on the items not gated on Song; Option B was declined by the adversarial check (CALPHAD pass ≠ viability; second undocumented LLM session).
-- [ ] #7/#8: which new measurements Song can run (wire AGG + heating test — required; SEM-BSE count; DSC for Ms — optional). DTA declined. Put to Song in the C1 draft.
-- [ ] Plug in E: — needed for #4 (Fig. 3 record) and #7 (40-min + AGG cyclic exports). **Not mounted at 2026-09-14 start (`ls /e/` → no such directory).**
-- [ ] #3: Song confirms the AGG route as run per specimen — the answer decides whether §2.2 is a wording fix or a factual correction.
+- [ ] #7/#8: which new measurements Song can run (wire AGG + heating test — required; SEM-BSE count; DSC for Ms — optional). DTA declined. **Put to Song in the updated Gmail draft (2026-09-20); NOT SENT. The package declares both as outstanding with an extension request for those items only.**
+- [x] Plug in E: — **mounted 2026-09-20.** Found the Fig. 3 record (`Fe-SMA-TENSILE-HEAT`, 2026-01-20, 127 mm), the raw exports behind the new Fig. 10, a second benchmark tag on the 40-min rod record (`stress strain-697-7.xlsx`), and two undocumented runs (1300 °C cycle; oct-11-25 spools 3–5 at the benchmark diameter). Copied to `revision/JMRT-R2/mechanical/raw-exports/`.
+- [ ] #3: Song confirms the AGG route as run per specimen — **§2.2 now states the schedules from the processing log**; his confirmation is question 2 of the 09-20 email.
 
 ### Work plan — started 2026-09-14 (Frank: "get started on the items I can work on now")
 
@@ -124,19 +124,26 @@ background while B/C proceed; B1 waits for A3.
 - [x] A6 `results/ANALYSIS.md`, `NI-SENSITIVITY.md`, `AGENT-WINDOW.md` rewritten under dated correction headers (done 2026-09-14)
 **B. Manuscript text (Frank reviews the diff)**
 - [x] B1 #6 — reworded 2026-09-14 (commit ba9c89f): abstract; §2.6 (liquid included; grid arbitration disclosed); §3.4 ¶2 (benchmark to ≈1325 °C), ¶3 (no solid-state α field; melting ≈1240–1300 °C), ¶4 (C-free window to the solidus), Ni-scan ¶, mc_fe ¶, A2-window ¶; new Table 4; Fig. 9 caption; §4.1 ¶3; §4.2 ¶4, ¶5, ¶9; §4.4 ¶3; §5 ¶4. Canary: 0 mojibake, α 111 / γ 71. R3 #6 reply written in `response-R3.md`
-- [ ] B2 #4 — §2.4 gauge per dataset (127 mm for the Table 2 sweep; 6 / 25.4 / 50.8 mm for the AGG rods; Fig. 3 pending Song); §3.5 "1006 MPa at 11.9 %" carries its 6 mm gauge
-- [ ] B3 #5 — claims bounded to the conditions tested (§3.2 ¶3, §3.3 ¶1, §3.5 ¶10, §4.1 ¶1); one three-level evidence statement (measured / calculated / inferred)
-- [ ] B4 #1 — §5 paragraph stating what held and what changed; abstract "locate the cause" and §5 "identify the origin" demoted to "indicate"
-- [ ] B5 #2 — contribution paragraph (§4.4) naming what is claimed as new and what is not; §1 "over 200 published papers" reconciled with the report's 76 sources; §5 Limitation 2 "instructing it to consult thermodynamic data" checked against §2.1
-- [ ] B6 #8 — §4.1 ¶3 Ms-above-RT reading demoted to a possibility (EDS partitioning argues against a martensitic origin of the γ); DSC named as the test; L122/L204 "equilibrium state" reconciled with L206
-- [ ] B7 #3 — §2.2 per-specimen schedules from the record (rod: 1200 °C/30 min WQ ↔ 900 °C/15 min ×2–3, final 1200 °C/30–60 min; Fig. 1d wire: quartz-tube 1200 °C/30 min ↔ cold zone ×4, WQ), chronology + intent, Kassel schedule reference, 1250 °C exposures disclosed — **wording pending Song's confirmation**
-- [ ] B8 #7 — §3.5: state what exists per dataset (gauge, diameter, n); 40-min paragraph **held** until Song confirms the heat of the 697-7 report; AGG heating test pending Song
+- [x] B2 #4 — done 2026-09-20: §2.4 gauge per dataset (127 mm sweep + Fig. 3 [record found on E:]; 6.0 / 25.4 mm for Fig. 10e/f); Fig. 3 caption carries 0.35 / 0.54 mm diameters; "1006 MPa at 11.9 %" carries its 6 mm gauge
+- [x] B3 #5 — done 2026-09-20: conditions enumerated at abstract, §3.2, §3.3, §3.5, §4.1; three-level statement opens §4.1; "regardless of heat-treating condition" removed
+- [x] B4 #1 — done 2026-09-20: §5 two new paragraphs (order of evidence; workflow as run); "locate"/"identify" → "indicate"; held/corrected/withdrawn table in the R3 letter
+- [x] B5 #2 — done 2026-09-20: §4.4 ¶1 rewritten, contribution paragraph added, second-session test declined with reason, last sentence rewritten; §1 76 sources; Limitation 2 restated on the record
+- [x] B6 #8 — done 2026-09-20 **with a departure from the plan above**: the refuter showed EDS partitioning is *neutral* (a martensitic γ inherits the α's Al-rich chemistry), so the Ms reading is demoted to one of two open readings rather than argued against; DSC named in §4.1 and §4.4 with its limit; the three "equilibrium, not incompletely transformed" sentences reworded
+- [x] B7 #3 — done 2026-09-20 from the processing log (rod 2-/3-cycle 1200 ↔ 900 °C; quartz-tube run for the Fig. 1d wire, no 900 °C step; benchmark argon ×5); 1250 °C and 1300 °C exposures disclosed; Viebranz 2024 cited (`viebranz2024agg`), Ref 18 "same type" — **Song's confirmation is question 2 of the 09-20 email**
+- [x] B8 #7 — done 2026-09-20: the 40-min rod record is treated as benchmark (three tags: PDF suffix, `stress strain-697-7.xlsx`, 0.040 in diameter) and withdrawn; replaced by the LLM wire spools 11/15/16; **new Fig. 10** (six raw-export records, `figures/build_fig10_cyclic_records.py`); bracketing paragraph withdrawn; heating test and phase fractions stated as not done
 **C. Song (draft only — Frank sends)**
-- [ ] C1 Gmail draft + `revision/JMRT-R2/email-to-song-2026-09-14.md`: heat of the 697-7 report; AGG route per specimen; Fig. 3's record; the three measurements
+- [x] C1 Gmail draft **updated 2026-09-20** (`revision/JMRT-R2/email-to-song-2026-09-20.md`): four record confirmations + tests a/b/c. **NOT SENT — Frank sends, with the marked-up DOCX and the R3 letter attached.**
 **D. Letters + package**
-- [ ] D1 `revision/JMRT-R2/response-R3.md` (eight points, verbatim + reply), `response-R1-R2.md`; cover note owning the liquid correction
-- [ ] D2 `build_docx_pair.py` rebuild → `revision/JMRT-R2/R2-manuscript/`, `submissions/`, Downloads; consistency pass (no surviving "1340", "1390", "no liquid at all", "every"-gauge claim)
-- [ ] D3 Submit by 2026-09-22, with the #7 extension request attached if the heating test has not landed
+- [x] D1 `response-R3.md` complete (eight points, verbatim + reply; ≈4,300 reply words — trim if Frank wants), `response-R1-R2.md` updated, `CoverLetter-R2.md` written (owns both corrections; declares the two outstanding measurements with an extension request for those items only)
+- [x] D2 pair built 2026-09-20 (547 revisions vs the R1 clean file), canaries pass (10 images / 4 tables / 0 mojibake / phrase checks in `CHANGES-R1-TO-R2.md` §4), package in `submissions/JMRT-R2-resubmission/` (README there), pair + R3 letter + cover letter in Downloads
+- [ ] D3 **Frank: read the R3 letter + cover letter; send the Song email; confirm the replicate gauge (§2.4 says 127 mm); upload by 2026-09-22.** If Song's heating test / DSC land first, add as a bound and rebuild.
+
+### Review (2026-09-20)
+
+- Every R3 point has a manuscript change and a reply. Two measurements (#7 wire heating test, #8 DSC) are outstanding and are *declared*, not hidden; nothing in the manuscript now depends on them.
+- Two corrections owned in the letters: the liquid-phase omission (#6) and the 40-min record attribution (#7). Both strengthen the paper once corrected, and both are stated as errors.
+- E: turned up what three sessions had recorded as absent: the Fig. 3 record existed under a different method name (`Fe-SMA-TENSILE-HEAT`, Jan 2026) — lesson recorded.
+- Not done: SEM-BSE count (optional, Song), Fig. 1 high-res rebuild (sources now on E: — `Fe-SMA-FC-1200C4FPM F72.jpg`, `…1200c40m-wq.jpg`, `FeMnAlNiSiC-3 cycle AGG ht.jpg` — not requested by R3, left for a later pass).
 
 ---
 

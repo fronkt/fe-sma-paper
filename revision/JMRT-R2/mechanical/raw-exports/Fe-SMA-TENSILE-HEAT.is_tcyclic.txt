@@ -1,0 +1,121 @@
+Tuesday, January 20, 2026 12:42:43 PM
+Customer
+Quality Order Number
+Production Order Number
+Alloy Type
+Sales Order Number
+Purchase Order Number
+Operator
+Production Machine
+Instron TT-
+Load Cell Used
+Method description 216- Lake  6% Strain 3% Measured
+Gage Length 5.00000 in
+Serial
+Number
+Diamete
+r
+[in]
+Breakload
+[lbf]
+Tensile
+Strength
+[psi]
+Elongatio
+n
+[%]
+Upper
+Plateau
+Load
+[lbf]
+Upper
+Plateau
+Stress
+[psi]
+Lower
+Plateau
+Load
+[lbf]
+Lower
+Plateau
+Stress
+[psi]
+1 0.02110 38.210 109276 4.5 30.371 86857 30.330 86741
+2 0.01387 22.279 147453 25.2 16.033 106111 16.002 105911
+Mean 0.01748 30.245 128364 14.8 23.202 96484 23.166 96326
+Standard deviation 0.00511 11.26492 26995.7
+1835 14.63710 10.1389
+1
+13614.41
+096
+10.1313
+7
+13555.81
+674
+Mean + 3 SD 0.03282 64.039 209352 58.7 53.619 137327 53.560 136993
+Mean - 3 SD 0.00215 -3.550 47377 -29.1 -7.215 55641 -7.228 55659
+Minimum 0.01387 22.279 109276 4.5 16.033 86857 16.002 86741
+Maximum 0.02110 38.210 147453 25.2 30.371 106111 30.330 105911
+Yield
+Load
+[lbf]
+Yield
+Strength
+[psi]
+Permanent
+Set
+[%]
+Modulu
+s
+[Msi]
+Visual
+Surface
+s Prim
+Visual
+Surface
+s Sec
+Straightnes
+s
+Out of
+Roundness
+1 30.371 86857 2.08 20.275
+2 16.033 106111 2.33 22.403
+Mean 23.202 96484 2.20 21.339
+Standard deviation 10.138
+91
+13614.4
+1096 0.17773 1.5050
+0
+Mean + 3 SD 53.619 137327 2.74 25.854
+Mean - 3 SD -7.215 55641 1.67 16.824
+Minimum 16.033 86857 2.08 20.275
+Fe-SMA-TENSILE-HEAT.is_tcyclic 1/20/2026 12:42:08 PM Page 1 of 2
+Tuesday, January 20, 2026 12:42:43 PM
+Yield
+Load
+[lbf]
+Yield
+Strength
+[psi]
+Permanent
+Set
+[%]
+Modulu
+s
+[Msi]
+Visual
+Surface
+s Prim
+Visual
+Surface
+s Sec
+Straightnes
+s
+Out of
+Roundness
+Maximum 30.371 106111 2.33 22.403
+Results Table 2
+Spool Number Operator
+1 697-7 1200C4FPM
+2 697-6 1200C4FPM
+Fe-SMA-TENSILE-HEAT.is_tcyclic 1/20/2026 12:42:08 PM Page 2 of 2

@@ -13,9 +13,9 @@ Frank Y. Cai^1^\*, S. Cai^2^, X. Wang^1^, J. Yan^3^
 
 ^1^School of Engineering Technologies, Purdue University, West Lafayette, Indiana 47907, USA
 
-^2^Fort Wayne Metals, Fort Wayne, Indiana [ZIP — confirm], USA
+^2^Fort Wayne Metals, Fort Wayne, Indiana, USA
 
-^3^Shanghai Synchrotron Radiation Facility, Shanghai [postal code — confirm], China
+^3^Shanghai Synchrotron Radiation Facility, Shanghai, China
 
 \*Corresponding author. E-mail: cai485@purdue.edu
 

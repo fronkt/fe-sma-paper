@@ -1,28 +1,6 @@
-# Responses to Reviewers 1 and 2 — JMRT-D-26-06169R1, Round 2
+# Response to Reviewer 2
 
-JMRT takes one response per reviewer. These two are short because both reviewers closed
-their reviews; they are kept separate from the Reviewer-3 response so that neither is sent
-a reply they cannot see.
-
----
-
-## Reviewer 1
-
-> No comment.
-
-We thank Reviewer 1 for the time given to both rounds of this manuscript. The changes made
-in this revision respond to Reviewer 3 and to two corrections of our own: the liquid phase
-had been omitted from two of the three thermodynamic databases in Sec. 3.4, and one
-40-minute-anneal elongation in Sec. 3.5 had been taken from a benchmark test record. Both
-are described in the response to Reviewer 3 (points 6 and 7), the corrected calculations and
-the LLM-alloy's own record replace them, and the affected sentences are marked in the
-tracked-changes file. A new Fig. 10 presents every tensile record of the LLM-alloy in the
-prolonged-anneal and cyclically treated conditions. No conclusion drawn from the experimental
-data has changed.
-
----
-
-## Reviewer 2
+**Manuscript:** JMRT-D-26-06169R1
 
 > I am pleased to state that the authors have comprehensively and satisfactorily addressed
 > all the points raised in my initial review. … I recommend acceptance of this paper in its
