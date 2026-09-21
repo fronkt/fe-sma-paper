@@ -60,7 +60,7 @@ PANELS = [
      [('Fe-SMA-FC_15.csv', 0.01410, 5.0)], 1.2, 0.2, 1000, 200),
     ('b', '0.36 mm wire, 1200 °C/80 min\n127 mm gauge',
      [('Fe-SMA-FC_16.csv', 0.01280, 5.0)], 1.2, 0.2, 1000, 200),
-    ('c', '≈1.3 mm rod, two-cycle 1200 ↔ 900 °C (n = 2)\n127 mm gauge',
+    ('c', '≈1.3 mm rod, two-cycle 1200 ↔ 900 °C\n127 mm gauge, n = 2',
      [('Fe-SMA-FC_17.csv', 0.0509, 5.0), ('Fe-SMA-FC_18.csv', 0.0509, 5.0)], 1.2, 0.2, 1000, 200),
     ('d', '≈1.06 mm rod, three-cycle + 200 °C/3 h\n127 mm gauge',
      [('Fe-SMA-FC_19.csv', 0.0418, 5.0)], 1.2, 0.2, 1000, 200),
@@ -93,6 +93,14 @@ def main():
         ax.set_title(title, fontsize=7, pad=3)
         ax.text(0.035, 0.955, '(%s)' % tag, transform=ax.transAxes,
                 fontsize=8, fontweight='bold', va='top', ha='left')
+    # constrained_layout does not stop a title wider than its axes from running off the
+    # canvas (the R2 panel (c) title was clipped this way), so check every title fits.
+    fig.canvas.draw()
+    r = fig.canvas.get_renderer()
+    for ax in axs.flat:
+        bb = ax.title.get_window_extent(r)
+        if bb.x0 < 0 or bb.x1 > fig.bbox.x1 or bb.y1 > fig.bbox.y1:
+            raise SystemExit('title runs off the figure: %r' % ax.get_title())
     fig.savefig(OUT, dpi=600)
     print('wrote', OUT)
 
