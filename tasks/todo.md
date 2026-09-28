@@ -6,18 +6,22 @@ is Frank's (all four authors must agree before upload). R3's three points: (1) d
 traceability, (2) γ-majority after quench vs α-majority calculated at 1200 °C is unresolved,
 so "absence of the α parent" is not established, (3) melt outside A2 on Mn and Al.
 
-- [ ] Workflow wf_72502f74-3b1: JMEP guidelines; uploaded R2 PDF vs repo text; JMRT-specific sweep;
+- [x] Workflow wf_72502f74-3b1: JMEP guidelines; uploaded R2 PDF vs repo text; JMRT-specific sweep;
       edit specs per point (mechanism / composition / traceability / front+back matter),
       adversarially verified, applied to a scratch copy, simulated R3 + consistency review
-- [ ] Apply verified edits to `manuscript.md` (Python, utf-8); new title in `front_JMEP.md`
+- [x] Apply verified edits to `manuscript.md` (Python, utf-8); new title in `front_JMEP.md`
       (four authors, current affiliations)
-- [ ] JMEP-specific: declarations per Springer headings, references via `jmep.csl` (checked
+- [x] JMEP-specific: declarations per Springer headings, references via `jmep.csl` (checked
       against current examples), figures 1–10 + tables 1–4 as separate files
-- [ ] Supplementary: specimen and record register + the LLM design report PDF
-- [ ] New JMEP cover letter (no JMRT history, no outstanding-measurement request)
-- [ ] Build `submissions/JMEP-2026-09/`; verify 10 images, 4 tables, 0 `[@`, no mojibake,
+- [x] Supplementary: specimen and record register + the LLM design report PDF
+- [x] New JMEP cover letter (no JMRT history, no outstanding-measurement request)
+- [x] Build `submissions/JMEP-2026-09/`; verify 10 images, 4 tables, 0 `[@`, no mojibake,
       no JMRT/reviewer language; copy the manuscript + cover letter to Downloads
-- [ ] Commit + push (explicit paths)
+- [x] Commit + push (explicit paths)
+
+---
+
+**Done 2026-09-28 (commit 18ba712).** Package `submissions/JMEP-2026-09/`. Simulated R3 re-review: "none of my three objections still stands as a blocker". OPEN for Frank: Otsuka ref (key otsuka2005physical mixes two works), author contributions + FWM competing-interest call, AI-writing disclosure, co-author consent + new title, Fig. 8 = 1 mm rod?, 62/34/4 by volume?, ESM1 PDF allowed?, Figs 3-8 below JMEP dpi (E: drive re-render later).
 
 ---
 
