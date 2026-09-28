@@ -34,7 +34,11 @@ between processing and performance. The design report the composition was taken 
 supplied as Online Resource 1. A specimen-by-specimen register of every record behind the
 figures and tables, together with the calculation settings, is supplied as Online Resource 2.
 
-This manuscript is original, has not been published, and is not under consideration elsewhere.
+An earlier version of this work, *Mechanical Responses of an AI-Hypothesized Super-elastic
+Fe-Mn-Al-Ni-Si-C Alloy*, was submitted to the journal on 13 July 2026 as JMEP-26-07-50730; we did
+not return its copyright transfer form. The present manuscript is a substantially revised version
+that supersedes it, and we ask that JMEP-26-07-50730 be withdrawn. Apart from that earlier
+version, this manuscript has not been published and is not under consideration elsewhere.
 Preliminary results were presented as a poster at SMST 2026. All authors have approved the
 submission.
 
