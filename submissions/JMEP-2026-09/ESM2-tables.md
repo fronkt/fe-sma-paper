@@ -57,7 +57,7 @@ Heats: **RD0697-6** = LLM-alloy; **RD0697-7** = benchmark alloy. Diameters are t
 | X2 | LLM (RD0697-6) | wire | 1200 °C/1 min, unloaded from 10% strain | Rietveld (as X1) | not recorded | Figs. 4b, 5b, 6a | beamline sample list (Sam6; frame NO7280) |
 | X3 | benchmark (RD0697-7) | wire | 1200 °C/1 min, undeformed; two frames | qualitative (Sec. 3.3) | – | Figs. 4c, 6b | beamline sample list (Sam7; frames NO7271, NO7274) |
 | X4 | benchmark (RD0697-7) | wire | 1200 °C/1 min, unloaded from 8% strain; two frames | qualitative | not recorded | Figs. 4d, 6b | beamline sample list (Sam8; frames NO7265, NO7268) |
-| X5 | LLM (RD0697-6) | rod, inferred from the schedule (Sec. 2.2) | three-cycle 1200 ↔ 900 °C, final 1200 °C/1 h WQ; two frames | qualitative | – | Fig. 8 | beamline sample list (Sam1, "3-cycle AGG, 1200C/1h WQ"; frames NO7325, NO7328) |
+| X5 | LLM (RD0697-6) | ≈1 mm rod | three-cycle 1200 ↔ 900 °C, final 1200 °C/1 h WQ; two frames | qualitative | – | Fig. 8 | beamline sample list (Sam1, "3-cycle AGG, 1200C/1h WQ"; frames NO7325, NO7328) |
 
 ## Table S2. Calculation register
 
