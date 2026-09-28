@@ -303,7 +303,7 @@ S. Cai also thanks his colleagues Andrew Michael for melting the alloys and Todd
 
 **Funding.** No external funding was received for this work.
 
-**Conflicts of interest/Competing interests.** The authors have no relevant financial or non-financial interests to disclose.
+**Conflicts of interest/Competing interests.** S. Cai is employed by Fort Wayne Metals, which provided the melting, hot-rolling, cold-drawing and metallography facilities used in this work. The authors have no other relevant financial or non-financial interests to disclose.
 
 **Author contributions.** F.Y. Cai conceived the study, carried out the LLM-assisted alloy design, the experiments (processing, heat treatment, mechanical testing and metallography), the data collection and analysis and the equilibrium calculations, and wrote the manuscript. S. Cai and X. Wang supervised the work throughout. J. Yan carried out the synchrotron X-ray diffraction experiments. S. Cai reviewed and edited the manuscript. All authors read and approved the final manuscript.
 
