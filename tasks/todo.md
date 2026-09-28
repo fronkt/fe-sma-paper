@@ -1,3 +1,26 @@
+# JMEP retarget — JMRT rejected 2026-09-28 (R3 final report, three points)
+
+Decision (Frank, 2026-09-28): **submit to J. Mater. Eng. Perform. (Springer/ASM), fast.**
+Scope chosen: **reframe, no new tests**; data availability **on request**; co-author notice
+is Frank's (all four authors must agree before upload). R3's three points: (1) data
+traceability, (2) γ-majority after quench vs α-majority calculated at 1200 °C is unresolved,
+so "absence of the α parent" is not established, (3) melt outside A2 on Mn and Al.
+
+- [ ] Workflow wf_72502f74-3b1: JMEP guidelines; uploaded R2 PDF vs repo text; JMRT-specific sweep;
+      edit specs per point (mechanism / composition / traceability / front+back matter),
+      adversarially verified, applied to a scratch copy, simulated R3 + consistency review
+- [ ] Apply verified edits to `manuscript.md` (Python, utf-8); new title in `front_JMEP.md`
+      (four authors, current affiliations)
+- [ ] JMEP-specific: declarations per Springer headings, references via `jmep.csl` (checked
+      against current examples), figures 1–10 + tables 1–4 as separate files
+- [ ] Supplementary: specimen and record register + the LLM design report PDF
+- [ ] New JMEP cover letter (no JMRT history, no outstanding-measurement request)
+- [ ] Build `submissions/JMEP-2026-09/`; verify 10 images, 4 tables, 0 `[@`, no mojibake,
+      no JMRT/reviewer language; copy the manuscript + cover letter to Downloads
+- [ ] Commit + push (explicit paths)
+
+---
+
 # Alem meeting brief — Fe-SMA experimental procedures (2026-08-26)
 
 - [x] Confirm whether the brief should cover only the LLM-alloy processing route or include the benchmark route for comparison.
