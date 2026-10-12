@@ -1,5 +1,5 @@
 ---
-title: "Absence of Super-elasticity in an LLM-Hypothesized Fe-Mn-Al-Ni-Si-C Alloy: Tensile, Synchrotron and CALPHAD Assessment"
+title: "Absence of Superelasticity in an LLM-Hypothesized Fe-Mn-Al-Ni-Si-C Alloy: Tensile, Synchrotron and CALPHAD Assessment"
 ---
 
 Frank Y. Cai^1^\*, S. Cai^2^, X. Wang^1^, J. Yan^3^

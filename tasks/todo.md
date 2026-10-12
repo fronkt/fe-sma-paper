@@ -1,3 +1,33 @@
+# JMEP-26-07-50730.R1 — revision of the JULY submission (decision 2026-10-12, major revision)
+
+Frank chose the revision route 2026-10-12 (52497 to be withdrawn; reply to Katona = Gmail draft
+r-4143640730635266984, unsent). Base text = `manuscript.md` at 8eaae5d (= 52497 as submitted).
+Comments: `revision/JMEP-R1/reviewer-comments-verbatim.md`; coverage map: `revision/JMEP-R1/comment-coverage.md`;
+edit ledger: `revision/JMEP-R1/CHANGES-R1.md`.
+
+**Step 1 — text fixes (Frank: "go ahead, start with the text fixes", 2026-10-12) — DONE 2026-10-12, ledger + 5 flags for Frank in CHANGES-R1.md**
+- [x] T1 keywords alphabetical, "superelasticity" (R1#1)
+- [x] T2 spelling superelastic/pseudoelastic throughout manuscript + title (R2#1)
+- [x] T3 abstract: ex-situ + semi-quantitative + scope, stay < 200 words (R2#1b, 14c, 15b)
+- [x] T4 intro "thermodynamically screened candidates" (R2#2d)
+- [x] T5 Table 1 wt% (at%) + single analysis / homogeneity limitation (R2#4a,b)
+- [x] T6 benchmark scoped as a reference composition processed in parallel (R2#7) — judgment, flag to Frank
+- [x] T7 Sec. 2.4 strain-rate rationale + rate sensitivity (R1#5); no compliance correction (R2#9a); Table 2 from cyclic specimens (R2#9d, per Table S1 — confirm)
+- [x] T8 Sec. 2.5 detector/distance/CeO2/normalization from repo (R2#13, part)
+- [x] T9 Sec. 3.1 grain-size estimation wording, EDS limits (R2#12b,c)
+- [x] T10 Sec. 3.2 "monotonically"; heating test = single observation per alloy (R2#10c, 11d)
+- [x] T11 Sec. 3.3 semi-quantitative; slip wording; "not in question"; D0₃ scale; κ not modelled (R2#14c, 15, 16, 7)
+- [x] T12 Sec. 4.1 textbook stabilizer sentence; "reflects dislocation multiplication" (R2#5d, 15c)
+- [x] T13 Sec. 4.2 D0₃ "in the α constituent" (R2#16c)
+- [x] T14 Sec. 4.3 interpretive wording, elongation-drop alternatives, envelope caveat (R2#17b–d, 9d, 10c)
+- [x] T15 Sec. 4.4 attribution of each link in the failure chain (R2#18a,b)
+- [x] T16 Conclusions: "AI-guided", ex-situ qualifier, semi-quantitative (R2#15b, 18)
+- [x] Verify: pandoc dry build (no unresolved citations), abstract < 200 words, no "super-elastic"/"pseudo-elastic" left, no mojibake
+
+**Later steps (not started):** repo facts (MAUD .par settings, calculated Si/C partitioning), facts from Frank/Song/Yan, literature for R2#18c (verified), response letter, R1 package (`submissions/JMEP-R1/`, ESM2 title spelling), tracked/highlighted DOCX vs July, push (ask first).
+
+---
+
 # JMEP retarget — JMRT rejected 2026-09-28 (R3 final report, three points)
 
 Decision (Frank, 2026-09-28): **submit to J. Mater. Eng. Perform. (Springer/ASM), fast.**
