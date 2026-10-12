@@ -24,6 +24,19 @@ Each entry: what changed, where, and the comment it answers. This ledger feeds t
 | T16 | Conclusions | "AI-guided" → "LLM"; Rietveld "semi-quantitative"; ex-situ qualifier on the unchanged pattern | R2#15b, 18 |
 | T17 | Secs. 2.5, 3.2, 3.3, 4.1 | Consistency sweep after T11: "Quantitative refinement proved feasible" → "Refinement proved feasible"; "reflecting incomplete recrystallization" → "consistent with"; "a quantitative, if grain-statistics-limited, refinement" → "a semi-quantitative, grain-statistics-limited refinement"; "quantitative Rietveld refinement … reveals" → "semi-quantitative … indicates" | R2#14c, 17b |
 
+## Step 2 — facts recovered from the repo (2026-10-12)
+
+| ID | Where | Change | Answers |
+|---|---|---|---|
+| T18 | Sec. 2.5 | Rietveld settings read from the MAUD files (`revision/JMRT-R1/xrd/from-scai/zip2-resample6/`): pseudo-Voigt, d-dependent Caglioti, Popa anisotropic size, interpolated background (+ 6th-order polynomial for the deformed pattern); refined variables of each final refinement listed (undeformed: scale + 7 detector-geometry terms, distance 1827.4 mm, + 4 size terms; deformed: 7 background + 4 size terms); ODF resolution 2° vs 5°; **phase fractions not varied in either final refinement** — undeformed held at 0.62/0.34/0.04 "the values of an earlier refinement stage", deformed at 0.608/0.351/0.041; size terms not interpreted. Sec. 3.3 sentence aligned ("no fraction is reported as a measurement") | R2#14a, 14b |
+| T19 | Sec. 3.4 (+ pointer in 3.1) | Calculated partitioning at 1200 °C (new script `revision/JMRT-R1/calphad/phase_compositions_1200.py`, output `results/phase_compositions_1200.txt`; phase fractions reproduce Table 3 exactly in all three databases): C 1.0–1.3 at% in γ vs ≈0.1 in α; Si 2.6–2.7 vs 1.7–1.8 (γ-enriched, two Si databases); Al to α, Mn to γ = direction of the EDS contrast | R1#4, R2#12c (part) |
+
+Not recoverable from the repo: the observed/calculated/difference curves R2#14a asks for — MAUD saved neither analysis with its spectra (`_maud_store_spectra_with_analysis false`), so Song must re-export them from the MAUD sessions with the .esg data.
+
+### Flag added in step 2
+
+6. **T18 "held at 0.62, 0.34 and 0.04, the values of an earlier refinement stage"** — this rests on your 08-14 confirmation that the fractions were refined; the saved file has them fixed. Please confirm with Song that the earlier stage exists (and, ideally, that its file does). The two negative Popa size terms in the deformed refinement are not reported, but the text now says size terms were refined.
+
 Bibliography: `shaw1995niti` added to `references.bib` and `submissions/JMEP-R1/references-jmep.bib` (the R1 package folder; `jmep.csl` copied there). The 52497 package `submissions/JMEP-2026-09/` is untouched.
 
 Checks (pandoc dry build, R1 bib + CSL): abstract 195 words; 0 unresolved citations; 0 mojibake; 0 "super-elastic"/"pseudo-elastic". Remaining "monotonically" (Sec. 3.4, a calculated trend) and "threshold" (Sec. 3.2, "rather than a measured recovery threshold") are deliberate.

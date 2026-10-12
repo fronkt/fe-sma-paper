@@ -1,0 +1,23 @@
+LLM-alloy (measured chemistry) at 1200 C: equilibrium phase compositions
+Same databases, phase lists, compositions and pdens as step_diagrams.py.
+
+=== mpea-02b (FE, MN, AL, NI, C), pdens 500
+alloy at%: FE 52.632, MN 30.455, AL 12.161, NI 4.292, C 0.460
+phase             mol%       AL        C       FE       MN       NI
+B2_BCC           71.06   13.045    0.108   52.916   29.520    4.412
+A1_FCC           28.94    9.991    1.325   51.934   32.752    3.999
+Table 3 check: alpha 71.1 / gamma 28.9 mol%
+
+=== PrecHiMn-04 (FE, MN, AL, SI, C), pdens 500
+alloy at%: FE 53.820, MN 31.142, AL 12.436, SI 2.132, C 0.470
+phase             mol%       AL        C       FE       MN       SI
+A1_FCC           35.53   10.032    1.149   52.771   33.332    2.716
+BCC_4SL          64.47   13.761    0.096   54.397   29.936    1.810
+Table 3 check: alpha 64.5 / gamma 35.5 mol%
+
+=== mc_fe (FE, MN, AL, NI, SI, C, P), pdens 2000
+alloy at%: FE 51.557, MN 29.833, AL 11.913, NI 4.205, SI 2.042, C 0.450, P 0.000
+phase             mol%       AL        C       FE       MN       NI        P       SI
+FCC_A1           38.06    9.900    1.021   51.634   31.462    3.430    0.000    2.554
+BCC_A2           61.94   13.150    0.100   51.509   28.832    4.681    0.000    1.728
+Table 3 check: alpha 61.9 / gamma 38.1 mol%
