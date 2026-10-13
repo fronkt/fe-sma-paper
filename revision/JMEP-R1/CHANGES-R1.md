@@ -35,6 +35,9 @@ Each entry: what changed, where, and the comment it answers. This ledger feeds t
 | T21 | Sec. 3.3 | No micrograph of the benchmark in the Fig. 3b condition reported; its grain size/diameter ratio, morphology and orientation known only from Fig. 4c; no aging | R2#7c |
 | T22 | Sec. 2.2 | "Surface oxidation and decarburization during the treatments at or below 1200 °C were not measured." | R2#6d |
 
+| T23 | Sec. 4.4 | New paragraph comparing the workflow with domain-trained LMs (AlloyBERT, AlloyGPT), tool-using LLM agents (AtomAgents; Pak et al. with Thermo-Calc), closed loops on experiment (Xue 2016 NiTi SMAs; Rao 2022 Invar HEAs) and AIMS (existing `aims2022`). Refs verified by a background agent against Crossref + OpenAlex with a refute pass; three re-checked by hand against Crossref | R2#18c, 3d |
+| T24 | Sec. 1 | "preliminary results were reported at SMST 2026 [cai2026smst]" — the ASM extended abstract (pp. 11–13, 2026-05-04) predates the July submission and was not cited | disclosure |
+
 Not recoverable from the repo: the observed/calculated/difference curves R2#14a asks for — MAUD saved neither analysis with its spectra (`_maud_store_spectra_with_analysis false`), so Song must re-export them from the MAUD sessions with the .esg data.
 
 ### Flag added in step 2

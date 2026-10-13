@@ -11,6 +11,7 @@ Each item names the reviewer comment and where the answer goes. "Not recorded" i
 4. **Title** (R2#1a): keep "Absence of Superelasticity in an LLM-Hypothesized …", or the reviewer's "Experimental Evaluation of an LLM-Proposed … Targeted for Room-Temperature Superelasticity"?
 5. **Benchmark wording** (R2#7): keep "a reference composition processed in parallel" (step 1, T6/T11) or revert?
 6. **Rod and bamboo-benchmark micrographs** (R2#12d): add them to Online Resource 2, or cut the detailed rod description in Section 3.5 back to what Fig. 1d shows?
+6b. **SMST 2026 extended abstract** (Cai & Cai, ASM, pp. 11–13, published 2026-05-04, DOI 10.31399/asm.cp.smst2026p0011): it predates the July submission and was not cited there; the 52497 cover letter called it a poster. Now cited in Section 1 and disclosed in the letter — keep (recommended) or remove?
 
 **Facts only you have**
 7. **R2#3a** — how many Gemini sessions/runs; why Hypothesis A2 rather than the first-ranked family; how the exact composition was chosen and why it fell outside A2 on Mn (32.3 vs ≤30 wt%) and Al (6.4 vs ≥8 wt%). *This is the reviewer's most pointed question.*
@@ -46,5 +47,5 @@ Each item names the reviewer comment and where the answer goes. "Not recorded" i
 
 ## Claude (in progress)
 
-31. **R2#18c / 3d** — comparison with specialized language models, CALPHAD-constrained agents and closed-loop studies (verified references) → Section 4.4.
+31. ~~**R2#18c / 3d** — literature comparison~~ DONE 2026-10-12 (Section 4.4 paragraph; 6 new verified refs + existing `aims2022`; A-Lab dropped — 2026 author correction, not alloys; SteelBERT dropped — abstract unreadable without a proxy).
 32. After answers: fill the OPEN markers in `response-to-reviewers.md`, apply the matching manuscript edits, build the R1 package (manuscript, tracked/highlighted file vs July, letter DOCX, ESM2 with Table S3 and the new calculation row), and update Table S2 with `phase_compositions_1200.py`.

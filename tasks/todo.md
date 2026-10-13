@@ -30,7 +30,8 @@ edit ledger: `revision/JMEP-R1/CHANGES-R1.md`.
 - [x] Small text fixes the letter needs: cost (T20), benchmark micrograph limit (T21), surface/decarburization (T22)
 - [x] Response letter draft `revision/JMEP-R1/response-to-reviewers.md` (all comments verbatim, 34 OPEN markers)
 - [x] Question list by person `revision/JMEP-R1/OPEN-ITEMS.md`
-- [ ] R2#18c literature comparison (verified refs, background agent) → Sec. 4.4 + bib
+- [x] R2#18c literature comparison (verified refs, background agent) → Sec. 4.4 + bib (T23); SMST 2026 extended abstract now cited (T24, decision 6b)
+- [x] R1 package build script `submissions/JMEP-R1/build_jmep_r1.py` (clean DOCX, ESM2, letter DOCX); ESM2 copy with K8 row
 
 **Later steps:** answers from Frank/Song/Yan → fill OPEN markers + matching edits; Table S2 row for the partitioning run; Table S3 process table; R1 package (`submissions/JMEP-R1/`: build script, ESM2 title spelling, tracked/highlighted DOCX vs July, letter DOCX); push (ask first).
 

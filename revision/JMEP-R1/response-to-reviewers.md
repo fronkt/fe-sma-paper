@@ -24,6 +24,8 @@ Reviewer 2 asked for fuller reporting of the work already performed, a transpare
 4. **The complete LLM design report** (Online Resource 1), and a register of every specimen and calculation behind the figures and tables (Online Resource 2, Tables S1 and S2).
 5. **The cyclic abnormal-grain-growth treatments**, now reported with their microstructure and tensile records (new Section 3.5, Fig. 1d, Fig. 10), and the drawing texture (Fig. 7) and the treated rod's diffraction (Fig. 8).
 
+Preliminary results of this work appeared as a three-page extended abstract in the SMST 2026 proceedings (ASM International); it is now cited in Section 1. **[OPEN — FC: keep this disclosure (recommended).]**
+
 Three errors in the original text are corrected: the gauge length was 127 mm, not 13 mm (a typographical error; the instrument records give 5.000 in); the α fraction is 34% (with 4% D0₃), not 37%; and the model was prompted, not trained.
 
 Because most of the text has been rewritten, the marked-up manuscript shows the changes as tracked changes against the original submission. **[OPEN — FC: confirm the highlighting method. A Word comparison against the July file will mark nearly every paragraph; the alternative the letter allows is colored text for new material.]** The section map below gives the correspondence.
@@ -148,7 +150,7 @@ Yes. Section 4.4 now states that one composition from one session, processed by 
 
 > (d) Could the Discussion place the agent's recommendation alongside transparent approaches reported in the recent literature …
 
-Section 1 places LLM hypothesis generation beside property-targeted screening and generative inverse design. Section 4.4 now treats screening against the processing window by equilibrium calculation as an established step in conventional alloy design, which the workflow here omitted. **[OPEN — literature comparison with specialized language models, CALPHAD-constrained and closed-loop studies (see 18c), in progress.]**
+Section 1 places LLM hypothesis generation beside property-targeted screening and generative inverse design. Section 4.4 now treats screening against the processing window by equilibrium calculation as an established step in conventional alloy design, which the workflow here omitted. It also adds a comparison with domain-trained language models, tool-using LLM agents and closed-loop studies (see 18c).
 
 ### 4. Nominal versus measured chemistry, composition basis, and cost objective
 
@@ -420,7 +422,13 @@ The omitted screening calculation is attributed to the workflow, not to the mode
 
 > (c) Could the authors compare their workflow with recent studies that use explicit datasets, specialized language models, CALPHAD/physics constraints, quantitative benchmarks, and/or closed-loop experimental validation?
 
-**[OPEN — literature comparison being added to Section 4.4 (verified references).]**
+Done. A new paragraph in Section 4.4 compares the workflow with four kinds of approach:
+- domain-trained language models with explicit datasets and quantitative test errors (AlloyBERT; AlloyGPT, trained on CALPHAD-generated records);
+- LLM agents that call physics tools (AtomAgents, atomistic simulation; an agentic system using Thermo-Calc calculations);
+- adaptive and active-learning loops closed on experiment (Xue et al., NiTi-based SMAs, 36 compositions over nine loops; Rao et al., high-entropy Invar alloys);
+- data-driven SMA selection confirmed experimentally (the AIMS framework).
+
+In those workflows a calculation or an experiment stands between the proposal and the decision to pursue it. The single-shot, tool-free workflow tested here had no such step. Seven references have been added or cited.
 
 > (d) Please formulate conclusions that remain valid if another processing route were later found to produce superelasticity in this same nominal composition.
 
