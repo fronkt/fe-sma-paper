@@ -31,6 +31,10 @@ Each entry: what changed, where, and the comment it answers. This ledger feeds t
 | T18 | Sec. 2.5 | Rietveld settings read from the MAUD files (`revision/JMRT-R1/xrd/from-scai/zip2-resample6/`): pseudo-Voigt, d-dependent Caglioti, Popa anisotropic size, interpolated background (+ 6th-order polynomial for the deformed pattern); refined variables of each final refinement listed (undeformed: scale + 7 detector-geometry terms, distance 1827.4 mm, + 4 size terms; deformed: 7 background + 4 size terms); ODF resolution 2° vs 5°; **phase fractions not varied in either final refinement** — undeformed held at 0.62/0.34/0.04 "the values of an earlier refinement stage", deformed at 0.608/0.351/0.041; size terms not interpreted. Sec. 3.3 sentence aligned ("no fraction is reported as a measurement") | R2#14a, 14b |
 | T19 | Sec. 3.4 (+ pointer in 3.1) | Calculated partitioning at 1200 °C (new script `revision/JMRT-R1/calphad/phase_compositions_1200.py`, output `results/phase_compositions_1200.txt`; phase fractions reproduce Table 3 exactly in all three databases): C 1.0–1.3 at% in γ vs ≈0.1 in α; Si 2.6–2.7 vs 1.7–1.8 (γ-enriched, two Si databases); Al to α, Mn to γ = direction of the EDS contrast | R1#4, R2#12c (part) |
 
+| T20 | Conclusions | "used to design a low-cost … alloy" → "asked for a lower-cost … alloy; cost was the objective of that request and is not evaluated here" | R2#4c |
+| T21 | Sec. 3.3 | No micrograph of the benchmark in the Fig. 3b condition reported; its grain size/diameter ratio, morphology and orientation known only from Fig. 4c; no aging | R2#7c |
+| T22 | Sec. 2.2 | "Surface oxidation and decarburization during the treatments at or below 1200 °C were not measured." | R2#6d |
+
 Not recoverable from the repo: the observed/calculated/difference curves R2#14a asks for — MAUD saved neither analysis with its spectra (`_maud_store_spectra_with_analysis false`), so Song must re-export them from the MAUD sessions with the .esg data.
 
 ### Flag added in step 2

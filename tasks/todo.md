@@ -24,7 +24,15 @@ edit ledger: `revision/JMEP-R1/CHANGES-R1.md`.
 - [x] T16 Conclusions: "AI-guided", ex-situ qualifier, semi-quantitative (R2#15b, 18)
 - [x] Verify: pandoc dry build (no unresolved citations), abstract < 200 words, no "super-elastic"/"pseudo-elastic" left, no mojibake
 
-**Later steps (not started):** repo facts (MAUD .par settings, calculated Si/C partitioning), facts from Frank/Song/Yan, literature for R2#18c (verified), response letter, R1 package (`submissions/JMEP-R1/`, ESM2 title spelling), tracked/highlighted DOCX vs July, push (ask first).
+**Step 2 — repo facts + response letter (Frank: "continue", 2026-10-12)**
+- [x] Rietveld settings from the MAUD files → Sec. 2.5 (T18; flag 6: fractions held fixed in final refinements)
+- [x] Calculated Si/C partitioning at 1200 °C → Sec. 3.4 (T19; `phase_compositions_1200.py`, reproduces Table 3)
+- [x] Small text fixes the letter needs: cost (T20), benchmark micrograph limit (T21), surface/decarburization (T22)
+- [x] Response letter draft `revision/JMEP-R1/response-to-reviewers.md` (all comments verbatim, 34 OPEN markers)
+- [x] Question list by person `revision/JMEP-R1/OPEN-ITEMS.md`
+- [ ] R2#18c literature comparison (verified refs, background agent) → Sec. 4.4 + bib
+
+**Later steps:** answers from Frank/Song/Yan → fill OPEN markers + matching edits; Table S2 row for the partitioning run; Table S3 process table; R1 package (`submissions/JMEP-R1/`: build script, ESM2 title spelling, tracked/highlighted DOCX vs July, letter DOCX); push (ask first).
 
 ---
 
