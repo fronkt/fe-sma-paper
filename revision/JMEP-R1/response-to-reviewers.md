@@ -48,7 +48,7 @@ All changes are shown as tracked changes against the original submission in the 
 | 5 Conclusions | 5 Conclusions (rewritten, comments 1b and 18d) |
 | — | Online Resource 1 (LLM report); Online Resource 2 (Tables S1, S2) |
 
-**Authors.** **[OPEN — FC: if X. Wang is added (he supervised the work throughout, per the Author contributions statement), state it here and attach the journal's authorship-change form. The Katona draft asks what the journal needs.]**
+**Authors.** X. Wang (School of Engineering Technologies, Purdue University), who supervised the work, has been added as an author, giving the author list of JMEP-26-09-52497, now withdrawn: F.Y. Cai, S. Cai, X. Wang, J. Yan. The editorial office adjusted the author list on 15 October 2026, and each author's written approval is being provided through the copyright transfer forms submitted with this revision, as the office requested. His contribution is stated in the Author contributions declaration.
 
 ## Associate Editor
 
