@@ -5,9 +5,10 @@ Each item names the reviewer comment and where the answer goes. "Not recorded" i
 ## Frank — facts and decisions
 
 **Decisions**
+0. **Reviewer mark-up files** (added 2026-10-15): the decision letter says "please open the decision letter [in the Author Center] to check for marked-up manuscript files … too large to be attached to this emailed version". Not yet checked; any annotated file adds comments the letter must answer. No due date is set ("as soon as possible … reasonable amount of time").
 1. **Highlighting method** (AE): tracked changes against the July file is now readable (the R1 is the July text plus targeted changes) — recommended; the marked-up file is built by `build_jmep_r1.py --compare`. Confirm.
 2. **English editing** (AE): paid service, or the statement in the letter?
-3. **X. Wang as author**: yes/no (Katona draft asks the procedure). His contribution in the declarations is supervision, so the rebase does not change this question.
+3. **X. Wang as author**: yes/no. Frank SENT the Katona reply 2026-10-15 05:29 UTC (chose 50730.R1, asked to withdraw 52497, asked what adding Wang requires); awaiting his answer. His contribution in the declarations is supervision, so the rebase does not change this question.
 4. **Title** (R2#1a): keep "Absence of Superelasticity in an LLM-Hypothesized … : Tensile, Synchrotron and CALPHAD Assessment", or the reviewer's "Experimental Evaluation of an LLM-Proposed … Targeted for Room-Temperature Superelasticity"?
 5. **Reference-alloy wording** (R2#7): the R1 keeps July's name "Omori alloy" and defines it as "a reference composition processed in parallel". OK?
 6. ~~Rod and bamboo micrographs~~ — no longer needed: the R1 makes no claim from the rod or Omori-alloy AGG micrographs (Sec. 3.5 of the long version is not carried over).
