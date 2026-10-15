@@ -18,7 +18,7 @@ Each item names the reviewer comment and where the answer goes. "Not recorded" i
 
 **Facts only you have**
 7. ~~**R2#3a** decision rule~~ — Frank 2026-10-15: A2 because of the earlier work on Fe-Mn-Al-Ni and the direct comparison with the Omori alloy. Written into Sec. 2.1 + letter, with report facts (A1/A2 joint second; A2 no Cr, more Ni, highest strain target) and the at%/wt% basis (Mn 30, Al 12, Si 4 = A2's upper limits applied as at%). **Frank: strike any of that elaboration that was not part of the thinking.** The number of sessions moved to item 8.
-8. **R2#3a/3b** — one Deep Research session, and the request never repeated? (one yes/no) (Sec. 4.3 already says run-to-run variation was not tested; Sec. 2.1 gets an explicit sentence.)
+8. ~~**R2#3a/3b**~~ — Frank 2026-10-15: one session, never repeated. In Sec. 2.1 and the letter. (Sec. 4.3 already says run-to-run variation was not tested; Sec. 2.1 gets an explicit sentence.)
 9. **R2#2a/2b** — were any files uploaded to the session? Any settings beyond choosing Deep Research? Was it Gemini **2.5** (the July text says so; the report records no model string)?
 10. **R2#2c** — where did "over 200 papers" (July text) come from? The report lists 76 sources.
 11. **R1#5** — why 0.25 in/min (8.3 × 10⁻⁴ s⁻¹)? Same rate as the NiTi-Cu paper?
