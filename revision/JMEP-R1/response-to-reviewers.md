@@ -2,10 +2,6 @@
 title: "Response to the Editor and Reviewers — JMEP-26-07-50730.R1"
 ---
 
-**DRAFT 2026-10-14 (rebuilt on the July text).** Items marked **[OPEN — …]** need a fact or decision from the person named (FC = Frank Cai, SC = S. Cai / Fort Wayne Metals records, JY = J. Yan). Bracketed draft wording inside an OPEN marker is a proposal, not a confirmed fact. Delete this paragraph before upload.
-
----
-
 Manuscript ID: JMEP-26-07-50730.R1
 
 Title: Absence of Superelasticity in an LLM-Hypothesized Fe-Mn-Al-Ni-Si-C Alloy: Tensile, Synchrotron and CALPHAD Assessment (originally "Mechanical Responses of an AI-Hypothesized Super-elastic Fe-Mn-Al-Ni-Si-C Alloy")
@@ -22,7 +18,7 @@ Reviewer 2 asked for fuller reporting of the work already performed, a transpare
 2. **Equilibrium calculations on the measured chemistry**, which Reviewer 2 suggested (comment 5a): CALPHAD calculations in three independent open databases, including a calculated carbon-free control (new Sections 2.6 and 3.4, Table 3).
 3. **The complete LLM design report** (Online Resource 1), and a register of every specimen and calculation behind the figures, tables and text (Online Resource 2, Tables S1 and S2).
 
-Preliminary results of this work appeared as a three-page extended abstract in the SMST 2026 proceedings (ASM International); it is now cited in Section 1. **[OPEN — FC: keep this disclosure (recommended).]**
+Preliminary results of this work appeared as a three-page extended abstract in the SMST 2026 proceedings (ASM International); it is now cited in Section 1.
 
 The following errors in the original text are corrected:
 
@@ -33,7 +29,7 @@ The following errors in the original text are corrected:
 - The Omori-alloy wire was 0.64 mm in diameter, not 0.36 mm.
 - The cyclic abnormal-grain-growth schedule was applied to ≈1–1.3 mm rod, and a separate cyclic treatment to 0.36 mm wire (Section 2.2), not as one schedule to wire.
 - The description of the request put to the agent now states only what its surviving report records (Section 2.1).
-- The declarations now disclose S. Cai's employment by Fort Wayne Metals. **[OPEN — FC: you are writing the generative-AI statement in the Declarations yourself; add a line here if it differs from the original declaration.]**
+- The declarations now disclose S. Cai's employment by Fort Wayne Metals, and the generative-AI declaration now records the use of Anthropic Claude in writing and editing the revised text.
 
 All changes are shown as tracked changes against the original submission in the marked-up manuscript. Figs. 5 and 6 have been updated to match the revised analysis: Fig. 5 now shows the Rietveld refinements of both the heat-treated and the deformed specimen, each with its fit indices, and Fig. 6 is regenerated from the integrated diffraction data. Section numbering is unchanged except for the additions below.
 
@@ -94,7 +90,7 @@ Carbides are calculated to be stable only well below the processing range (κ-ca
 
 > How was the strain rate selected? Are shape memory alloys strain rate sensitive in their shape memory effect?
 
-The crosshead speed was 0.25 in min⁻¹ on a 127 mm gauge, a nominal strain rate of 8.3 × 10⁻⁴ s⁻¹ (Section 2.4). The original text gave 1 × 10⁻³ s⁻¹ on a 13 mm gauge; the gauge was a typographical error, and the rate is now computed from the recorded crosshead speed and gauge. **[OPEN — FC: why this rate was chosen. Draft: "It is the quasi-static rate we use routinely for superelastic wire (ref. cai2024niticu)" — confirm the NiTi-Cu work used the same rate before saying so.]**
+The crosshead speed was 0.25 in min⁻¹ on a 127 mm gauge, a nominal strain rate of 8.3 × 10⁻⁴ s⁻¹ (Section 2.4). The original text gave 1 × 10⁻³ s⁻¹ on a 13 mm gauge; the gauge was a typographical error, and the rate is now computed from the recorded crosshead speed and gauge. The rate was not chosen to probe rate effects: it is a quasi-static rate, and the same crosshead speed was used for both alloys, including the heating tests.
 
 Yes, superelastic alloys are rate-sensitive, chiefly because the latent heat of transformation warms the specimen when it cannot be conducted away fast enough, which raises the stress needed to continue transforming (Shaw and Kyriakides, 1995, now cited). This changes the stress–strain response of an alloy that transforms; it does not suppress the transformation. The effect should also be weaker in Fe-Mn-Al-Ni, whose transformation stress depends only weakly on temperature (0.53 MPa °C⁻¹; Omori et al., 2011). At the quasi-static rate used, strain rate is not expected to bear on the absence of transformation. This is added to Section 2.4.
 
@@ -108,7 +104,7 @@ We thank the reviewer for a careful and constructive report, and for recognizing
 
 > (a) Could the authors revise the title so that it states that the alloy was targeted for room-temperature superelasticity but failed to exhibit it? …
 
-Yes. The title is now "Absence of Superelasticity in an LLM-Hypothesized Fe-Mn-Al-Ni-Si-C Alloy: Tensile, Synchrotron and CALPHAD Assessment". It states the negative result, uses the standard spelling (now used throughout), and names the model class (LLM) rather than AI in general. We kept "hypothesized" because the paper treats the composition as a hypothesis under test. **[OPEN — FC: or adopt the reviewer's title, "Experimental Evaluation of an LLM-Proposed Fe-Mn-Al-Ni-Si-C Alloy Targeted for Room-Temperature Superelasticity"; co-authors sign off on either.]**
+Yes. The title is now "Absence of Superelasticity in an LLM-Hypothesized Fe-Mn-Al-Ni-Si-C Alloy: Tensile, Synchrotron and CALPHAD Assessment". It states the negative result, uses the standard spelling (now used throughout), and names the model class (LLM) rather than AI in general. We kept "hypothesized" because the paper treats the composition as a hypothesis under test.
 
 > (b) Could the Abstract and Conclusions distinguish clearly among (i) failure of this composition under the tested processing conditions, (ii) limitations of this particular deep-research workflow, and (iii) the much broader performance of AI-assisted alloy design?
 
@@ -118,15 +114,15 @@ Yes. The Abstract now separates the three: what the composition did in the condi
 
 > (a) Did the authors actually fine-tune or otherwise train a model, upload a closed corpus for retrieval, or simply ask Gemini Deep Research to search public sources? …
 
-We did not train or fine-tune any model. The composition came from a Gemini 2.5 Deep Research session, in which the agent retrieves and reads public sources at query time. **[OPEN — FC: confirm that no files were uploaded to the session.]** "Trained" has been removed, and the workflow is described in Sections 1 and 2.1 and in the Generative-AI declaration.
+We did not train or fine-tune any model. The composition came from a Gemini 2.5 Deep Research session, in which the agent retrieves and reads public sources at query time. The report cites only the 76 sources listed in it, each recorded as accessed on 19 May 2025. "Trained" has been removed, and the workflow is described in Sections 1 and 2.1 and in the Generative-AI declaration.
 
 > (b) Could the authors provide … the complete verbatim prompt sequence, date and exact model/product version, settings available to the user, all sources retrieved, the full unedited model response, and the candidate composition ranges proposed?
 
-The full, unedited report is supplied as Online Resource 1: *New Fe-SMA Alloy Hypotheses*, 41 pages, drawing on 76 sources, all accessed 19 May 2025 and exported 4 June 2025. It lists every source and gives all six candidate families with their composition ranges and performance targets. The product was Gemini 2.5 Deep Research. **[OPEN — FC: confirm the model version (the report itself records no model string), and the settings available to the user, e.g. "none beyond selecting Deep Research".]** The verbatim prompt was not preserved, and the report does not embed it. We state this in Section 2.1 rather than reconstructing the prompt from memory.
+The full, unedited report is supplied as Online Resource 1: *New Fe-SMA Alloy Hypotheses*, 41 pages, drawing on 76 sources, all accessed 19 May 2025 and exported 4 June 2025. It lists every source and gives all six candidate families with their composition ranges and performance targets. The product was Gemini 2.5 Deep Research. The exported report itself records no model string; the identification is the one given in the original submission. The Deep Research mode of the Gemini app exposes no generation settings to the user. The verbatim prompt was not preserved, and the report does not embed it. We state this in Section 2.1 rather than reconstructing the prompt from memory.
 
 > (c) How were the 'over 200 papers' selected, deduplicated, quality-controlled, and supplied to the agent? …
 
-**[OPEN — FC: where the "over 200 papers" figure came from.]** Draft: "The statement in the original text was inaccurate and has been removed. The agent's report draws on 76 sources, listed in Online Resource 1; [no separate corpus was supplied to it / the figure of 200 counted …]."
+The figure in the original text did not describe the agent's input and has been removed. The agent's report draws on 76 sources, all listed in Online Resource 1, and the paper now describes only what that report records.
 
 > (d) Could the authors state which thermodynamic database or computational tool the agent accessed? …
 
@@ -160,7 +156,7 @@ Done. Table 1 now gives every composition in wt% with at% in parentheses. Its ca
 
 > (b) What plausible processing or analytical factors could explain the large Si shortfall, and how might the deviation affect phase stability? …
 
-The shortfall is consistent with oxidation loss of silicon during vacuum induction melting (Section 2.1). **[OPEN — SC: any other known cause, e.g. the form in which Si was charged.]** Its effect on phase stability was evaluated by calculation (Section 3.4). With carbon removed, the two databases that carry silicon at its measured level both return single-phase α at 1200 °C (Table 3), so the silicon shortfall is not what closes the α field. Whether the intended silicon would have opened the field with carbon present cannot be answered from these calculations: the one database in which the nominal composition was evaluated with its silicon places it partly molten at 1200 °C, and Section 3.4 says so. Section 2.1 now states that chemical homogeneity within a heat was not checked.
+The shortfall is consistent with oxidation loss of silicon during vacuum induction melting (Section 2.1). No other cause was established, and because the heat was analyzed once, an analytical contribution to the low value cannot be excluded. Its effect on phase stability was evaluated by calculation (Section 3.4). With carbon removed, the two databases that carry silicon at its measured level both return single-phase α at 1200 °C (Table 3), so the silicon shortfall is not what closes the α field. Whether the intended silicon would have opened the field with carbon present cannot be answered from these calculations: the one database in which the nominal composition was evaluated with its silicon places it partly molten at 1200 °C, and Section 3.4 says so. Section 2.1 now states that chemical homogeneity within a heat was not checked.
 
 > (c) Could the authors quantify the raw-material cost reduction …
 
@@ -192,19 +188,19 @@ Done. Section 4.1 now states that element-by-element stabilizer rules cannot dec
 
 > (a) Could the authors provide a complete process-flow diagram and tabulated thermal-mechanical history for each tested condition …
 
-Sections 2.1 and 2.2 give the route: vacuum induction melting (≈2 kg) to ø50 mm ingots, EDM to ø13 mm rods, homogenization at 1000 °C for 16 h in argon, hot rolling at 850 °C in multiple passes, and cold drawing with intermediate anneals at 1000 °C in argon, to 0.36 mm (LLM alloy) and 0.64 mm (Omori alloy) wire with ≈85% area reduction after the last process anneal. They also give every final heat treatment, including the cyclic schedules. Table S1 lists the condition of every tested specimen. **[OPEN — SC: hot-rolling reductions and pass schedule, redraw sequence, number and duration of intermediate anneals, cooling media. These go into a process table (Online Resource 2, new Table S3); entries not recorded will be stated as such.]**
+Sections 2.1 and 2.2 give the route: vacuum induction melting (≈2 kg) to ø50 mm ingots, EDM to ø13 mm rods, homogenization at 1000 °C for 16 h in argon, hot rolling at 850 °C in multiple passes, and cold drawing with intermediate anneals at 1000 °C in argon, to 0.36 mm (LLM alloy) and 0.64 mm (Omori alloy) wire with ≈85% area reduction after the last process anneal. They also give every final heat treatment, including the cyclic schedules. Table S1 lists the condition of every tested specimen. The hot-rolling reductions and pass schedule, the redraw sequence, the number and duration of the intermediate anneals and the cooling media are not documented in the processing records available to us. Section 2.1 now says so, and for that reason we have not added a process table.
 
 > (b) What exactly was the 200 °C/3 h aging sequence in Fig. 2f …
 
-Section 2.2 now defines it: the 1200 °C/1 min wire was aged at 200 °C for 3 hours. **[OPEN — SC: quench medium and temperature after the anneal, transfer time, aging atmosphere, cooling after aging.]**
+Section 2.2 now defines it: the 1200 °C/1 min wire was aged at 200 °C for 3 hours. The quench medium after the strand anneal, the transfer time, the aging atmosphere and the cooling after aging are not documented, and Section 2.2 says so.
 
 > (c) For the strand furnace, what were hot-zone length, line speed, temperature calibration, wire tension, argon oxygen level, and method used to verify that a 0.36 mm wire experienced the stated dwell temperature?
 
-Line speed was 4 ft min⁻¹ where the record states it. Section 2.2 now states that "1 minute" is the nominal dwell, and that the time at temperature set by speed and hot-zone length was not measured separately, nor was the cooling rate on leaving the furnace. **[OPEN — SC: hot-zone length, temperature calibration, wire tension, argon purity.]**
+Line speed was 4 ft min⁻¹ where the record states it. Section 2.2 now states that "1 minute" is the nominal dwell, and that the time at temperature set by speed and hot-zone length was not measured separately, nor was the cooling rate on leaving the furnace. The hot-zone length, temperature calibration, wire tension and argon purity are not documented in the records available to us either, and Section 2.2 says so.
 
 > (d) Could the authors describe the observed surface condition after treatment, especially at 1200 °C, and discuss oxidation, decarburization, or surface depletion as possible limitations if these were not measured directly?
 
-Treatments above 1200 °C caused severe oxidation and are not reported. Section 2.2 now states that surface oxidation and decarburization during treatments at or below 1200 °C were not measured, and Section 4.2 lists them among the possible causes of the lower elongation above 1000 °C. **[OPEN — FC/SC: any observed surface condition at 1200 °C, if recorded.]**
+Treatments above 1200 °C caused severe oxidation and are not reported. Section 2.2 now states that surface oxidation and decarburization during treatments at or below 1200 °C were not measured, and Section 4.2 lists them among the possible causes of the lower elongation above 1000 °C. No observation of the surface condition after the 1200 °C treatments was recorded.
 
 ### 7. Validity of the comparison alloy as a positive functional control
 
@@ -214,7 +210,7 @@ The heating test was applied to both alloys in the same condition, 1200 °C for 
 
 > (b) Do the authors have any existing cyclic data showing that the particular Omori-alloy condition used here exhibits superelastic unloading recovery? If not, could it be described more cautiously as a reference composition rather than as a validated positive control?
 
-**[OPEN — FC: confirm that no cyclic unloading record of the Omori alloy exists for this condition.]** We have adopted the reviewer's description. Section 2.1 now defines the Omori alloy as "a reference composition processed in parallel, not as an optimally treated superelastic control"; its transformation under the common route is used only as evidence that the route and tests can detect one. Section 3.2 describes its 0.5% recovery as a single observed heating-induced (shape-memory) recovery, and Section 3.3 states that its transformation rests on three observations, each limited on its own.
+The paper reports no cyclic record of the Omori alloy in this condition other than the loading–unloading–heating test of Fig. 3b, so we have adopted the reviewer's description. Section 2.1 now defines the Omori alloy as "a reference composition processed in parallel, not as an optimally treated superelastic control"; its transformation under the common route is used only as evidence that the route and tests can detect one. Section 3.2 describes its 0.5% recovery as a single observed heating-induced (shape-memory) recovery, and Section 3.3 states that its transformation rests on three observations, each limited on its own.
 
 > (c) What information is already available on the grain-size-to-wire-diameter ratio, grain morphology/orientation, aging condition, and phase constitution of the benchmark specimen used in Fig. 3? …
 
@@ -236,7 +232,7 @@ It is now presented that way. Section 4.1 is retitled "Interpreting the absence 
 
 > (c) Could the authors report the actual laboratory test temperature and thermal history immediately before testing …
 
-**[OPEN — SC/FC: laboratory temperature during testing, and the time and storage between heat treatment and test. If not recorded, Section 2.4 will say "laboratory ambient, not recorded".]**
+The tests were run at laboratory ambient temperature, which was not recorded, and the time between heat treatment and test was not recorded either; Section 2.4 now says so.
 
 ### 9. Mechanical-test methodology and strain metrology
 
@@ -246,15 +242,15 @@ Strain is crosshead extension divided by the gauge length, without extensometry.
 
 > (b) Could the authors identify the test standard, frame, load cell, grips, preload, data rate, exact loading/unloading rates, unloading stress threshold, and environmental-temperature tolerance?
 
-Section 2.4 gives the standard (broadly ASTM E8/E8M; the cyclic protocol is the purpose-designed method of our earlier work, Cai et al. 2024), the increment (nominally 1% strain per cycle) and the crosshead speed. **[OPEN — SC / E: drive records: Instron model, load cell, grips, preload, data rate, unloading endpoint (zero load or a set threshold), unloading rate, temperature tolerance.]**
+Section 2.4 gives the standard (broadly ASTM E8/E8M; the cyclic protocol is the purpose-designed method of our earlier work, Cai et al. 2024), the increment (nominally 1% strain per cycle) and the crosshead speed. From the exported test records, Section 2.4 now adds that data were logged at 5 Hz (10 Hz in the heating test) and that each unloading ran at the same crosshead speed to approximately zero load. The machine model, load cell, grips and preload are not given in those records, and the laboratory temperature was not recorded.
 
 > (c) How were E, 0.2% offset yield strength, UTS, elongation to fracture, recovered strain, residual strain, and hysteresis energy extracted from an incremental cyclic history? …
 
-**[OPEN — FC/SC: how each property was extracted (software or by hand; which loading segment E and σ₀.₂ were taken from).]** Recovered and residual strain are reported only for the heating test, where they are defined in Section 3.2; hysteresis energy is not reported, because no transformation hysteresis was observed.
+Table 2 uses the standard definitions: apparent E as the slope of the initial loading, σ₀.₂ by the 0.2% offset method, UTS as the maximum engineering stress, and elongation as the engineering strain at fracture. The construction for each specimen is not reproduced here. Recovered and residual strain are reported only for the heating test, where they are defined in Section 3.2; hysteresis energy is not reported, because no transformation hysteresis was observed.
 
 > (d) Were the Table 2 yield and tensile properties obtained from independent monotonic specimens or extracted from incrementally cycled specimens? …
 
-From the incrementally cycled specimens. **[OPEN — FC: confirm, per Table S1.]** Section 2.4 now says so and identifies the values as protocol-dependent, and Section 4.2 compares them with monotonic data only with that qualification.
+From the incrementally cycled specimens, as Table S1 records. Section 2.4 now says so and identifies the values as protocol-dependent, and Section 4.2 compares them with monotonic data only with that qualification.
 
 ### 10. Experimental scope, specimen count, and level of inference
 
@@ -264,7 +260,7 @@ Each alloy is a single heat. Table S1 (Online Resource 2) lists every specimen b
 
 > (b) Where more than one specimen or acquisition was already obtained, could the individual values or observed range be reported? …
 
-Table 2 reports mean ± one standard deviation over three specimens. Each panel of Fig. 2 shows one specimen, and the caption says so. Single observations are designated as such. **[OPEN — FC: the individual values of the three specimens per condition, if they are in your records (the source table gives mean ± SD only); if so, they go into Table S1.]**
+Table 2 reports mean ± one standard deviation over three specimens. Each panel of Fig. 2 shows one specimen, and the caption says so. Single observations are designated as such. The record of these tests that we used gives the mean and standard deviation of each set of three, so the individual values are not reported.
 
 > (c) Could the authors describe the work explicitly as exploratory screening, replace inferential expressions such as 'threshold' and 'monotonically' with descriptive wording …
 
@@ -274,15 +270,15 @@ Done. Section 1 describes the work as an exploratory case study, and Section 4.2
 
 > (a) Could the authors provide a step-by-step control protocol showing whether force, crosshead position, or strain was controlled during heating, and clarify what 'continued to zero strain' means?
 
-Section 2.4 now gives the sequence: the specimen was loaded to 3% strain and unloaded to zero stress, and the crosshead was then returned to its starting position (nominal zero strain); at the same time the specimen was heated to ≈200 °C at ≈50 °C s⁻¹ and held for ≈10 s, and it was then reloaded. The Fig. 3 caption now identifies the three segments (unloading; return of the crosshead at zero stress during heating; reloading). **[OPEN — SC: control mode during heating (crosshead position held?), heating method, and how temperature was measured.]**
+Section 2.4 now gives the sequence: the specimen was loaded to 3% strain and unloaded to zero stress, and the crosshead was then returned to its starting position (nominal zero strain); at the same time the specimen was heated to ≈200 °C at ≈50 °C s⁻¹ and held for ≈10 s, and it was then reloaded. The Fig. 3 caption now identifies the three segments (unloading; return of the crosshead at zero stress during heating; reloading). The test record shows the control mode: the crosshead moved at 0.25 in min⁻¹ throughout, unloading, returning and reloading without a hold, so the specimen was heated while it carried no load. The heating method is not recorded beyond its rate, and the record has no temperature channel; Section 2.4 now says so.
 
 > (b) How was specimen temperature monitored, what heating/cooling sequence was used, and were fixture expansion or machine compliance corrections applied? …
 
-**[OPEN — SC: temperature monitoring, cooling before reloading, and whether fixture expansion was corrected.]** No compliance correction was applied (Section 2.4).
+Specimen temperature was not logged, and the cooling before reloading was not recorded. No correction for fixture expansion or for load-train compliance was applied (Section 2.4).
 
 > (c) If the recorded data permit, could the authors … define exactly how the reported 0.5% recovery was obtained?
 
-The 0.5% is the difference between the residual strain after unloading from 3% (≈2.2%) and the strain at which stress rises on reloading after heating (≈1.7%), as defined in Section 3.2. **[OPEN — SC: whether a temperature–time record exists; if not, Section 2.4 will say so.]**
+The 0.5% is the difference between the residual strain after unloading from 3% (≈2.2%) and the strain at which stress rises on reloading after heating (≈1.7%), as defined in Section 3.2. The test record contains time, crosshead displacement and force only, so no temperature–time history can be shown; Section 2.4 says so.
 
 > (d) Was the recovery observed in more than one cycle or specimen? If not, please describe it as a single observed heating-induced recovery, use 'shape-memory recovery' rather than 'superelasticity,' …
 
@@ -296,11 +292,11 @@ Section 3.1 now separates what is visible (two constituents of different contras
 
 > (b) How were the quoted grain-size ranges estimated, and how many fields were inspected? …
 
-They are visual estimates from the micrographs, not stereological measurements, and Section 3.1 now says so. **[OPEN — FC: number of fields inspected.]**
+They are visual estimates from the micrographs, not stereological measurements, and Section 3.1 now says so. The number of fields inspected was not recorded, and Section 3.1 says so.
 
 > (c) Could the authors report the acquisition conditions and available point or map data underlying the EDS interpretation …
 
-Section 3.1 now states that EDS was used qualitatively, cannot measure carbon, and does not on its own identify crystal structure; the α/γ assignment rests on EDS, diffraction and the calculated partitioning together (Sections 3.1, 3.3 and 3.4). **[OPEN — SC: SEM/EDS acquisition conditions (kV, detector), and whether point or map data exist.]**
+Section 3.1 now states that EDS was used qualitatively, cannot measure carbon, and does not on its own identify crystal structure; the α/γ assignment rests on EDS, diffraction and the calculated partitioning together (Sections 3.1, 3.3 and 3.4). The acquisition conditions and any point or map data are not available to us, and Section 2.3 now says so.
 
 > (d) Were micrographs of the AGG-treated wire acquired? …
 
@@ -310,15 +306,15 @@ Yes. Fig. 1d (new) shows the 0.36 mm wire after the cyclic treatment: it retains
 
 > (a) Could the authors report detector, sample-detector distance, calibration procedure, exposure time, number of frames, specimen-to-beam geometry, background measurement, intensity normalization, and any specimen rotation/translation?
 
-Section 2.5 now reports transmission geometry, a 4288 × 4288-pixel area detector with 100 µm pixels, a sample-to-detector distance of ≈1.83 m (refined to 1827.4 mm), beam center and distance fitted from the rings themselves with a CeO₂ calibrant frame, and one or two frames per specimen. The exposure normalization of Fig. 6b is stated in its caption. **[OPEN — JY: detector model, exposure time, background measurement, whether the specimen was rotated or translated.]**
+Section 2.5 now reports transmission geometry, a 4288 × 4288-pixel area detector with 100 µm pixels, a sample-to-detector distance of ≈1.83 m (refined to 1827.4 mm), beam center and distance fitted from the rings themselves with a CeO₂ calibrant frame, and one or two frames per specimen. The exposure normalization of Fig. 6b is stated in its caption. The detector model, exposure time per frame, background measurement and any specimen motion during exposure are not documented in the beamline records available to us, and Section 2.5 now says so.
 
 > (b) How was overspill from the 0.5 mm beam relative to the 0.36 mm wire handled, and was the same illuminated volume sampled before and after deformation?
 
-**[OPEN — JY.]** Before and after deformation are separate specimens (Section 2.5, Fig. 4 caption), so the same volume was not sampled; Section 3.3 notes that the different grains illuminated in a separate specimen may contribute to the observed changes.
+The overspill was not corrected: the 0.5 mm beam is wider than the 0.36 mm wire, so part of it passed beside the specimen, and Section 2.5 now says so. Before and after deformation are separate specimens (Section 2.5, Fig. 4 caption), so the same volume was not sampled; Section 3.3 notes that the different grains illuminated in a separate specimen may contribute to the observed changes.
 
 > (c) Were the post-deformation specimens measured under zero load, and at what location relative to the gauge and fracture/plastic-localization region?
 
-Under zero load, after unloading (Section 2.5). **[OPEN — JY/FC: location along the gauge relative to the fracture or neck.]**
+Under zero load, after unloading (Section 2.5). Their location along the gauge relative to the fracture or neck was not recorded, and Section 2.5 says so.
 
 > (d) How many specimens, positions, and diffraction acquisitions are represented for each condition? …
 
@@ -336,7 +332,7 @@ Section 2.5 now reports:
 - the refined variables of each final refinement (undeformed and deformed);
 - E-WIMV texture at 2° and 5° ODF resolution.
 
-R_wp and R_p of both refinements are given in Section 3.3 and the Fig. 5 caption, which now shows both. We do not quote MAUD's goodness-of-fit value, which its weighting scheme does not make comparable to a conventional χ². The basis of the phase fractions is stated plainly: they were not varied in either final refinement; the undeformed pattern's were held at the values of an earlier refinement stage, and the deformed pattern's are not reported as a measurement. They therefore carry no least-squares uncertainty and are labelled semi-quantitative. **[OPEN — FC/SC: confirm the earlier refinement stage that produced 0.62/0.34/0.04. Residual (difference) curves: MAUD saved neither analysis with its spectra, so Song must re-export observed/calculated/difference curves from both sessions with the .esg data, for a figure in Online Resource 2.]**
+R_wp and R_p of both refinements are given in Section 3.3 and the Fig. 5 caption, which now shows both. We do not quote MAUD's goodness-of-fit value, which its weighting scheme does not make comparable to a conventional χ². The basis of the phase fractions is stated plainly: they were not varied in either final refinement; the undeformed pattern's were held at the values of an earlier refinement stage, and the deformed pattern's are not reported as a measurement. They therefore carry no least-squares uncertainty and are labelled semi-quantitative. The values 0.62/0.34/0.04 come from that earlier stage. Difference curves cannot be shown, because MAUD saved neither analysis with its spectra; Fig. 5 shows the observed and calculated patterns, and R_wp and R_p are reported for both.
 
 > (b) Were the 72 azimuthal spectra refined simultaneously in MAUD to determine an orientation distribution, or were they independently fitted? How were the sector results combined into 62/34/4%?
 
@@ -366,7 +362,7 @@ No line-profile analysis was made. The spots-to-arcs change is now described as 
 
 > (d) Why were different maximum strains used for the two alloys, and were intensities normalized …
 
-**[OPEN — FC: why 10% for the LLM alloy and 8% for the Omori alloy.]** The Omori alloy's post-deformation spectrum is divided by 1.625, the exposure ratio recorded with the data, and the Fig. 6 caption now says so; the other spectra are as measured. The before/after comparisons are qualitative, and the text treats them so.
+The two maximum strains were not matched, which limits the comparison. The Omori alloy's post-deformation spectrum is divided by 1.625, the exposure ratio recorded with the data, and the Fig. 6 caption now says so; the other spectra are as measured. The before/after comparisons are qualitative, and the text treats them so.
 
 ### 16. Identification and role of B2, DO3, and possible carbide precipitates
 
