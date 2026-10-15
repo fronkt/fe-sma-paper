@@ -54,6 +54,10 @@ Sec. 2.1: decision rule for A2 (Frank: earlier Fe-Mn-Al-Ni work, direct comparis
 
 Language edit of Abstract–Sec. 5 + Acknowledgments (Declarations untouched; Frank writes the AI statement): 53 lines, by four section agents, merged after an invariant check (numbers, citations, cross-references, symbols, markup, no em dashes; every hedge-count change read by hand) and a full word-diff review. Review corrections on top: "removing its carbon restores that field" → "opens" (Secs. 3.4, 4.1, 5; the LLM alloy never had the field); Sec. 4.3 slip statement → "is interpreted to have been accommodated" (matches 4.1/5, R2#15c); "disordered A2" (Strukturbericht) → "disordered BCC" (clash with Hypothesis A2); heading "Experiment Results" → "Experimental Results". Letter quotes re-synchronized to the edited wording (all verified by script). Marked-up vs July: 1122 tracked revisions (was 805). Two July wordings left for S. Cai (OPEN-ITEMS 26b): "OP-S aluminum-oxide" (OP-S is colloidal silica) and "Clemex Vision PE optical microscope" (software).
 
+## Generative-AI declaration (2026-10-15)
+
+Frank's decision: the R1 declaration uses the JMRT round-2 wording (Gemini design step as study method; no AI-generated data; authors responsible) WITHOUT the 52497 sentence on Anthropic Claude. Claude flagged before the change that 52497 had declared it to JMEP and that Springer's policy covers generative writing help; Frank chose removal.
+
 ## Deliberately NOT carried over from the long (52497) version
 
 Figs. 7 (IPFs), 8 (rod XRD), 9 (step diagrams), 10 (prolonged/cyclic tensile records); Table 4; Sec. 3.5 (AGG response), Sec. 4.2 "The role of carbon" (Schaeffler Ni_eq, low-density-steel comparison, Heo Si→D0₃), the low-density-steel envelope paragraph, the hypothesis-in-its-own-terms paragraph of Sec. 1, the report-transfer (κ vs D0₃) paragraph, the aging-asymmetry paragraph (condensed to one clause in 4.1), the long open-tests paragraph, the measured/interpreted/calculated/open conclusion structure. None is asked for by a JMEP comment.

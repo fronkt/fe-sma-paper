@@ -29,7 +29,7 @@ The following errors in the original text are corrected:
 - The Omori-alloy wire was 0.64 mm in diameter, not 0.36 mm.
 - The cyclic abnormal-grain-growth schedule was applied to ≈1–1.3 mm rod, and a separate cyclic treatment to 0.36 mm wire (Section 2.2), not as one schedule to wire.
 - The description of the request put to the agent now states only what its surviving report records (Section 2.1).
-- The declarations now disclose S. Cai's employment by Fort Wayne Metals, and the generative-AI declaration now records the use of Anthropic Claude in writing and editing the revised text.
+- The declarations now disclose S. Cai's employment by Fort Wayne Metals.
 
 All changes are shown as tracked changes against the original submission in the marked-up manuscript. Figs. 5 and 6 have been updated to match the revised analysis: Fig. 5 now shows the Rietveld refinements of both the heat-treated and the deformed specimen, each with its fit indices, and Fig. 6 is regenerated from the integrated diffraction data. Section numbering is unchanged except for the additions below.
 
