@@ -1,8 +1,10 @@
-"""Build the JMEP-26-07-50730.R1 package: clean manuscript DOCX (front_JMEP.md + manuscript.md),
-Online Resource 2 DOCX and the response-letter DOCX.
+"""Build the JMEP-26-07-50730.R1 package: clean manuscript DOCX (front_R1.md + manuscript_R1.md,
+both in this folder), Online Resource 2 DOCX, the response-letter DOCX and, with --compare,
+the marked-up DOCX (Word CompareDocuments against the July submission).
 
+Since 2026-10-14 R1 is built on the JULY text (git 2cf184e), not on the 52497 text; the root
+manuscript.md (52497 + R1 steps 1-2) is no longer the R1 source.
 Adapted from submissions/JMEP-2026-09/build_jmep.py (the 52497 build, left untouched).
-The marked-up comparison against the July submission is a separate step (Word compare).
 
 Original notes follow.
 
@@ -35,8 +37,14 @@ PANDOC = os.path.join(os.environ["LOCALAPPDATA"], "Pandoc", "pandoc.exe")
 BIB = os.path.join(OUT, "references-jmep.bib")
 CSL = os.path.join(OUT, "jmep.csl")
 DOCX = os.path.join(OUT, "Cai_Fe-SMA_JMEP_R1_clean.docx")
-ESM2_MD = os.path.join(OUT, "ESM2-tables.md")
-ESM2_DOCX = os.path.join(OUT, "ESM2-tables.docx")
+FRONT = os.path.join(OUT, "front_R1.md")
+BODY = os.path.join(OUT, "manuscript_R1.md")
+JULY = os.path.join(ROOT, "submissions", "JMEP", "Cai_Fe-SMA_JMEP_manuscript.docx")
+INLINE = os.path.join(OUT, "_R1_inline_for_compare.docx")
+MARKED = os.path.join(OUT, "Cai_Fe-SMA_JMEP_R1_marked-up.docx")
+N_FIG, N_TAB = 6, 3
+ESM2_MD = os.path.join(OUT, "ESM2-R1.md")  # ESM2-tables.md = long-version register
+ESM2_DOCX = os.path.join(OUT, "ESM2-R1.docx")
 LETTER_MD = os.path.join(ROOT, "revision", "JMEP-R1", "response-to-reviewers.md")
 LETTER_DOCX = os.path.join(OUT, "Response-to-reviewers.docx")
 
@@ -69,12 +77,13 @@ def split_blocks(body):
 
 
 def main():
-    front = open(os.path.join(ROOT, "front_JMEP.md"), encoding="utf-8").read()
-    body = open(os.path.join(ROOT, "manuscript.md"), encoding="utf-8").read()
+    front = open(FRONT, encoding="utf-8").read()
+    body = open(BODY, encoding="utf-8").read()
+    full_body = body
     body, tables, figures = split_blocks(body)
-    assert len(tables) == 4, f"expected 4 tables, found {len(tables)}"
-    assert len(figures) == 10, f"expected 10 figures, found {len(figures)}"
-    assert "::: {#refs}" in body, "manuscript.md needs a '# References' + '::: {#refs}' div"
+    assert len(tables) == N_TAB, f"expected {N_TAB} tables, found {len(tables)}"
+    assert len(figures) == N_FIG, f"expected {N_FIG} figures, found {len(figures)}"
+    assert "::: {#refs}" in body, "manuscript needs a '# References' + '::: {#refs}' div"
 
     caps = []
     for f in figures:
@@ -89,11 +98,22 @@ def main():
     src = os.path.join(OUT, "_build_input.md")
     open(src, "w", encoding="utf-8", newline="\n").write(front + "\n\n" + body + tail)
     subprocess.run([PANDOC, src, "--from", "markdown+yaml_metadata_block", "--citeproc",
-                    f"--bibliography={BIB}", f"--csl={CSL}", f"--resource-path={ROOT}",
+                    f"--bibliography={BIB}", f"--csl={CSL}", f"--resource-path={OUT}",
                     "-o", DOCX], check=True)
     os.remove(src)
     style(DOCX)
     check(DOCX)
+    # Inline build in the July layout (plain pandoc, floats in place) for the Word comparison.
+    src = os.path.join(OUT, "_build_inline.md")
+    open(src, "w", encoding="utf-8", newline="\n").write(front + "\n\n" + full_body)
+    subprocess.run([PANDOC, src, "--from", "markdown+yaml_metadata_block", "--citeproc",
+                    f"--bibliography={BIB}", f"--csl={CSL}", f"--resource-path={OUT}",
+                    "-o", INLINE], check=True)
+    os.remove(src)
+    harmonize_alt_text(JULY, INLINE)
+    if "--compare" in sys.argv:
+        compare(JULY, INLINE, MARKED)
+    os.remove(INLINE)
     # Supplementary tables and the response letter: plain pandoc, no citeproc needed.
     subprocess.run([PANDOC, ESM2_MD, "-o", ESM2_DOCX], check=True)
     subprocess.run([PANDOC, LETTER_MD, "-o", LETTER_DOCX], check=True)
@@ -149,11 +169,14 @@ def check(path):
     cells = "\n".join(c.text for t in d.tables for r in t.rows for c in r.cells)
     media = [n for n in zipfile.ZipFile(path).namelist() if n.startswith("word/media/")]
     problems = []
-    if len(media) != 10:
-        problems.append(f"{len(media)} images (expected 10)")
-    if len(d.tables) != 4:
-        problems.append(f"{len(d.tables)} tables (expected 4)")
-    for bad in ("[@", "Ã", "Â", "â€", "�", "JMRT", "eviewer", "13 mm gauge", "withdrawn"):
+    if len(media) != N_FIG:
+        problems.append(f"{len(media)} images (expected {N_FIG})")
+    if len(d.tables) != N_TAB:
+        problems.append(f"{len(d.tables)} tables (expected {N_TAB})")
+    for bad in ("[@", "Ã", "Â", "â€", "�", "JMRT", "eviewer", "13 mm gauge", "gauge length was 13", "withdrawn",
+                "AI alloy", "AI-alloy", "Omori-alloy", "super-elastic", "pseudo-elastic",
+                "trained an AI", "37%", "benchmark", "Fig. 7", "Fig. 8", "Fig. 9", "Fig. 10",
+                "Table 4", "Sec. 3.5", "Sec. 4.4"):
         if bad in text or bad in cells:
             problems.append(f"found {bad!r}")
     if "α" not in text or "γ" not in text:
@@ -168,6 +191,115 @@ def check(path):
         print("PROBLEMS: " + "; ".join(problems))
         sys.exit(1)
     print("checks pass")
+
+
+def harmonize_alt_text(orig_path, revised_path):
+    """Give each unchanged figure of the inline R1 file the July file's alt text.
+
+    pandoc stores the caption as the picture's alt text (wp:docPr descr), so a figure whose
+    caption was revised but whose image is byte-identical would show in Word's comparison as
+    a deleted and re-inserted picture; so does one whose drawing ids differ (tested
+    2026-10-15). Matching is by the SHA-1 of the embedded image; the July docPr element and
+    pic:cNvPr id are copied unless that id is already used elsewhere in the R1 file.
+    """
+    import hashlib
+
+    def drawings(path):
+        z = zipfile.ZipFile(path)
+        xml = z.read("word/document.xml").decode("utf-8")
+        rels = dict(re.findall(r'Id="(rId\d+)"[^>]*Target="(media/[^"]+)"',
+                               z.read("word/_rels/document.xml.rels").decode("utf-8")))
+        out = []
+        for m in re.finditer(r"<w:drawing>.*?</w:drawing>", xml, flags=re.S):
+            rid = re.search(r'r:embed="([^"]+)"', m.group(0)).group(1)
+            digest = hashlib.sha1(z.read("word/" + rels[rid])).hexdigest()
+            out.append((digest, m.group(0)))
+        return z, xml, out
+
+    _, _, orig = drawings(orig_path)
+    orig_by_hash = {digest: d for digest, d in orig}
+    z, xml, rev = drawings(revised_path)
+    used_ids = set(re.findall(r'<(?:wp:docPr|pic:cNvPr) [^>]*?id="(\d+)"', xml))
+    n = 0
+    for digest, d in rev:
+        if digest not in orig_by_hash:
+            continue
+        o = orig_by_hash[digest]
+        o_docpr = re.search(r"<wp:docPr [^>]*/>", o).group(0)
+        o_cnv_id = re.search(r'<pic:cNvPr [^>]*?id="(\d+)"', o).group(1)
+        r_docpr = re.search(r"<wp:docPr [^>]*/>", d).group(0)
+        r_ids = set(re.findall(r'<(?:wp:docPr|pic:cNvPr) [^>]*?id="(\d+)"', d))
+        new_ids = {re.search(r'id="(\d+)"', o_docpr).group(1), o_cnv_id}
+        if new_ids & (used_ids - r_ids):
+            new_d = d.replace(r_docpr, re.sub(r'descr="[^"]*"', re.search(
+                r'descr="[^"]*"', o_docpr).group(0), r_docpr, count=1), 1)
+        else:
+            new_d = d.replace(r_docpr, o_docpr, 1)
+            new_d = re.sub(r'(<pic:cNvPr [^>]*?)id="\d+"', r'\g<1>id="%s"' % o_cnv_id, new_d,
+                           count=1)
+            used_ids = (used_ids - r_ids) | new_ids
+        xml = xml.replace(d, new_d, 1)
+        n += 1
+    items = {i.filename: z.read(i.filename) for i in z.infolist()}
+    z.close()
+    items["word/document.xml"] = xml.encode("utf-8")
+    with zipfile.ZipFile(revised_path, "w", zipfile.ZIP_DEFLATED) as out:
+        for name, data in items.items():
+            out.writestr(name, data)
+    print(f"alt text matched to July for {n} unchanged figure(s)")
+
+
+def compare(orig_path, revised_path, out_path):
+    """Word CompareDocuments(orig, revised) -> tracked-changes DOCX.
+
+    Same recipe as revision/JMRT-R2/R2-manuscript/build_docx_pair.py, but guarded against a
+    Word that is already running: DispatchEx normally starts a new WINWORD process, yet Word
+    can hand back an existing one. The script therefore notes the WINWORD process IDs before
+    and after, refuses to touch an instance that has documents open, and quits Word at the
+    end only if the process was started here.
+    """
+    import pythoncom
+    import win32com.client
+
+    def word_pids():
+        out = subprocess.run(["tasklist", "/fi", "imagename eq WINWORD.EXE", "/fo", "csv",
+                              "/nh"], capture_output=True, text=True).stdout
+        return {line.split('","')[1] for line in out.splitlines() if line.startswith('"WINWORD')}
+
+    before = word_pids()
+    pythoncom.CoInitialize()
+    word = win32com.client.DispatchEx("Word.Application")
+    started_here = bool(word_pids() - before)
+    if word.Documents.Count:
+        raise SystemExit("refusing to compare: attached to a Word instance with documents "
+                         "open; close Word and rerun")
+    if started_here:
+        word.Visible = False
+    word.DisplayAlerts = 0
+    try:
+        orig = word.Documents.Open(os.path.abspath(orig_path), ReadOnly=True)
+        rev = word.Documents.Open(os.path.abspath(revised_path), ReadOnly=True)
+        cmp_doc = word.CompareDocuments(
+            OriginalDocument=orig, RevisedDocument=rev, Destination=2, Granularity=1,
+            CompareFormatting=False, CompareCaseChanges=True, CompareWhitespace=False,
+            CompareTables=True, CompareHeaders=True, CompareFootnotes=True,
+            CompareTextboxes=True, CompareFields=True, CompareComments=True,
+            RevisedAuthor="R1 revision", IgnoreAllComparisonWarnings=True)
+        orig.Close(False)
+        rev.Close(False)
+        ins = sum(1 for r in cmp_doc.Revisions if r.Type == 1)
+        dele = sum(1 for r in cmp_doc.Revisions if r.Type == 2)
+        print(f"marked-up: {cmp_doc.Revisions.Count} tracked revisions "
+              f"({ins} insertions, {dele} deletions)")
+        if os.path.exists(out_path):
+            os.remove(out_path)
+        cmp_doc.SaveAs2(os.path.abspath(out_path))
+        cmp_doc.Close(False)
+    finally:
+        if started_here:
+            word.Quit()
+        else:
+            print("Word was already running; left it open")
 
 
 if __name__ == "__main__":

@@ -35,6 +35,29 @@ edit ledger: `revision/JMEP-R1/CHANGES-R1.md`.
 
 **Later steps:** answers from Frank/Song/Yan → fill OPEN markers + matching edits; Table S2 row for the partitioning run; Table S3 process table; R1 package (`submissions/JMEP-R1/`: build script, ESM2 title spelling, tracked/highlighted DOCX vs July, letter DOCX); push (ask first).
 
+**Step 3 — REBASE onto the July text (Song's advice via Frank, 2026-10-14: "just answer the items from the reviewers … rather than putting all of the revisions done by the JMRT revisions"; Frank: "go ahead, rebuild from the July text")**
+Steps 1–2 were applied to the 52497 text (≈21k words, 10 figs, 4 tables). R1 now starts from the July source
+(`git show 2cf184e:manuscript.md`, verified to rebuild the submitted July DOCX word for word) and takes in only
+(a) what a JMEP comment asks for and (b) corrections of factual errors in the July text. Root `manuscript.md`
+(52497 + steps 1–2, commit a5ae5b9) is left untouched as the long version.
+Rule for every change: name the comment it answers, or the July error it corrects. Nothing else goes in.
+- [x] Archive the 52497-based letter, ledger and coverage map (dated `-archive-` copies with provenance header)
+- [x] New source `submissions/JMEP-R1/manuscript_R1.md` + `front_R1.md` from July; figures: July 2–6 as submitted, Fig. 1 = 4-panel (adds d, R2#12d)
+- [x] Port: step-1/2 wording fixes that land on July sentences; methods facts (R1#5, R2#4, 6, 9, 11, 13, 14); Table 1 at%; Table 2 n = 3
+- [x] Corrections of July errors: 13 mm → 127 mm gauge, 1e-3 → 8.3e-4 s⁻¹, 37% → 34%, "trained … 200 papers", AGG schedule was rod not wire, wire diameters (0.64/0.54 mm benchmark)
+- [x] CALPHAD condensed (R1#4, R2#5, R2#18b): short Sec. 2.6 + Sec. 3.4 with Table 3 (incl. C-free row), partitioning, carbides; window/nominal/Al results as one sentence each for the failure chain. OUT: Fig. 9, Table 4, Ni scan detail, Schaeffler, low-density-steel discussion, Sec. 4.2 carbon
+- [x] AGG (R1#3, R2#12d): correct schedules in 2.2 + one results paragraph (Fig. 1d, no bamboo, brittle rod; no Fig. 10). OUT: Figs. 7, 8, 10, Sec. 3.5
+- [x] Discussion: July 4.1 rewritten for R2#5, 8, 14d, 15c, 16d, 17a, R1#2; July 4.2 → R2#10c, 17b–d; July 4.3 → R2#3c,d, 18a–d (failure chain + lit comparison)
+- [x] Abstract (< 200 words), keywords, conclusions (R2#1b, 4c, 15b, 18d); declarations from 52497 (honest AI-use statement, 4 authors, CRediT)
+- [x] ESM2 trimmed to the R1 figure/section numbers; Online Resource 1 unchanged
+- [x] Build script → new source; checks: 6 figures, 3 tables, abstract < 200, no `[@`, no mojibake
+- [x] Response letter rewritten against the July base (section map shrinks; answers keep their substance); OPEN-ITEMS renumbered
+- [x] Tracked-changes DOCX vs the July file (Word compare) — now readable
+- [x] Verify: every R1 change traceable to a comment/error (new ledger `CHANGES-R1.md`); word count vs July reported
+- [x] Fact check by a background agent against root manuscript.md + July + records: 24 findings, each checked; fixes applied (CHANGES-R1.md "Fixes after the fact check"). Biggest: July Fig. 5 panel = the DEFORMED refinement (now two-panel Fig. 5, Song to confirm); July Fig. 6a had an unstated offset (now the raw-data replot); unloading is linear only in the recrystallized conditions (≤0.3% non-linearity as-drawn/600 °C, now stated).
+
+**Review (2026-10-15):** R1 = July text + targeted changes; body ≈9.6k words (July ≈4.2k body, long version ≈21k); 6 figures (2–4 as July), 3 tables; abstract 196 words; marked-up vs July = 805 tracked revisions, Figs. 2–4 compare as unchanged. Letter 35 OPEN markers; OPEN-ITEMS adds 6c (AI statement), 6d (Fig. 5 identity), 13b (individual Table 2 values). Nothing pushed.
+
 ---
 
 # JMEP retarget — JMRT rejected 2026-09-28 (R3 final report, three points)

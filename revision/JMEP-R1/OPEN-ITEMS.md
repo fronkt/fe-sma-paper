@@ -1,43 +1,46 @@
-# JMEP-26-07-50730.R1 — what is still needed, by person (2026-10-12)
+# JMEP-26-07-50730.R1 — what is still needed, by person (updated 2026-10-14, R1 rebuilt on the July text)
 
-Each item names the reviewer comment and where the answer goes. "Not recorded" is an acceptable answer for any fact; the paper will then say so.
+Each item names the reviewer comment and where the answer goes. "Not recorded" is an acceptable answer for any fact; the paper will then say so. Section numbers are those of the R1 manuscript (`submissions/JMEP-R1/manuscript_R1.md`), which keeps the July numbering plus new Secs. 2.6 and 3.4. The 52497-based version of this list is in `archive-2026-10-14-on-52497-base/`.
 
 ## Frank — facts and decisions
 
 **Decisions**
-1. **Highlighting method** (AE): tracked changes against the July file (nearly every paragraph marked) or colored text for new material?
+1. **Highlighting method** (AE): tracked changes against the July file is now readable (the R1 is the July text plus targeted changes) — recommended; the marked-up file is built by `build_jmep_r1.py --compare`. Confirm.
 2. **English editing** (AE): paid service, or the statement in the letter?
-3. **X. Wang as author**: yes/no (Katona draft asks the procedure).
-4. **Title** (R2#1a): keep "Absence of Superelasticity in an LLM-Hypothesized …", or the reviewer's "Experimental Evaluation of an LLM-Proposed … Targeted for Room-Temperature Superelasticity"?
-5. **Benchmark wording** (R2#7): keep "a reference composition processed in parallel" (step 1, T6/T11) or revert?
-6. **Rod and bamboo-benchmark micrographs** (R2#12d): add them to Online Resource 2, or cut the detailed rod description in Section 3.5 back to what Fig. 1d shows?
-6b. **SMST 2026 extended abstract** (Cai & Cai, ASM, pp. 11–13, published 2026-05-04, DOI 10.31399/asm.cp.smst2026p0011): it predates the July submission and was not cited there; the 52497 cover letter called it a poster. Now cited in Section 1 and disclosed in the letter — keep (recommended) or remove?
+3. **X. Wang as author**: yes/no (Katona draft asks the procedure). His contribution in the declarations is supervision, so the rebase does not change this question.
+4. **Title** (R2#1a): keep "Absence of Superelasticity in an LLM-Hypothesized … : Tensile, Synchrotron and CALPHAD Assessment", or the reviewer's "Experimental Evaluation of an LLM-Proposed … Targeted for Room-Temperature Superelasticity"?
+5. **Reference-alloy wording** (R2#7): the R1 keeps July's name "Omori alloy" and defines it as "a reference composition processed in parallel". OK?
+6. ~~Rod and bamboo micrographs~~ — no longer needed: the R1 makes no claim from the rod or Omori-alloy AGG micrographs (Sec. 3.5 of the long version is not carried over).
+6b. **SMST 2026 extended abstract** (Cai & Cai, ASM, pp. 11–13, 2026-05-04): cited in Sec. 1 and disclosed in the letter — keep (recommended) or remove?
+6d. **Fig. 5 identity** (with Song): July's single panel is identical to panel (b) of S. Cai's two-panel figure, labelled there as the specimen unloaded from 10% strain (R_wp 12.5%); his 2026-08-08 note called it the heat-treated specimen. R1 uses the two-panel figure and the letter lists the July caption as an error — confirm which is right.
+6c. **Generative-AI statement**: the July file said no generative AI was used to prepare the text; the R1 declaration (carried from the 52497 version) discloses Claude's use in writing and editing. Confirm the wording, and whether the July statement was accurate for the July text — the letter lists the change among the corrections.
 
 **Facts only you have**
-7. **R2#3a** — how many Gemini sessions/runs; why Hypothesis A2 rather than the first-ranked family; how the exact composition was chosen and why it fell outside A2 on Mn (32.3 vs ≤30 wt%) and Al (6.4 vs ≥8 wt%). *This is the reviewer's most pointed question.*
-8. **R2#3b** — was the request ever repeated?
-9. **R2#2a/2b** — were any files uploaded to the session? Any settings beyond choosing Deep Research?
+7. **R2#3a** — how many Gemini sessions/runs; why Hypothesis A2 rather than the first-ranked family; how the exact composition was chosen and why it fell outside A2 on Mn (32.3 vs ≤30 wt%) and Al (6.4 vs ≥8 wt%). *The reviewer's most pointed question; Sec. 2.1 gets the decision rule.*
+8. **R2#3b** — was the request ever repeated? (Sec. 4.3 already says run-to-run variation was not tested; Sec. 2.1 gets an explicit sentence.)
+9. **R2#2a/2b** — were any files uploaded to the session? Any settings beyond choosing Deep Research? Was it Gemini **2.5** (the July text says so; the report records no model string)?
 10. **R2#2c** — where did "over 200 papers" (July text) come from? The report lists 76 sources.
 11. **R1#5** — why 0.25 in/min (8.3 × 10⁻⁴ s⁻¹)? Same rate as the NiTi-Cu paper?
 12. **R2#9c** — how σ₀.₂, UTS, elongation and E were taken from the cyclic records (Bluehill? by hand? which loading segment?).
-13. **R2#9d** — confirm the August n = 3 replicates were cyclic tests (Table S1 says so).
-14. **R2#7b** — confirm no cyclic *unloading* record of the benchmark exists for the 1200 °C/1 min condition.
+13. **R2#9d** — confirm the n = 3 replicates of Table 2 were cyclic tests (Table S1 says so).
+13b. **R2#10b** — the individual values of the three specimens per condition, if you have them (the 2026-08-20 source table gives mean ± SD only); they would go into Table S1.
+14. **R2#7b** — confirm no cyclic *unloading* record of the Omori alloy exists for the 1200 °C/1 min condition.
 15. **R2#12b** — roughly how many micrograph fields were looked at for the grain sizes.
-16. **R2#15d** — why 10% strain for the LLM-alloy and 8% for the benchmark before diffraction.
+16. **R2#15d** — why 10% strain for the LLM alloy and 8% for the Omori alloy before diffraction.
 17. **R2#14a** — the earlier refinement stage that produced 0.62/0.34/0.04 (your 08-14 confirmation): ask Song whether its file still exists.
 
 ## Song (Fort Wayne Metals records)
 
-18. **R2#6a — process table**: hot-rolling reductions and pass schedule; redraw sequence; number and duration of intermediate anneals at 1000 °C; cooling medium after homogenization, hot rolling and intermediate anneals.
+18. **R2#6a — process table**: hot-rolling reductions and pass schedule; redraw sequence; number and duration of intermediate anneals at 1000 °C; cooling medium after homogenization, hot rolling and intermediate anneals. → new Table S3.
 19. **R2#6b — the 200 °C/3 h age**: quench medium/temperature after the 1200 °C strand anneal, transfer time, aging atmosphere, cooling after aging.
 20. **R2#6c — strand furnace**: hot-zone length, temperature calibration, wire tension, argon purity/flow.
 21. **R2#6d** — any surface oxidation seen after 1200 °C.
 22. **R2#4b** — anything besides oxidation that could explain the Si loss (form in which Si was charged?).
 23. **R2#8c** — lab temperature during testing; time/storage between heat treatment and test.
 24. **R2#9b — tensile set-up**: Instron model, load cell capacity, grips, preload, data rate, unloading endpoint (zero load or a set threshold), unloading speed. (Also on the E: drive Bluehill files.)
-25. **R2#11a–c — heating test**: how the wire was heated (≈50 °C/s rules out a furnace), how temperature was measured, what the machine held during heating (crosshead position?), whether a temperature–time record exists.
+25. **R2#11a–c — heating test**: how the wire was heated (≈50 °C/s rules out a furnace), how temperature was measured, what the machine held during heating (crosshead position?), whether fixture expansion was corrected, whether a temperature–time record exists.
 26. **R2#12c — SEM/EDS**: instrument, kV, detector; are point or map data available?
-27. **R2#14a — residual curves**: re-export observed/calculated/difference curves for both refinements from MAUD with the .esg data (the saved analyses do not store spectra).
+27. **R2#14a — residual curves**: re-export observed/calculated/difference curves of the undeformed refinement from MAUD with the .esg data (the saved analysis does not store spectra).
 
 ## J. Yan (SSRF)
 
@@ -45,7 +48,8 @@ Each item names the reviewer comment and where the answer goes. "Not recorded" i
 29. **R2#13b** — how the 0.5 mm beam vs 0.36 mm wire overspill was handled.
 30. **R2#13c** — where along the gauge the deformed specimens were measured (relative to fracture/neck).
 
-## Claude (in progress)
+## Claude
 
-31. ~~**R2#18c / 3d** — literature comparison~~ DONE 2026-10-12 (Section 4.4 paragraph; 6 new verified refs + existing `aims2022`; A-Lab dropped — 2026 author correction, not alloys; SteelBERT dropped — abstract unreadable without a proxy).
-32. After answers: fill the OPEN markers in `response-to-reviewers.md`, apply the matching manuscript edits, build the R1 package (manuscript, tracked/highlighted file vs July, letter DOCX, ESM2 with Table S3 and the new calculation row), and update Table S2 with `phase_compositions_1200.py`.
+31. ~~R2#18c / 3d literature comparison~~ DONE 2026-10-12.
+32. ~~Rebase R1 onto the July text~~ DONE 2026-10-14 (`CHANGES-R1.md`).
+33. After answers: fill the OPEN markers in `response-to-reviewers.md`, apply the matching manuscript edits, add Table S3 to `ESM2-R1.md`, rebuild with `python submissions/JMEP-R1/build_jmep_r1.py --compare` (clean + marked-up + ESM2 + letter).
