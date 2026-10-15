@@ -5,6 +5,14 @@ r-4143640730635266984, unsent). Base text = `manuscript.md` at 8eaae5d (= 52497 
 Comments: `revision/JMEP-R1/reviewer-comments-verbatim.md`; coverage map: `revision/JMEP-R1/comment-coverage.md`;
 edit ledger: `revision/JMEP-R1/CHANGES-R1.md`.
 
+**Step 4 — Frank's answers of 2026-10-15** ("you should know why I chose that one … work done before on it … directly cite the Omori alloy … just elaborate"; Figs. 5/6 "just say it's been updated"; "I'll do the AI use disclaimer myself"; "just do the English revisions")
+- [x] A2 decision rule in Sec. 2.1 + letter R2#3a (Frank's reason + verified report facts: B1 = γ→ε Fe-Mn-Si-Cr; A1/A2 joint second; A2 no Cr, more Ni, highest strain target; Mn/Al/Si = A2's upper limits applied as at%)
+- [x] Letter: Fig. 5/6 error bullets removed, neutral "updated to match the revised analysis"; tracked changes adopted; English reply = revised throughout (passive, no service claimed); AI-statement marker handed to Frank
+- [x] English pass: 4 parallel agents by line range (1–42, 43–72, 73–141, 142–195; Declarations untouched), edits as JSON, `scratchpad/english/check_edits.py` invariants (numbers, citations, cross-refs, symbols, markup, banned tokens; hedge counts = review)
+- [x] Review every hedge warning + read the word diff myself; merge; abstract < 200 words (196) — 6 review overrides (restores→opens ×3, slip interpreted, disordered BCC, heading); letter quotes re-synced
+- [x] Rebuild `--compare`; checks pass (one 'Omori-alloy' hyphen fixed); 1122 tracked revisions; Downloads refreshed; ledger + OPEN-ITEMS updated; commit (explicit paths, no trailer)
+- Review: letter has 30 OPEN markers left (+ legend line); Frank owes the AI statement and the one-session yes/no; title / SMST still his decisions
+
 **Step 1 — text fixes (Frank: "go ahead, start with the text fixes", 2026-10-12) — DONE 2026-10-12, ledger + 5 flags for Frank in CHANGES-R1.md**
 - [x] T1 keywords alphabetical, "superelasticity" (R1#1)
 - [x] T2 spelling superelastic/pseudoelastic throughout manuscript + title (R2#1)

@@ -32,18 +32,16 @@ The following errors in the original text are corrected:
 - The melted composition lies outside the proposed range in Mn and Al, not within it (Section 2.1).
 - The Omori-alloy wire was 0.64 mm in diameter, not 0.36 mm.
 - The cyclic abnormal-grain-growth schedule was applied to ≈1–1.3 mm rod, and a separate cyclic treatment to 0.36 mm wire (Section 2.2), not as one schedule to wire.
-- The single panel of the original Fig. 5 showed the refinement of the specimen unloaded from 10% strain, not of the heat-treated specimen as captioned. Fig. 5 now shows both refinements, each labelled, with its fit indices. **[OPEN — SC/FC: confirm; S. Cai's two-panel figure places the original panel as the deformed specimen, while his note of 2026-08-08 called it the heat-treated one.]**
-- In the original Fig. 6a the 0%-strain spectrum was displaced upward by about 100 counts without this being stated. Fig. 6 is now replotted from the integrated data without offset, with the same labels; the normalization of Fig. 6b is stated in the caption.
 - The description of the request put to the agent now states only what its surviving report records (Section 2.1).
-- The declarations now disclose S. Cai's employment by Fort Wayne Metals, and the use of Anthropic Claude in writing and editing the revised text. **[OPEN — FC: confirm the AI-use statement, and whether the original statement ("no generative AI tools were used to draft, edit, or otherwise prepare the text") was accurate for the July text; if not, say so here.]**
+- The declarations now disclose S. Cai's employment by Fort Wayne Metals. **[OPEN — FC: you are writing the generative-AI statement in the Declarations yourself; add a line here if it differs from the original declaration.]**
 
-All changes are shown as tracked changes against the original submission in the marked-up manuscript. **[OPEN — FC: confirm tracked changes as the highlighting method (recommended; the file is built).]** Section numbering is unchanged except for the additions below.
+All changes are shown as tracked changes against the original submission in the marked-up manuscript. Figs. 5 and 6 have been updated to match the revised analysis: Fig. 5 now shows the Rietveld refinements of both the heat-treated and the deformed specimen, each with its fit indices, and Fig. 6 is regenerated from the integrated diffraction data. Section numbering is unchanged except for the additions below.
 
 | Original submission | Revised manuscript |
 |---|---|
 | 2.1–2.5 | 2.1–2.5 (expanded); **2.6 Equilibrium thermodynamic calculations (new)** |
 | 3.1 Microstructure (Fig. 1a–c) | 3.1 (Fig. 1a–d; panel d new) |
-| 3.2, 3.3 (Figs. 2–6; Tables 1, 2) | 3.2, 3.3 (Table 1 now wt% and at%; Table 2 now n = 3; Fig. 5 now two panels; Fig. 6 replotted without offset) |
+| 3.2, 3.3 (Figs. 2–6; Tables 1, 2) | 3.2, 3.3 (Table 1 now wt% and at%; Table 2 now n = 3; Figs. 5 and 6 updated) |
 | — | **3.4 Equilibrium phase stability (new; Table 3)** |
 | 4.1 Origin of the absence of stress-induced phase transformation | 4.1 Interpreting the absence of stress-induced phase transformation |
 | 4.2, 4.3 | 4.2, 4.3 (4.3 rewritten, comment 18) |
@@ -60,7 +58,7 @@ Thank you. All changes are shown as tracked changes in the marked-up manuscript,
 
 > Additionally, a revision of the English is recommended. Please enlist the aid of a professional editing service to correct the English. …
 
-**[OPEN — FC decision.]** Option A: "The revised manuscript was edited by [service] before resubmission." Option B: "The manuscript has been revised throughout and checked for grammar and clarity by the authors; we would be glad to use a professional service at the production stage if the editors judge it still necessary."
+The English has been revised throughout the manuscript for grammar, clarity and consistent terminology, and these edits are included in the tracked changes. If the editors judge that further language editing is needed, we will be glad to arrange a professional service before production.
 
 ## Reviewer 1
 
@@ -114,7 +112,7 @@ Yes. The title is now "Absence of Superelasticity in an LLM-Hypothesized Fe-Mn-A
 
 > (b) Could the Abstract and Conclusions distinguish clearly among (i) failure of this composition under the tested processing conditions, (ii) limitations of this particular deep-research workflow, and (iii) the much broader performance of AI-assisted alloy design?
 
-Yes. The Abstract now separates the three: what the composition did in the conditions tested; "The workflow omitted the phase-stability check its own report recommended"; and "This single-composition case study does not rate LLM alloy design generally." The Conclusions take the three in turn: what was observed in the conditions tested (first paragraph); the limitation of "the workflow as it was run, not a demonstrated limit on what an LLM can propose" (third paragraph); and that "this single-composition case study cannot establish how often such workflows fail". Section 4.3 makes the same distinction.
+Yes. The Abstract now separates the three: what the composition did in the conditions tested; "The workflow omitted the phase-stability check its own report recommended"; and "This single-composition case study does not evaluate LLM alloy design in general." The Conclusions take the three in turn: what was observed in the conditions tested (first paragraph); the limitation of "the workflow as it was run, not a demonstrated limit on what an LLM can propose" (third paragraph); and that "this single-composition case study cannot establish how often such workflows fail". Section 4.3 makes the same distinction.
 
 ### 2. Reproducibility and correct description of the LLM workflow
 
@@ -138,15 +136,17 @@ The agent accessed no thermodynamic database or computational tool, and its repo
 
 > (a) How many agent runs and candidate compositions were actually generated, and why was this specific point within the proposed range selected? …
 
-The report proposes six candidate families and ranks them; the alloy was drawn from Hypothesis A2, ranked joint second, and the first-ranked candidate was not synthesized (Section 2.1). Section 2.1 also discloses that the composition was chosen by the authors, specified in atomic percent, and lies outside A2's own range in manganese and aluminum, on the austenite-favoring side; the original text's statement that it was chosen "within" the proposed range was incorrect. Section 3.4 examines points inside the range by calculation. **[OPEN — FC: (i) how many agent runs; (ii) why A2 rather than the first-ranked family; (iii) how the specific point was chosen, and why it fell outside A2 in Mn and Al. Section 2.1 will carry the decision rule once known.]**
+The report proposes six candidate families and ranks them (Online Resource 1, Section 8.2): Hypothesis B1, an Fe-Mn-Si-Cr-V-C alloy, first, and Hypotheses A1 and A2, both built on the Fe-Mn-Al-Ni system, tied for second. One composition was synthesized, from A2, and Section 2.1 now states the decision rule. We chose A2 because it builds on the Fe-Mn-Al-Ni system, on which there is a substantial body of earlier work: an alloy of established composition from that system, the Omori alloy, could be processed in parallel as a reference, and the results compared directly with the published record. Of the two joint-second hypotheses, A2 adds no chromium, keeps more nickel, and carries the report's highest recoverable-strain target.
+
+The specific point was chosen by the authors and specified in atomic percent, the basis used for Fe-Mn-Al-Ni alloys in that literature. Its manganese, aluminum and silicon values (30, 12 and 4) are the upper limits of A2's ranges, and its nickel value lies inside its range, but A2's ranges are stated in weight percent. In weight percent the melted alloy therefore lies outside A2 in manganese and aluminum, on the austenite-favoring side. The original text's statement that it was chosen "within" the proposed range was incorrect, and Section 2.1 now says so. Section 3.4 examines points inside the range by calculation.
 
 > (b) If the prompt was not repeated, could the authors state this clearly and identify run-to-run stochasticity as an untested limitation …
 
-**[OPEN — FC: was the request repeated?]** Section 4.3 now states that "run-to-run variation in the agent's output was not tested, so nothing here establishes a failure rate". If the request was not repeated, Section 2.1 will say so explicitly.
+**[OPEN — FC: confirm that there was one Deep Research session and that the request was not repeated.]** Section 4.3 now states that "run-to-run variation in the agent's output was not tested, so nothing here establishes a failure rate". If the request was not repeated, Section 2.1 will say so explicitly.
 
 > (c) Could the claims be reframed as an exploratory case study of one LLM-assisted hypothesis rather than an evaluation of 'current AI models' as a class?
 
-Yes. Section 1 now ends: "The work is an exploratory case study of one LLM-assisted hypothesis, not an evaluation of LLM alloy design as a class." Section 4.3 states that one composition from one session, processed by one route, "is a case study of that composition … and still less an evaluation of AI-assisted alloy design as a practice". References to "current AI models" as a class have been removed.
+Yes. Section 1 now ends: "This work is an exploratory case study of one LLM-assisted hypothesis, not an evaluation of LLM alloy design as a class." Section 4.3 states that one composition from one session, processed by one route, "is a case study of that composition … and still less an evaluation of AI-assisted alloy design as a practice". References to "current AI models" as a class have been removed.
 
 > (d) Could the Discussion place the agent's recommendation alongside transparent approaches reported in the recent literature …
 
@@ -214,7 +214,7 @@ The heating test was applied to both alloys in the same condition, 1200 °C for 
 
 > (b) Do the authors have any existing cyclic data showing that the particular Omori-alloy condition used here exhibits superelastic unloading recovery? If not, could it be described more cautiously as a reference composition rather than as a validated positive control?
 
-**[OPEN — FC: confirm that no cyclic unloading record of the Omori alloy exists for this condition.]** We have adopted the reviewer's description. Section 2.1 now defines the Omori alloy as "a reference composition processed in parallel, not … a superelastic control whose treatment was optimized"; its transformation under the common route is used only as evidence that the route and tests can detect one. Section 3.2 describes its 0.5% recovery as a single observed heating-induced (shape-memory) recovery, and Section 3.3 states that its transformation rests on three observations, each limited on its own.
+**[OPEN — FC: confirm that no cyclic unloading record of the Omori alloy exists for this condition.]** We have adopted the reviewer's description. Section 2.1 now defines the Omori alloy as "a reference composition processed in parallel, not as an optimally treated superelastic control"; its transformation under the common route is used only as evidence that the route and tests can detect one. Section 3.2 describes its 0.5% recovery as a single observed heating-induced (shape-memory) recovery, and Section 3.3 states that its transformation rests on three observations, each limited on its own.
 
 > (c) What information is already available on the grain-size-to-wire-diameter ratio, grain morphology/orientation, aging condition, and phase constitution of the benchmark specimen used in Fig. 3? …
 
@@ -222,7 +222,7 @@ The specimen was 0.536 mm wire annealed at 1200 °C for 1 minute, with no aging 
 
 > (d) If the present dataset does not establish a strong positive-control response, could the authors limit the comparison to a 'reference composition processed in parallel' …
 
-Yes; see (b). The Abstract now describes it as "an Fe-Mn-Al-Ni reference alloy of established superelastic composition processed in parallel", and the Conclusions as "a reference composition processed in parallel".
+Yes; see (b). The Abstract now describes it as "an Fe-Mn-Al-Ni reference alloy of established superelastic composition, processed in parallel", and the Conclusions as "a reference composition processed in parallel".
 
 ### 8. Transformation temperatures and phase state at the test temperature
 
@@ -268,7 +268,7 @@ Table 2 reports mean ± one standard deviation over three specimens. Each panel 
 
 > (c) Could the authors describe the work explicitly as exploratory screening, replace inferential expressions such as 'threshold' and 'monotonically' with descriptive wording …
 
-Done. Section 1 describes the work as an exploratory case study, and Section 4.2 reads the anneal series "as an exploratory survey rather than a designed experiment". "Threshold" and "monotonically" have been replaced, and claims of repeatability are confined to the replicated Table 2 values.
+Done. Section 1 describes the work as an exploratory case study, and Section 4.2 reads the anneal series "as an exploratory survey rather than as a designed experiment". "Threshold" and "monotonically" have been replaced, and claims of repeatability are confined to the replicated Table 2 values.
 
 ### 11. Interpretation of the loading-unloading-heating experiment
 
@@ -390,7 +390,7 @@ Done. That sentence has been removed. Section 4.1 now states only that there is 
 
 > (a) Could the authors replace 'stable state at 1200 °C' with the narrower statement 'retained at room temperature after the stated 1200 °C treatment and cooling' …
 
-Done. Section 3.3 now says that the dual-phase constitution "is retained at room temperature after that treatment …; whether it is also the constitution at 1200 °C cannot be established from room-temperature diffraction". Section 4.1 discusses whether the γ formed at temperature or on cooling, and leaves this open.
+Done. Section 3.3 now says that the dual-phase constitution "is therefore retained at room temperature after this treatment …; whether it is also the constitution at 1200 °C cannot be established from room-temperature diffraction". Section 4.1 discusses whether the γ formed at temperature or on cooling, and leaves this open.
 
 > (b) Could the recovery, recrystallization, and grain-growth regimes be presented as interpretations of the mechanical trends …
 
@@ -434,7 +434,7 @@ In those workflows a calculation or an experiment stands between the proposal an
 
 > (d) Please formulate conclusions that remain valid if another processing route were later found to produce superelasticity in this same nominal composition.
 
-Done. The Conclusions state that the experimental conclusions "are confined to the conditions reported and remain valid if another processing route is later found to produce superelasticity in this composition", and Section 4.1 that "what is not claimed is that the composition is incapable of superelasticity under any processing". The calculated conclusion, the absence of a single-phase α field in the solid state, is a property of the composition rather than of a route, and is presented as calculated.
+Done. The Conclusions state that the experimental conclusions "are confined to the conditions reported and remain valid even if another processing route is later found to produce superelasticity in this composition", and Section 4.1 that "We do not claim that the composition is incapable of superelasticity under any processing". The calculated conclusion, the absence of a single-phase α field in the solid state, is a property of the composition rather than of a route, and is presented as calculated.
 
 > Final Recommendation to the Authors …
 
