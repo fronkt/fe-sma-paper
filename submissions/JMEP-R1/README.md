@@ -3,9 +3,11 @@
 Source: `front_R1.md` + `manuscript_R1.md` (July text + reviewer-driven changes; ledger `revision/JMEP-R1/CHANGES-R1.md`).
 Rebuild: `python submissions/JMEP-R1/build_jmep_r1.py --compare` from the repo root (clean, marked-up vs July, ESM2, letter).
 
-## Staged in ScholarOne on 2026-10-15 (draft revision, NOT submitted)
+## SUBMITTED 17-Oct-2026 (staged 2026-10-15)
 
-Revision due 11-Dec-2026 (Author Center). The decision letter in the Author Center carries no reviewer mark-up files.
+JMEP-26-07-50730.R1 submitted on 17-Oct-2026 (portal confirmation page and the ScholarOne confirmation e-mail of the same day). Authors on the confirmation: Cai, Frank; Cai, S.; Wang, Xiao-Ming; Yan, J. Revision had been due 11-Dec-2026. The decision letter in the Author Center carries no reviewer mark-up files.
+
+Still open after submission: X. Wang and S. Cai each complete the copyright transfer form with all four authors in order (Katona, 15 Oct); form PDF: https://mc.manuscriptcentral.com/societyimages/jmep/JMEP%20Copyright%20Transfer%20Form.pdf. J. Yan confirmed the author change to Katona by e-mail on 15 Oct (Katona acknowledged 16 Oct). The PDF proof only opens with pop-ups allowed for mc.manuscriptcentral.com; Submit stays grey until a proof is opened.
 
 | Step | Entered |
 |---|---|
@@ -15,7 +17,7 @@ Revision due 11-Dec-2026 (Author Center). The decision letter in the Author Cent
 | 4 Keywords (free text accepted) | Fe-based shape memory alloy; synchrotron XRD; abnormal grain growth; CALPHAD; superelasticity; alloy design; large language model |
 | 5 Authors (locked by the journal) | F.Y. Cai (corr.), S. Cai, X. Wang, J. Yan |
 | 6 Details | Cover letter text below (July CoverLetter.docx removed); special issue No; previously submitted Yes (JMEP-26-07-50730; 52497 withdrawn 15 Oct 2026); copyright form No — X. Wang and S. Cai complete it on submission (Katona, 15 Oct), J. Yan done; published/submitted elsewhere No; colour fee No |
-| 7 Review & Submit | All steps complete. Frank must view the HTML or PDF proof (required) and click Submit himself |
+| 7 Review & Submit | All steps complete. PDF proof opened, then Submit clicked on Frank's instruction ("Submit it"), 17-Oct-2026 |
 
 ### Cover letter (Step 6 text)
 
